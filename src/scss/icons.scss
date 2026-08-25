@@ -1,0 +1,247 @@
+%ic {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  &:before {
+    @extend %ic;
+    display: block;
+  }
+}
+
+.icon-eye:before {
+  content: "\e936";
+}
+
+.icon-eye-stroke:before {
+  content: "\e937";
+}
+
+.icon-lock:before {
+  content: "\e938";
+}
+
+.icon-download:before {
+  content: "\e935";
+}
+
+.icon-location-pin:before {
+  content: "\e934";
+}
+
+.icon-edit:before {
+  content: "\e933";
+}
+
+.icon-plus:before {
+  content: "\e931";
+}
+
+.icon-dotts:before {
+  content: "\e932";
+}
+
+.icon-trash:before {
+  content: "\e930";
+}
+
+.icon-cross:before {
+  content: "\e92f";
+}
+
+.icon-check-cirlce:before {
+  content: "\e92e";
+}
+
+.icon-compare:before {
+  content: "\e92d";
+}
+
+.icon-compare-fill:before {
+  content: "\e92b";
+}
+
+.icon-share:before {
+  content: "\e92c";
+}
+
+.icon-filter:before {
+  content: "\e92a";
+}
+
+.icon-bag:before {
+  content: "\e928";
+}
+
+.icon-favorite:before {
+  content: "\e927";
+}
+
+.icon-favorite-fill:before {
+  content: "\e929";
+}
+
+.icon-home:before {
+  content: "\e921";
+}
+
+.icon-home-fill:before {
+  content: "\e922";
+}
+
+.icon-hearts-fill:before {
+  content: "\e923";
+}
+
+.icon-pills-fill:before {
+  content: "\e924";
+}
+
+.icon-shopping-cart-fill:before {
+  content: "\e925";
+}
+
+.icon-user-fill:before {
+  content: "\e926";
+}
+
+.icon-heart:before {
+  content: "\e920";
+}
+
+.icon-animal-pills:before {
+  content: "\e912";
+}
+
+.icon-beauty:before {
+  content: "\e913";
+}
+
+.icon-detox:before {
+  content: "\e914";
+}
+
+.icon-energy:before {
+  content: "\e915";
+}
+
+.icon-grass:before {
+  content: "\e916";
+}
+
+.icon-immunitet:before {
+  content: "\e917";
+}
+
+.icon-mother:before {
+  content: "\e918";
+}
+
+.icon-nervous:before {
+  content: "\e919";
+}
+
+.icon-sport:before {
+  content: "\e91a";
+}
+
+.icon-superfoods:before {
+  content: "\e91b";
+}
+
+.icon-vitamins:before {
+  content: "\e91c";
+}
+
+.icon-sales:before {
+  content: "\e91d";
+}
+
+.icon-news:before {
+  content: "\e91e";
+}
+
+.icon-brands:before {
+  content: "\e91f";
+}
+
+.icon-clock:before {
+  content: "\e900";
+}
+
+.icon-hearts:before {
+  content: "\e901";
+}
+
+.icon-left:before {
+  content: "\e902";
+}
+
+.icon-message:before {
+  content: "\e903";
+}
+
+.icon-orders:before {
+  content: "\e904";
+}
+
+.icon-pills:before {
+  content: "\e905";
+}
+
+.icon-play:before {
+  content: "\e906";
+}
+
+.icon-right:before {
+  content: "\e907";
+}
+
+.icon-search:before {
+  content: "\e908";
+}
+
+.icon-shopping-cart:before {
+  content: "\e909";
+}
+
+.icon-star:before {
+  content: "\e90a";
+}
+
+.icon-telegram:before {
+  content: "\e90b";
+}
+
+.icon-user:before {
+  content: "\e90c";
+}
+
+.icon-views:before {
+  content: "\e90d";
+}
+
+.icon-vk:before {
+  content: "\e90e";
+}
+
+.icon-arrow:before {
+  content: "\e90f";
+}
+
+.icon-cam-search:before {
+  content: "\e910";
+}
+
+.icon-chevron-down:before {
+  content: "\e911";
+}
