@@ -47,7 +47,9 @@ export const copyWoff = () => {
         .src(`${app.path.srcFolder}/fonts/*.woff`)
         .pipe(app.gulp.dest(`${app.path.build.fonts}`))
         .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/*.woff2`))
-        .pipe(app.gulp.dest(`${app.path.build.fonts}`));
+        .pipe(app.gulp.dest(`${app.path.build.fonts}`))
+        .pipe(app.gulp.src(`${app.path.srcFolder}/fonts/iconfont/**/*.*`))
+        .pipe(app.gulp.dest(`${app.path.build.fonts}/iconfont`));
 };
 
 export const fontsStyle = () => {
@@ -56,6 +58,7 @@ export const fontsStyle = () => {
     // Проверяем наличие папки с шрифтами
     fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
         if (fontsFiles) {
+            fontsFiles = fontsFiles.filter((file) => /\.(woff2?|ttf|otf)$/i.test(file));
             // Если файл существует, удаляем его
             if (fs.existsSync(fontsFile)) {
                 fs.unlinkSync(fontsFile);

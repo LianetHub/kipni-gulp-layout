@@ -1,273 +1,83 @@
+@use "sass:math";
+
+.form-control,
+.form-select {
+	width: 100%;
+	min-height: rem(50);
+	padding: rem(14) rem(20);
+	border: 1px solid var(--color-border-subtle);
+	border-radius: var(--radius-btn);
+	background: var(--color-white);
+	box-shadow: var(--shadow-muted);
+	font-family: $fontfamily, sans-serif;
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(19, 16);
+	color: var(--color-text);
+	box-sizing: border-box;
+	transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+	&::placeholder {
+		color: var(--color-muted);
+	}
+
+	&:focus {
+		outline: none;
+		border-color: var(--color-primary);
+		box-shadow: var(--focus-ring);
+	}
+
+	&.is-error {
+		border-color: #c0392b;
+	}
+
+	&.is-success {
+		border-color: var(--color-primary);
+	}
+}
+
+.form-select {
+	padding-right: rem(44);
+	appearance: none;
+	cursor: pointer;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%234c4c4c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right rem(20) center;
+	background-size: rem(12) rem(7);
+}
+
 .form-field {
 	position: relative;
 	display: block;
 	width: 100%;
 
-	// .form-field--select
-	&--select {
-		.form-field__input {
-			padding-right: rem(36);
-			appearance: none;
-			cursor: pointer;
-		}
-	}
-
-	// .form-field__input
-	&__input {
-		width: 100%;
-		height: rem(48);
-		padding: 0 rem(16);
-		border: 1px solid var(--color-accent);
-		border-radius: var(--radius);
-		background: #fff;
-		font-family: inherit;
-		font-size: rem(12);
-		font-weight: 500;
-		line-height: normal;
-		color: var(--color-text);
-		box-sizing: border-box;
-		transition: border-color 0.2s ease, box-shadow 0.2s ease;
-
-		&::placeholder {
-			color: rgba(0, 0, 0, 0.5);
-		}
-
-		&:focus {
-			outline: none;
-			border-color: #5f6b42;
-			box-shadow: var(--focus-ring);
-		}
-
-		// .form-field__input.is-error
-		&.is-error {
-			border-color: var(--color-sale);
-		}
-
-		&.is-error:focus {
-			border-color: var(--color-sale);
-			box-shadow: var(--focus-ring);
-		}
-
-		// .form-field__input.is-success
-		&.is-success {
-			border-color: var(--color-accent);
-		}
-	}
-
-	textarea#{&}__input {
-		height: auto;
-		min-height: rem(96);
-		padding: rem(12) rem(16);
-		resize: vertical;
-	}
-
-	select#{&}__input:invalid {
-		color: rgba(0, 0, 0, 0.5);
-	}
-
-	select#{&}__input:valid {
+	// form-field__label
+	&__label {
+		display: block;
+		margin-bottom: rem(8);
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(17, 14);
 		color: var(--color-text);
 	}
 
-	select#{&}__input option {
-		color: var(--color-text);
-	}
-
-	select#{&}__input option[disabled] {
-		color: rgba(0, 0, 0, 0.5);
-	}
-
-	// .form-field__chevron
-	&__chevron {
-		position: absolute;
-		top: 50%;
-		right: rem(16);
-		transform: translateY(-50%);
-		font-size: rem(8);
-		line-height: 1;
-		color: var(--color-text);
-		pointer-events: none;
-	}
-
-	// .form-field__error
+	// form-field__error
 	&__error {
 		display: none;
-		position: absolute;
-		left: 0;
-		top: 100%;
 		margin-top: rem(6);
-		font-size: rem(11);
-		line-height: rem(15);
-		color: var(--color-sale);
-		pointer-events: none;
+		font-size: rem(12);
+		line-height: math.div(14, 12);
+		color: #c0392b;
 	}
 
-	// .form-field.is-error .form-field__error
+	// form-field.is-error .form-field__error
 	&.is-error &__error {
-		display: block;
-	}
-
-	// .form-field__success
-	&__success {
-		display: none;
-		position: absolute;
-		left: 0;
-		top: 100%;
-		margin-top: rem(6);
-		font-size: rem(11);
-		line-height: rem(15);
-		color: var(--color-accent);
-		pointer-events: none;
-	}
-
-	// .form-field.is-success .form-field__success
-	&.is-success &__success {
 		display: block;
 	}
 }
 
-.search-bar {
-	display: flex;
-	align-items: stretch;
-	width: 100%;
-	max-width: rem(624);
-	flex: 0 1 auto;
-	background: var(--color-accent);
-	border-radius: var(--radius);
-	position: relative;
-	transition:
-		box-shadow 0.25s ease,
-		width var(--duration-layout) var(--ease-layout),
-		max-width var(--duration-layout) var(--ease-layout),
-		min-width var(--duration-layout) var(--ease-layout),
-		flex-grow var(--duration-layout) var(--ease-layout),
-		flex-basis var(--duration-layout) var(--ease-layout);
-
-	@media (min-width: $md4) {
-		max-width: 100%;
-		flex: 1 1 auto;
-		min-width: 0;
-	}
-
-	&:focus-within {
-		box-shadow: 0 0 0 3px rgba(116, 129, 83, 0.28);
-	}
-
-	// .search-bar__field
-	&__field {
-		flex: 1 1 auto;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: rem(8);
-		min-width: 0;
-		height: rem(40);
-		padding: 0 rem(14) 0 rem(18);
-		background: #fff;
-		border: 1px solid var(--color-accent);
-		border-radius: var(--radius);
-		position: relative;
-		z-index: 2;
-		transition:
-			border-color 0.25s ease,
-			height var(--duration-layout) var(--ease-layout);
-
-		@media (min-width: $md4) {
-			height: rem(48);
-		}
-	}
-
-	&:focus-within &__field {
-		border-color: #5f6b42;
-	}
-
-	// .search-bar__input
-	&__input {
-		flex: 1 1 auto;
-		width: 100%;
-		border: none;
-		background: transparent;
-		font-family: inherit;
-		text-overflow: ellipsis;
-		font-size: rem(12);
-		font-weight: 500;
-		color: var(--color-text);
-		min-width: 0;
-
-
-		&::placeholder {
-			color: rgba(0, 0, 0, 0.5);
-		}
-
-		&:focus {
-			outline: none;
-		}
-	}
-
-	// .search-bar__camera
-	&__camera {
-		flex-shrink: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(29);
-		height: rem(23);
-		padding: 0;
-		border: none;
-		background: transparent;
-		cursor: pointer;
-		color: rgba(116, 129, 83, 0.7);
-		font-size: rem(23);
-		transition: color 0.3s ease;
-
-		&:focus-visible {
-			outline: none;
-			box-shadow: var(--focus-ring);
-			border-radius: rem(4);
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: #748153
-			}
-		}
-	}
-
-	// .search-bar__submit
-	&__submit {
-		flex-shrink: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(48);
-		padding: 0;
-		border: none;
-		border-radius: 0 var(--radius) var(--radius) 0;
-		background: transparent;
-		cursor: pointer;
-		color: #fff;
-		font-size: rem(18);
-		padding-left: var(--radius);
-		transition: background-color 0.2s ease;
-		margin-left: calc(-1 * var(--radius));
-
-		@media (any-hover: hover) {
-			&:hover {
-				background: #5f6b42;
-			}
-		}
-
-		&:active {
-			background: #4f5a37;
-		}
-
-		&:focus-visible {
-			outline: none;
-			box-shadow: inset var(--focus-ring);
-		}
-	}
-
-	&:focus-within &__submit {
-		background: #5f6b42;
-	}
+textarea.form-control {
+	min-height: rem(120);
+	resize: vertical;
 }

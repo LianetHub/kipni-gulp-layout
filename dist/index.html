@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>KIPNI — UI Kit</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<link rel="shortcut icon" href="/favicon.ico" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+	<link rel="manifest" href="/site.webmanifest" />
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260825120204">
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260825120204">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260825120204">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260825120204">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<div class="container section-space-md">
+				<h1 class="h1">UI Kit KIPNI</h1>
+				<p class="text text-muted mt-title">Система дизайна для сайта KIPNI</p>
+				<section class="mt-title section-space-md">
+					<h2 class="h2">Кнопки</h2>
+					<div class="mt-title flex-wrap">
+						<a href="#" class="btn btn--primary">Каталог товаров</a>
+						<a href="#" class="btn btn--primary">
+							<span class="btn__icon" aria-hidden="true">
+								<img src="fonts/iconfont/menu.svg" alt="" width="17" height="17">
+							</span> Каталог товаров </a>
+						<a href="#" class="btn btn--soft"> Смотреть все <span class="btn__chevron" aria-hidden="true">
+								<img src="fonts/iconfont/chevron-right-sm.svg" alt="" width="12" height="7">
+							</span>
+						</a>
+						<a href="#" class="btn btn--ghost">Перейти в каталог</a>
+						<a href="#" class="btn btn--muted">Где купить</a>
+						<a href="#" class="btn btn--info">Узнать условия</a>
+					</div>
+				</section>
+				<section class="mt-title section-space-md">
+					<h2 class="h2">Карточка товара</h2>
+					<div class="mt-title">
+						<article class="product-card">
+							<div class="product-card__head">
+								<span class="badge badge--hit">Хит</span>
+								<button type="button" class="product-card__favorite" aria-label="Добавить в избранное">
+									<img src="fonts/iconfont/heart.svg" alt="" width="28" height="26" loading="lazy">
+								</button>
+							</div>
+							<div class="product-card__media">
+								<picture>
+									<source srcset="img/product-duck.webp" type="image/webp"><img src="img/product-duck.png" alt="Чистящий гель KIPNI для унитазов" width="200" height="200" loading="lazy">
+								</picture>
+							</div>
+							<div class="product-card__body">
+								<h3 class="product-card__title">Чистящий гель для унитазов</h3>
+								<p class="product-card__volume">750 мл</p>
+								<div class="product-card__rating">
+									<span class="product-card__star" aria-hidden="true">
+										<img src="fonts/iconfont/star.svg" alt="" width="12" height="12" loading="lazy">
+									</span>
+									<span class="product-card__rating-value">4.9</span>
+									<span class="product-card__rating-count">(12)</span>
+								</div>
+								<div class="product-card__footer">
+									<a href="#" class="more-link product-card__link">Подробнее</a>
+									<span class="product-card__action" aria-hidden="true">
+										<img src="fonts/iconfont/chevron-right.svg" alt="" width="9" height="15" loading="lazy">
+									</span>
+								</div>
+							</div>
+						</article>
+					</div>
+				</section>
+			</div>
+		</main>
+	</div>
+	<script defer src="js/libs/swiper-bundle.min.js?_v=20260825120204"></script>
+	<script defer src="js/libs/fancybox.umd.js?_v=20260825120204"></script>
+	<script defer src="js/app.min.js?_v=20260825120204"></script>
+</body>
+
+</html>

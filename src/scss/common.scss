@@ -1,13 +1,15 @@
+@use "sass:math";
+
 * {
 	scroll-margin-top: $header;
 }
 
 body {
-	font-family: $fontfamily, "Noto Sans", "Segoe UI", Roboto, Arial, sans-serif;
-	font-size: rem(14);
+	font-family: $fontfamily, sans-serif;
+	font-size: rem(16);
 	min-width: rem($minWidth);
 	min-height: 100%;
-	line-height: normal;
+	line-height: math.div(19, 16);
 	font-weight: 400;
 	background: var(--color-bg);
 	color: var(--color-text);

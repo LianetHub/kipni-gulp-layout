@@ -1,0 +1,83 @@
+@use "sass:math";
+
+%heading {
+	font-family: $font-heading, sans-serif;
+	font-weight: 500;
+	color: var(--color-text);
+}
+
+h1,
+.h1 {
+	@extend %heading;
+	font-size: rem(36);
+	line-height: math.div(43, 36);
+
+	@media (min-width: $md4) {
+		font-size: rem(64);
+		line-height: math.div(77, 64);
+	}
+}
+
+h2,
+.h2 {
+	@extend %heading;
+	font-size: rem(28);
+	line-height: math.div(34, 28);
+
+	@media (min-width: $md4) {
+		font-size: rem(36);
+		line-height: math.div(43, 36);
+	}
+}
+
+h3,
+.h3 {
+	@extend %heading;
+	font-size: rem(20);
+	line-height: math.div(24, 20);
+
+	@media (min-width: $md4) {
+		font-size: rem(24);
+		line-height: math.div(29, 24);
+	}
+}
+
+h4,
+.h4 {
+	@extend %heading;
+	font-size: rem(18);
+	line-height: math.div(22, 18);
+}
+
+.text {
+	font-family: $fontfamily, sans-serif;
+	font-size: rem(16);
+	font-weight: 400;
+	line-height: math.div(19, 16);
+	color: var(--color-text);
+}
+
+.text--sm {
+	font-family: $fontfamily, sans-serif;
+	font-size: rem(14);
+	font-weight: 400;
+	line-height: math.div(17, 14);
+	color: var(--color-text);
+}
+
+.caption,
+.caption--2 {
+	font-family: $fontfamily, sans-serif;
+	font-size: rem(14);
+	font-weight: 400;
+	line-height: math.div(17, 14);
+	color: var(--color-text);
+}
+
+.text-muted {
+	color: var(--color-muted);
+}
+
+.text-link {
+	color: var(--color-link-dark);
+}

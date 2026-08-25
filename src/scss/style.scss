@@ -1,9 +1,9 @@
 @use "sass:math";
 @import "mixins";
 @import "fonts";
-// @import "icons";
 
-$fontfamily: "NotoSans";
+$fontfamily: "Onest", sans-serif;
+$font-heading: "Golos Text", sans-serif;
 
 $md0: 1518.98px;
 $md1: 1439.98px;
@@ -18,21 +18,59 @@ $maxWidthContainer: rem(1368);
 $maxWidthContainerLarge: rem(1488);
 $containerPadding: 24;
 
-$accent: #748153;
-$surface: #f2f2f2;
-$muted: #63666a;
+// Colors — KIPNI UI Kit
+$color-primary: #8abd35;
+$color-primary-dark: #3f8c2c;
+$color-button: #5e9834;
+$color-link: #528428;
+$color-link-dark: #3d6c10;
+$color-text: #4c4c4c;
+$color-muted: #737373;
+$color-white: #fefefe;
+$color-bg: #ffffff;
+$color-surface: #f6f7f4;
+$color-cream: #fff6e5;
+$color-soft-blue: #e8f0fd;
+$color-soft-green: #f4f7e7;
+$color-border: #e4e4e4;
+$color-border-subtle: rgba(52, 52, 52, 0.1);
+$color-badge-hit: #7da331;
+$color-info: #0c3162;
 
 :root {
-	--color-bg: #ffffff;
-	--color-surface: #{$surface};
-	--color-accent: #{$accent};
-	--color-text: #000000;
-	--color-muted: #{$muted};
+	--color-primary: #{$color-primary};
+	--color-primary-dark: #{$color-primary-dark};
+	--color-button: #{$color-button};
+	--color-link: #{$color-link};
+	--color-link-dark: #{$color-link-dark};
+	--color-text: #{$color-text};
+	--color-muted: #{$color-muted};
+	--color-white: #{$color-white};
+	--color-bg: #{$color-bg};
+	--color-surface: #{$color-surface};
+	--color-cream: #{$color-cream};
+	--color-soft-blue: #{$color-soft-blue};
+	--color-soft-green: #{$color-soft-green};
+	--color-border: #{$color-border};
+	--color-border-subtle: #{$color-border-subtle};
+	--color-badge-hit: #{$color-badge-hit};
+	--color-info: #{$color-info};
+	--color-accent: #{$color-primary};
 	--header-height: #{rem(86)};
 	--container: #{$maxWidthContainer};
-	--radius: #{rem(8)};
+	--radius-sm: #{rem(10)};
+	--radius-md: #{rem(20)};
+	--radius-btn: #{rem(15)};
+	--radius: var(--radius-sm);
+	--shadow-soft: 0 #{rem(10)} #{rem(12.9)} rgba(83, 131, 40, 0.07);
+	--shadow-green: 0 #{rem(10)} #{rem(25.8)} rgba(83, 131, 40, 0.3);
+	--shadow-muted: 0 #{rem(10)} #{rem(25.8)} rgba(115, 115, 115, 0.1);
+	--shadow-info: 0 #{rem(10)} #{rem(25.8)} rgba(11, 51, 105, 0.14);
+	--space-lg: #{rem(130)};
+	--space-md: #{rem(80)};
+	--space-title: #{rem(25)};
 	--focus-ring: 0 0 0 2px #fff,
-	0 0 0 4px #{$accent};
+	0 0 0 4px #{$color-primary};
 	--duration-layout: 0.3s;
 	--ease-layout: ease;
 
@@ -59,6 +97,8 @@ $ui-index-5: 5;
 $ui-index-6: 6;
 $ui-index-7: 7;
 
-// @import "ui";
-// @import "forms";
+@import "typography";
+@import "base";
+@import "ui";
+@import "forms";
 @import "common";

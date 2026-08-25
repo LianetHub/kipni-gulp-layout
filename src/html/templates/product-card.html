@@ -1,0 +1,32 @@
+<article class="product-card">
+	<div class="product-card__head">
+		@@if (badge) {
+		<span class="badge badge--hit">@@badge</span>
+		}
+		<button type="button" class="product-card__favorite" aria-label="Добавить в избранное">
+			<img src="fonts/iconfont/heart.svg" alt="" width="28" height="26" loading="lazy">
+		</button>
+	</div>
+	<div class="product-card__media">
+		<img src="@@image" alt="@@image_alt" width="200" height="200" loading="lazy">
+	</div>
+	<div class="product-card__body">
+		<h3 class="product-card__title">@@title</h3>
+		@@if (volume) {
+		<p class="product-card__volume">@@volume</p>
+		}
+		<div class="product-card__rating">
+			<span class="product-card__star" aria-hidden="true">
+				<img src="fonts/iconfont/star.svg" alt="" width="12" height="12" loading="lazy">
+			</span>
+			<span class="product-card__rating-value">@@rating</span>
+			<span class="product-card__rating-count">(@@reviews)</span>
+		</div>
+		<div class="product-card__footer">
+			<a href="@@link" class="more-link product-card__link">Подробнее</a>
+			<span class="product-card__action" aria-hidden="true">
+				<img src="fonts/iconfont/chevron-right.svg" alt="" width="9" height="15" loading="lazy">
+			</span>
+		</div>
+	</div>
+</article>

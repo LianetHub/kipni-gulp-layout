@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
   @@include('html/_head.html', {
-  "title": "Home"
+  "title": "KIPNI — UI Kit"
   })
   <body>
     <div class="wrapper">
       <main class="page">
-        <div class="container"></div>
+        <div class="container section-space-md">
+          <h1 class="h1">UI Kit KIPNI</h1>
+          <p class="text text-muted mt-title">Система дизайна для сайта KIPNI</p>
+
+          <section class="mt-title section-space-md">
+            <h2 class="h2">Кнопки</h2>
+            <div class="mt-title flex-wrap">
+              <a href="#" class="btn btn--primary">Каталог товаров</a>
+              <a href="#" class="btn btn--primary">
+                <span class="btn__icon" aria-hidden="true">
+                  <img src="fonts/iconfont/menu.svg" alt="" width="17" height="17">
+                </span>
+                Каталог товаров
+              </a>
+              <a href="#" class="btn btn--soft">
+                Смотреть все
+                <span class="btn__chevron" aria-hidden="true">
+                  <img src="fonts/iconfont/chevron-right-sm.svg" alt="" width="12" height="7">
+                </span>
+              </a>
+              <a href="#" class="btn btn--ghost">Перейти в каталог</a>
+              <a href="#" class="btn btn--muted">Где купить</a>
+              <a href="#" class="btn btn--info">Узнать условия</a>
+            </div>
+          </section>
+
+          <section class="mt-title section-space-md">
+            <h2 class="h2">Карточка товара</h2>
+            <div class="mt-title">
+              @@include('html/templates/product-card.html', {
+                "title": "Чистящий гель для унитазов",
+                "volume": "750 мл",
+                "rating": "4.9",
+                "reviews": "12",
+                "badge": "Хит",
+                "image": "img/product-duck.png",
+                "image_alt": "Чистящий гель KIPNI для унитазов",
+                "link": "#"
+              })
+            </div>
+          </section>
+        </div>
       </main>
     </div>
     @@include('html/_js.html', {})
