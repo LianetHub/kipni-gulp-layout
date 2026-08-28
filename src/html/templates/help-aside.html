@@ -3,11 +3,7 @@
 		<h2 class="h3 help-aside__title" id="help-aside-title">Помощь</h2>
 		<ul class="help-aside__list">
 			<li>
-				<a
-					class="help-aside__link@@if(active==='delivery'){ help-aside__link--active}"
-					href="delivery.html"
-					@@if(active==='delivery'){aria-current="page" }
-				>Доставка и оплата</a>
+				<a class="help-aside__link@@if(active==='delivery'){ help-aside__link--active}" href="delivery.html" @@if(active==='delivery' ){aria-current="page" }>Доставка и оплата</a>
 			</li>
 			<li>
 				<a class="help-aside__link" href="#">Гарантия и возврат</a>
@@ -25,22 +21,14 @@
 	</nav>
 
 	<article class="help-aside__promo">
-		<div class="help-aside__promo-media">
-			<img
-				src="img/delivery/promo.png"
-				alt="Средства для уборки кухни KIPNI на столешнице"
-				width="345"
-				height="171"
-				loading="lazy"
-			>
-		</div>
+				<div class="help-aside__promo-media" role="img" aria-label="Средства для уборки кухни KIPNI на столешнице" style="background-image: url('@img/delivery/promo.png');"></div>
 		<div class="help-aside__promo-body">
 			<h3 class="h3 help-aside__promo-title">5 шагов к чистой кухне без химии</h3>
 			<p class="text help-aside__promo-text">Рассказываем, как поддерживать идеальную...</p>
 			<a class="btn btn--primary help-aside__promo-btn" href="article.html">
 				Читать далее
 				<span class="btn__chevron" aria-hidden="true">
-					<img src="fonts/iconfont/chevron-right-sm.svg" alt="" width="12" height="7">
+					<img src="fonts/iconfont/chevron-right-sm.svg" alt="Стрелка вправо" width="12" height="7">
 				</span>
 			</a>
 		</div>

@@ -175,7 +175,7 @@
 		}
 	}
 
-	// catalog-cat__img
+	// catalog-cat__media
 	&__img {
 		position: absolute;
 		right: rem(-8);
@@ -416,65 +416,6 @@
 
 		strong {
 			font-weight: 600;
-		}
-	}
-
-	// catalog-toolbar__sort
-	&__sort {
-		display: inline-flex;
-		align-items: center;
-		gap: rem(10);
-		min-height: rem(50);
-		padding: rem(12) rem(26);
-		border: 1px solid rgba(52, 52, 52, 0.05);
-		border-radius: var(--radius-btn);
-		background: var(--color-white);
-		font-family: $fontfamily, sans-serif;
-		font-size: rem(14);
-		font-weight: 400;
-		line-height: 1.1;
-		color: var(--color-text);
-		cursor: pointer;
-		transition: border-color 0.2s ease;
-
-		@media (any-hover: hover) {
-			&:hover {
-				border-color: rgba(138, 189, 53, 0.35);
-			}
-		}
-
-		&:focus-visible {
-			outline: none;
-			box-shadow: var(--focus-ring);
-		}
-	}
-
-	// catalog-toolbar__sort-icon
-	&__sort-icon {
-		display: inline-flex;
-		flex-shrink: 0;
-		width: rem(20);
-		height: rem(20);
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
-	}
-
-	// catalog-toolbar__sort-chevron
-	&__sort-chevron {
-		display: inline-flex;
-		flex-shrink: 0;
-		width: rem(12);
-		height: rem(7);
-		margin-left: rem(4);
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
 		}
 	}
 }

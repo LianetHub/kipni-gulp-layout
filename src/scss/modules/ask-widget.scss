@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .ask-widget {
 	display: none;
 	position: fixed;
@@ -6,9 +8,36 @@
 	z-index: $ui-index-6;
 	width: rem(180);
 	pointer-events: none;
+	transform: translateX(calc(100% + #{rem(24)}));
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+		opacity 0.45s ease,
+		visibility 0s linear 0.65s;
 
 	@media (min-width: $md2) {
 		display: block;
+	}
+
+	&.is-visible {
+		transform: translateX(0);
+		opacity: 1;
+		visibility: visible;
+		pointer-events: auto;
+		transition:
+			transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+			opacity 0.45s ease,
+			visibility 0s;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		transform: none;
+		transition: opacity 0.2s ease, visibility 0s linear 0.2s;
+
+		&.is-visible {
+			transition: opacity 0.2s ease, visibility 0s;
+		}
 	}
 
 	// ask-widget__link
@@ -20,12 +49,15 @@
 		color: inherit;
 	}
 
-	// ask-widget__img
-	&__img {
+	// ask-widget__media
+	&__media {
 		display: block;
 		width: rem(160);
-		height: auto;
+		height: rem(170);
 		margin-left: auto;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: bottom center;
 	}
 
 	// ask-widget__btn
@@ -35,5 +67,12 @@
 		bottom: rem(12);
 		min-width: rem(180);
 		pointer-events: none;
+	}
+
+	@media (any-hover: hover) {
+		.ask-widget__link:hover .ask-widget__btn {
+			box-shadow: var(--shadow-green);
+			background: var(--color-soft-green);
+		}
 	}
 }

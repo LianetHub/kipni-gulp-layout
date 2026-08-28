@@ -129,56 +129,6 @@
 		margin: 0;
 	}
 
-	// vacancies-list__sort
-	&__sort {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		gap: rem(10);
-		min-height: rem(50);
-		padding: rem(12) rem(26);
-		border-radius: var(--radius-btn);
-		background: var(--color-bg);
-		box-shadow: var(--shadow-soft);
-		cursor: pointer;
-		color: var(--color-primary);
-		transition: box-shadow 0.2s ease;
-
-		&:hover {
-			box-shadow: var(--shadow-green);
-		}
-
-		&:focus-visible {
-			outline: none;
-			box-shadow: var(--focus-ring);
-		}
-	}
-
-	// vacancies-list__sort-icon
-	&__sort-icon {
-		display: block;
-		width: rem(20);
-		height: rem(20);
-		flex-shrink: 0;
-	}
-
-	// vacancies-list__sort-text
-	&__sort-text {
-		font-family: $fontfamily, sans-serif;
-		font-size: rem(16);
-		font-weight: 600;
-		line-height: 1.1;
-		white-space: nowrap;
-	}
-
-	// vacancies-list__sort-chevron
-	&__sort-chevron {
-		display: block;
-		width: rem(12);
-		height: rem(7);
-		flex-shrink: 0;
-	}
-
 	// vacancies-list__items
 	&__items {
 		display: flex;

@@ -16,21 +16,13 @@
 
 <section class="promo-intro" aria-labelledby="promo-intro-title">
 	<div class="container promo-intro__inner">
-		<div class="promo-intro__decor" aria-hidden="true">
-			<img
-				src="img/promo/leaves.png"
-				alt=""
-				width="646"
-				height="862"
-				loading="lazy"
-			>
-		</div>
+				<div class="promo-intro__decor" role="img" aria-label="Декоративные зелёные листья" style="background-image: url('@img/promo/leaves.png');"></div>
 
 		<h1 class="h1 promo-intro__title" id="promo-intro-title">2+1 на средства для уборки</h1>
 
 		<p class="promo-intro__date">
 			<span class="promo-intro__date-icon" aria-hidden="true">
-				<img src="img/promo/calendar.svg" alt="" width="24" height="24">
+				<img src="@img/promo/calendar.svg" alt="Календарь" width="24" height="24">
 			</span>
 			<span class="promo-intro__date-text">Акция действует до 21.11.2026</span>
 		</p>
@@ -38,14 +30,7 @@
 		<div class="row gy-4 promo-intro__row">
 			<div class="col-12 col-lg-8">
 				<div class="promo-intro__main">
-					<div class="promo-intro__media">
-						<img
-							src="img/promo/hero.png"
-							alt="Набор средств для уборки KIPNI с подарочной коробкой"
-							width="621"
-							height="466"
-						>
-					</div>
+										<div class="promo-intro__media" role="img" aria-label="Набор средств для уборки KIPNI с подарочной коробкой" style="background-image: url('@img/promo/hero.png');"></div>
 					<p class="text promo-intro__text">
 						Кухня — одно из самых сложных мест для уборки. Жир, остатки пищи, известковый налёт и неприятные запахи появляются здесь практически каждый день. Однако для поддержания порядка необязательно использовать большое количество агрессивных средств.
 					</p>
@@ -53,22 +38,14 @@
 			</div>
 			<div class="col-12 col-lg-4">
 				<article class="help-aside__promo promo-intro__teaser">
-					<div class="help-aside__promo-media">
-						<img
-							src="img/promo/teaser.png"
-							alt="Средства для уборки кухни KIPNI на столешнице"
-							width="345"
-							height="171"
-							loading="lazy"
-						>
-					</div>
+										<div class="help-aside__promo-media" role="img" aria-label="Средства для уборки кухни KIPNI на столешнице" style="background-image: url('@img/promo/teaser.png');"></div>
 					<div class="help-aside__promo-body">
 						<h2 class="h3 help-aside__promo-title">5 шагов к чистой кухне без химии</h2>
 						<p class="text help-aside__promo-text">Рассказываем, как поддерживать идеальную...</p>
 						<a class="btn btn--primary help-aside__promo-btn" href="article.html">
 							Читать далее
 							<span class="btn__chevron" aria-hidden="true">
-								<img src="fonts/iconfont/chevron-right-sm.svg" alt="" width="12" height="7">
+								<img src="fonts/iconfont/chevron-right-sm.svg" alt="Стрелка вправо" width="12" height="7">
 							</span>
 						</a>
 					</div>
@@ -84,46 +61,46 @@
 		<div class="row gy-3 promo-products__row">
 			<div class="col-12 col-sm-6 col-xl-3">
 				@@include('../templates/product-card.html', {
-					"title": "Чистящий гель для унитазов",
-					"volume": "750 мл",
-					"badge": "Хит",
-					"badge_mod": "badge--hit",
-					"image": "img/products/toilet-gel.png",
-					"image_alt": "Чистящий гель KIPNI для унитазов",
-					"link": "#"
+				"title": "Чистящий гель для унитазов",
+				"volume": "750 мл",
+				"badge": "Хит",
+				"badge_mod": "badge--hit",
+				"image": "img/products/toilet-gel.png",
+				"image_alt": "Чистящий гель KIPNI для унитазов",
+				"link": "#"
 				})
 			</div>
 			<div class="col-12 col-sm-6 col-xl-3">
 				@@include('../templates/product-card.html', {
-					"title": "Чистящий гель для унитазов",
-					"volume": "750 мл",
-					"badge": "Хит",
-					"badge_mod": "badge--hit",
-					"image": "img/products/laundry-gel.png",
-					"image_alt": "Универсальный гель для стирки KIPNI",
-					"link": "#"
+				"title": "Чистящий гель для унитазов",
+				"volume": "750 мл",
+				"badge": "Хит",
+				"badge_mod": "badge--hit",
+				"image": "img/products/laundry-gel.png",
+				"image_alt": "Универсальный гель для стирки KIPNI",
+				"link": "#"
 				})
 			</div>
 			<div class="col-12 col-sm-6 col-xl-3">
 				@@include('../templates/product-card.html', {
-					"title": "Чистящий гель для унитазов",
-					"volume": "750 мл",
-					"badge": "Новинка",
-					"badge_mod": "badge--new",
-					"image": "img/products/tropical-soap.png",
-					"image_alt": "Жидкое мыло Тропические фрукты",
-					"link": "#"
+				"title": "Чистящий гель для унитазов",
+				"volume": "750 мл",
+				"badge": "Новинка",
+				"badge_mod": "badge--new",
+				"image": "img/products/tropical-soap.png",
+				"image_alt": "Жидкое мыло Тропические фрукты",
+				"link": "#"
 				})
 			</div>
 			<div class="col-12 col-sm-6 col-xl-3">
 				@@include('../templates/product-card.html', {
-					"title": "Чистящий гель для унитазов",
-					"volume": "750 мл",
-					"badge": "Хит",
-					"badge_mod": "badge--hit",
-					"image": "img/products/household-soap.png",
-					"image_alt": "Мыло хозяйственное Кипни",
-					"link": "#"
+				"title": "Чистящий гель для унитазов",
+				"volume": "750 мл",
+				"badge": "Хит",
+				"badge_mod": "badge--hit",
+				"image": "img/products/household-soap.png",
+				"image_alt": "Мыло хозяйственное Кипни",
+				"link": "#"
 				})
 			</div>
 		</div>

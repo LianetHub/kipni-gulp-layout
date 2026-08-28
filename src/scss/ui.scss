@@ -242,18 +242,43 @@
 		background: transparent;
 		cursor: pointer;
 		color: inherit;
+		transition: transform 0.2s ease, opacity 0.2s ease;
 
-		img,
-		svg {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+
+		&:active {
+			transform: scale(0.9);
 		}
 
 		&:focus-visible {
 			outline: none;
 			box-shadow: var(--focus-ring);
 			border-radius: rem(4);
+		}
+
+		&.is-active {
+			.product-card__favorite-icon--outline {
+				display: none;
+			}
+
+			.product-card__favorite-icon--filled {
+				display: block;
+			}
+		}
+	}
+
+	// product-card__favorite-icon
+	&__favorite-icon {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+
+		&--filled {
+			display: none;
 		}
 	}
 

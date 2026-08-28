@@ -16,15 +16,14 @@
 				<span class="favorites__title-text">Избранное:</span>
 				<span class="favorites__count">9 товаров</span>
 			</h1>
-			<button type="button" class="catalog-toolbar__sort" aria-label="Сортировать товары">
-				<span class="catalog-toolbar__sort-icon" aria-hidden="true">
-					<img src="img/catalog/icon-sort.svg" alt="" width="20" height="20">
-				</span>
-				<span class="catalog-toolbar__sort-text">Сортировать</span>
-				<span class="catalog-toolbar__sort-chevron" aria-hidden="true">
-					<img src="fonts/iconfont/chevron-down.svg" alt="" width="12" height="7">
-				</span>
-			</button>
+			@@include('../templates/custom-select.html', {
+				"id": "favorites-sort",
+				"name": "sort",
+				"mod": "catalog",
+				"label": "Сортировать товары",
+				"placeholder": "Сортировать",
+				"icon": "img/catalog/icon-sort.svg"
+			})
 		</div>
 	</div>
 

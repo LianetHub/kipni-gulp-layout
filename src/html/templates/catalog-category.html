@@ -3,14 +3,5 @@
 		<h3 class="catalog-cat__title">@@title</h3>
 		<p class="catalog-cat__lead">@@lead</p>
 	</div>
-	<img
-		class="catalog-cat__img"
-		src="@@image"
-		alt="@@image_alt"
-		width="@@image_width"
-		height="@@image_height"
-		@@if (typeof lazy !== 'undefined' && lazy) {
-		loading="lazy"
-		}
-	>
+	<div class="catalog-cat__media" role="img" aria-label="@@image_alt" style="background-image: url('@@image');"></div>
 </a>

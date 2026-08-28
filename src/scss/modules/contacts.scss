@@ -185,16 +185,20 @@
 	margin-bottom: rem(32);
 	border-radius: rem(20);
 	overflow: hidden;
+	aspect-ratio: 1440 / 585;
+	min-height: rem(280);
 
 	@media (min-width: $md4) {
 		margin-bottom: rem(50);
+		min-height: rem(585);
 	}
 
-	img {
+	// contacts-map__frame
+	&__frame {
 		display: block;
 		width: 100%;
-		height: auto;
-		object-fit: cover;
+		height: 100%;
+		border: 0;
 	}
 }
 

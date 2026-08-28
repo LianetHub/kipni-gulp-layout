@@ -3,20 +3,24 @@
 		@@if (typeof badge !== 'undefined' && badge) {
 		<span class="badge @@badge_mod">@@badge</span>
 		}
-		@@if (typeof favorited !== 'undefined' && favorited) {
-		<button type="button" class="product-card__favorite is-active" aria-label="Убрать из избранного" aria-pressed="true">
-			<img src="fonts/iconfont/favorite.svg" alt="" width="28" height="26" loading="lazy">
+		<button
+			type="button"
+			class="product-card__favorite@@if(typeof favorited !== 'undefined' && favorited){ is-active}"
+			data-product-card-favorite
+			@@if(typeof favorited !== 'undefined' && favorited){
+			aria-pressed="true"
+			aria-label="Убрать из избранного"
+			}
+			@@if(typeof favorited === 'undefined' || !favorited){
+			aria-pressed="false"
+			aria-label="Добавить в избранное"
+			}
+		>
+			<img class="product-card__favorite-icon product-card__favorite-icon--outline" src="fonts/iconfont/heart.svg" alt="Добавить в избранное" width="28" height="26" loading="lazy">
+			<img class="product-card__favorite-icon product-card__favorite-icon--filled" src="fonts/iconfont/favorite.svg" alt="В избранном" width="28" height="26" loading="lazy">
 		</button>
-		}
-		@@if (typeof favorited === 'undefined' || !favorited) {
-		<button type="button" class="product-card__favorite" aria-label="Добавить в избранное">
-			<img src="fonts/iconfont/heart.svg" alt="" width="28" height="26" loading="lazy">
-		</button>
-		}
 	</div>
-	<div class="product-card__media">
-		<img src="@@image" alt="@@image_alt" width="200" height="200" loading="lazy">
-	</div>
+	<div class="product-card__media" role="img" aria-label="@@image_alt" style="background-image: url('@@image');"></div>
 	<div class="product-card__body">
 		<h3 class="product-card__title">@@title</h3>
 		@@if (typeof volume !== 'undefined' && volume) {
@@ -25,7 +29,7 @@
 		@@if (typeof rating !== 'undefined' && rating) {
 		<div class="product-card__rating">
 			<span class="product-card__star" aria-hidden="true">
-				<img src="fonts/iconfont/star.svg" alt="" width="12" height="12" loading="lazy">
+				<img src="fonts/iconfont/star.svg" alt="Звезда рейтинга" width="12" height="12" loading="lazy">
 			</span>
 			<span class="product-card__rating-value">@@rating</span>
 			@@if (typeof reviews !== 'undefined' && reviews) {
@@ -36,7 +40,7 @@
 		<div class="product-card__footer">
 			<a href="@@link" class="more-link product-card__link">Подробнее</a>
 			<span class="product-card__action" aria-hidden="true">
-				<img src="fonts/iconfont/chevron-right.svg" alt="" width="9" height="15" loading="lazy">
+				<img src="fonts/iconfont/chevron-right.svg" alt="Стрелка вправо" width="9" height="15" loading="lazy">
 			</span>
 		</div>
 	</div>

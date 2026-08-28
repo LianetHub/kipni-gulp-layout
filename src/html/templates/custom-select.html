@@ -1,0 +1,45 @@
+<div class="custom-select custom-select--@@mod" data-custom-select>
+	<label class="visually-hidden" for="@@id">@@label</label>
+	<select class="custom-select__native" id="@@id" name="@@name" tabindex="-1" aria-hidden="true">
+		@@if(mod === 'catalog'){
+		<option value="popular" selected>По популярности</option>
+		<option value="price-asc">Сначала дешевле</option>
+		<option value="price-desc">Сначала дороже</option>
+		<option value="name">По названию</option>
+		}
+		@@if(mod === 'vacancies'){
+		<option value="date" selected>По дате</option>
+		<option value="salary-desc">По зарплате: по убыванию</option>
+		<option value="salary-asc">По зарплате: по возрастанию</option>
+		<option value="name">По названию</option>
+		}
+	</select>
+	<button type="button" class="custom-select__trigger" data-custom-select-trigger aria-haspopup="listbox" aria-expanded="false" aria-controls="@@id-list">
+		<span class="custom-select__icon" aria-hidden="true">
+			<img src="@@icon" alt="Иконка" width="20" height="20" loading="lazy">
+		</span>
+		<span class="custom-select__value" data-custom-select-value>@@placeholder</span>
+		<span class="custom-select__chevron" aria-hidden="true">
+			@@if(mod === 'vacancies'){
+			<img src="@img/vacancies/icon-chevron.svg" alt="Стрелка вниз" width="12" height="7" loading="lazy">
+			}
+			@@if(mod !== 'vacancies'){
+			<img src="fonts/iconfont/chevron-down.svg" alt="Стрелка вниз" width="12" height="7" loading="lazy">
+			}
+		</span>
+	</button>
+	<ul class="custom-select__list" id="@@id-list" role="listbox" tabindex="-1" data-custom-select-list hidden>
+		@@if(mod === 'catalog'){
+		<li class="custom-select__option is-selected" role="option" data-value="popular" aria-selected="true" tabindex="-1">По популярности</li>
+		<li class="custom-select__option" role="option" data-value="price-asc" aria-selected="false" tabindex="-1">Сначала дешевле</li>
+		<li class="custom-select__option" role="option" data-value="price-desc" aria-selected="false" tabindex="-1">Сначала дороже</li>
+		<li class="custom-select__option" role="option" data-value="name" aria-selected="false" tabindex="-1">По названию</li>
+		}
+		@@if(mod === 'vacancies'){
+		<li class="custom-select__option is-selected" role="option" data-value="date" aria-selected="true" tabindex="-1">По дате</li>
+		<li class="custom-select__option" role="option" data-value="salary-desc" aria-selected="false" tabindex="-1">По зарплате: по убыванию</li>
+		<li class="custom-select__option" role="option" data-value="salary-asc" aria-selected="false" tabindex="-1">По зарплате: по возрастанию</li>
+		<li class="custom-select__option" role="option" data-value="name" aria-selected="false" tabindex="-1">По названию</li>
+		}
+	</ul>
+</div>
