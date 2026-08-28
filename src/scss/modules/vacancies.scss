@@ -1,0 +1,691 @@
+@use "sass:math";
+
+.vacancies-intro {
+	padding-top: rem(24);
+	padding-bottom: rem(40);
+
+	@media (min-width: $md4) {
+		padding-top: rem(40);
+		padding-bottom: rem(48);
+	}
+
+	// vacancies-intro__row
+	&__row {
+		@media (min-width: $md3) {
+			align-items: center;
+		}
+	}
+
+	// vacancies-intro__content
+	&__content {
+		max-width: rem(830);
+	}
+
+	// vacancies-intro__title
+	&__title {
+		margin-bottom: rem(24);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(36);
+		}
+	}
+
+	// vacancies-intro__text
+	&__text {
+		line-height: math.div(26, 16);
+		margin-bottom: rem(32);
+		max-width: rem(540);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(48);
+			max-width: rem(507);
+		}
+	}
+
+	// vacancies-intro__benefits
+	&__benefits {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		@media (min-width: $md4) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: rem(50);
+		}
+	}
+
+	// vacancies-intro__benefit
+	&__benefit {
+		display: flex;
+		align-items: center;
+		gap: rem(13);
+		max-width: rem(221);
+	}
+
+	// vacancies-intro__check
+	&__check {
+		flex-shrink: 0;
+		width: rem(40);
+		height: rem(40);
+
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	}
+
+	// vacancies-intro__benefit-text
+	&__benefit-text {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		color: var(--color-text);
+	}
+
+	// vacancies-intro__media
+	&__media {
+		margin-top: rem(32);
+
+		@media (min-width: $md3) {
+			margin-top: 0;
+			display: flex;
+			justify-content: flex-end;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			max-width: rem(460);
+			height: auto;
+			margin-inline: auto;
+		}
+	}
+}
+
+.vacancies-list {
+	padding-bottom: rem(64);
+
+	@media (min-width: $md4) {
+		padding-bottom: rem(100);
+	}
+
+	// vacancies-list__head
+	&__head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(16);
+		margin-bottom: rem(24);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(40);
+		}
+	}
+
+	// vacancies-list__title
+	&__title {
+		margin: 0;
+	}
+
+	// vacancies-list__sort
+	&__sort {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(10);
+		min-height: rem(50);
+		padding: rem(12) rem(26);
+		border-radius: var(--radius-btn);
+		background: var(--color-bg);
+		box-shadow: var(--shadow-soft);
+		cursor: pointer;
+		color: var(--color-primary);
+		transition: box-shadow 0.2s ease;
+
+		&:hover {
+			box-shadow: var(--shadow-green);
+		}
+
+		&:focus-visible {
+			outline: none;
+			box-shadow: var(--focus-ring);
+		}
+	}
+
+	// vacancies-list__sort-icon
+	&__sort-icon {
+		display: block;
+		width: rem(20);
+		height: rem(20);
+		flex-shrink: 0;
+	}
+
+	// vacancies-list__sort-text
+	&__sort-text {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: 1.1;
+		white-space: nowrap;
+	}
+
+	// vacancies-list__sort-chevron
+	&__sort-chevron {
+		display: block;
+		width: rem(12);
+		height: rem(7);
+		flex-shrink: 0;
+	}
+
+	// vacancies-list__items
+	&__items {
+		display: flex;
+		flex-direction: column;
+		gap: rem(16);
+
+		@media (min-width: $md4) {
+			gap: rem(30);
+		}
+	}
+}
+
+.vacancy-card {
+	border-radius: var(--radius-md);
+	background: #f7f7f7;
+	overflow: hidden;
+
+	&.is-open {
+		.vacancy-card__toggle {
+			img {
+				opacity: 0;
+			}
+
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		.vacancy-card__body {
+			display: block;
+		}
+	}
+
+	// vacancy-card__header
+	&__header {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(12) rem(16);
+		width: 100%;
+		padding: rem(20);
+		background: transparent;
+		text-align: left;
+		cursor: pointer;
+		color: var(--color-text);
+
+		@media (min-width: $md4) {
+			flex-wrap: nowrap;
+			padding: rem(50) rem(65);
+			min-height: rem(164);
+		}
+
+		&:focus-visible {
+			outline: none;
+			box-shadow: var(--focus-ring);
+		}
+	}
+
+	// vacancy-card__title
+	&__title {
+		flex: 1 1 auto;
+		min-width: 0;
+		font-family: $font-heading, sans-serif;
+		font-size: rem(22);
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--color-primary);
+
+		@media (min-width: $md4) {
+			font-size: rem(36);
+		}
+	}
+
+	// vacancy-card__salary
+	&__salary {
+		font-family: $font-heading, sans-serif;
+		font-size: rem(22);
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--color-text);
+		white-space: nowrap;
+
+		@media (min-width: $md4) {
+			font-size: rem(36);
+			margin-right: rem(24);
+		}
+	}
+
+	// vacancy-card__toggle
+	&__toggle {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		width: rem(48);
+		height: rem(48);
+		margin-left: auto;
+		border-radius: 50%;
+		background: var(--color-primary);
+
+		@media (min-width: $md4) {
+			width: rem(64);
+			height: rem(64);
+			margin-left: 0;
+		}
+
+		img {
+			display: block;
+			width: rem(20);
+			height: rem(20);
+			transition: opacity 0.2s ease;
+
+			@media (min-width: $md4) {
+				width: rem(24);
+				height: rem(24);
+			}
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			width: rem(16);
+			height: rem(2);
+			border-radius: rem(51);
+			background: #fff;
+			opacity: 0;
+			transition: opacity 0.2s ease;
+
+			@media (min-width: $md4) {
+				width: rem(20);
+			}
+		}
+	}
+
+	// vacancy-card__body
+	&__body {
+		display: none;
+		padding: 0 rem(20) rem(24);
+
+		@media (min-width: $md4) {
+			padding: 0 rem(65) rem(50);
+		}
+	}
+
+	// vacancy-card__row
+	&__row {
+		@media (min-width: $md2) {
+			--gutter-x: #{rem(40)};
+		}
+	}
+
+	// vacancy-card__details
+	&__details {
+		display: flex;
+		flex-direction: column;
+		gap: rem(28);
+
+		@media (min-width: $md4) {
+			gap: rem(40);
+			padding-top: rem(8);
+		}
+	}
+
+	// vacancy-card__block
+	&__block {
+		max-width: rem(661);
+	}
+
+	// vacancy-card__heading
+	&__heading {
+		margin: 0 0 rem(16);
+	}
+
+	// vacancy-card__list
+	&__list {
+		padding-left: rem(24);
+		list-style: disc;
+
+		li {
+			font-size: rem(16);
+			line-height: math.div(26, 16);
+			color: var(--color-text);
+
+			&:not(:last-child) {
+				margin-bottom: rem(10);
+			}
+		}
+	}
+
+	// vacancy-card__summary
+	&__summary {
+		margin-top: rem(24);
+		padding: rem(28) rem(24);
+		border-radius: var(--radius-md);
+		background: var(--color-bg);
+
+		@media (min-width: $md2) {
+			margin-top: rem(8);
+			padding: rem(44) rem(44) rem(42);
+		}
+	}
+
+	// vacancy-card__meta
+	&__meta {
+		display: flex;
+		flex-direction: column;
+		gap: rem(22);
+		margin-bottom: rem(28);
+
+		li {
+			font-family: $font-heading, sans-serif;
+			font-size: rem(16);
+			font-weight: 500;
+			line-height: 1.2;
+			color: #8a8a8a;
+
+			@media (min-width: $md4) {
+				font-size: rem(18);
+			}
+		}
+	}
+
+	// vacancy-card__apply
+	&__apply {
+		min-width: rem(200);
+
+		@media (min-width: $md4) {
+			min-width: rem(233);
+		}
+	}
+}
+
+.vacancy-modal {
+	position: relative;
+	width: min(100%, rem(896));
+	padding: rem(28) rem(20) rem(24);
+	border-radius: var(--radius-md);
+	background: #f7f8f3;
+	box-sizing: border-box;
+
+	@media (min-width: $md4) {
+		padding: rem(52) rem(40) rem(40);
+	}
+
+	// vacancy-modal--apply
+	&--apply {
+		background: var(--color-bg);
+	}
+
+	// vacancy-modal__close
+	&__close {
+		position: absolute;
+		top: rem(16);
+		right: rem(16);
+		width: rem(36);
+		height: rem(36);
+		padding: 0;
+		background: transparent;
+		cursor: pointer;
+
+		@media (min-width: $md4) {
+			top: rem(27);
+			right: rem(27);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		&:focus-visible {
+			outline: none;
+			border-radius: 50%;
+			box-shadow: var(--focus-ring);
+		}
+	}
+
+	// vacancy-modal__head
+	&__head {
+		margin-bottom: rem(24);
+		padding-right: rem(44);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(32);
+		}
+	}
+
+	// vacancy-modal__title
+	&__title {
+		margin: 0 0 rem(12);
+		font-family: $font-heading, sans-serif;
+		font-size: rem(24);
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--color-text);
+
+		@media (min-width: $md4) {
+			font-size: rem(30);
+			margin-bottom: rem(25);
+		}
+	}
+
+	// vacancy-modal__lead
+	&__lead {
+		margin: 0;
+		line-height: math.div(26, 16);
+		max-width: rem(540);
+	}
+
+	// vacancy-modal__fields
+	&__fields {
+		margin-bottom: rem(20);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(28);
+		}
+
+		.form-control {
+			min-height: rem(56);
+			border-radius: var(--radius-sm);
+			box-shadow: var(--shadow-soft);
+
+			@media (min-width: $md4) {
+				min-height: rem(62);
+				font-size: rem(18);
+				line-height: math.div(22, 18);
+			}
+		}
+	}
+
+	// vacancy-modal__textarea
+	&__textarea {
+		min-height: rem(160);
+		resize: vertical;
+
+		@media (min-width: $md4) {
+			min-height: rem(198);
+		}
+	}
+
+	// vacancy-modal__file
+	&__file {
+		display: block;
+		width: 100%;
+		cursor: pointer;
+	}
+
+	// vacancy-modal__file-input
+	&__file-input {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+
+	// vacancy-modal__file-btn
+	&__file-btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: rem(12);
+		width: 100%;
+		min-height: rem(56);
+		padding: rem(14) rem(20);
+		border: 1px solid var(--color-border-subtle);
+		border-radius: var(--radius-sm);
+		background: var(--color-bg);
+		box-shadow: var(--shadow-soft);
+		box-sizing: border-box;
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+		@media (min-width: $md4) {
+			min-height: rem(62);
+		}
+
+		img {
+			display: block;
+			width: rem(22);
+			height: rem(25);
+			flex-shrink: 0;
+		}
+
+		.vacancy-modal__file-input:focus-visible + & {
+			border-color: var(--color-primary);
+			box-shadow: var(--focus-ring);
+		}
+	}
+
+	// vacancy-modal__file-text
+	&__file-text {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: 1.2;
+		color: var(--color-primary);
+
+		@media (min-width: $md4) {
+			font-size: rem(18);
+		}
+	}
+
+	// vacancy-modal__consent
+	&__consent {
+		display: flex;
+		align-items: flex-start;
+		gap: rem(8);
+		margin-bottom: rem(20);
+		cursor: pointer;
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(24);
+		}
+	}
+
+	// vacancy-modal__checkbox
+	&__checkbox {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+
+		&:checked + .vacancy-modal__check {
+			img {
+				opacity: 1;
+			}
+		}
+
+		&:focus-visible + .vacancy-modal__check {
+			box-shadow: var(--focus-ring);
+		}
+	}
+
+	// vacancy-modal__check
+	&__check {
+		display: flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		width: rem(20);
+		height: rem(20);
+
+		img {
+			display: block;
+			width: rem(20);
+			height: rem(20);
+			opacity: 0;
+			transition: opacity 0.2s ease;
+		}
+	}
+
+	// vacancy-modal__consent-text
+	&__consent-text {
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(20, 14);
+		color: var(--color-text);
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+			line-height: math.div(26, 16);
+		}
+	}
+
+	// vacancy-modal__submit
+	&__submit {
+		min-width: rem(200);
+
+		@media (min-width: $md4) {
+			min-width: rem(233);
+		}
+	}
+}
+
+// Fancybox chrome for vacancy modals
+.fancybox__container:has(.vacancy-modal) {
+	--fancybox-bg: rgba(255, 255, 255, 0.6);
+	--fancybox-opacity: 1;
+
+	.fancybox__backdrop {
+		backdrop-filter: blur(8px);
+	}
+
+	.fancybox__slide {
+		padding: rem(16);
+	}
+
+	.fancybox__content {
+		padding: 0;
+		background: transparent;
+		color: inherit;
+		max-width: rem(896);
+		border-radius: var(--radius-md);
+	}
+
+	.f-button.is-close-btn {
+		display: none;
+	}
+}

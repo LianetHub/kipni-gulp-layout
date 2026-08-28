@@ -1,64 +1,63 @@
 .breadcrumbs {
-    position: relative;
-    z-index: 3;
-    padding: rem(16) 0 0;
+	position: relative;
+	z-index: 3;
+	padding: rem(16) 0 0;
 
-    // .breadcrumbs__list
-    &__list {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow: hidden;
-        white-space: nowrap;
-        gap: 0.5rem;
-    }
+	// breadcrumbs__list
+	&__list {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: hidden;
+		white-space: nowrap;
+		gap: 0.5rem;
+	}
 
-    // .breadcrumbs__item
-    &__item {
-        display: inline-flex;
-        align-items: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        min-width: 0;
-        line-height: 130%;
-        font-size: 0.75rem;
-        font-weight: 500;
+	// breadcrumbs__item
+	&__item {
+		display: inline-flex;
+		align-items: center;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		min-width: 0;
+		line-height: 1.2;
+		font-size: rem(14);
+		font-weight: 400;
 
-        &:not(:last-child) {
-            flex-shrink: 1;
+		&:not(:last-child) {
+			flex-shrink: 0;
+			overflow: visible;
+			text-overflow: clip;
 
-            &::before {
-                margin-left: 0.5rem;
-                font-size: 0.25rem;
-                order: 1;
-                @extend %ic;
-                content: "\e90f";
-            }
-        }
+			&::after {
+				content: "";
+				display: inline-block;
+				width: rem(4);
+				height: rem(6);
+				margin-left: 0.5rem;
+				background: currentColor;
+				opacity: 0.45;
+				clip-path: polygon(0 0, 100% 50%, 0 100%);
+			}
+		}
+	}
 
-        &:not(:last-child) {
-            flex-shrink: 0;
-            overflow: visible;
-            text-overflow: clip;
-        }
-    }
+	// breadcrumbs__link
+	&__link {
+		word-break: break-all;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		color: var(--color-primary);
 
-    // .breadcrumbs__link
-    &__link {
-        word-break: break-all;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        color: rgba($color: #271605, $alpha: .6);
+		&:is(a) {
+			color: var(--color-text);
+			transition: color 0.3s ease;
 
-        &:is(a) {
-            color: #271605;
-            transition: color 0.3s ease;
-
-            @media (any-hover: hover) {
-                &:hover {
-                    color: $accent;
-                }
-            }
-        }
-    }
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--color-primary);
+				}
+			}
+		}
+	}
 }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.html', {
+  "title": "KIPNI — Акции и предложения"
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.html')
+      <main class="page">
+        @@include('html/sections/promotions.html')
+        @@include('html/sections/gifts.html', {
+          "mod": "gifts--on-dark"
+        })
+      </main>
+      @@include('html/_footer.html', {})
+    </div>
+    @@include('html/_js.html', {})
+  </body>
+</html>

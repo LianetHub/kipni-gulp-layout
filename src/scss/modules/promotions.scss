@@ -1,0 +1,256 @@
+@use "sass:math";
+
+.promotions-intro {
+	padding-top: rem(24);
+	padding-bottom: rem(40);
+
+	@media (min-width: $md4) {
+		padding-top: rem(40);
+		padding-bottom: rem(56);
+	}
+
+	// promotions-intro__row
+	&__row {
+		@media (min-width: $md3) {
+			align-items: center;
+		}
+	}
+
+	// promotions-intro__content
+	&__content {
+		max-width: rem(487);
+	}
+
+	// promotions-intro__title
+	&__title {
+		margin-bottom: rem(24);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(36);
+		}
+	}
+
+	// promotions-intro__accent
+	&__accent {
+		color: var(--color-primary);
+	}
+
+	// promotions-intro__text
+	&__text {
+		line-height: math.div(26, 16);
+		max-width: rem(464);
+	}
+
+	// promotions-intro__media
+	&__media {
+		margin-top: rem(24);
+
+		@media (min-width: $md3) {
+			margin-top: 0;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			max-width: rem(846);
+			margin-inline: auto;
+		}
+	}
+}
+
+.promotions-list {
+	padding-bottom: rem(24);
+
+	@media (min-width: $md4) {
+		padding-bottom: rem(40);
+	}
+
+	// promotions-list__title
+	&__title {
+		margin-bottom: rem(24);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(40);
+		}
+	}
+
+	// promotions-list__row
+	&__row {
+		--gutter-x: #{rem(20)};
+		--gutter-y: #{rem(20)};
+	}
+}
+
+.promo-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 100%;
+	min-height: rem(360);
+	padding: rem(24) rem(20) rem(24);
+	overflow: hidden;
+	border-radius: var(--radius-md);
+	background: #f7f8f3;
+
+	@media (min-width: $md4) {
+		min-height: rem(420);
+		padding: rem(36) rem(40) rem(40);
+	}
+
+	@media (min-width: $md2) {
+		min-height: rem(482);
+		padding: rem(42) rem(59) rem(58);
+	}
+
+	// promo-card__head
+	&__head {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		gap: rem(16);
+		width: 100%;
+		margin-bottom: rem(20);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(28);
+		}
+	}
+
+	// promo-card__date
+	&__date {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		margin: 0;
+		padding-right: rem(56);
+
+		@media (min-width: $md4) {
+			padding-right: rem(72);
+		}
+	}
+
+	// promo-card__date-icon
+	&__date-icon {
+		flex-shrink: 0;
+		width: rem(24);
+		height: rem(24);
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// promo-card__date-text
+	&__date-text {
+		font-size: rem(14);
+		line-height: math.div(18, 14);
+		color: var(--color-text);
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+			line-height: math.div(26, 16);
+		}
+	}
+
+	// promo-card__badge
+	&__badge {
+		position: absolute;
+		top: rem(16);
+		right: rem(16);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(56);
+		height: rem(56);
+		border-radius: 50%;
+		background: var(--color-primary);
+
+		@media (min-width: $md4) {
+			top: rem(20);
+			right: rem(22);
+			width: rem(80);
+			height: rem(80);
+		}
+
+		img {
+			display: block;
+			width: rem(28);
+			height: rem(28);
+
+			@media (min-width: $md4) {
+				width: rem(40);
+				height: rem(40);
+			}
+		}
+	}
+
+	// promo-card__title
+	&__title {
+		position: relative;
+		z-index: 1;
+		max-width: rem(415);
+		margin: 0 0 rem(16);
+	}
+
+	// promo-card__text
+	&__text {
+		position: relative;
+		z-index: 1;
+		max-width: rem(265);
+		margin: 0;
+		line-height: math.div(26, 16);
+	}
+
+	// promo-card__btn
+	&__btn {
+		position: relative;
+		z-index: 1;
+		order: 5;
+		margin-top: rem(24);
+		min-width: rem(180);
+
+		@media (min-width: $md4) {
+			order: 0;
+			margin-top: auto;
+			min-width: rem(221);
+			padding-top: rem(32);
+		}
+	}
+
+	// promo-card__media
+	&__media {
+		position: relative;
+		align-self: center;
+		order: 4;
+		width: rem(220);
+		margin-top: rem(16);
+		pointer-events: none;
+		z-index: 0;
+
+		@media (min-width: $md4) {
+			position: absolute;
+			align-self: auto;
+			order: 0;
+			right: rem(-10);
+			bottom: rem(20);
+			width: rem(300);
+			margin-top: 0;
+		}
+
+		@media (min-width: $md2) {
+			width: rem(360);
+			right: rem(-8);
+			bottom: rem(30);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}

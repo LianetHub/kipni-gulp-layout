@@ -1,0 +1,120 @@
+@use "sass:math";
+
+.gifts {
+	padding-block: rem(24);
+
+	@media (min-width: $md4) {
+		padding-block: rem(40);
+	}
+
+	// gifts__banner
+	&__banner {
+		position: relative;
+		overflow: hidden;
+		border-radius: rem(20);
+		min-height: rem(373);
+
+		@media (min-width: $md4) {
+			min-height: rem(320);
+		}
+
+		@media (min-width: $md2) {
+			min-height: rem(394);
+		}
+	}
+
+	// gifts__img
+	&__img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: 70% center;
+
+		@media (min-width: $md4) {
+			object-position: center right;
+		}
+	}
+
+	// gifts__content
+	&__content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		min-height: rem(373);
+		padding: rem(27) rem(22);
+
+		@media (min-width: $md4) {
+			justify-content: center;
+			min-height: rem(320);
+			padding: rem(40) rem(48);
+		}
+
+		@media (min-width: $md2) {
+			min-height: rem(394);
+			padding: rem(74) rem(68);
+		}
+	}
+
+	// gifts__title
+	&__title {
+		max-width: rem(286);
+		margin: 0;
+		font-family: $font-heading, sans-serif;
+		font-size: rem(24);
+		font-weight: 500;
+		line-height: math.div(29, 24);
+		color: var(--color-text);
+
+		@media (min-width: $md4) {
+			max-width: rem(523);
+			font-size: rem(32);
+			line-height: math.div(38, 32);
+		}
+
+		@media (min-width: $md2) {
+			font-size: rem(36);
+			line-height: math.div(43, 36);
+		}
+	}
+
+	// gifts__lead
+	&__lead {
+		margin: rem(23) 0 0;
+		max-width: rem(180);
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(14);
+		line-height: math.div(16, 14);
+		color: var(--color-muted);
+
+		@media (min-width: $md4) {
+			margin-top: rem(17);
+			max-width: rem(250);
+			font-size: rem(16);
+			line-height: math.div(18, 16);
+		}
+	}
+
+	// gifts__btn
+	&__btn {
+		margin-top: auto;
+		padding-top: rem(22);
+
+		@media (min-width: $md4) {
+			margin-top: rem(36);
+			padding-top: 0;
+		}
+	}
+
+	// gifts--on-dark
+	&--on-dark {
+		.gifts__title,
+		.gifts__lead {
+			color: var(--color-white);
+		}
+	}
+}

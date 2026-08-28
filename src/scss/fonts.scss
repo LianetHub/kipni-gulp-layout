@@ -1,8 +1,8 @@
 @font-face {
-								font-family: 'Golos Text';
+								font-family: 'Onest';
 								font-display: swap;
-								src: url("../fonts/Golos Text-Medium.woff2") format("woff2"), url("../fonts/Golos Text-Medium.woff") format("woff");
-								font-weight: 500;
+								src: url("../fonts/Onest-Regular.woff2") format("woff2"), url("../fonts/Onest-Regular.woff") format("woff");
+								font-weight: 400;
 								font-style: normal;
 							}
 @font-face {
@@ -15,14 +15,14 @@
 @font-face {
 								font-family: 'Onest';
 								font-display: swap;
-								src: url("../fonts/Onest-Regular.woff2") format("woff2"), url("../fonts/Onest-Regular.woff") format("woff");
-								font-weight: 400;
+								src: url("../fonts/Onest-SemiBold.woff2") format("woff2"), url("../fonts/Onest-SemiBold.woff") format("woff");
+								font-weight: 600;
 								font-style: normal;
 							}
 @font-face {
-								font-family: 'Onest';
+								font-family: 'Golos Text';
 								font-display: swap;
-								src: url("../fonts/Onest-SemiBold.woff2") format("woff2"), url("../fonts/Onest-SemiBold.woff") format("woff");
-								font-weight: 600;
+								src: url("../fonts/Golos Text-Medium.woff2") format("woff2"), url("../fonts/Golos Text-Medium.woff") format("woff");
+								font-weight: 500;
 								font-style: normal;
 							}

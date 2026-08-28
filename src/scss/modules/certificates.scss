@@ -1,0 +1,294 @@
+@use "sass:math";
+
+.certs-intro {
+	padding-top: rem(24);
+	padding-bottom: rem(48);
+
+	@media (min-width: $md4) {
+		padding-top: rem(40);
+		padding-bottom: rem(64);
+	}
+
+	// certs-intro__row
+	&__row {
+		@media (min-width: $md3) {
+			align-items: center;
+		}
+	}
+
+	// certs-intro__content
+	&__content {
+		max-width: rem(811);
+	}
+
+	// certs-intro__title
+	&__title {
+		margin-bottom: rem(24);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(36);
+		}
+	}
+
+	// certs-intro__accent
+	&__accent {
+		color: var(--color-primary);
+	}
+
+	// certs-intro__text
+	&__text {
+		line-height: math.div(26, 16);
+		margin-bottom: rem(32);
+		max-width: rem(540);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(48);
+			max-width: rem(811);
+		}
+	}
+
+	// certs-intro__benefits
+	&__benefits {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		@media (min-width: $md4) {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: rem(85);
+		}
+	}
+
+	// certs-intro__benefit
+	&__benefit {
+		display: flex;
+		align-items: center;
+		gap: rem(13);
+		max-width: rem(221);
+	}
+
+	// certs-intro__check
+	&__check {
+		flex-shrink: 0;
+		width: rem(40);
+		height: rem(40);
+
+		img {
+			width: 100%;
+			height: 100%;
+			display: block;
+		}
+	}
+
+	// certs-intro__benefit-text
+	&__benefit-text {
+		font-size: rem(16);
+		line-height: math.div(19, 16);
+		color: var(--color-text);
+	}
+
+	// certs-intro__media
+	&__media {
+		margin-top: rem(32);
+
+		@media (min-width: $md3) {
+			margin-top: 0;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			max-width: rem(484);
+			margin-inline: auto;
+		}
+	}
+}
+
+.certs-groups {
+	padding-bottom: rem(48);
+
+	@media (min-width: $md4) {
+		padding-bottom: rem(64);
+	}
+}
+
+.certs-card {
+	background: #f7f8f3;
+	border-radius: var(--radius-md);
+	padding: rem(32) rem(20);
+
+	@media (min-width: $md4) {
+		padding: rem(48) rem(40);
+	}
+
+	@media (min-width: $md2) {
+		padding: rem(69) rem(74);
+	}
+
+	& + & {
+		margin-top: rem(24);
+
+		@media (min-width: $md4) {
+			margin-top: rem(51);
+		}
+	}
+
+	// certs-card__row
+	&__row {
+		@media (min-width: $md3) {
+			align-items: center;
+		}
+	}
+
+	// certs-card__content
+	&__content {
+		max-width: rem(718);
+	}
+
+	// certs-card__title
+	&__title {
+		margin-bottom: rem(20);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(32);
+		}
+	}
+
+	// certs-card__text
+	&__text {
+		line-height: math.div(26, 16);
+		margin-bottom: rem(28);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(48);
+		}
+	}
+
+	// certs-card__btn
+	&__btn {
+		min-width: rem(221);
+	}
+
+	// certs-card__previews
+	&__previews {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: rem(16);
+
+		@media (min-width: $md4) {
+			gap: rem(24);
+			justify-content: flex-end;
+		}
+	}
+
+	// certs-card__preview
+	&__preview {
+		display: block;
+		flex: 0 1 rem(160);
+		max-width: rem(266);
+		background: #fff;
+		border: rem(12) solid #fff;
+		border-radius: rem(5);
+		box-shadow: 0 #{rem(4)} #{rem(30)} rgba(0, 0, 0, 0.25);
+		overflow: hidden;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+		@media (min-width: $md4) {
+			flex-basis: rem(220);
+			border-width: rem(20);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				transform: translateY(#{rem(-4)});
+				box-shadow: 0 #{rem(8)} #{rem(30)} rgba(0, 0, 0, 0.28);
+			}
+		}
+
+		&:focus-visible {
+			outline: none;
+			box-shadow: var(--focus-ring);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.certs-letters {
+	padding-bottom: rem(64);
+
+	@media (min-width: $md4) {
+		padding-bottom: rem(100);
+	}
+
+	// certs-letters__title
+	&__title {
+		margin-bottom: rem(28);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(48);
+		}
+	}
+}
+
+.certs-file {
+	display: flex;
+	align-items: center;
+	gap: rem(17);
+	color: var(--color-text);
+	transition: color 0.2s ease;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--color-primary);
+		}
+	}
+
+	&:focus-visible {
+		outline: none;
+		box-shadow: var(--focus-ring);
+		border-radius: rem(4);
+	}
+
+	// certs-file__icon
+	&__icon {
+		flex-shrink: 0;
+		width: rem(37);
+		height: rem(37);
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// certs-file__meta
+	&__meta {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: rem(6);
+		font-size: rem(18);
+		line-height: math.div(22, 18);
+	}
+
+	// certs-file__name
+	&__name {
+		&::after {
+			content: ",";
+		}
+	}
+
+	// certs-file__size
+	&__size {
+		white-space: nowrap;
+	}
+}

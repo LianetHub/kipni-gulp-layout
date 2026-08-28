@@ -1,0 +1,173 @@
+@use "sass:math";
+
+.promo-intro {
+	position: relative;
+	padding-top: rem(24);
+	padding-bottom: rem(40);
+	overflow: hidden;
+
+	@media (min-width: $md4) {
+		padding-top: rem(32);
+		padding-bottom: rem(56);
+	}
+
+	// promo-intro__inner
+	&__inner {
+		position: relative;
+	}
+
+	// promo-intro__decor
+	&__decor {
+		display: none;
+		pointer-events: none;
+		position: absolute;
+		z-index: 0;
+		top: rem(-80);
+		right: rem(-180);
+		width: rem(420);
+		height: auto;
+
+		@media (min-width: $md3) {
+			display: block;
+		}
+
+		@media (min-width: $md2) {
+			top: rem(-90);
+			right: rem(-220);
+			width: rem(520);
+		}
+
+		@media (min-width: $md1) {
+			right: rem(-280);
+			width: rem(646);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	// promo-intro__title
+	&__title {
+		position: relative;
+		z-index: 1;
+		margin: 0 0 rem(16);
+		max-width: rem(900);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(24);
+		}
+	}
+
+	// promo-intro__date
+	&__date {
+		position: relative;
+		z-index: 1;
+		display: inline-flex;
+		align-items: center;
+		gap: rem(10);
+		margin: 0 0 rem(24);
+		color: var(--color-primary);
+		font-size: rem(14);
+		line-height: math.div(16, 14);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(28);
+			font-size: rem(16);
+			line-height: math.div(18, 16);
+		}
+	}
+
+	// promo-intro__date-icon
+	&__date-icon {
+		flex-shrink: 0;
+		width: rem(24);
+		height: rem(24);
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	// promo-intro__date-text
+	&__date-text {
+		font-weight: 500;
+	}
+
+	// promo-intro__row
+	&__row {
+		position: relative;
+		z-index: 1;
+
+		@media (min-width: $md3) {
+			align-items: flex-end;
+		}
+	}
+
+	// promo-intro__main
+	&__main {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		@media (min-width: $md4) {
+			gap: rem(28);
+		}
+	}
+
+	// promo-intro__media
+	&__media {
+		overflow: hidden;
+		border-radius: var(--radius-md);
+		max-width: rem(621);
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+	}
+
+	// promo-intro__text
+	&__text {
+		max-width: rem(936);
+		line-height: math.div(26, 16);
+	}
+
+	// promo-intro__teaser
+	&__teaser {
+		position: relative;
+		z-index: 2;
+		max-width: rem(345);
+		margin-inline: auto;
+
+		@media (min-width: $md3) {
+			margin-inline: 0 0;
+			margin-left: auto;
+		}
+	}
+}
+
+.promo-products {
+	// promo-products__title
+	&__title {
+		margin: 0 0 rem(24);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(36);
+		}
+	}
+
+	// promo-products__row
+	&__row {
+		.product-card {
+			max-width: none;
+			height: 100%;
+		}
+	}
+}

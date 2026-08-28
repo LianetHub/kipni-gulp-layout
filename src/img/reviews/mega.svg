@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="195" height="29" viewBox="0 0 195 29" role="img" aria-label="Мегамаркет">
+  <defs><linearGradient id="mm" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#A855F7"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs>
+  <rect width="29" height="29" rx="8" fill="url(#mm)"/>
+  <path d="M8 20V9l4.5 7L17 9v11h-2.2v-6.5L11.2 19h-1.4L6.5 13.5V20H8z" fill="#fff"/>
+  <text x="38" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#6D28D9">Мегамаркет</text>
+</svg>

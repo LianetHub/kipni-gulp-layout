@@ -1,0 +1,39 @@
+.ask-widget {
+	display: none;
+	position: fixed;
+	right: 0;
+	bottom: rem(120);
+	z-index: $ui-index-6;
+	width: rem(180);
+	pointer-events: none;
+
+	@media (min-width: $md2) {
+		display: block;
+	}
+
+	// ask-widget__link
+	&__link {
+		position: relative;
+		display: block;
+		pointer-events: auto;
+		text-decoration: none;
+		color: inherit;
+	}
+
+	// ask-widget__img
+	&__img {
+		display: block;
+		width: rem(160);
+		height: auto;
+		margin-left: auto;
+	}
+
+	// ask-widget__btn
+	&__btn {
+		position: absolute;
+		right: 0;
+		bottom: rem(12);
+		min-width: rem(180);
+		pointer-events: none;
+	}
+}

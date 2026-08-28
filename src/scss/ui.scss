@@ -202,6 +202,13 @@
 		min-height: rem(31);
 		padding-inline: rem(9);
 	}
+
+	// badge--new
+	&--new {
+		background: #ac42f9;
+		min-height: rem(31);
+		padding-inline: rem(9);
+	}
 }
 
 .product-card {
@@ -229,6 +236,7 @@
 		flex-shrink: 0;
 		width: rem(28);
 		height: rem(26);
+		margin-left: auto;
 		padding: 0;
 		border: none;
 		background: transparent;

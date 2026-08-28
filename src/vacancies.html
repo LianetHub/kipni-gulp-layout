@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.html', {
+  "title": "KIPNI — Вакансии"
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.html')
+      <main class="page">
+        @@include('html/sections/vacancies.html')
+      </main>
+      @@include('html/_footer.html', {
+        "askFancyboxSrc": "#modal-ask-question"
+      })
+      @@include('html/sections/ask-widget.html', {
+        "fancyboxSrc": "#modal-ask-question"
+      })
+      @@include('html/sections/vacancy-modals.html')
+    </div>
+    @@include('html/_js.html', {})
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<section class="popular section-space-md" aria-labelledby="popular-title">
+	<div class="container">
+		<h2 class="h2 popular__title" id="popular-title">Популярные товары бытовой химии</h2>
+	</div>
+	<div class="popular__slider-wrap">
+		<div class="container popular__slider-inner">
+			<div class="swiper popular__slider" data-popular-slider>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/toilet-gel.png",
+							"image_alt": "Чистящий гель KIPNI для унитазов",
+							"link": "#"
+						})
+					</div>
+					<div class="swiper-slide">
+						@@include('../templates/product-card.html', {
+							"title": "Гель для душа Канди шоп",
+							"volume": "750 мл",
+							"image": "img/products/candy-shop.png",
+							"image_alt": "Гель для душа Канди шоп папайя виноград",
+							"link": "#"
+						})
+					</div>
+					<div class="swiper-slide">
+						@@include('../templates/product-card.html', {
+							"title": "Жидкое мыло Тропические фрукты",
+							"volume": "500 мл",
+							"badge": "Новинка",
+							"badge_mod": "badge--new",
+							"image": "img/products/tropical-soap.png",
+							"image_alt": "Жидкое мыло Тропические фрукты",
+							"link": "#"
+						})
+					</div>
+					<div class="swiper-slide">
+						@@include('../templates/product-card.html', {
+							"title": "Мыло хозяйственное Кипни",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/household-soap.png",
+							"image_alt": "Мыло хозяйственное Кипни",
+							"link": "#"
+						})
+					</div>
+					<div class="swiper-slide">
+						@@include('../templates/product-card.html', {
+							"title": "Универсальный гель для стирки",
+							"volume": "5 л",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/laundry-gel.png",
+							"image_alt": "Универсальный гель для стирки KIPNI 5 л",
+							"link": "#"
+						})
+					</div>
+					<div class="swiper-slide">
+						@@include('../templates/product-card.html', {
+							"title": "Средство для посуды",
+							"volume": "750 мл",
+							"image": "img/products/dish.png",
+							"image_alt": "Средство для посуды OLLY",
+							"link": "#"
+						})
+					</div>
+				</div>
+			</div>
+			<button type="button" class="popular__next" data-popular-next aria-label="Следующие товары">
+				<img src="fonts/iconfont/chevron-right.svg" alt="" width="9" height="15" aria-hidden="true">
+			</button>
+		</div>
+	</div>
+</section>

@@ -1,0 +1,359 @@
+@use "sass:math";
+
+.footer {
+	position: relative;
+	background: #fcfbfb;
+	padding-block: rem(60) rem(40);
+	overflow: clip;
+
+	@media (min-width: $md2) {
+		padding-block: rem(46) rem(40);
+	}
+
+	// footer__inner
+	&__inner {
+		position: relative;
+		z-index: $ui-index-2;
+	}
+
+	// footer__main
+	&__main {
+		--gutter-y: #{rem(40)};
+
+		@media (min-width: $md2) {
+			--gutter-y: #{rem(0)};
+		}
+	}
+
+	// footer__brand
+	&__brand {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		margin-bottom: rem(8);
+
+		@media (min-width: $md2) {
+			align-items: flex-start;
+			align-self: stretch;
+			height: 100%;
+			text-align: left;
+			margin-bottom: 0;
+			padding-right: rem(16);
+		}
+	}
+
+	// footer__logo
+	&__logo {
+		display: inline-flex;
+		width: rem(173);
+		max-width: 100%;
+
+		img {
+			width: 100%;
+			height: auto;
+			object-fit: contain;
+		}
+	}
+
+	// footer__tagline
+	&__tagline {
+		max-width: rem(280);
+		margin-top: rem(16);
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(17, 14);
+		color: var(--color-muted);
+
+		@media (min-width: $md2) {
+			max-width: rem(260);
+			margin-top: rem(20);
+			font-size: rem(16);
+			line-height: math.div(19, 16);
+		}
+	}
+
+	// footer__col
+	&__col {
+		@media (min-width: $md2) {
+			padding-top: rem(4);
+		}
+	}
+
+	// footer__title
+	&__title {
+		margin-bottom: rem(20);
+		font-family: $font-heading, sans-serif;
+		font-size: rem(18);
+		font-weight: 500;
+		line-height: math.div(20, 18);
+		color: var(--color-text);
+
+		@media (min-width: $md2) {
+			margin-bottom: rem(28);
+			font-size: rem(20);
+			line-height: math.div(22, 20);
+		}
+	}
+
+	// footer__list
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: rem(20);
+
+		@media (min-width: $md2) {
+			gap: rem(25);
+		}
+	}
+
+	// footer__link
+	&__link {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(17, 14);
+		color: var(--color-muted);
+		transition: color 0.2s ease;
+
+		@media (min-width: $md2) {
+			font-size: rem(16);
+			line-height: math.div(19, 16);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-primary);
+			}
+		}
+	}
+
+	// footer__contacts
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	// footer__phone
+	&__phone {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(18);
+		font-weight: 600;
+		line-height: math.div(20, 18);
+		color: var(--color-primary);
+		transition: opacity 0.2s ease;
+
+		@media (min-width: $md2) {
+			font-size: rem(20);
+			line-height: math.div(22, 20);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	// footer__hours
+	&__hours {
+		margin-top: rem(8);
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(12);
+		font-weight: 400;
+		line-height: math.div(14, 12);
+		color: var(--color-muted);
+
+		@media (min-width: $md2) {
+			font-size: rem(14);
+			line-height: math.div(17, 14);
+		}
+	}
+
+	// footer__email
+	&__email {
+		margin-top: rem(16);
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: math.div(18, 16);
+		color: var(--color-text);
+		transition: color 0.2s ease;
+
+		@media (min-width: $md2) {
+			margin-top: rem(20);
+			font-size: rem(18);
+			line-height: math.div(20, 18);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-primary);
+			}
+		}
+	}
+
+	// footer__socials
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: rem(10);
+		margin-top: rem(20);
+
+		@media (min-width: $md2) {
+			margin-top: rem(24);
+		}
+	}
+
+	// footer__social
+	&__social {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(38);
+		height: rem(38);
+		border: 1px solid var(--color-primary);
+		border-radius: 50%;
+		transition: background-color 0.2s ease, box-shadow 0.2s ease;
+
+		@media (min-width: $md2) {
+			width: rem(40);
+			height: rem(40);
+		}
+
+		img {
+			width: auto;
+			height: auto;
+			max-width: rem(20);
+			max-height: rem(16);
+			object-fit: contain;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: var(--color-soft-green);
+			}
+		}
+
+		&:focus-visible {
+			outline: none;
+			box-shadow: var(--focus-ring);
+		}
+	}
+
+	// footer__btn
+	&__btn {
+		margin-top: rem(20);
+		min-height: rem(44);
+		padding: rem(14) rem(24);
+		background: var(--color-primary);
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: math.div(16, 14);
+
+		@media (min-width: $md2) {
+			margin-top: rem(24);
+			min-height: rem(50);
+			padding: rem(16) rem(30);
+			font-size: rem(16);
+			line-height: math.div(18, 16);
+		}
+	}
+
+	// footer__legal
+	&__legal {
+		display: flex;
+		flex-direction: column;
+		gap: rem(12);
+
+		// footer__legal--desktop
+		&--desktop {
+			display: none;
+			margin-top: auto;
+			padding-top: rem(48);
+			text-align: left;
+			align-items: flex-start;
+
+			@media (min-width: $md2) {
+				display: flex;
+			}
+		}
+
+		// footer__legal--mobile
+		&--mobile {
+			align-items: center;
+			text-align: center;
+			margin-bottom: rem(24);
+
+			@media (min-width: $md2) {
+				display: none;
+			}
+		}
+	}
+
+	// footer__legal-link
+	&__legal-link {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(14);
+		font-weight: 500;
+		line-height: math.div(17, 14);
+		color: var(--color-primary);
+		text-decoration: underline;
+		text-underline-offset: rem(2);
+		transition: opacity 0.2s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.75;
+			}
+		}
+	}
+
+	// footer__bottom
+	&__bottom {
+		margin-top: rem(48);
+		text-align: center;
+
+		@media (min-width: $md2) {
+			margin-top: rem(56);
+		}
+	}
+
+	// footer__copy
+	&__copy {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(17, 14);
+		color: rgba(115, 115, 115, 0.5);
+
+		@media (min-width: $md2) {
+			font-size: rem(16);
+			line-height: math.div(19, 16);
+		}
+	}
+
+	// footer__deco
+	&__deco {
+		display: none;
+
+		@media (min-width: $md2) {
+			display: block;
+			position: absolute;
+			right: rem(24);
+			top: rem(76);
+			z-index: $ui-index-1;
+			width: rem(130);
+			height: auto;
+			pointer-events: none;
+			user-select: none;
+		}
+
+		@media (min-width: $md0) {
+			right: rem(80);
+			width: rem(163);
+		}
+	}
+}

@@ -1,0 +1,198 @@
+<section class="favorites" aria-labelledby="favorites-title">
+	<div class="container">
+		<nav class="breadcrumbs" aria-label="Хлебные крошки">
+			<ol class="breadcrumbs__list">
+				<li class="breadcrumbs__item">
+					<a class="breadcrumbs__link" href="index.html">Главная</a>
+				</li>
+				<li class="breadcrumbs__item">
+					<span class="breadcrumbs__link">Избранное</span>
+				</li>
+			</ol>
+		</nav>
+
+		<div class="favorites__head">
+			<h1 class="favorites__title" id="favorites-title">
+				<span class="favorites__title-text">Избранное:</span>
+				<span class="favorites__count">9 товаров</span>
+			</h1>
+			<button type="button" class="catalog-toolbar__sort" aria-label="Сортировать товары">
+				<span class="catalog-toolbar__sort-icon" aria-hidden="true">
+					<img src="img/catalog/icon-sort.svg" alt="" width="20" height="20">
+				</span>
+				<span class="catalog-toolbar__sort-text">Сортировать</span>
+				<span class="catalog-toolbar__sort-chevron" aria-hidden="true">
+					<img src="fonts/iconfont/chevron-down.svg" alt="" width="12" height="7">
+				</span>
+			</button>
+		</div>
+	</div>
+
+	<div class="container favorites__body">
+		<div class="row gy-4">
+			<aside class="col-12 col-lg-3 favorites__aside">
+				<form class="catalog-filters" data-catalog-filters aria-labelledby="favorites-filters-title">
+					<div class="catalog-filters__head">
+						<h2 class="catalog-filters__title" id="favorites-filters-title">Фильтры</h2>
+						<button type="button" class="catalog-filters__reset" data-catalog-filters-reset>
+							Сбросить
+							<span class="catalog-filters__reset-icon" aria-hidden="true"></span>
+						</button>
+					</div>
+
+					<div class="catalog-filters__group">
+						<h3 class="catalog-filters__group-title">Бренд</h3>
+						<div class="catalog-filters__chips">
+							<button type="button" class="catalog-chip catalog-chip--brand is-active" data-catalog-chip aria-pressed="true">KIPNI</button>
+							<button type="button" class="catalog-chip catalog-chip--brand" data-catalog-chip aria-pressed="false">AXIT</button>
+							<button type="button" class="catalog-chip catalog-chip--brand" data-catalog-chip aria-pressed="false">Olly</button>
+							<button type="button" class="catalog-chip catalog-chip--brand" data-catalog-chip aria-pressed="false">Lutea</button>
+						</div>
+					</div>
+
+					<div class="catalog-filters__group">
+						<h3 class="catalog-filters__group-title">Литраж</h3>
+						<div class="catalog-filters__chips">
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">380 мл</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">500 мл</button>
+							<button type="button" class="catalog-chip is-active" data-catalog-chip aria-pressed="true">750 мл</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">1 л</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">1.5 л</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">2.5 л</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">5 л</button>
+						</div>
+					</div>
+
+					<div class="catalog-filters__group">
+						<h3 class="catalog-filters__group-title">Тип</h3>
+						<div class="catalog-filters__chips">
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">Гель для душа</button>
+							<button type="button" class="catalog-chip is-active" data-catalog-chip aria-pressed="true">Шампунь</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">Кондиционер для белья</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">Средство для мытья пола</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">Жидкое мыло</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">Мыло</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">Средство для мытья посуды</button>
+							<button type="button" class="catalog-chip" data-catalog-chip aria-pressed="false">Мыло хозяйственное жидкое</button>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn--primary catalog-filters__submit">Применить фильтр</button>
+				</form>
+			</aside>
+
+			<div class="col-12 col-lg-9 favorites__content">
+				<div class="row gy-4 catalog-products">
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/toilet-gel.png",
+							"image_alt": "Чистящий гель KIPNI для унитазов",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Новинка",
+							"badge_mod": "badge--new",
+							"image": "img/products/candy-shop.png",
+							"image_alt": "Гель для душа Канди шоп",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/tropical-soap.png",
+							"image_alt": "Жидкое мыло Тропические фрукты",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/household-soap.png",
+							"image_alt": "Мыло хозяйственное Кипни",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/laundry-gel.png",
+							"image_alt": "Универсальный гель для стирки KIPNI",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/dish.png",
+							"image_alt": "Средство для посуды OLLY",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/toilet-gel.png",
+							"image_alt": "Чистящий гель KIPNI для унитазов",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Новинка",
+							"badge_mod": "badge--new",
+							"image": "img/products/candy-shop.png",
+							"image_alt": "Гель для душа Канди шоп",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+					<div class="col-12 col-sm-6 col-xl-4">
+						@@include('../templates/product-card.html', {
+							"title": "Чистящий гель для унитазов",
+							"volume": "750 мл",
+							"badge": "Хит",
+							"badge_mod": "badge--hit",
+							"image": "img/products/tropical-soap.png",
+							"image_alt": "Жидкое мыло Тропические фрукты",
+							"link": "#",
+							"favorited": true
+						})
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

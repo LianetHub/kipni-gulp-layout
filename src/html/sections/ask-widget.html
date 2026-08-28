@@ -1,0 +1,24 @@
+<aside class="ask-widget" aria-label="Задать вопрос">
+	@@if(typeof fancyboxSrc !== 'undefined' && fancyboxSrc){
+	<a
+		class="ask-widget__link"
+		href="@@fancyboxSrc"
+		data-fancybox
+		data-src="@@fancyboxSrc"
+		data-type="inline"
+	>
+	}
+	@@if(typeof fancyboxSrc === 'undefined' || !fancyboxSrc){
+	<a class="ask-widget__link" href="#">
+	}
+		<img
+			class="ask-widget__img"
+			src="img/ask/bird.png"
+			alt="Маскот KIPNI — зелёная птица"
+			width="230"
+			height="243"
+			loading="lazy"
+		>
+		<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
+	</a>
+</aside>

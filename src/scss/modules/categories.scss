@@ -1,0 +1,126 @@
+@use "sass:math";
+
+.categories {
+	padding-block: rem(32);
+
+	@media (min-width: $md4) {
+		padding-block: rem(48);
+	}
+
+	@media (min-width: $md2) {
+		padding-block: rem(80);
+	}
+}
+
+.category-card {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	height: rem(112);
+	border-radius: rem(12);
+	color: inherit;
+	text-decoration: none;
+
+	@media (min-width: $md4) {
+		height: rem(200);
+		border-radius: var(--radius-btn);
+	}
+
+	@media (min-width: $md2) {
+		height: rem(288);
+		border-radius: rem(15);
+	}
+
+	// category-card__img
+	&__img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	// category-card__content
+	&__content {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		height: 100%;
+		padding: rem(15) rem(13);
+
+		@media (min-width: $md4) {
+			padding: rem(24) rem(28);
+		}
+
+		@media (min-width: $md2) {
+			padding: rem(30);
+		}
+	}
+
+	// category-card__title
+	&__title {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(16);
+		font-weight: 600;
+		line-height: math.div(18, 16);
+		color: var(--color-text);
+		margin: 0;
+
+		@media (min-width: $md4) {
+			font-size: rem(20);
+			line-height: math.div(22, 20);
+		}
+
+		@media (min-width: $md2) {
+			font-size: rem(24);
+			line-height: math.div(26, 24);
+		}
+	}
+
+	// category-card__lead
+	&__lead {
+		display: none;
+		margin: rem(16) 0 0;
+		max-width: rem(195);
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: math.div(17, 16);
+		color: var(--color-muted);
+
+		@media (min-width: $md2) {
+			display: block;
+		}
+	}
+
+	// category-card__btn
+	&__btn {
+		display: none;
+		margin-top: auto;
+		pointer-events: none;
+
+		@media (min-width: $md2) {
+			display: inline-flex;
+			min-width: rem(208);
+		}
+
+		.btn__chevron {
+			transform: rotate(-90deg);
+		}
+	}
+
+	// category-card--accent
+	&.category-card--accent {
+		.category-card__btn.btn--primary {
+			font-size: rem(16);
+			font-weight: 600;
+			padding-block: rem(19);
+		}
+
+		.category-card__btn .btn__chevron {
+			filter: brightness(0) invert(1);
+		}
+	}
+}

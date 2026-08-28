@@ -47,7 +47,7 @@ const fonts = gulp.series(otf2ttf, ttfToWoff, copyWoff, fontsStyle);
 const mainTasks = gulp.series(
     fonts,
     // svgSpriteTask,
-    gulp.parallel(copy, copyCssLibs, copyJsLibs, html, normalize, scss, favicon, js, json, images)
+    gulp.parallel(copy, copyCssLibs, copyJsLibs, html, normalize, scss, favicon, js, json, images, php)
 );
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
