@@ -134,14 +134,12 @@
 	// promo-card__date-icon
 	&__date-icon {
 		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		width: rem(24);
 		height: rem(24);
-
-		img {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
+		font-size: rem(24);
 	}
 
 	// promo-card__date-text

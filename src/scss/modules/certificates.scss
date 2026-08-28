@@ -71,14 +71,12 @@
 	// certs-intro__check
 	&__check {
 		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		width: rem(40);
 		height: rem(40);
-
-		img {
-			width: 100%;
-			height: 100%;
-			display: block;
-		}
+		font-size: rem(40);
 	}
 
 	// certs-intro__benefit-text
@@ -260,14 +258,12 @@
 	// certs-file__icon
 	&__icon {
 		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		width: rem(37);
 		height: rem(37);
-
-		img {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
+		font-size: rem(37);
 	}
 
 	// certs-file__meta

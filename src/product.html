@@ -7,7 +7,268 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-        @@include('html/sections/product.html')
+          <div class="container">
+            @@include('html/templates/breadcrumbs.html', {
+              "parent": "Каталог товаров",
+              "parentHref": "catalog.html",
+              "parent2": "Уборка",
+              "parent2Href": "#",
+              "current": "Гель для стирки белого белья"
+            })
+          </div>
+
+        <section class="product" aria-labelledby="product-title">
+          <div class="container product__inner">
+
+            <div class="row gy-4 product__top">
+              <div class="col-12 col-lg-7">
+                <div class="product-gallery">
+                  <div class="product-gallery__thumbs" role="list">
+                    <button type="button" class="product-gallery__thumb is-active" role="listitem" aria-label="Фото товара 1" aria-current="true">
+                      <img src="@img/product/gallery-1.png" alt="Гель для стирки белого белья KIPNI, вид 1" width="107" height="111">
+                    </button>
+                    <button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 2">
+                      <img src="@img/product/gallery-2.png" alt="Гель для стирки белого белья KIPNI, вид 2" width="107" height="111" loading="lazy">
+                    </button>
+                    <button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 3">
+                      <img src="@img/product/gallery-3.png" alt="Гель для стирки белого белья KIPNI, вид 3" width="107" height="111" loading="lazy">
+                    </button>
+                    <button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 4">
+                      <img src="@img/product/gallery-4.png" alt="Гель для стирки белого белья KIPNI, вид 4" width="107" height="111" loading="lazy">
+                    </button>
+                  </div>
+
+                  <div class="product-gallery__main">
+                    <a class="product-gallery__zoom icon-arrows-maximize" href="img/product/gallery-1.png" data-fancybox="product-gallery" aria-label="Открыть фото в полном размере"></a>
+                    <img class="product-gallery__image" src="@img/product/gallery-1.png" alt="Гель для стирки белого белья KIPNI" width="642" height="663">
+                    <a class="visually-hidden" href="img/product/gallery-2.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 2</a>
+                    <a class="visually-hidden" href="img/product/gallery-3.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 3</a>
+                    <a class="visually-hidden" href="img/product/gallery-4.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 4</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-lg-5">
+                <div class="product-info">
+                  <div class="product-info__rating" aria-label="Рейтинг 4.9 из 5">
+                    <span class="product-info__stars" aria-hidden="true">
+                      <span class="icon-star" aria-hidden="true"></span>
+                      <span class="icon-star" aria-hidden="true"></span>
+                      <span class="icon-star" aria-hidden="true"></span>
+                      <span class="icon-star" aria-hidden="true"></span>
+                      <span class="icon-star" aria-hidden="true"></span>
+                    </span>
+                    <span class="product-info__score">4.9</span>
+                  </div>
+
+                  <h1 class="h1 product-info__title" id="product-title">Гель для стирки белого белья</h1>
+
+                  <button type="button" class="product-info__favorite icon-heart" aria-pressed="false">
+                    В избранное
+                  </button>
+
+                  <div class="product-info__volume">
+                    <p class="h3 product-info__label">Объем</p>
+                    <div class="product-info__chips" role="group" aria-label="Выбор объёма">
+                      <button type="button" class="product-info__chip is-active" aria-pressed="true">0.75 л</button>
+                      <button type="button" class="product-info__chip" aria-pressed="false">1.5 л</button>
+                      <button type="button" class="product-info__chip" aria-pressed="false">2 л</button>
+                    </div>
+                  </div>
+
+                  <div class="product-info__buy">
+                    <p class="h3 product-info__label">Доступно для покупки</p>
+                    <div class="row g-3 product-info__markets">
+                      <div class="col-6">
+                        <a class="product-info__market" href="#" aria-label="Купить в Золотом Яблоке">
+                          <img src="@img/product/golden-apple.svg" alt="Золотое Яблоко" width="160" height="24" loading="lazy">
+                        </a>
+                      </div>
+                      <div class="col-6">
+                        <a class="product-info__market" href="#" aria-label="Купить на Ozon">
+                          <img src="@img/shared/logos/marketplaces/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
+                        </a>
+                      </div>
+                      <div class="col-6">
+                        <a class="product-info__market" href="#" aria-label="Купить на Wildberries">
+                          <img src="@img/shared/logos/marketplaces/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
+                        </a>
+                      </div>
+                      <div class="col-6">
+                        <a class="product-info__market" href="#" aria-label="Купить на Яндекс Маркете">
+                          <img src="@img/shared/logos/marketplaces/yandex-market.png" alt="Яндекс Маркет" width="174" height="26" loading="lazy">
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-tabs">
+              <div class="product-tabs__nav" role="tablist" aria-label="Информация о товаре">
+                <button type="button" class="product-tabs__btn is-active" id="product-tab-desc" role="tab" aria-selected="true" aria-controls="product-panel-desc">Описание</button>
+                <button type="button" class="product-tabs__btn" id="product-tab-specs" role="tab" aria-selected="false" aria-controls="product-panel-specs" tabindex="-1">Характеристики</button>
+                <button type="button" class="product-tabs__btn" id="product-tab-usage" role="tab" aria-selected="false" aria-controls="product-panel-usage" tabindex="-1">Способ применения</button>
+              </div>
+
+              <div class="product-tabs__panels">
+                <div class="product-tabs__panel is-active" id="product-panel-desc" role="tabpanel" aria-labelledby="product-tab-desc">
+                  <div class="row gy-4 product-tabs__row">
+                    <div class="col-12 col-lg-7">
+                      <ul class="product-benefits">
+                        <li class="product-benefits__item">
+                          <span class="product-benefits__icon icon-check" aria-hidden="true"></span>
+                          <span class="product-benefits__text">Бережный и эффективный</span>
+                        </li>
+                        <li class="product-benefits__item">
+                          <span class="product-benefits__icon icon-check" aria-hidden="true"></span>
+                          <span class="product-benefits__text">Для всей семьи</span>
+                        </li>
+                        <li class="product-benefits__item">
+                          <span class="product-benefits__icon icon-check" aria-hidden="true"></span>
+                          <span class="product-benefits__text">Без парабенов</span>
+                        </li>
+                        <li class="product-benefits__item">
+                          <span class="product-benefits__icon icon-check" aria-hidden="true"></span>
+                          <span class="product-benefits__text">Гипоаллергенный гель</span>
+                        </li>
+                      </ul>
+
+                      <div class="product-tabs__content">
+                        <p class="text">
+                          Гель для стирки белья Kipni — идеальный выбор для чистоты и свежести вашей одежды. Он проникает глубоко в ткани, избавляя одежду от загрязнений и неприятных запахов.
+                        </p>
+                        <h2 class="h3 product-tabs__subtitle">Область применения</h2>
+                        <p class="text">
+                          Для повседневной стирки белья и одежды из всех видов тканей и материалов в автоматических стиральных машинах. Гель безопасен и эффективен для ручной стирки. Гель имеет достаточно высокую эффективность при различных температурных режимах, а также при использовании в жёсткой воде.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                      <article class="help-aside__promo product-tabs__teaser" style="background-image: url('@img/shared/decor/teaser.png');">
+                        <div class="help-aside__promo-body">
+                          <h2 class="h3 help-aside__promo-title">5 шагов к чистой кухне без химии</h2>
+                          <p class="text help-aside__promo-text">
+                            Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств
+                          </p>
+                          <a class="btn btn--ghost help-aside__promo-btn" href="article.html">
+                            Читать далее
+                          </a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="product-tabs__panel" id="product-panel-specs" role="tabpanel" aria-labelledby="product-tab-specs" hidden>
+                  <div class="product-tabs__content product-tabs__content--solo">
+                    <h2 class="h3 product-tabs__subtitle">Характеристики</h2>
+                    <ul class="product-specs">
+                      <li class="product-specs__item">
+                        <span class="product-specs__name">Тип средства</span>
+                        <span class="product-specs__value">Гель для стирки</span>
+                      </li>
+                      <li class="product-specs__item">
+                        <span class="product-specs__name">Назначение</span>
+                        <span class="product-specs__value">Белое бельё</span>
+                      </li>
+                      <li class="product-specs__item">
+                        <span class="product-specs__name">Объём</span>
+                        <span class="product-specs__value">0.75 л / 1.5 л / 2 л</span>
+                      </li>
+                      <li class="product-specs__item">
+                        <span class="product-specs__name">Состав</span>
+                        <span class="product-specs__value">Без парабенов, гипоаллергенный</span>
+                      </li>
+                      <li class="product-specs__item">
+                        <span class="product-specs__name">Температура стирки</span>
+                        <span class="product-specs__value">От 30 °C</span>
+                      </li>
+                      <li class="product-specs__item">
+                        <span class="product-specs__name">Тип стирки</span>
+                        <span class="product-specs__value">Автоматическая и ручная</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="product-tabs__panel" id="product-panel-usage" role="tabpanel" aria-labelledby="product-tab-usage" hidden>
+                  <div class="product-tabs__content product-tabs__content--solo">
+                    <h2 class="h3 product-tabs__subtitle">Способ применения</h2>
+                    <ol class="product-usage">
+                      <li class="product-usage__item">
+                        Определите степень загрязнения белья и жёсткость воды.
+                      </li>
+                      <li class="product-usage__item">
+                        Налейте гель в отсек для моющего средства или непосредственно в барабан.
+                      </li>
+                      <li class="product-usage__item">
+                        Выберите подходящую программу и температуру стирки.
+                      </li>
+                      <li class="product-usage__item">
+                        Для ручной стирки растворите небольшое количество геля в воде, постирайте и тщательно прополощите.
+                      </li>
+                    </ol>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <section class="product-related section-space-md" aria-labelledby="product-related-title">
+            <div class="container">
+              <h2 class="h2 product-related__title" id="product-related-title">Смотрите также:</h2>
+              <div class="row gy-3 product-related__row">
+                <div class="col-12 col-sm-6 col-xl-3">
+                  @@include('html/templates/product-card.html', {
+                  "title": "Чистящий гель для унитазов",
+                  "volume": "750 мл",
+                  "badge": "Хит",
+                  "badge_mod": "badge--hit",
+                  "image": "img/products/toilet-gel.png",
+                  "image_alt": "Чистящий гель KIPNI для унитазов",
+                  "link": "product.html"
+                  })
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  @@include('html/templates/product-card.html', {
+                  "title": "Чистящий гель для унитазов",
+                  "volume": "750 мл",
+                  "badge": "Новинка",
+                  "badge_mod": "badge--new",
+                  "image": "img/products/laundry-gel.png",
+                  "image_alt": "Универсальный гель для стирки KIPNI",
+                  "link": "product.html"
+                  })
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  @@include('html/templates/product-card.html', {
+                  "title": "Жидкое мыло Тропические фрукты",
+                  "volume": "500 мл",
+                  "badge": "Новинка",
+                  "badge_mod": "badge--new",
+                  "image": "img/products/tropical-soap.png",
+                  "image_alt": "Жидкое мыло Тропические фрукты",
+                  "link": "product.html"
+                  })
+                </div>
+                <div class="col-12 col-sm-6 col-xl-3">
+                  @@include('html/templates/product-card.html', {
+                  "title": "Мыло хозяйственное Кипни",
+                  "volume": "750 мл",
+                  "badge": "Хит",
+                  "badge_mod": "badge--hit",
+                  "image": "img/products/household-soap.png",
+                  "image_alt": "Мыло хозяйственное Кипни",
+                  "link": "product.html"
+                  })
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
       </main>
       @@include('html/_footer.html', {})
       @@include('html/sections/ask-widget.html')

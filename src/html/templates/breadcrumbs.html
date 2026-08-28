@@ -1,0 +1,20 @@
+<nav class="breadcrumbs" aria-label="Хлебные крошки">
+	<ol class="breadcrumbs__list">
+		<li class="breadcrumbs__item">
+			<a class="breadcrumbs__link" href="index.html">Главная</a>
+		</li>
+		@@if(typeof parent !== 'undefined' && parent){
+		<li class="breadcrumbs__item">
+			<a class="breadcrumbs__link" href="@@parentHref">@@parent</a>
+		</li>
+		}
+		@@if(typeof parent2 !== 'undefined' && parent2){
+		<li class="breadcrumbs__item">
+			<a class="breadcrumbs__link" href="@@parent2Href">@@parent2</a>
+		</li>
+		}
+		<li class="breadcrumbs__item">
+			<span class="breadcrumbs__link">@@current</span>
+		</li>
+	</ol>
+</nav>

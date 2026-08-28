@@ -20,44 +20,25 @@ $maxWidthContainer: rem(1368);
 $maxWidthContainerLarge: rem(1488);
 $containerPadding: 24;
 
-// Colors — KIPNI UI Kit
-$color-primary: #8abd35;
-$color-primary-dark: #3f8c2c;
-$color-button: #5e9834;
-$color-link: #528428;
-$color-link-dark: #3d6c10;
-$color-text: #4c4c4c;
-$color-muted: #737373;
-$color-white: #fefefe;
-$color-bg: #ffffff;
-$color-surface: #f6f7f4;
-$color-cream: #fff6e5;
-$color-soft-blue: #e8f0fd;
-$color-soft-green: #f4f7e7;
-$color-border: #e4e4e4;
-$color-border-subtle: rgba(52, 52, 52, 0.1);
-$color-badge-hit: #7da331;
-$color-info: #0c3162;
-
 :root {
-	--color-primary: #{$color-primary};
-	--color-primary-dark: #{$color-primary-dark};
-	--color-button: #{$color-button};
-	--color-link: #{$color-link};
-	--color-link-dark: #{$color-link-dark};
-	--color-text: #{$color-text};
-	--color-muted: #{$color-muted};
-	--color-white: #{$color-white};
-	--color-bg: #{$color-bg};
-	--color-surface: #{$color-surface};
-	--color-cream: #{$color-cream};
-	--color-soft-blue: #{$color-soft-blue};
-	--color-soft-green: #{$color-soft-green};
-	--color-border: #{$color-border};
-	--color-border-subtle: #{$color-border-subtle};
-	--color-badge-hit: #{$color-badge-hit};
-	--color-info: #{$color-info};
-	--color-accent: #{$color-primary};
+	--color-primary: #8abd35;
+	--color-primary-dark: #3f8c2c;
+	--color-button: #5e9834;
+	--color-link: #528428;
+	--color-link-dark: #3d6c10;
+	--color-text: #4c4c4c;
+	--color-muted: #737373;
+	--color-white: #fefefe;
+	--color-bg: #ffffff;
+	--color-surface: #f6f7f4;
+	--color-cream: #fff6e5;
+	--color-soft-blue: #e8f0fd;
+	--color-soft-green: #f4f7e7;
+	--color-border: #e4e4e4;
+	--color-border-subtle: rgba(52, 52, 52, 0.1);
+	--color-badge-hit: #7da331;
+	--color-info: #0c3162;
+	--color-accent: var(--color-primary);
 	--header-height: #{rem(86)};
 	--container: #{$maxWidthContainer};
 	--radius-sm: #{rem(10)};
@@ -72,7 +53,7 @@ $color-info: #0c3162;
 	--space-md: #{rem(80)};
 	--space-title: #{rem(25)};
 	--focus-ring: 0 0 0 2px #fff,
-	0 0 0 4px #{$color-primary};
+		0 0 0 4px var(--color-primary);
 	--duration-layout: 0.3s;
 	--ease-layout: ease;
 
@@ -89,7 +70,28 @@ $color-info: #0c3162;
 	}
 }
 
+// Colors — KIPNI UI Kit
+$color-primary: var(--color-primary);
+$color-primary-dark: var(--color-primary-dark);
+$color-button: var(--color-button);
+$color-link: var(--color-link);
+$color-link-dark: var(--color-link-dark);
+$color-text: var(--color-text);
+$color-muted: var(--color-muted);
+$color-white: var(--color-white);
+$color-bg: var(--color-bg);
+$color-surface: var(--color-surface);
+$color-cream: var(--color-cream);
+$color-soft-blue: var(--color-soft-blue);
+$color-soft-green: var(--color-soft-green);
+$color-border: var(--color-border);
+$color-border-subtle: var(--color-border-subtle);
+$color-badge-hit: var(--color-badge-hit);
+$color-info: var(--color-info);
+$color-accent: var(--color-accent);
+
 $header: var(--header-height, #{rem(106)});
+$focus-ring: var(--focus-ring);
 
 $ui-index-1: 1;
 $ui-index-2: 2;

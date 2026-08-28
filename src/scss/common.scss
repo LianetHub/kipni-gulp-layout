@@ -11,10 +11,8 @@ body {
 	min-height: 100%;
 	line-height: math.div(19, 16);
 	font-weight: 400;
-	background: var(--color-bg);
-	color: var(--color-text);
-	overflow-wrap: break-word;
-	word-break: break-word;
+	background: $color-bg;
+	color: $color-text;
 
 	// body.is-locked
 	&.is-locked {
@@ -28,7 +26,7 @@ a {
 
 	&:focus-visible {
 		outline: none;
-		box-shadow: var(--focus-ring);
+		box-shadow: $focus-ring;
 		border-radius: rem(2);
 	}
 }

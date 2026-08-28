@@ -260,6 +260,16 @@
 				height: rem(50);
 			}
 		}
+
+		&.icon-truck,
+		&.icon-box,
+		&.icon-shop {
+			font-size: rem(40);
+
+			@media (min-width: $md4) {
+				font-size: rem(50);
+			}
+		}
 	}
 
 	// delivery-method__body

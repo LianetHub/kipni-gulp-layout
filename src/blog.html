@@ -7,7 +7,88 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-        @@include('html/sections/blog.html')
+          <div class="container">
+            @@include('html/templates/breadcrumbs.html', {
+              "current": "Блог"
+            })
+          </div>
+
+        <section class="blog-intro" aria-labelledby="blog-intro-title">
+          <div class="container">
+            <div class="blog-intro__content">
+              <h1 class="h1 blog-intro__title" id="blog-intro-title">Блог</h1>
+              <p class="text blog-intro__text">
+                Полезные советы по&nbsp;уборке дома, заботе о&nbsp;вещах и&nbsp;окружающей среде.<br>
+                Используйте натуральные средства и&nbsp;живите в&nbsp;гармонии с&nbsp;природой.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="blog-list" aria-label="Статьи блога">
+          <div class="container">
+            <div class="row blog-list__row gy-4">
+              <div class="col-12 col-lg-6">
+                @@include('html/templates/blog-card.html', {
+                  "views": "211 просмотров",
+                  "date": "20 июля 2026",
+                  "likes": "200 лайков",
+                  "title": "5 шагов к чистой кухне без химии",
+                  "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                  "link": "article.html",
+                  "image": "img/blog/card-laundry.png",
+                  "image_alt": "Бельё на верёвке и натуральные средства для стирки",
+                  "image_width": "712",
+                  "image_height": "401"
+                })
+              </div>
+              <div class="col-12 col-lg-6">
+                @@include('html/templates/blog-card.html', {
+                  "views": "211 просмотров",
+                  "date": "20 июля 2026",
+                  "likes": "200 лайков",
+                  "title": "Как правильно стирать разные ткани",
+                  "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                  "link": "#",
+                  "image": "img/blog/card-bottles.png",
+                  "image_alt": "Флаконы экологичных средств для уборки KIPNI",
+                  "image_width": "712",
+                  "image_height": "401"
+                })
+              </div>
+              <div class="col-12 col-lg-6">
+                @@include('html/templates/blog-card.html', {
+                  "views": "211 просмотров",
+                  "date": "20 июля 2026",
+                  "likes": "200 лайков",
+                  "title": "Как правильно стирать разные ткани",
+                  "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                  "link": "#",
+                  "image": "img/blog/card-sponges.jpg",
+                  "image_alt": "Натуральные губки и экосредства для уборки",
+                  "image_width": "712",
+                  "image_height": "401"
+                })
+              </div>
+              <div class="col-12 col-lg-6">
+                @@include('html/templates/blog-card.html', {
+                  "views": "211 просмотров",
+                  "date": "20 июля 2026",
+                  "likes": "200 лайков",
+                  "title": "5 шагов к чистой кухне без химии",
+                  "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                  "link": "article.html",
+                  "image": "img/blog/card-laundry.png",
+                  "image_alt": "Бельё на верёвке и натуральные средства для стирки",
+                  "image_width": "712",
+                  "image_height": "401"
+                })
+              </div>
+            </div>
+
+            @@include('html/templates/pagination.html')
+          </div>
+        </section>
       </main>
       @@include('html/_footer.html', {})
     </div>

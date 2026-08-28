@@ -6,39 +6,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const BANNER_CLOSE_MS = 460;
     const HEADER_DESKTOP_MQ = "(min-width: 1199.98px)";
 
-    const FAQ_ITEM = ".about-faq__item, .contacts-faq__item, .delivery-faq__item, .vacancy-card";
-    const FAQ_BTN = ".about-faq__question, .contacts-faq__question, .delivery-faq__question, .vacancy-card__header";
-    const FAQ_PANEL = ".about-faq__answer, .contacts-faq__answer, .delivery-faq__answer, .vacancy-card__body";
-
-    let header = null;
-    let banner = null;
-    let catalogBtn = null;
-    let catalogPanel = null;
-    let buyBtn = null;
-    let buyPanel = null;
-    let burger = null;
-    let menuPanel = null;
-    let searchMobile = null;
-    let searchPanel = null;
-    let searchInputMobile = null;
+    let h = null;
 
     function isDesktopHeader() {
         return window.matchMedia(HEADER_DESKTOP_MQ).matches;
     }
 
     function setHeaderHeight() {
-        if (!header) return;
-        const height = Math.ceil(header.getBoundingClientRect().height);
+        if (!h) return;
+        const height = Math.ceil(h.root.getBoundingClientRect().height);
         document.documentElement.style.setProperty("--header-height", `${height}px`);
     }
 
     function finishBannerHide() {
-        if (!header) return;
+        if (!h) return;
 
-        header.classList.add("is-banner-hidden");
-        if (banner) {
-            banner.hidden = true;
-            banner.classList.remove("is-closing");
+        h.root.classList.add("is-banner-hidden");
+        if (h.banner) {
+            h.banner.hidden = true;
+            h.banner.classList.remove("is-closing");
         }
         try {
             sessionStorage.setItem(BANNER_STORAGE_KEY, "1");
@@ -49,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function hideBanner() {
-        if (!banner || !header || header.classList.contains("is-banner-hidden") || banner.classList.contains("is-closing")) {
+        if (!h?.banner || h.root.classList.contains("is-banner-hidden") || h.banner.classList.contains("is-closing")) {
             return;
         }
 
@@ -58,50 +44,50 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        banner.classList.add("is-closing");
+        h.banner.classList.add("is-closing");
 
         const onTransitionEnd = (event) => {
-            if (event.target !== banner || event.propertyName !== "max-height") return;
-            banner.removeEventListener("transitionend", onTransitionEnd);
+            if (event.target !== h.banner || event.propertyName !== "max-height") return;
+            h.banner.removeEventListener("transitionend", onTransitionEnd);
             finishBannerHide();
         };
 
-        banner.addEventListener("transitionend", onTransitionEnd);
+        h.banner.addEventListener("transitionend", onTransitionEnd);
         window.setTimeout(() => {
-            if (!header.classList.contains("is-banner-hidden")) {
-                banner.removeEventListener("transitionend", onTransitionEnd);
+            if (!h.root.classList.contains("is-banner-hidden")) {
+                h.banner.removeEventListener("transitionend", onTransitionEnd);
                 finishBannerHide();
             }
         }, BANNER_CLOSE_MS);
     }
 
     function closeCatalog() {
-        if (!catalogBtn) return;
-        catalogBtn.setAttribute("aria-expanded", "false");
+        if (!h?.catalogBtn) return;
+        h.catalogBtn.setAttribute("aria-expanded", "false");
 
         if (isDesktopHeader()) {
-            catalogBtn.closest(".header__catalog-wrap")?.classList.remove("is-open");
+            h.catalogBtn.closest(".header__catalog-wrap")?.classList.remove("is-open");
         }
     }
 
     function closeBuy() {
-        if (!buyPanel || !buyBtn) return;
-        buyPanel.hidden = true;
-        buyBtn.setAttribute("aria-expanded", "false");
+        if (!h?.buyPanel || !h.buyBtn) return;
+        h.buyPanel.hidden = true;
+        h.buyBtn.setAttribute("aria-expanded", "false");
     }
 
     function closeMobile() {
-        if (!menuPanel || !burger || !header) return;
+        if (!h?.menuPanel || !h.burger) return;
 
         if (isDesktopHeader()) {
-            menuPanel.hidden = false;
+            h.menuPanel.hidden = false;
             return;
         }
 
-        menuPanel.hidden = true;
-        burger.setAttribute("aria-expanded", "false");
-        burger.setAttribute("aria-label", "Открыть меню");
-        header.classList.remove("is-mobile-open");
+        h.menuPanel.hidden = true;
+        h.burger.setAttribute("aria-expanded", "false");
+        h.burger.setAttribute("aria-label", "Открыть меню");
+        h.root.classList.remove("is-mobile-open");
         document.body.classList.remove("is-locked");
     }
 
@@ -112,71 +98,71 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function openCatalog() {
         closeBuy();
-        if (!catalogBtn) return;
-        catalogBtn.setAttribute("aria-expanded", "true");
+        if (!h?.catalogBtn) return;
+        h.catalogBtn.setAttribute("aria-expanded", "true");
 
         if (!isDesktopHeader()) {
-            catalogBtn.closest(".header__catalog-wrap")?.classList.add("is-open");
+            h.catalogBtn.closest(".header__catalog-wrap")?.classList.add("is-open");
         }
     }
 
     function openBuy() {
         closeCatalog();
         closeMobile();
-        if (!buyPanel || !buyBtn) return;
-        buyPanel.hidden = false;
-        buyBtn.setAttribute("aria-expanded", "true");
+        if (!h?.buyPanel || !h.buyBtn) return;
+        h.buyPanel.hidden = false;
+        h.buyBtn.setAttribute("aria-expanded", "true");
     }
 
     function openMobile() {
         closeDesktopMenus();
-        if (!menuPanel || !burger || !header) return;
-        menuPanel.hidden = false;
-        burger.setAttribute("aria-expanded", "true");
-        burger.setAttribute("aria-label", "Закрыть меню");
-        header.classList.add("is-mobile-open");
+        if (!h?.menuPanel || !h.burger) return;
+        h.menuPanel.hidden = false;
+        h.burger.setAttribute("aria-expanded", "true");
+        h.burger.setAttribute("aria-label", "Закрыть меню");
+        h.root.classList.add("is-mobile-open");
         document.body.classList.add("is-locked");
     }
 
     function toggleCatalog() {
-        if (!catalogBtn) return;
+        if (!h?.catalogBtn) return;
 
         if (isDesktopHeader()) {
-            const isOpen = catalogBtn.getAttribute("aria-expanded") === "true";
+            const isOpen = h.catalogBtn.getAttribute("aria-expanded") === "true";
             if (isOpen) closeCatalog();
             else openCatalog();
             return;
         }
 
-        toggleHeaderAccordion(catalogBtn);
+        toggleHeaderAccordion(h.catalogBtn);
     }
 
     function toggleBuy() {
-        if (!buyBtn) return;
-        const isOpen = buyBtn.getAttribute("aria-expanded") === "true";
+        if (!h?.buyBtn) return;
+        const isOpen = h.buyBtn.getAttribute("aria-expanded") === "true";
         if (isOpen) closeBuy();
         else openBuy();
     }
 
     function toggleMobile() {
-        if (!burger) return;
-        const isOpen = burger.getAttribute("aria-expanded") === "true";
+        if (!h?.burger) return;
+        const isOpen = h.burger.getAttribute("aria-expanded") === "true";
         if (isOpen) closeMobile();
         else openMobile();
     }
 
     function toggleSearchMobile() {
-        if (!searchMobile || !searchPanel) return;
+        if (!h?.searchMobile || !h.searchPanel) return;
 
         closeMobile();
-        const isOpen = searchMobile.getAttribute("aria-expanded") === "true";
+        const isOpen = h.searchMobile.getAttribute("aria-expanded") === "true";
         if (isOpen) {
-            searchPanel.hidden = true;
-            searchMobile.setAttribute("aria-expanded", "false");
+            h.searchPanel.hidden = true;
+            h.searchMobile.setAttribute("aria-expanded", "false");
         } else {
-            searchPanel.hidden = false;
-            searchMobile.setAttribute("aria-expanded", "true");
-            searchInputMobile?.focus();
+            h.searchPanel.hidden = false;
+            h.searchMobile.setAttribute("aria-expanded", "true");
+            h.searchInputMobile?.focus();
         }
         setHeaderHeight();
     }
@@ -189,54 +175,57 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function syncMobileHeaderAccordions() {
-        if (isDesktopHeader() || !header) return;
+        if (isDesktopHeader() || !h) return;
 
-        header.querySelectorAll(".header__menu-accordion.is-open").forEach((accordion) => {
+        h.root.querySelectorAll(".header__menu-accordion.is-open").forEach((accordion) => {
             const toggle = accordion.querySelector(".header__menu-row--toggle, .header__catalog-btn");
             toggle?.setAttribute("aria-expanded", "true");
         });
     }
 
     function handleHeaderOutsideClick(target) {
-        if (!header) return;
+        if (!h) return;
 
-        if (!header.contains(target)) {
+        if (!h.root.contains(target)) {
             closeDesktopMenus();
             return;
         }
 
         if (
             isDesktopHeader() &&
-            catalogPanel &&
-            catalogBtn?.getAttribute("aria-expanded") === "true" &&
-            !catalogPanel.contains(target) &&
-            !catalogBtn.contains(target)
+            h.catalogPanel &&
+            h.catalogBtn?.getAttribute("aria-expanded") === "true" &&
+            !h.catalogPanel.contains(target) &&
+            !h.catalogBtn.contains(target)
         ) {
             closeCatalog();
         }
 
-        if (buyPanel && !buyPanel.hidden && !buyPanel.contains(target) && buyBtn && !buyBtn.contains(target)) {
+        if (h.buyPanel && !h.buyPanel.hidden && !h.buyPanel.contains(target) && h.buyBtn && !h.buyBtn.contains(target)) {
             closeBuy();
         }
     }
 
-    header = document.querySelector(".header");
-    if (header) {
-        banner = header.querySelector(".header-banner");
-        catalogBtn = header.querySelector(".header__catalog-btn");
-        catalogPanel = header.querySelector(".header-catalog");
-        buyBtn = header.querySelector(".header-buy-btn");
-        buyPanel = header.querySelector(".header-buy");
-        burger = header.querySelector(".header__burger");
-        menuPanel = header.querySelector(".header__menu");
-        searchMobile = header.querySelector(".header__search-mobile");
-        searchPanel = header.querySelector(".header__search-mobile-panel");
-        searchInputMobile = header.querySelector("#header-search-input-mobile");
+    const headerRoot = document.querySelector(".header");
+    if (headerRoot) {
+        h = {
+            root: headerRoot,
+            banner: headerRoot.querySelector(".header-banner"),
+            catalogBtn: headerRoot.querySelector(".header__catalog-btn"),
+            catalogPanel: headerRoot.querySelector(".header-catalog"),
+            buyBtn: headerRoot.querySelector(".header-buy-btn"),
+            buyPanel: headerRoot.querySelector(".header-buy"),
+            burger: headerRoot.querySelector(".header__burger"),
+            menuPanel: headerRoot.querySelector(".header__menu"),
+            searchMobile: headerRoot.querySelector(".header__search-mobile"),
+            searchPanel: headerRoot.querySelector(".header__search-mobile-panel"),
+            searchInputMobile: headerRoot.querySelector("#header-search-input-mobile"),
+        };
 
         try {
             if (sessionStorage.getItem(BANNER_STORAGE_KEY) === "1") {
-                header.classList.add("is-banner-hidden");
-                if (banner) banner.hidden = true;
+                h.root.classList.add("is-banner-hidden");
+                if (h.banner) h.banner.hidden = true;
             }
         } catch {
             /* ignore */
@@ -245,18 +234,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const mq = window.matchMedia(HEADER_DESKTOP_MQ);
         const onBreakpoint = () => {
             if (mq.matches) {
-                menuPanel.hidden = false;
+                h.menuPanel.hidden = false;
                 closeDesktopMenus();
                 closeMobile();
-                if (searchPanel) {
-                    searchPanel.hidden = true;
-                    searchMobile?.setAttribute("aria-expanded", "false");
+                if (h.searchPanel) {
+                    h.searchPanel.hidden = true;
+                    h.searchMobile?.setAttribute("aria-expanded", "false");
                 }
             } else {
                 closeDesktopMenus();
                 syncMobileHeaderAccordions();
-                if (burger?.getAttribute("aria-expanded") !== "true") {
-                    menuPanel.hidden = true;
+                if (h.burger?.getAttribute("aria-expanded") !== "true") {
+                    h.menuPanel.hidden = true;
                 }
             }
             setHeaderHeight();
@@ -272,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (typeof ResizeObserver !== "undefined") {
             const observer = new ResizeObserver(() => setHeaderHeight());
-            observer.observe(header);
+            observer.observe(h.root);
         } else {
             window.addEventListener("resize", setHeaderHeight);
         }
@@ -630,10 +619,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    function getRegionPanel(btn) {
+        const panelId = btn.getAttribute("aria-controls");
+        if (!panelId) return null;
+        const panel = document.getElementById(panelId);
+        return panel?.getAttribute("role") === "region" ? panel : null;
+    }
+
     function toggleFaqItem(btn) {
-        const item = btn.closest(FAQ_ITEM);
-        const panel = item?.querySelector(FAQ_PANEL);
-        if (!item || !panel) return;
+        const panel = getRegionPanel(btn);
+        const item = panel?.parentElement;
+        if (!panel || !item) return;
 
         const isOpen = item.classList.toggle("is-open");
         btn.setAttribute("aria-expanded", String(isOpen));
@@ -865,8 +861,8 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleReviewExpand(reviewExpand);
         }
 
-        const faqBtn = target.closest(FAQ_BTN);
-        if (faqBtn) {
+        const faqBtn = target.closest("button[aria-controls]");
+        if (faqBtn && getRegionPanel(faqBtn)) {
             toggleFaqItem(faqBtn);
         }
 

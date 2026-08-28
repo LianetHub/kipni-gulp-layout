@@ -265,6 +265,16 @@
 			height: rem(28);
 			object-fit: contain;
 		}
+
+		&.icon-leaf,
+		&.icon-box,
+		&.icon-certificate,
+		&.icon-drop,
+		&.icon-molecule,
+		&.icon-user,
+		&.icon-people {
+			font-size: rem(28);
+		}
 	}
 
 	// hero-feature__body

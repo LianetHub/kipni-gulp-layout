@@ -46,14 +46,12 @@
 	// article__meta-icon
 	&__meta-icon {
 		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		width: rem(24);
 		height: rem(24);
-
-		img {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
+		font-size: rem(24);
 	}
 
 	// article__meta-text
@@ -187,8 +185,8 @@
 				color: var(--color-white);
 			}
 
-			.article__like-icon img {
-				filter: brightness(0) invert(1);
+			.article__like-icon {
+				color: var(--color-white);
 			}
 		}
 	}
@@ -196,14 +194,12 @@
 	// article__like-icon
 	&__like-icon {
 		flex-shrink: 0;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		width: rem(28);
 		height: rem(26);
-
-		img {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
+		font-size: rem(26);
 	}
 
 	// article__like-text

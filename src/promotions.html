@@ -7,7 +7,89 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-        @@include('html/sections/promotions.html')
+        <div class="container">
+          @@include('html/templates/breadcrumbs.html', {
+            "current": "Акции и предложения"
+          })
+        </div>
+
+        <section class="promotions-intro" aria-labelledby="promotions-intro-title">
+          <div class="container">
+            <div class="row promotions-intro__row">
+              <div class="col-12 col-lg-6">
+                <div class="promotions-intro__content">
+                  <h1 class="h1 promotions-intro__title" id="promotions-intro-title">
+                    <span class="promotions-intro__accent">Акции</span> и&nbsp;предложения
+                  </h1>
+                  <p class="text promotions-intro__text">
+                    Выгодные предложения, акции и&nbsp;спецпредложения от&nbsp;KIPNI<br>
+                    Чистота и&nbsp;забота о&nbsp;доме по&nbsp;лучшим ценам
+                  </p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 promotions-intro__media">
+                <img src="@img/promotions/hero.png" alt="Средства KIPNI для уборки и маскот-уточка" width="846" height="480" loading="lazy">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="promotions-list" aria-labelledby="promotions-list-title">
+          <div class="container">
+            <h2 class="h2 promotions-list__title" id="promotions-list-title">Действующие акции:</h2>
+            <div class="row promotions-list__row gy-4">
+              <div class="col-12 col-lg-6">
+                @@include('html/templates/promo-card.html', {
+                "until": "21.11.2026",
+                "title": "Бесплатная доставка от 1&nbsp;500&nbsp;₽",
+                "text": "Выгодные предложения, акции и спецпредложения от KIPNI<br>Чистота и забота о доме по лучшим ценам",
+                "link": "#",
+                "image": "img/promotions/card-delivery.png",
+                "image_alt": "Грузовик доставки с коробкой и маскотом KIPNI",
+                "image_width": "371",
+                "image_height": "268"
+                })
+              </div>
+              <div class="col-12 col-lg-6">
+                @@include('html/templates/promo-card.html', {
+                "until": "21.11.2026",
+                "title": "2+1 на средства<br>для уборки",
+                "text": "Выгодные предложения, акции и спецпредложения от KIPNI<br>Чистота и забота о доме по лучшим ценам",
+                "link": "promo.html",
+                "image": "img/promotions/card-products.png",
+                "image_alt": "Средства для уборки KIPNI и подарочная коробка",
+                "image_width": "397",
+                "image_height": "298"
+                })
+              </div>
+              <div class="col-12 col-lg-6">
+                @@include('html/templates/promo-card.html', {
+                "until": "21.11.2026",
+                "title": "Бесплатная доставка от 1&nbsp;500&nbsp;₽",
+                "text": "Выгодные предложения, акции и спецпредложения от KIPNI<br>Чистота и забота о доме по лучшим ценам",
+                "link": "#",
+                "image": "img/promotions/card-delivery.png",
+                "image_alt": "Грузовик доставки с коробкой и маскотом KIPNI",
+                "image_width": "371",
+                "image_height": "268"
+                })
+              </div>
+              <div class="col-12 col-lg-6">
+                @@include('html/templates/promo-card.html', {
+                "until": "21.11.2026",
+                "title": "2+1 на средства<br>для уборки",
+                "text": "Выгодные предложения, акции и спецпредложения от KIPNI<br>Чистота и забота о доме по лучшим ценам",
+                "link": "promo.html",
+                "image": "img/promotions/card-products.png",
+                "image_alt": "Средства для уборки KIPNI и подарочная коробка",
+                "image_width": "397",
+                "image_height": "298"
+                })
+              </div>
+            </div>
+          </div>
+        </section>
+
         @@include('html/sections/gifts.html', {
           "mod": "gifts--on-dark"
         })
