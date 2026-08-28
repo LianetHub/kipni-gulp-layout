@@ -58,7 +58,7 @@
 
 	// article__meta-text
 	&__meta-text {
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: math.div(19, 16);
@@ -140,7 +140,7 @@
 	// article__callout-text
 	&__callout-text {
 		margin: 0;
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: math.div(22, 16);
@@ -218,6 +218,7 @@
 }
 
 .article-block {
+
 	// article-block__title
 	&__title {
 		margin: 0 0 rem(16);
@@ -292,7 +293,7 @@
 	// article-toc__link
 	&__link {
 		display: block;
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: 1.2;

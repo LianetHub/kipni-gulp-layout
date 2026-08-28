@@ -573,7 +573,7 @@
 
 	// product-benefits__text
 	&__text {
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: math.div(19, 16);
@@ -636,6 +636,7 @@
 }
 
 .product-related {
+
 	// product-related__title
 	&__title {
 		margin: 0 0 rem(24);

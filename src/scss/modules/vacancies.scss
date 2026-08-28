@@ -191,7 +191,7 @@
 	&__title {
 		flex: 1 1 auto;
 		min-width: 0;
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(22);
 		font-weight: 500;
 		line-height: 1.2;
@@ -204,7 +204,7 @@
 
 	// vacancy-card__salary
 	&__salary {
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(22);
 		font-weight: 500;
 		line-height: 1.2;
@@ -340,7 +340,7 @@
 		margin-bottom: rem(28);
 
 		li {
-			font-family: $font-heading, sans-serif;
+			font-family: $font-golos, sans-serif;
 			font-size: rem(16);
 			font-weight: 500;
 			line-height: 1.2;
@@ -421,7 +421,7 @@
 	// vacancy-modal__title
 	&__title {
 		margin: 0 0 rem(12);
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(24);
 		font-weight: 500;
 		line-height: 1.2;
@@ -518,7 +518,7 @@
 			flex-shrink: 0;
 		}
 
-		.vacancy-modal__file-input:focus-visible + & {
+		.vacancy-modal__file-input:focus-visible+& {
 			border-color: var(--color-primary);
 			box-shadow: var(--focus-ring);
 		}
@@ -562,13 +562,13 @@
 		white-space: nowrap;
 		border: 0;
 
-		&:checked + .vacancy-modal__check {
+		&:checked+.vacancy-modal__check {
 			img {
 				opacity: 1;
 			}
 		}
 
-		&:focus-visible + .vacancy-modal__check {
+		&:focus-visible+.vacancy-modal__check {
 			box-shadow: var(--focus-ring);
 		}
 	}

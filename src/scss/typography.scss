@@ -1,7 +1,7 @@
 @use "sass:math";
 
 %heading {
-	font-family: $font-heading, sans-serif;
+	font-family: $font-golos, sans-serif;
 	font-weight: 500;
 	color: var(--color-text);
 }
@@ -87,7 +87,7 @@ h4,
 	flex-direction: column;
 	align-items: flex-start;
 
-	> h1 {
+	>h1 {
 		margin-bottom: rem(32);
 
 		@media (min-width: $md4) {
@@ -95,7 +95,7 @@ h4,
 		}
 	}
 
-	> h2 {
+	>h2 {
 		margin-top: rem(40);
 		margin-bottom: rem(20);
 
@@ -105,19 +105,19 @@ h4,
 		}
 	}
 
-	> p {
+	>p {
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: math.div(26, 16);
 		color: var(--color-text);
 
-		& + p {
+		&+p {
 			margin-top: rem(15);
 		}
 	}
 
-	> ul {
+	>ul {
 		display: flex;
 		flex-direction: column;
 		gap: rem(15);

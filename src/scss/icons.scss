@@ -1,6 +1,13 @@
-%ic {
+@font-face {
   font-family: "icons";
+  font-display: block;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: normal;
   font-style: normal;
+}
+
+%ic {
+  font-family: "icons";  font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
@@ -18,230 +25,159 @@
   }
 }
 
-.icon-eye:before {
-  content: "\e936";
-}
-
-.icon-eye-stroke:before {
-  content: "\e937";
-}
-
-.icon-lock:before {
-  content: "\e938";
-}
-
-.icon-download:before {
-  content: "\e935";
-}
-
-.icon-location-pin:before {
-  content: "\e934";
-}
-
-.icon-edit:before {
-  content: "\e933";
-}
-
-.icon-plus:before {
-  content: "\e931";
-}
-
-.icon-dotts:before {
-  content: "\e932";
-}
-
-.icon-trash:before {
-  content: "\e930";
-}
-
-.icon-cross:before {
-  content: "\e92f";
-}
-
-.icon-check-cirlce:before {
-  content: "\e92e";
-}
-
-.icon-compare:before {
-  content: "\e92d";
-}
-
-.icon-compare-fill:before {
-  content: "\e92b";
-}
-
-.icon-share:before {
-  content: "\e92c";
-}
-
-.icon-filter:before {
-  content: "\e92a";
-}
-
-.icon-bag:before {
-  content: "\e928";
-}
-
-.icon-favorite:before {
-  content: "\e927";
-}
-
-.icon-favorite-fill:before {
-  content: "\e929";
-}
-
-.icon-home:before {
-  content: "\e921";
-}
-
-.icon-home-fill:before {
-  content: "\e922";
-}
-
-.icon-hearts-fill:before {
-  content: "\e923";
-}
-
-.icon-pills-fill:before {
-  content: "\e924";
-}
-
-.icon-shopping-cart-fill:before {
-  content: "\e925";
-}
-
-.icon-user-fill:before {
-  content: "\e926";
-}
-
-.icon-heart:before {
-  content: "\e920";
-}
-
-.icon-animal-pills:before {
-  content: "\e912";
-}
-
-.icon-beauty:before {
-  content: "\e913";
-}
-
-.icon-detox:before {
-  content: "\e914";
-}
-
-.icon-energy:before {
-  content: "\e915";
-}
-
-.icon-grass:before {
-  content: "\e916";
-}
-
-.icon-immunitet:before {
-  content: "\e917";
-}
-
-.icon-mother:before {
-  content: "\e918";
-}
-
-.icon-nervous:before {
+.icon-arrows-minimize:before {
   content: "\e919";
 }
 
-.icon-sport:before {
-  content: "\e91a";
-}
-
-.icon-superfoods:before {
-  content: "\e91b";
-}
-
-.icon-vitamins:before {
-  content: "\e91c";
-}
-
-.icon-sales:before {
-  content: "\e91d";
-}
-
-.icon-news:before {
-  content: "\e91e";
-}
-
-.icon-brands:before {
-  content: "\e91f";
-}
-
-.icon-clock:before {
+.icon-location:before {
   content: "\e900";
 }
 
-.icon-hearts:before {
+.icon-envelope:before {
   content: "\e901";
 }
 
-.icon-left:before {
+.icon-phone:before {
   content: "\e902";
 }
 
-.icon-message:before {
+.icon-filter:before {
   content: "\e903";
 }
 
-.icon-orders:before {
+.icon-minus:before {
   content: "\e904";
 }
 
-.icon-pills:before {
+.icon-calendar:before {
   content: "\e905";
 }
 
-.icon-play:before {
+.icon-eye:before {
   content: "\e906";
 }
 
-.icon-right:before {
+.icon-arrows-maximize:before {
   content: "\e907";
 }
 
-.icon-search:before {
+.icon-cross:before {
   content: "\e908";
 }
 
-.icon-shopping-cart:before {
+.icon-plus:before {
   content: "\e909";
 }
 
-.icon-star:before {
+.icon-telegram:before {
   content: "\e90a";
 }
 
-.icon-telegram:before {
+.icon-max:before {
   content: "\e90b";
 }
 
-.icon-user:before {
+.icon-vk:before {
   content: "\e90c";
 }
 
-.icon-views:before {
+.icon-prev:before {
   content: "\e90d";
 }
 
-.icon-vk:before {
+.icon-next:before {
   content: "\e90e";
 }
 
-.icon-arrow:before {
+.icon-star:before {
   content: "\e90f";
 }
 
-.icon-cam-search:before {
+.icon-check:before {
   content: "\e910";
 }
 
-.icon-chevron-down:before {
+.icon-heart-fill:before {
   content: "\e911";
+}
+
+.icon-chevron-right:before {
+  content: "\e912";
+}
+
+.icon-chevron-down:before {
+  content: "\e912";
+  transform: rotate(90deg);
+}
+
+.icon-heart:before {
+  content: "\e913";
+}
+
+.icon-shopping-cart:before {
+  content: "\e914";
+}
+
+.icon-grid:before {
+  content: "\e915";
+}
+
+.icon-cross-circle:before {
+  content: "\e916";
+}
+
+.icon-search:before {
+  content: "\e917";
+}
+
+.icon-file:before {
+  content: "\e918";
+}
+
+.icon-burger:before {
+  content: "\e91a";
+}
+
+.icon-menu:before {
+  content: "\e91b";
+}
+
+.icon-shop:before {
+  content: "\e91c";
+}
+
+.icon-leaf:before {
+  content: "\e91d";
+}
+
+.icon-drop:before {
+  content: "\e91e";
+}
+
+.icon-molecule:before {
+  content: "\e91f";
+}
+
+.icon-box:before {
+  content: "\e920";
+}
+
+.icon-truck:before {
+  content: "\e921";
+}
+
+.icon-certificate:before {
+  content: "\e922";
+}
+
+.icon-home:before {
+  content: "\e923";
+}
+
+.icon-people:before {
+  content: "\e924";
+}
+
+.icon-user:before {
+  content: "\e925";
 }

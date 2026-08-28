@@ -1,30 +1,40 @@
 @font-face {
-  font-family: "Onest";
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
   font-display: swap;
-  src: url("../fonts/Onest-Regular.woff2") format("woff2"), url("../fonts/Onest-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "icons";
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
-  font-family: "Onest";
-  font-display: swap;
-  src: url("../fonts/Onest-Bold.woff2") format("woff2"), url("../fonts/Onest-Bold.woff") format("woff");
-  font-weight: 700;
+  font-family: "GolosText";
+  src: url("../fonts/GolosText-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/GolosText-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/GolosText-VariableFont_wght.woff") format("woff");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
-  font-family: "Golos Text";
+  font-family: "tthoves";
   font-display: swap;
-  src: url("../fonts/Golos Text-Medium.woff2") format("woff2"), url("../fonts/Golos Text-Medium.woff") format("woff");
+  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: "Onest";
-  font-display: swap;
-  src: url("../fonts/Onest-SemiBold.woff2") format("woff2"), url("../fonts/Onest-SemiBold.woff") format("woff");
-  font-weight: 600;
+  src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
   font-style: normal;
+  font-display: swap;
 }
 :root {
   --color-primary: #8abd35;
@@ -84,7 +94,7 @@ h4,
 .h3, h2,
 .h2, h1,
 .h1 {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-weight: 500;
   color: var(--color-text);
 }
@@ -225,6 +235,188 @@ h4,
   height: 0.375rem;
   border-radius: 50%;
   background: var(--color-primary);
+}
+
+@font-face {
+  font-family: "icons";
+  font-display: block;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  speak: never;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^=icon-]:before,
+[class*=" icon-"]:before {
+  display: block;
+}
+
+.icon-arrows-minimize:before {
+  content: "\e919";
+}
+
+.icon-location:before {
+  content: "\e900";
+}
+
+.icon-envelope:before {
+  content: "\e901";
+}
+
+.icon-phone:before {
+  content: "\e902";
+}
+
+.icon-filter:before {
+  content: "\e903";
+}
+
+.icon-minus:before {
+  content: "\e904";
+}
+
+.icon-calendar:before {
+  content: "\e905";
+}
+
+.icon-eye:before {
+  content: "\e906";
+}
+
+.icon-arrows-maximize:before {
+  content: "\e907";
+}
+
+.icon-cross:before {
+  content: "\e908";
+}
+
+.icon-plus:before {
+  content: "\e909";
+}
+
+.icon-telegram:before {
+  content: "\e90a";
+}
+
+.icon-max:before {
+  content: "\e90b";
+}
+
+.icon-vk:before {
+  content: "\e90c";
+}
+
+.icon-prev:before {
+  content: "\e90d";
+}
+
+.icon-next:before {
+  content: "\e90e";
+}
+
+.icon-star:before {
+  content: "\e90f";
+}
+
+.icon-check:before {
+  content: "\e910";
+}
+
+.icon-heart-fill:before {
+  content: "\e911";
+}
+
+.icon-chevron-right:before {
+  content: "\e912";
+}
+
+.icon-chevron-down:before {
+  content: "\e912";
+  transform: rotate(90deg);
+}
+
+.icon-heart:before {
+  content: "\e913";
+}
+
+.icon-shopping-cart:before {
+  content: "\e914";
+}
+
+.icon-grid:before {
+  content: "\e915";
+}
+
+.icon-cross-circle:before {
+  content: "\e916";
+}
+
+.icon-search:before {
+  content: "\e917";
+}
+
+.icon-file:before {
+  content: "\e918";
+}
+
+.icon-burger:before {
+  content: "\e91a";
+}
+
+.icon-menu:before {
+  content: "\e91b";
+}
+
+.icon-shop:before {
+  content: "\e91c";
+}
+
+.icon-leaf:before {
+  content: "\e91d";
+}
+
+.icon-drop:before {
+  content: "\e91e";
+}
+
+.icon-molecule:before {
+  content: "\e91f";
+}
+
+.icon-box:before {
+  content: "\e920";
+}
+
+.icon-truck:before {
+  content: "\e921";
+}
+
+.icon-certificate:before {
+  content: "\e922";
+}
+
+.icon-home:before {
+  content: "\e923";
+}
+
+.icon-people:before {
+  content: "\e924";
+}
+
+.icon-user:before {
+  content: "\e925";
 }
 
 .rounded-10 {
@@ -1535,16 +1727,14 @@ h4,
   border: none;
   background: transparent;
   cursor: pointer;
+  font-size: 1.625rem;
+  line-height: 1;
+  color: var(--color-text);
 }
 @media (min-width: 767.98px) {
   .header__search-mobile {
     display: none;
   }
-}
-.header__search-mobile img {
-  width: 1.625rem;
-  height: 1.625rem;
-  object-fit: contain;
 }
 .header__search-mobile:focus-visible {
   outline: none;
@@ -1650,7 +1840,7 @@ h4,
 @media (min-width: 767.98px) {
   .header-banner__text {
     max-width: none;
-    font-family: "Golos Text", sans-serif, sans-serif;
+    font-family: "GolosText", sans-serif, sans-serif;
     font-size: 1.125rem;
     line-height: 1.1;
     color: var(--color-text);
@@ -1676,6 +1866,9 @@ h4,
   display: none;
   margin-left: 0.25rem;
   vertical-align: middle;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: #538429;
 }
 @media (min-width: 767.98px) {
   .header-banner__link-icon {
@@ -1683,12 +1876,6 @@ h4,
     width: 0.5rem;
     height: 0.75rem;
   }
-}
-.header-banner__link-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  filter: invert(35%) sepia(45%) saturate(600%) hue-rotate(55deg);
 }
 .header-banner__close {
   position: absolute;
@@ -1704,6 +1891,9 @@ h4,
   border: none;
   background: transparent;
   cursor: pointer;
+  font-size: 1.6875rem;
+  line-height: 1;
+  color: inherit;
 }
 @media (min-width: 767.98px) {
   .header-banner__close {
@@ -1711,11 +1901,6 @@ h4,
     width: 1.6875rem;
     height: 1.6875rem;
   }
-}
-.header-banner__close img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 .header-banner__close:focus-visible {
   outline: none;
@@ -1773,11 +1958,9 @@ h4,
   border: none;
   background: transparent;
   cursor: pointer;
-}
-.header-search__submit img {
-  width: 1.25rem;
-  height: 1.25rem;
-  object-fit: contain;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--color-muted);
 }
 .header-search__submit:focus-visible {
   outline: none;
@@ -1805,7 +1988,7 @@ h4,
   }
 }
 .header-nav__link {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.1;
@@ -1900,11 +2083,9 @@ h4,
   justify-content: center;
   width: 2rem;
   height: 2rem;
-}
-.header-favorite__icon {
-  width: 1.75rem;
-  height: 1.625rem;
-  object-fit: contain;
+  font-size: 1.625rem;
+  line-height: 1;
+  color: inherit;
 }
 .header-favorite__badge {
   position: absolute;
@@ -2056,7 +2237,7 @@ h4,
 }
 .header-catalog__promo-title {
   margin: 0 0 0.5rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.2727272727;
@@ -2460,7 +2641,7 @@ h4,
   }
 }
 .hero-slide__title {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-weight: 500;
   font-size: 2rem;
   line-height: 1.125;
@@ -2717,7 +2898,7 @@ h4,
   max-width: 33.75rem;
 }
 .error-page__code {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-weight: 500;
   font-size: 6rem;
   line-height: 1.1979166667;
@@ -3310,7 +3491,7 @@ h4,
 .gifts__title {
   max-width: 17.875rem;
   margin: 0;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2083333333;
@@ -3527,7 +3708,7 @@ h4,
 }
 .marketplaces__title {
   margin: 0;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2083333333;
@@ -3902,7 +4083,7 @@ h4,
 }
 .business__title {
   margin: 0;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.25;
@@ -4117,15 +4298,14 @@ h4,
   box-shadow: var(--shadow-soft);
   cursor: pointer;
   transform: translateY(-50%);
+  font-size: 0.9375rem;
+  line-height: 1;
+  color: var(--color-text);
 }
 @media (min-width: 767.98px) {
   .reviews__prev, .reviews__next {
     display: inline-flex;
   }
-}
-.reviews__prev img, .reviews__next img {
-  width: 0.5625rem;
-  height: 0.9375rem;
 }
 .reviews__prev:focus-visible, .reviews__next:focus-visible {
   outline: none;
@@ -4213,7 +4393,7 @@ h4,
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.1818181818;
@@ -5536,7 +5716,7 @@ h4,
 }
 .contacts-card__title {
   margin: 0 0 1rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2083333333;
@@ -5551,7 +5731,7 @@ h4,
 }
 .contacts-card__text {
   margin: 0 0 1.5rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.375;
@@ -5591,7 +5771,7 @@ h4,
   height: 100%;
 }
 .contacts-card__link {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.2;
@@ -5611,7 +5791,7 @@ h4,
 }
 .contacts-card__address {
   margin: 0;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.3333333333;
@@ -5672,7 +5852,7 @@ h4,
 }
 .contacts-form__title {
   margin: 0 0 1rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2083333333;
@@ -5792,7 +5972,7 @@ h4,
 
 .contacts-faq__title {
   margin: 0 0 0.75rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2083333333;
@@ -6404,7 +6584,7 @@ h4,
   height: 1.0625rem;
 }
 .blog-card__meta-text {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.2142857143;
@@ -6582,7 +6762,7 @@ h4,
   height: 100%;
 }
 .article__meta-text {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.1875;
@@ -6655,7 +6835,7 @@ h4,
 }
 .article__callout-text {
   margin: 0;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.375;
@@ -6782,7 +6962,7 @@ h4,
 }
 .article-toc__link {
   display: block;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
@@ -7385,7 +7565,7 @@ h4,
   height: 100%;
 }
 .product-benefits__text {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.1875;
@@ -7615,7 +7795,7 @@ h4,
 .vacancy-card__title {
   flex: 1 1 auto;
   min-width: 0;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.2;
@@ -7627,7 +7807,7 @@ h4,
   }
 }
 .vacancy-card__salary {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 1.2;
@@ -7748,7 +7928,7 @@ h4,
   margin-bottom: 1.75rem;
 }
 .vacancy-card__meta li {
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
@@ -7821,7 +8001,7 @@ h4,
 }
 .vacancy-modal__title {
   margin: 0 0 0.75rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1.2;
@@ -8295,7 +8475,7 @@ h4,
 }
 .catalog-filters__group-title {
   margin: 0 0 0.875rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.2;
@@ -8618,14 +8798,14 @@ h4,
 }
 .custom-select__icon {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: 1.25rem;
   height: 1.25rem;
-}
-.custom-select__icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  font-size: 1.25rem;
+  line-height: 1;
+  color: var(--color-muted);
 }
 .custom-select__value {
   font-family: "Onest", sans-serif, sans-serif;
@@ -8636,16 +8816,15 @@ h4,
 }
 .custom-select__chevron {
   display: inline-flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
   width: 0.75rem;
   height: 0.4375rem;
   margin-left: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1;
   transition: transform 0.2s ease;
-}
-.custom-select__chevron img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
 }
 .custom-select__list {
   position: absolute;
@@ -8814,6 +8993,8 @@ h4,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 1.0625rem;
+  line-height: 1;
 }
 .btn__icon img,
 .btn__icon svg {
@@ -8828,6 +9009,8 @@ h4,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.75rem;
+  line-height: 1;
 }
 .btn__chevron img,
 .btn__chevron svg {
@@ -8840,7 +9023,7 @@ h4,
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.0714285714;
@@ -8925,6 +9108,8 @@ h4,
   background: transparent;
   cursor: pointer;
   color: inherit;
+  font-size: 1.625rem;
+  line-height: 1;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 @media (any-hover: hover) {
@@ -8940,19 +9125,8 @@ h4,
   box-shadow: var(--focus-ring);
   border-radius: 0.25rem;
 }
-.product-card__favorite.is-active .product-card__favorite-icon--outline {
-  display: none;
-}
-.product-card__favorite.is-active .product-card__favorite-icon--filled {
-  display: block;
-}
-.product-card__favorite-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.product-card__favorite-icon--filled {
-  display: none;
+.product-card__favorite.is-active.icon-heart:before {
+  content: "\e911";
 }
 .product-card__media {
   display: flex;
@@ -9008,12 +9182,9 @@ h4,
   flex-shrink: 0;
   width: 0.75rem;
   height: 0.75rem;
-}
-.product-card__star img,
-.product-card__star svg {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  font-size: 0.75rem;
+  line-height: 1;
+  color: var(--color-primary);
 }
 .product-card__footer {
   display: flex;
@@ -9031,12 +9202,9 @@ h4,
   border-radius: 50%;
   background: var(--color-surface);
   transition: background-color 0.2s ease;
-}
-.product-card__action img,
-.product-card__action svg {
-  width: 0.5625rem;
-  height: 0.9375rem;
-  object-fit: contain;
+  font-size: 0.9375rem;
+  line-height: 1;
+  color: var(--color-text);
 }
 .product-card__link {
   flex: 1 1 auto;
@@ -9311,7 +9479,7 @@ img {
 }
 .footer__title {
   margin-bottom: 1.25rem;
-  font-family: "Golos Text", sans-serif, sans-serif;
+  font-family: "GolosText", sans-serif, sans-serif;
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.1111111111;
@@ -9431,6 +9599,9 @@ img {
   height: 2.375rem;
   border: 1px solid var(--color-primary);
   border-radius: 50%;
+  font-size: 1rem;
+  line-height: 1;
+  color: var(--color-primary);
   transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 @media (min-width: 1199.98px) {

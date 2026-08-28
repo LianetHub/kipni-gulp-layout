@@ -22,7 +22,6 @@
   "overrides": {
     "clean-css": "^5.3.3"
   },
-
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/preset-env": "^7.15.0",

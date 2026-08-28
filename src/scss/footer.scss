@@ -84,7 +84,7 @@
 	// footer__title
 	&__title {
 		margin-bottom: rem(20);
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(18);
 		font-weight: 500;
 		line-height: math.div(20, 18);
@@ -216,6 +216,9 @@
 		height: rem(38);
 		border: 1px solid var(--color-primary);
 		border-radius: 50%;
+		font-size: rem(16);
+		line-height: 1;
+		color: var(--color-primary);
 		transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
 		@media (min-width: $md2) {

@@ -3,7 +3,9 @@
 @import "fonts";
 
 $fontfamily: "Onest", sans-serif;
-$font-heading: "Golos Text", sans-serif;
+$font-golos: "GolosText", sans-serif;
+$font-manrope: "Manrope", sans-serif;
+$font-tthoves: "tthoves", sans-serif;
 
 $md0: 1518.98px;
 $md1: 1439.98px;
@@ -98,6 +100,7 @@ $ui-index-6: 6;
 $ui-index-7: 7;
 
 @import "typography";
+@import "icons";
 @import "base";
 @import "modules/grid";
 @import "modules/header";

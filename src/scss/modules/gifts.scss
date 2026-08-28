@@ -54,7 +54,7 @@
 	&__title {
 		max-width: rem(286);
 		margin: 0;
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(24);
 		font-weight: 500;
 		line-height: math.div(29, 24);
@@ -102,6 +102,7 @@
 
 	// gifts--on-dark
 	&--on-dark {
+
 		.gifts__title,
 		.gifts__lead {
 			color: var(--color-white);

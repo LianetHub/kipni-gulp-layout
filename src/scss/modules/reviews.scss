@@ -121,14 +121,12 @@
 		box-shadow: var(--shadow-soft);
 		cursor: pointer;
 		transform: translateY(-50%);
+		font-size: rem(15);
+		line-height: 1;
+		color: var(--color-text);
 
 		@media (min-width: $md4) {
 			display: inline-flex;
-		}
-
-		img {
-			width: rem(9);
-			height: rem(15);
 		}
 
 		&:focus-visible {
@@ -227,7 +225,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: rem(8);
-		font-family: $font-heading, sans-serif;
+		font-family: $font-golos, sans-serif;
 		font-size: rem(22);
 		font-weight: 500;
 		line-height: math.div(26, 22);
