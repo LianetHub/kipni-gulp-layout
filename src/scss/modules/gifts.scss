@@ -13,26 +13,17 @@
 		overflow: hidden;
 		border-radius: rem(20);
 		min-height: rem(373);
-
-		@media (min-width: $md4) {
-			min-height: rem(320);
-		}
-
-		@media (min-width: $md2) {
-			min-height: rem(394);
-		}
-	}
-
-	// gifts__media
-	&__media {
-		position: absolute;
-		inset: 0;
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 70% center;
 
 		@media (min-width: $md4) {
+			min-height: rem(320);
 			background-position: center right;
+		}
+
+		@media (min-width: $md2) {
+			min-height: rem(394);
 		}
 	}
 

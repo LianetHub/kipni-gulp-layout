@@ -13,39 +13,19 @@
 		overflow: hidden;
 		border-radius: rem(20);
 		min-height: rem(373);
-		background: #e8f0f8;
-
-		@media (min-width: $md4) {
-			min-height: rem(360);
-		}
-
-		@media (min-width: $md2) {
-			min-height: rem(394);
-		}
-	}
-
-	// business__media
-	&__media {
-		position: absolute;
-		inset: 0;
+		background-color: #e8f0f8;
+		background-image: var(--business-bg-mobile);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: right center;
 
-		&--desktop {
-			display: none;
-
-			@media (min-width: $md4) {
-				display: block;
-			}
+		@media (min-width: $md4) {
+			min-height: rem(360);
+			background-image: var(--business-bg-desktop);
 		}
 
-		&--mobile {
-			display: block;
-
-			@media (min-width: $md4) {
-				display: none;
-			}
+		@media (min-width: $md2) {
+			min-height: rem(394);
 		}
 	}
 

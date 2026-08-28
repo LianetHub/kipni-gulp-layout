@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <meta name="apple-mobile-web-app-title" content="KIPNI" />
-    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <meta name="apple-mobile-web-app-title" content="KIPNI">
+    <link rel="manifest" href="/site.webmanifest">
 
 
     <!-- plugins -->
@@ -26,8 +26,7 @@
   <body>
     <div class="wrapper">
       <header class="header" data-header>
-        <div class="header-banner" data-header-banner>
-              <div class="header-banner__bg" role="img" aria-label="White flowers and green leaves on a light background" style="background-image: url('img/header/banner-bg.png');"></div>
+        <div class="header-banner" data-header-banner style="background-image: url('img/header/banner-bg.png');">
           <div class="container header-banner__inner">
             <p class="header-banner__text">
               Любимые экосредства для дома и семьи в одной подборке.
@@ -288,10 +287,9 @@
                 </ul>
               </div>
 
-              <div class="header-catalog__promo">
+              <div class="header-catalog__promo" style="--header-catalog-promo-image: url('img/header/catalog-promo.png');">
                 <p class="header-catalog__promo-title">Чистота, которой доверяет семья</p>
                 <p class="header-catalog__promo-text">Экологичные средства для дома на каждый день</p>
-                          <div class="header-catalog__promo-media" role="img" aria-label="Продукция KIPNI и зелёный утёнок-маскот" style="background-image: url('img/header/catalog-promo.png');"></div>
                 <a class="btn btn--primary header-catalog__promo-btn" href="#">
                   Перейти в каталог
                   <span class="btn__chevron" aria-hidden="true">
@@ -420,8 +418,7 @@
         <section class="hero" aria-label="Главный баннер">
         	<div class="swiper hero__slider" data-hero-slider>
         		<div class="swiper-wrapper">
-        			<div class="swiper-slide hero-slide">
-        				<div class="hero-slide__media" role="img" aria-label="Продукция KIPNI для дома и ухода и маскот бренда" style="background-image: url('img/hero/slide-1.jpg');"></div>
+        			<div class="swiper-slide hero-slide" style="background-image: url('img/hero/slide-1.jpg');">
         				<div class="container hero-slide__inner">
         					<div class="hero-slide__content">
         						<h1 class="hero-slide__title">
@@ -471,8 +468,7 @@
         				</div>
         			</div>
 
-        			<div class="swiper-slide hero-slide">
-        				<div class="hero-slide__media" role="img" aria-label="Гель для стирки KIPNI 5 литров и плюшевый мишка в корзине с бельём" style="background-image: url('img/hero/slide-2.png');"></div>
+        			<div class="swiper-slide hero-slide" style="background-image: url('img/hero/slide-2.png');">
         				<div class="container hero-slide__inner">
         					<div class="hero-slide__content">
         						<h2 class="hero-slide__title">
@@ -517,8 +513,7 @@
         				</div>
         			</div>
 
-        			<div class="swiper-slide hero-slide hero-slide--dark">
-        				<div class="hero-slide__media" role="img" aria-label="Парфюмированное мыло KIPNI в янтарных флаконах под водой" style="background-image: url('img/hero/slide-3.png');"></div>
+        			<div class="swiper-slide hero-slide hero-slide--dark" style="background-image: url('img/hero/slide-3.png');">
         				<div class="container hero-slide__inner">
         					<div class="hero-slide__content">
         						<h2 class="hero-slide__title">
@@ -689,8 +684,7 @@
 
         <section class="gifts section-space-md" aria-label="Подарочные наборы">
         	<div class="container">
-        		<div class="gifts__banner">
-        						<div class="gifts__media" role="img" aria-label="Подарочный набор жидкого мыла Lutea в коробке" style="background-image: url('img/gifts/banner.jpg');"></div>
+        		<div class="gifts__banner" style="background-image: url('img/gifts/banner.jpg');">
         			<div class="gifts__content">
         				<h2 class="gifts__title">Подарочные наборы для ваших близких</h2>
         				<p class="gifts__lead">Покажите красиво заботу о&nbsp;ваших близких с&nbsp;KIPNI</p>
@@ -727,7 +721,9 @@
         									<img class="product-card__favorite-icon product-card__favorite-icon--filled" src="fonts/iconfont/favorite.svg" alt="В избранном" width="28" height="26" loading="lazy">
         								</button>
         							</div>
-        							<div class="product-card__media" role="img" aria-label="Чистящий гель KIPNI для унитазов" style="background-image: url('img/products/toilet-gel.png');"></div>
+        							<div class="product-card__media">
+        								<picture><source srcset="img/products/toilet-gel.webp" type="image/webp"><img src="img/products/toilet-gel.png" alt="Чистящий гель KIPNI для унитазов" width="200" height="200" loading="lazy"></picture>
+        							</div>
         							<div class="product-card__body">
         								<h3 class="product-card__title">Чистящий гель для унитазов</h3>
         								
@@ -762,7 +758,9 @@
         									<img class="product-card__favorite-icon product-card__favorite-icon--filled" src="fonts/iconfont/favorite.svg" alt="В избранном" width="28" height="26" loading="lazy">
         								</button>
         							</div>
-        							<div class="product-card__media" role="img" aria-label="Гель для душа Канди шоп папайя виноград" style="background-image: url('img/products/candy-shop.png');"></div>
+        							<div class="product-card__media">
+        								<picture><source srcset="img/products/candy-shop.webp" type="image/webp"><img src="img/products/candy-shop.png" alt="Гель для душа Канди шоп папайя виноград" width="200" height="200" loading="lazy"></picture>
+        							</div>
         							<div class="product-card__body">
         								<h3 class="product-card__title">Гель для душа Канди шоп</h3>
         								
@@ -799,7 +797,9 @@
         									<img class="product-card__favorite-icon product-card__favorite-icon--filled" src="fonts/iconfont/favorite.svg" alt="В избранном" width="28" height="26" loading="lazy">
         								</button>
         							</div>
-        							<div class="product-card__media" role="img" aria-label="Жидкое мыло Тропические фрукты" style="background-image: url('img/products/tropical-soap.png');"></div>
+        							<div class="product-card__media">
+        								<picture><source srcset="img/products/tropical-soap.webp" type="image/webp"><img src="img/products/tropical-soap.png" alt="Жидкое мыло Тропические фрукты" width="200" height="200" loading="lazy"></picture>
+        							</div>
         							<div class="product-card__body">
         								<h3 class="product-card__title">Жидкое мыло Тропические фрукты</h3>
         								
@@ -836,7 +836,9 @@
         									<img class="product-card__favorite-icon product-card__favorite-icon--filled" src="fonts/iconfont/favorite.svg" alt="В избранном" width="28" height="26" loading="lazy">
         								</button>
         							</div>
-        							<div class="product-card__media" role="img" aria-label="Мыло хозяйственное Кипни" style="background-image: url('img/products/household-soap.png');"></div>
+        							<div class="product-card__media">
+        								<picture><source srcset="img/products/household-soap.webp" type="image/webp"><img src="img/products/household-soap.png" alt="Мыло хозяйственное Кипни" width="200" height="200" loading="lazy"></picture>
+        							</div>
         							<div class="product-card__body">
         								<h3 class="product-card__title">Мыло хозяйственное Кипни</h3>
         								
@@ -873,7 +875,9 @@
         									<img class="product-card__favorite-icon product-card__favorite-icon--filled" src="fonts/iconfont/favorite.svg" alt="В избранном" width="28" height="26" loading="lazy">
         								</button>
         							</div>
-        							<div class="product-card__media" role="img" aria-label="Универсальный гель для стирки KIPNI 5 л" style="background-image: url('img/products/laundry-gel.png');"></div>
+        							<div class="product-card__media">
+        								<picture><source srcset="img/products/laundry-gel.webp" type="image/webp"><img src="img/products/laundry-gel.png" alt="Универсальный гель для стирки KIPNI 5 л" width="200" height="200" loading="lazy"></picture>
+        							</div>
         							<div class="product-card__body">
         								<h3 class="product-card__title">Универсальный гель для стирки</h3>
         								
@@ -908,7 +912,9 @@
         									<img class="product-card__favorite-icon product-card__favorite-icon--filled" src="fonts/iconfont/favorite.svg" alt="В избранном" width="28" height="26" loading="lazy">
         								</button>
         							</div>
-        							<div class="product-card__media" role="img" aria-label="Средство для посуды OLLY" style="background-image: url('img/products/dish.png');"></div>
+        							<div class="product-card__media">
+        								<picture><source srcset="img/products/dish.webp" type="image/webp"><img src="img/products/dish.png" alt="Средство для посуды OLLY" width="200" height="200" loading="lazy"></picture>
+        							</div>
         							<div class="product-card__body">
         								<h3 class="product-card__title">Средство для посуды</h3>
         								
@@ -934,57 +940,57 @@
         	</div>
         </section>
 
-        <section class="marketplaces section-space-md" aria-labelledby="marketplaces-title">
-        	<div class="container">
-        		<div class="marketplaces__panel">
-        			<div class="marketplaces__grid">
-        				<div class="marketplaces__intro">
-        					<h2 class="marketplaces__title" id="marketplaces-title">
-        						Выбирайте удобный
-        						<span class="marketplaces__title-accent">способ покупки</span>
-        					</h2>
-        					<p class="marketplaces__lead">Наши товары есть на&nbsp;всех крупнейших маркетплейсах</p>
-        				</div>
-        				<div class="marketplaces__mascot" role="img" aria-label="Маскот KIPNI — жёлтый цыплёнок" style="background-image: url('img/marketplaces/chick.png');"></div>
-        				<div class="marketplaces__shops">
-        					<a class="marketplace-card marketplace-card--avito" href="#" aria-label="Купить на Avito">
-        						<img class="marketplace-card__logo" src="img/marketplaces/avito.svg" alt="Avito" width="160" height="24" loading="lazy">
-        						<span class="marketplace-card__caption">Перейти в магазин</span>
-        					</a>
-        					<a class="marketplace-card" href="#" aria-label="Купить на Ozon">
-        						<img class="marketplace-card__logo marketplace-card__logo--ozon" src="img/where-to-buy/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
-        					</a>
-        					<a class="marketplace-card" href="#" aria-label="Купить на Wildberries">
-        						<img class="marketplace-card__logo marketplace-card__logo--wb" src="img/where-to-buy/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
-        					</a>
-        					<a class="marketplace-card" href="#" aria-label="Купить на Мегамаркете">
-        						<img class="marketplace-card__logo marketplace-card__logo--mega" src="img/marketplaces/megamarket.svg" alt="Мегамаркет" width="195" height="29" loading="lazy">
-        					</a>
-        					<a class="marketplace-card" href="#" aria-label="Купить на Яндекс Маркете">
-        						<picture><source srcset="img/where-to-buy/yandex-market.webp" type="image/webp"><img class="marketplace-card__logo marketplace-card__logo--yandex" src="img/where-to-buy/yandex-market.png" alt="Яндекс Маркет" width="174" height="26" loading="lazy"></picture>
-        					</a>
-        					<a class="marketplace-card" href="#" aria-label="Купить на Магнит Маркете">
-        						<picture><source srcset="img/where-to-buy/magnit.webp" type="image/webp"><img class="marketplace-card__logo marketplace-card__logo--magnit" src="img/where-to-buy/magnit.png" alt="Магнит Маркет" width="191" height="36" loading="lazy"></picture>
-        					</a>
-        				</div>
-        				<div class="marketplaces__perks">
-        					<div class="marketplace-perk">
-        						<span class="marketplace-perk__icon" aria-hidden="true">
-        							<img src="fonts/iconfont/truck.svg" alt="Доставка" width="40" height="28" loading="lazy">
-        						</span>
-        						<span class="marketplace-perk__text">Быстрая доставка</span>
-        					</div>
-        					<div class="marketplace-perk">
-        						<span class="marketplace-perk__icon" aria-hidden="true">
-        							<img src="fonts/iconfont/certificate.svg" alt="Сертификат" width="34" height="34" loading="lazy">
-        						</span>
-        						<span class="marketplace-perk__text">Оригинальная продукция</span>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
+        <section class="marketplaces section-space-md" aria-labelledby="marketplaces-title">
+        	<div class="container">
+        		<div class="marketplaces__panel">
+        			<div class="marketplaces__grid">
+        				<div class="marketplaces__intro">
+        					<h2 class="marketplaces__title" id="marketplaces-title">
+        						Выбирайте удобный
+        						<span class="marketplaces__title-accent">способ покупки</span>
+        					</h2>
+        					<p class="marketplaces__lead">Наши товары есть на&nbsp;всех крупнейших маркетплейсах</p>
+        				</div>
+        				<div class="marketplaces__shops">
+        					<a class="marketplace-card marketplace-card--avito" href="#" aria-label="Купить на Avito">
+        						<img class="marketplace-card__logo" src="img/marketplaces/avito.svg" alt="Avito" width="160" height="24" loading="lazy">
+        						<span class="marketplace-card__caption">Перейти в магазин</span>
+        					</a>
+        					<a class="marketplace-card" href="#" aria-label="Купить на Ozon">
+        						<img class="marketplace-card__logo marketplace-card__logo--ozon" src="img/where-to-buy/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
+        					</a>
+        					<a class="marketplace-card" href="#" aria-label="Купить на Wildberries">
+        						<img class="marketplace-card__logo marketplace-card__logo--wb" src="img/where-to-buy/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
+        					</a>
+        					<a class="marketplace-card" href="#" aria-label="Купить на Мегамаркете">
+        						<img class="marketplace-card__logo marketplace-card__logo--mega" src="img/marketplaces/megamarket.svg" alt="Мегамаркет" width="195" height="29" loading="lazy">
+        					</a>
+        					<a class="marketplace-card" href="#" aria-label="Купить на Яндекс Маркете">
+        						<picture><source srcset="img/where-to-buy/yandex-market.webp" type="image/webp"><img class="marketplace-card__logo marketplace-card__logo--yandex" src="img/where-to-buy/yandex-market.png" alt="Яндекс Маркет" width="174" height="26" loading="lazy"></picture>
+        					</a>
+        					<a class="marketplace-card" href="#" aria-label="Купить на Магнит Маркете">
+        						<picture><source srcset="img/where-to-buy/magnit.webp" type="image/webp"><img class="marketplace-card__logo marketplace-card__logo--magnit" src="img/where-to-buy/magnit.png" alt="Магнит Маркет" width="191" height="36" loading="lazy"></picture>
+        					</a>
+        				</div>
+        				<div class="marketplaces__perks">
+        					<div class="marketplace-perk">
+        						<span class="marketplace-perk__icon" aria-hidden="true">
+        							<img src="fonts/iconfont/truck.svg" alt="Доставка" width="40" height="28" loading="lazy">
+        						</span>
+        						<span class="marketplace-perk__text">Быстрая доставка</span>
+        					</div>
+        					<div class="marketplace-perk">
+        						<span class="marketplace-perk__icon" aria-hidden="true">
+        							<img src="fonts/iconfont/certificate.svg" alt="Сертификат" width="34" height="34" loading="lazy">
+        						</span>
+        						<span class="marketplace-perk__text">Оригинальная продукция</span>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+        	</div>
+        </section>
+
         <section class="why section-space-md" aria-labelledby="why-title">
         	<div class="container">
         		<div class="why__head">
@@ -994,8 +1000,8 @@
 
         		<div class="why__rows">
         			<div class="row why__row align-items-center">
-        				<div class="col-12 col-xl-6">
-        										<div class="why__media" role="img" aria-label="Продукция KIPNI на столе в светлой ванной" style="background-image: url('img/why/safety.jpg');"></div>
+        				<div class="col-12 col-xl-6 why__media">
+        					<picture><source srcset="img/why/safety.webp" type="image/webp"><img src="img/why/safety.jpg" alt="Продукция KIPNI на столе в светлой ванной" width="720" height="350" loading="lazy"></picture>
         				</div>
         				<div class="col-12 col-xl-6">
         					<div class="why__copy">
@@ -1008,8 +1014,8 @@
         			</div>
 
         			<div class="row why__row why__row--reverse align-items-center">
-        				<div class="col-12 col-xl-6">
-        										<div class="why__media" role="img" aria-label="Семья с двумя детьми в светлой гостиной" style="background-image: url('img/why/quality.jpg');"></div>
+        				<div class="col-12 col-xl-6 why__media">
+        					<picture><source srcset="img/why/quality.webp" type="image/webp"><img src="img/why/quality.jpg" alt="Семья с двумя детьми в светлой гостиной" width="720" height="350" loading="lazy"></picture>
         				</div>
         				<div class="col-12 col-xl-6">
         					<div class="why__copy why__copy--end">
@@ -1022,8 +1028,8 @@
         			</div>
 
         			<div class="row why__row align-items-center">
-        				<div class="col-12 col-xl-6">
-        										<div class="why__media" role="img" aria-label="Производственный комплекс KIPNI и логистика" style="background-image: url('img/why/access.jpg');"></div>
+        				<div class="col-12 col-xl-6 why__media">
+        					<picture><source srcset="img/why/access.webp" type="image/webp"><img src="img/why/access.jpg" alt="Производственный комплекс KIPNI и логистика" width="720" height="350" loading="lazy"></picture>
         				</div>
         				<div class="col-12 col-xl-6">
         					<div class="why__copy">
@@ -1039,9 +1045,7 @@
         </section>
         <section class="business section-space-md" aria-labelledby="business-title">
         	<div class="container">
-        		<div class="business__banner">
-        						<div class="business__media business__media--desktop" role="img" aria-label="Грузовик и продукция KIPNI для оптовых поставок" style="background-image: url('img/business/banner.jpg');"></div>
-        						<div class="business__media business__media--mobile" role="img" aria-label="Грузовик для поставок продукции KIPNI" style="background-image: url('img/business/mobile.jpg');"></div>
+        		<div class="business__banner" style="--business-bg-desktop: url('img/business/banner.jpg'); --business-bg-mobile: url('img/business/mobile.jpg');">
         			<div class="business__content">
         				<h2 class="business__title" id="business-title">Товары для бизнеса</h2>
         				<p class="business__lead">Чистота и&nbsp;забота о&nbsp;клиентах - ваша репутация</p>
@@ -1325,16 +1329,13 @@
       			<p class="footer__copy">2003-2026 © ООО «Фабрика Кипни». Все права защищены</p>
       		</div>
       	</div>
-
-      		<div class="footer__deco" role="img" aria-label="Декоративные зелёные листья" style="background-image: url('img/footer/leaf-deco.png');"></div>
       </footer>
 
       <aside class="ask-widget" data-ask-widget aria-label="Задать вопрос" aria-hidden="true">
       	
       		
-      		<a class="ask-widget__link" href="#">
+      		<a class="ask-widget__link" href="#" style="background-image: url('img/ask/bird.png');">
       			
-      			<div class="ask-widget__media" role="img" aria-label="Маскот KIPNI — зелёная птица" style="background-image: url('img/ask/bird.png');"></div>
       			<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
       		</a>
       </aside>

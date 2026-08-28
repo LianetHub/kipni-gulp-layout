@@ -139,6 +139,27 @@
 		padding: rem(29) rem(20);
 	}
 
+	&::after {
+		content: "";
+		position: absolute;
+		right: rem(-8);
+		bottom: rem(-4);
+		width: rem(110);
+		height: rem(110);
+		background-image: var(--catalog-cat-image);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		pointer-events: none;
+
+		@media (min-width: $md4) {
+			right: rem(-12);
+			bottom: rem(-6);
+			width: rem(145);
+			height: rem(145);
+		}
+	}
+
 	// catalog-cat__content
 	&__content {
 		position: relative;
@@ -172,24 +193,6 @@
 		@media (min-width: $md4) {
 			font-size: rem(16);
 			line-height: math.div(17, 16);
-		}
-	}
-
-	// catalog-cat__media
-	&__img {
-		position: absolute;
-		right: rem(-8);
-		bottom: rem(-4);
-		width: rem(110);
-		height: rem(110);
-		object-fit: contain;
-		pointer-events: none;
-
-		@media (min-width: $md4) {
-			right: rem(-12);
-			bottom: rem(-6);
-			width: rem(145);
-			height: rem(145);
 		}
 	}
 

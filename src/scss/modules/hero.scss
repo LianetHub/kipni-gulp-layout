@@ -64,17 +64,9 @@
 	height: 100%;
 	overflow: hidden;
 	background: var(--color-surface);
-
-	// hero-slide__media
-	&__media {
-		position: absolute;
-		inset: 0;
-		z-index: $ui-index-1;
-		pointer-events: none;
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center right;
-	}
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center right;
 
 	// hero-slide__inner
 	&__inner {

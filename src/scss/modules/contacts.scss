@@ -12,30 +12,36 @@
 	// contacts__inner
 	&__inner {
 		position: relative;
-	}
 
-	// contacts__decor
-	&__decor {
-		display: none;
-		position: absolute;
-		top: rem(-40);
-		right: rem(-180);
-		z-index: 0;
-		width: rem(320);
-		height: auto;
-		pointer-events: none;
-		user-select: none;
-		transform: rotate(12deg);
+		&::before {
+			content: "";
+			display: none;
+			position: absolute;
+			top: rem(-40);
+			right: rem(-180);
+			z-index: 0;
+			width: rem(320);
+			height: rem(320);
+			pointer-events: none;
+			user-select: none;
+			transform: rotate(12deg);
+			background-image: url("@img/contacts/decor.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
 
-		@media (min-width: $md3) {
-			display: block;
-			right: rem(-120);
-			width: rem(400);
-		}
+			@media (min-width: $md3) {
+				display: block;
+				right: rem(-120);
+				width: rem(400);
+				height: rem(400);
+			}
 
-		@media (min-width: $md2) {
-			right: rem(-80);
-			width: rem(488);
+			@media (min-width: $md2) {
+				right: rem(-80);
+				width: rem(488);
+				height: rem(488);
+			}
 		}
 	}
 

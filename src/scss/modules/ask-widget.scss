@@ -44,17 +44,12 @@
 	&__link {
 		position: relative;
 		display: block;
-		pointer-events: auto;
-		text-decoration: none;
-		color: inherit;
-	}
-
-	// ask-widget__media
-	&__media {
-		display: block;
 		width: rem(160);
 		height: rem(170);
 		margin-left: auto;
+		pointer-events: auto;
+		text-decoration: none;
+		color: inherit;
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-position: bottom center;

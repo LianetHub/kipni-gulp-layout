@@ -97,19 +97,15 @@
 	&__promo {
 		overflow: hidden;
 		border-radius: var(--radius-md);
-		background: #f7f8f3;
-	}
+		background-color: #f7f8f3;
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: top center;
 
-	// help-aside__promo-media
-	&__promo-media {
-		aspect-ratio: 345 / 171;
-		overflow: hidden;
-
-		img {
+		&::before {
+			content: "";
 			display: block;
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
+			aspect-ratio: 345 / 171;
 		}
 	}
 

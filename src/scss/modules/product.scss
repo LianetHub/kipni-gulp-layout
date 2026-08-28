@@ -12,38 +12,38 @@
 	// product__inner
 	&__inner {
 		position: relative;
-	}
 
-	// product__decor
-	&__decor {
-		display: none;
-		pointer-events: none;
-		position: absolute;
-		z-index: 0;
-		top: rem(-40);
-		right: rem(-180);
-		width: rem(360);
-		height: auto;
+		&::before {
+			content: "";
+			display: none;
+			pointer-events: none;
+			position: absolute;
+			z-index: 0;
+			top: rem(-40);
+			right: rem(-180);
+			width: rem(360);
+			height: rem(360);
+			background-image: url("@img/promo/leaves.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
 
-		@media (min-width: $md2) {
-			display: block;
-		}
+			@media (min-width: $md2) {
+				display: block;
+			}
 
-		@media (min-width: $md1) {
-			top: rem(-60);
-			right: rem(-240);
-			width: rem(520);
-		}
+			@media (min-width: $md1) {
+				top: rem(-60);
+				right: rem(-240);
+				width: rem(520);
+				height: rem(520);
+			}
 
-		@media (min-width: $md0) {
-			right: rem(-280);
-			width: rem(646);
-		}
-
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
+			@media (min-width: $md0) {
+				right: rem(-280);
+				width: rem(646);
+				height: rem(646);
+			}
 		}
 	}
 
@@ -520,7 +520,7 @@
 			margin-left: auto;
 		}
 
-		.help-aside__promo-media {
+		.help-aside__promo::before {
 			aspect-ratio: 586 / 214;
 			border-radius: 0 var(--radius-md) 0 var(--radius-btn);
 		}

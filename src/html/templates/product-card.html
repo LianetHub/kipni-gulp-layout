@@ -20,7 +20,9 @@
 			<img class="product-card__favorite-icon product-card__favorite-icon--filled" src="fonts/iconfont/favorite.svg" alt="В избранном" width="28" height="26" loading="lazy">
 		</button>
 	</div>
-	<div class="product-card__media" role="img" aria-label="@@image_alt" style="background-image: url('@@image');"></div>
+	<div class="product-card__media">
+		<img src="@@image" alt="@@image_alt" width="200" height="200" loading="lazy">
+	</div>
 	<div class="product-card__body">
 		<h3 class="product-card__title">@@title</h3>
 		@@if (typeof volume !== 'undefined' && volume) {

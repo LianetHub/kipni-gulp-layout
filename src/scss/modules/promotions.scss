@@ -221,8 +221,8 @@
 		}
 	}
 
-	// promo-card__media
-	&__media {
+	&::after {
+		content: "";
 		position: relative;
 		align-self: center;
 		order: 4;
@@ -230,6 +230,11 @@
 		margin-top: rem(16);
 		pointer-events: none;
 		z-index: 0;
+		background-image: var(--promo-card-image);
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center bottom;
+		aspect-ratio: 220 / 180;
 
 		@media (min-width: $md4) {
 			position: absolute;
@@ -239,18 +244,14 @@
 			bottom: rem(20);
 			width: rem(300);
 			margin-top: 0;
+			aspect-ratio: 300 / 240;
 		}
 
 		@media (min-width: $md2) {
 			width: rem(360);
 			right: rem(-8);
 			bottom: rem(30);
-		}
-
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
+			aspect-ratio: 360 / 280;
 		}
 	}
 }

@@ -14,38 +14,38 @@
 	// promo-intro__inner
 	&__inner {
 		position: relative;
-	}
 
-	// promo-intro__decor
-	&__decor {
-		display: none;
-		pointer-events: none;
-		position: absolute;
-		z-index: 0;
-		top: rem(-80);
-		right: rem(-180);
-		width: rem(420);
-		height: auto;
+		&::before {
+			content: "";
+			display: none;
+			pointer-events: none;
+			position: absolute;
+			z-index: 0;
+			top: rem(-80);
+			right: rem(-180);
+			width: rem(420);
+			height: rem(420);
+			background-image: url("@img/promo/leaves.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
 
-		@media (min-width: $md3) {
-			display: block;
-		}
+			@media (min-width: $md3) {
+				display: block;
+			}
 
-		@media (min-width: $md2) {
-			top: rem(-90);
-			right: rem(-220);
-			width: rem(520);
-		}
+			@media (min-width: $md2) {
+				top: rem(-90);
+				right: rem(-220);
+				width: rem(520);
+				height: rem(520);
+			}
 
-		@media (min-width: $md1) {
-			right: rem(-280);
-			width: rem(646);
-		}
-
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
+			@media (min-width: $md1) {
+				right: rem(-280);
+				width: rem(646);
+				height: rem(646);
+			}
 		}
 	}
 

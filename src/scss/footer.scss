@@ -335,8 +335,8 @@
 		}
 	}
 
-	// footer__deco
-	&__deco {
+	&::after {
+		content: "";
 		display: none;
 
 		@media (min-width: $md2) {
@@ -346,14 +346,19 @@
 			top: rem(76);
 			z-index: $ui-index-1;
 			width: rem(130);
-			height: auto;
+			height: rem(130);
 			pointer-events: none;
 			user-select: none;
+			background-image: url("@img/footer/leaf-deco.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
 		}
 
 		@media (min-width: $md0) {
 			right: rem(80);
 			width: rem(163);
+			height: rem(163);
 		}
 	}
 }

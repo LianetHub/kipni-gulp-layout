@@ -1,79 +1,7 @@
-@use "sass:math";
-
 .technical {
 	padding-top: rem(40);
 
 	@media (min-width: $md4) {
 		padding-top: rem(84);
-	}
-
-	// technical__title
-	&__title {
-		margin-bottom: rem(32);
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(76);
-		}
-	}
-
-	// technical__body
-	&__body {
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	// technical__heading
-	&__heading {
-		margin-top: rem(40);
-		margin-bottom: rem(20);
-
-		@media (min-width: $md4) {
-			margin-top: rem(48);
-			margin-bottom: rem(40);
-		}
-	}
-
-	// technical__text
-	&__text {
-		font-family: $fontfamily, sans-serif;
-		font-size: rem(16);
-		font-weight: 400;
-		line-height: math.div(26, 16);
-		color: var(--color-text);
-
-		& + .technical__text {
-			margin-top: rem(15);
-		}
-	}
-
-	// technical__list
-	&__list {
-		display: flex;
-		flex-direction: column;
-		gap: rem(15);
-		margin-top: rem(15);
-		margin-bottom: rem(24);
-
-		li {
-			position: relative;
-			padding-left: rem(14);
-			font-family: $fontfamily, sans-serif;
-			font-size: rem(16);
-			font-weight: 400;
-			line-height: math.div(16, 16);
-			color: var(--color-text);
-
-			&::before {
-				content: "";
-				position: absolute;
-				top: rem(5);
-				left: 0;
-				width: rem(6);
-				height: rem(6);
-				border-radius: 50%;
-				background: var(--color-primary);
-			}
-		}
 	}
 }
