@@ -1,9 +1,9 @@
 <footer class="footer">
-	<div class="container footer__inner">
+	<div class="container footer__container">
 		<div class="row footer__main">
 			<div class="col-12 col-xl-3 footer__brand">
 				<a class="footer__logo" href="/" aria-label="KIPNI — на главную">
-					<img src="@img/footer/logo.png" alt="Логотип KIPNI" width="173" height="56" loading="lazy">
+					<img src="@img/logo.svg" alt="Логотип KIPNI" width="173" height="56" loading="lazy">
 				</a>
 				<p class="footer__tagline">Средства для дома и семьи, созданные с заботой о вас и природе</p>
 				<div class="footer__legal footer__legal--desktop">
@@ -58,22 +58,14 @@
 						<a class="footer__social icon-vk" href="#" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"></a>
 					</li>
 					<li>
-						<a class="footer__social" href="#" target="_blank" rel="noopener noreferrer" aria-label="Одноклассники">
-							<img src="@img/footer/icon-ok.svg" alt="Одноклассники" width="16" height="16" loading="lazy">
-						</a>
+						<a class="footer__social icon-max" href="#" target="_blank" rel="noopener noreferrer" aria-label="Мax"></a>
 					</li>
 					<li>
 						<a class="footer__social icon-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"></a>
 					</li>
 				</ul>
 				@@if(typeof askFancyboxSrc !== 'undefined' && askFancyboxSrc){
-				<a
-					class="btn btn--primary footer__btn"
-					href="@@askFancyboxSrc"
-					data-fancybox
-					data-src="@@askFancyboxSrc"
-					data-type="inline"
-				>Задать вопрос</a>
+				<a class="btn btn--primary footer__btn" href="@@askFancyboxSrc" data-fancybox data-src="@@askFancyboxSrc" data-type="inline">Задать вопрос</a>
 				}
 				@@if(typeof askFancyboxSrc === 'undefined' || !askFancyboxSrc){
 				<a class="btn btn--primary footer__btn" href="#">Задать вопрос</a>

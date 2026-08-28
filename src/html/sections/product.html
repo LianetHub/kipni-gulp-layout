@@ -1,4 +1,4 @@
-<section class="product" aria-labelledby="product-title" data-product>
+<section class="product" aria-labelledby="product-title">
 	<div class="container">
 		<nav class="breadcrumbs" aria-label="Хлебные крошки">
 			<ol class="breadcrumbs__list">
@@ -22,25 +22,25 @@
 
 		<div class="row gy-4 product__top">
 			<div class="col-12 col-lg-7">
-				<div class="product-gallery" data-product-gallery>
+				<div class="product-gallery">
 					<div class="product-gallery__thumbs" role="list">
-						<button type="button" class="product-gallery__thumb is-active" role="listitem" aria-label="Фото товара 1" aria-current="true" data-product-thumb data-src="@img/product/gallery-1.png">
+						<button type="button" class="product-gallery__thumb is-active" role="listitem" aria-label="Фото товара 1" aria-current="true">
 							<img src="@img/product/gallery-1.png" alt="Гель для стирки белого белья KIPNI, вид 1" width="107" height="111">
 						</button>
-						<button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 2" data-product-thumb data-src="@img/product/gallery-2.png">
+						<button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 2">
 							<img src="@img/product/gallery-2.png" alt="Гель для стирки белого белья KIPNI, вид 2" width="107" height="111" loading="lazy">
 						</button>
-						<button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 3" data-product-thumb data-src="@img/product/gallery-3.png">
+						<button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 3">
 							<img src="@img/product/gallery-3.png" alt="Гель для стирки белого белья KIPNI, вид 3" width="107" height="111" loading="lazy">
 						</button>
-						<button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 4" data-product-thumb data-src="@img/product/gallery-4.png">
+						<button type="button" class="product-gallery__thumb" role="listitem" aria-label="Фото товара 4">
 							<img src="@img/product/gallery-4.png" alt="Гель для стирки белого белья KIPNI, вид 4" width="107" height="111" loading="lazy">
 						</button>
 					</div>
 
 					<div class="product-gallery__main">
-						<a class="product-gallery__zoom icon-arrows-maximize" href="img/product/gallery-1.png" data-fancybox="product-gallery" data-product-zoom aria-label="Открыть фото в полном размере"></a>
-						<img class="product-gallery__image" src="@img/product/gallery-1.png" alt="Гель для стирки белого белья KIPNI" width="642" height="663" data-product-main>
+						<a class="product-gallery__zoom icon-arrows-maximize" href="img/product/gallery-1.png" data-fancybox="product-gallery" aria-label="Открыть фото в полном размере"></a>
+						<img class="product-gallery__image" src="@img/product/gallery-1.png" alt="Гель для стирки белого белья KIPNI" width="642" height="663">
 						<a class="visually-hidden" href="img/product/gallery-2.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 2</a>
 						<a class="visually-hidden" href="img/product/gallery-3.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 3</a>
 						<a class="visually-hidden" href="img/product/gallery-4.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 4</a>
@@ -63,16 +63,16 @@
 
 					<h1 class="h1 product-info__title" id="product-title">Гель для стирки белого белья</h1>
 
-					<button type="button" class="product-info__favorite icon-heart" data-product-favorite aria-pressed="false">
+					<button type="button" class="product-info__favorite icon-heart" aria-pressed="false">
 						В избранное
 					</button>
 
 					<div class="product-info__volume">
 						<p class="h3 product-info__label">Объем</p>
 						<div class="product-info__chips" role="group" aria-label="Выбор объёма">
-							<button type="button" class="product-info__chip is-active" data-product-volume aria-pressed="true">0.75 л</button>
-							<button type="button" class="product-info__chip" data-product-volume aria-pressed="false">1.5 л</button>
-							<button type="button" class="product-info__chip" data-product-volume aria-pressed="false">2 л</button>
+							<button type="button" class="product-info__chip is-active" aria-pressed="true">0.75 л</button>
+							<button type="button" class="product-info__chip" aria-pressed="false">1.5 л</button>
+							<button type="button" class="product-info__chip" aria-pressed="false">2 л</button>
 						</div>
 					</div>
 
@@ -105,15 +105,15 @@
 			</div>
 		</div>
 
-		<div class="product-tabs" data-product-tabs>
+		<div class="product-tabs">
 			<div class="product-tabs__nav" role="tablist" aria-label="Информация о товаре">
-				<button type="button" class="product-tabs__btn is-active" id="product-tab-desc" role="tab" aria-selected="true" aria-controls="product-panel-desc" data-product-tab="desc">Описание</button>
-				<button type="button" class="product-tabs__btn" id="product-tab-specs" role="tab" aria-selected="false" aria-controls="product-panel-specs" data-product-tab="specs" tabindex="-1">Характеристики</button>
-				<button type="button" class="product-tabs__btn" id="product-tab-usage" role="tab" aria-selected="false" aria-controls="product-panel-usage" data-product-tab="usage" tabindex="-1">Способ применения</button>
+				<button type="button" class="product-tabs__btn is-active" id="product-tab-desc" role="tab" aria-selected="true" aria-controls="product-panel-desc">Описание</button>
+				<button type="button" class="product-tabs__btn" id="product-tab-specs" role="tab" aria-selected="false" aria-controls="product-panel-specs" tabindex="-1">Характеристики</button>
+				<button type="button" class="product-tabs__btn" id="product-tab-usage" role="tab" aria-selected="false" aria-controls="product-panel-usage" tabindex="-1">Способ применения</button>
 			</div>
 
 			<div class="product-tabs__panels">
-				<div class="product-tabs__panel is-active" id="product-panel-desc" role="tabpanel" aria-labelledby="product-tab-desc" data-product-panel="desc">
+				<div class="product-tabs__panel is-active" id="product-panel-desc" role="tabpanel" aria-labelledby="product-tab-desc">
 					<div class="row gy-4 product-tabs__row">
 						<div class="col-12 col-lg-7">
 							<ul class="product-benefits">
@@ -162,7 +162,7 @@
 					</div>
 				</div>
 
-				<div class="product-tabs__panel" id="product-panel-specs" role="tabpanel" aria-labelledby="product-tab-specs" data-product-panel="specs" hidden>
+				<div class="product-tabs__panel" id="product-panel-specs" role="tabpanel" aria-labelledby="product-tab-specs" hidden>
 					<div class="product-tabs__content product-tabs__content--solo">
 						<h2 class="h3 product-tabs__subtitle">Характеристики</h2>
 						<ul class="product-specs">
@@ -194,7 +194,7 @@
 					</div>
 				</div>
 
-				<div class="product-tabs__panel" id="product-panel-usage" role="tabpanel" aria-labelledby="product-tab-usage" data-product-panel="usage" hidden>
+				<div class="product-tabs__panel" id="product-panel-usage" role="tabpanel" aria-labelledby="product-tab-usage" hidden>
 					<div class="product-tabs__content product-tabs__content--solo">
 						<h2 class="h3 product-tabs__subtitle">Способ применения</h2>
 						<ol class="product-usage">

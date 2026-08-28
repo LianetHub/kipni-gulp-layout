@@ -54,8 +54,8 @@
 .catalog-cats {
 	overflow: hidden;
 
-	// catalog-cats__inner
-	&__inner {
+	// catalog-cats__container
+	&__container {
 		position: relative;
 	}
 
@@ -97,6 +97,10 @@
 		transform: translateY(-50%);
 		transition: background-color 0.2s ease;
 
+		&::after {
+			content: none;
+		}
+
 		@media (min-width: $md4) {
 			right: 0;
 			width: rem(48);
@@ -119,6 +123,11 @@
 		&:focus-visible {
 			outline: none;
 			box-shadow: var(--focus-ring);
+		}
+
+		&.swiper-button-disabled {
+			opacity: 0.4;
+			pointer-events: none;
 		}
 	}
 }

@@ -57,7 +57,7 @@
 	<div class="container">
 		<h2 class="h2 buy-partners__title">Покупайте на маркетплейсах:</h2>
 		<div class="buy-partners__slider-wrap">
-			<div class="swiper buy-partners__slider" data-partners-slider data-partners-variant="market">
+			<div class="swiper buy-partners__slider">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						@@include('../templates/partner-card.html', {
@@ -127,7 +127,7 @@
 					</div>
 				</div>
 			</div>
-			<button class="buy-partners__next" type="button" data-partners-next aria-label="Следующие маркетплейсы">
+			<button class="buy-partners__next swiper-button-next" type="button" aria-label="Следующие маркетплейсы">
 				<span class="buy-partners__next-icon" aria-hidden="true">
 					<img src="@img/where-to-buy/arrow-next.svg" alt="Далее" width="11" height="17">
 				</span>
@@ -143,7 +143,7 @@
 			Наша продукция представлена в крупных розничных сетях по всей России
 		</p>
 		<div class="buy-partners__slider-wrap">
-			<div class="swiper buy-partners__slider" data-partners-slider data-partners-variant="offline">
+			<div class="swiper buy-partners__slider">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						@@include('../templates/partner-card.html', {
@@ -213,7 +213,7 @@
 					</div>
 				</div>
 			</div>
-			<button class="buy-partners__next" type="button" data-partners-next aria-label="Следующие оффлайн магазины">
+			<button class="buy-partners__next swiper-button-next" type="button" aria-label="Следующие оффлайн магазины">
 				<span class="buy-partners__next-icon" aria-hidden="true">
 					<img src="@img/where-to-buy/arrow-next.svg" alt="Далее" width="11" height="17">
 				</span>

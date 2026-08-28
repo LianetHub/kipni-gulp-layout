@@ -176,6 +176,10 @@
 		box-shadow: 0 rem(4) rem(16) rgba(83, 131, 40, 0.12);
 		transition: background-color 0.2s ease, opacity 0.2s ease;
 
+		&::after {
+			content: none;
+		}
+
 		@media (min-width: $md3) {
 			display: inline-flex;
 		}

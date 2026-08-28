@@ -26,8 +26,8 @@
 		overflow: hidden;
 	}
 
-	// popular__slider-inner
-	&__slider-inner {
+	// popular__slider-container
+	&__slider-container {
 		position: relative;
 	}
 
@@ -69,6 +69,10 @@
 		cursor: pointer;
 		transform: translateY(-50%);
 		transition: background-color 0.2s ease;
+
+		&::after {
+			content: none;
+		}
 
 		@media (min-width: $md4) {
 			right: rem(0);

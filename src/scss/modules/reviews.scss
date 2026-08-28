@@ -81,6 +81,9 @@
 
 	// reviews__pagination
 	&__pagination {
+		position: static;
+		width: auto;
+		transform: none;
 		display: flex;
 		justify-content: center;
 		gap: rem(8);
@@ -124,6 +127,10 @@
 		font-size: rem(15);
 		line-height: 1;
 		color: var(--color-text);
+
+		&::after {
+			content: none;
+		}
 
 		@media (min-width: $md4) {
 			display: inline-flex;

@@ -3,8 +3,8 @@
 		<h2 class="h2 popular__title" id="popular-title">Популярные товары бытовой химии</h2>
 	</div>
 	<div class="popular__slider-wrap">
-		<div class="container popular__slider-inner">
-			<div class="swiper popular__slider" data-popular-slider>
+		<div class="container popular__slider-container">
+			<div class="swiper popular__slider">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						@@include('../templates/product-card.html', {
@@ -70,7 +70,7 @@
 					</div>
 				</div>
 			</div>
-			<button type="button" class="popular__next icon-chevron-right" data-popular-next aria-label="Следующие товары"></button>
+			<button type="button" class="popular__next swiper-button-next icon-chevron-right" aria-label="Следующие товары"></button>
 		</div>
 	</div>
 </section>

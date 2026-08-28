@@ -68,8 +68,8 @@
 	background-size: cover;
 	background-position: center right;
 
-	// hero-slide__inner
-	&__inner {
+	// hero-slide__container
+	&__container {
 		position: relative;
 		z-index: $ui-index-2;
 		display: flex;
