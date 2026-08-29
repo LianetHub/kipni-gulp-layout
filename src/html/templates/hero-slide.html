@@ -1,7 +1,7 @@
-<div class="swiper-slide hero-slide" style="background-image: url('@@image');">
+<div class="swiper-slide hero-slide@@if (typeof modifier !== 'undefined' && modifier) { @@modifier}" style="background-image: url('@@image');">
 	<div class="container hero-slide__container">
 		<div class="hero-slide__content">
-			<@@heading class="hero-slide__title">
+			<@@heading class="h1 hero-slide__title">
 				@@title
 				<span class="hero-slide__accent">@@accent</span>
 			</@@heading>

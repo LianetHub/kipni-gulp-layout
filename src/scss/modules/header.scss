@@ -6,7 +6,7 @@
 	z-index: $ui-index-7;
 	width: 100%;
 	background: $color-bg;
-	transition: background $duration-layout $ease-layout;
+	transition: background-color $duration-layout $ease-layout;
 
 	html.is-banner-hidden &,
 	&.is-banner-hidden {
@@ -43,7 +43,7 @@
 		z-index: $ui-index-3;
 		background: $color-bg;
 		transition:
-			background $duration-layout $ease-layout,
+			background-color $duration-layout $ease-layout,
 			backdrop-filter $duration-layout $ease-layout,
 			box-shadow $duration-layout $ease-layout;
 	}
@@ -53,15 +53,14 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		justify-content: space-between;
 		gap: rem(12);
-		min-height: rem(72);
 		padding-block: rem(12);
 
 		@media (min-width: $md4) {
 			flex-wrap: nowrap;
 			gap: rem(20);
-			min-height: rem(106);
-			padding-block: rem(20);
+			padding-block: rem(32);
 		}
 
 		@media (min-width: $md2) {
@@ -163,13 +162,7 @@
 	// header__menu-cta
 	&__menu-cta {
 		width: 100%;
-		min-height: rem(44);
 		margin-bottom: rem(24);
-		padding-block: rem(14);
-		font-size: rem(14);
-		font-weight: 500;
-		background: $color-primary;
-		border-radius: rem(8);
 
 		@media (min-width: $md4) {
 			display: none !important;
@@ -236,9 +229,16 @@
 		&--toggle {
 			@extend %icon-after-chevron-down;
 
+			&[aria-expanded="true"]::after {
+				transform: rotate(-90deg);
+			}
+
 			&::after {
 				margin-left: auto;
+				flex-shrink: 0;
 				font-size: rem(12);
+				color: $color-muted;
+				transition: transform 0.2s ease;
 
 				@media (min-width: $md4) {
 					display: none;
@@ -305,44 +305,24 @@
 		}
 
 		@media (min-width: $md1) {
-			margin-left: rem(51);
+			margin-left: rem(44);
 		}
 	}
 
 	// header__catalog-btn
 	&__catalog-btn {
-		display: flex;
-		align-items: center;
-		gap: rem(14);
 		width: 100%;
-		min-height: rem(44);
-		padding: rem(12) rem(16);
-		border: none;
-		border-radius: 0;
-		font-size: rem(16);
-		font-weight: 600;
-		line-height: 1.1;
-		text-align: left;
-		white-space: normal;
-		background: $color-primary;
+		justify-content: flex-start;
 
-		@media (min-width: $md4) {
-			display: inline-flex;
-			width: auto;
-			min-height: rem(55);
-			padding: rem(19) rem(30);
-			border-radius: $radius-btn;
-			background: $color-primary;
-			box-shadow: $shadow-green;
-			font-family: $font-tthoves, sans-serif;
-			font-size: rem(18);
-			font-weight: 500;
-			line-height: 1.1;
-			text-align: center;
-			white-space: nowrap;
+		&::after {
+			color: currentColor;
 		}
 
-		&[aria-expanded="true"] {}
+		@media (min-width: $md4) {
+			width: auto;
+			justify-content: center;
+			white-space: nowrap;
+		}
 	}
 
 	// header__catalog-btn-icon
@@ -406,11 +386,9 @@
 	&__actions {
 		display: flex;
 		align-items: center;
+		justify-content: flex-end;
 		gap: rem(12);
 		flex-shrink: 0;
-		margin-left: auto;
-		min-width: rem(92);
-		min-height: rem(40);
 
 		@media (min-width: $md4) {
 			order: 5;
@@ -452,6 +430,7 @@
 	overflow: hidden;
 	min-height: rem(54);
 	max-height: rem(120);
+	padding-block: rem(15);
 	background: $color-soft-green;
 	transition:
 		max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
@@ -525,15 +504,12 @@
 		align-items: center;
 		justify-content: center;
 		gap: rem(12);
-		min-height: rem(54);
-		padding-block: rem(10);
+
 		transition:
 			transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
 			opacity 0.3s ease;
 
-		@media (min-width: $md4) {
-			min-height: rem(57);
-		}
+
 	}
 
 	// header-banner__text
@@ -561,7 +537,9 @@
 		&::before {
 			display: none;
 			order: 1;
-			font-size: rem(12);
+			font-size: rem(11);
+			line-height: 0.8;
+			margin-left: 0.25em;
 			line-height: 1;
 			color: $color-primary;
 
@@ -573,6 +551,10 @@
 		@media (any-hover: hover) {
 			&:hover {
 				opacity: 0.8;
+
+				& span {
+					text-decoration: none;
+				}
 			}
 		}
 	}
@@ -711,7 +693,9 @@
 	}
 
 	@media (min-width: $md2) {
+		order: 4;
 		display: block;
+		flex: 1 1 auto;
 	}
 
 	// header-nav__toggle
@@ -738,6 +722,7 @@
 		@media (min-width: $md4) {
 			flex-direction: row;
 			align-items: center;
+			justify-content: center;
 			gap: rem(30);
 			padding: 0;
 		}
@@ -866,7 +851,7 @@
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		content: "\e912";
-		font-size: rem(7);
+		font-size: rem(12);
 		color: $color-muted;
 		transform: rotate(90deg);
 		transition: transform 0.2s ease;
@@ -899,7 +884,8 @@
 	// header-favorite__badge
 	&__badge {
 		position: absolute;
-		top: 45%;
+		top: 50%;
+		transform: translateY(-50%);
 		right: rem(-4);
 		display: inline-flex;
 		align-items: center;
@@ -917,7 +903,7 @@
 
 		@media (min-width: $md4) {
 
-			right: rem(-4);
+			right: rem(-6);
 			min-width: rem(18);
 			height: rem(18);
 			font-size: rem(12);
@@ -938,10 +924,13 @@
 		z-index: $ui-index-2;
 		padding-top: rem(12);
 		display: none;
+		pointer-events: none;
 	}
 
 	// header-catalog__panel
 	&__panel {
+		pointer-events: all;
+
 		@media (min-width: $md4) {
 			position: relative;
 			padding: rem(32);
@@ -1013,6 +1002,7 @@
 			width: rem(18);
 			height: rem(18);
 			font-size: rem(18);
+			color: $color-primary;
 		}
 	}
 
@@ -1047,18 +1037,6 @@
 			font-size: rem(15);
 		}
 
-		&::before {
-			display: none;
-			flex-shrink: 0;
-			width: rem(22);
-			height: rem(22);
-			font-size: rem(22);
-
-			@media (min-width: $md4) {
-				display: block;
-			}
-		}
-
 		&::after {
 			display: none;
 			flex-shrink: 0;
@@ -1080,25 +1058,12 @@
 		}
 	}
 
-	// header-catalog__link-thumb
-	&__link-thumb {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
+	// header-catalog__link-icon
+	&__link-icon {
 		flex-shrink: 0;
-		width: rem(36);
-		height: rem(36);
-		overflow: hidden;
-
-		img {
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
-		}
-
-		@media (min-width: $md4) {
-			display: none;
-		}
+		width: rem(22);
+		height: rem(22);
+		object-fit: contain;
 	}
 
 	// header-catalog__link-text
@@ -1121,9 +1086,10 @@
 
 		&::before {
 			content: "";
+			order: 3;
 			flex: 1 1 auto;
 			min-height: rem(160);
-			margin-bottom: rem(16);
+			margin: rem(16) 0;
 			background-image: var(--header-catalog-promo-image);
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -1139,11 +1105,15 @@
 		font-weight: 500;
 		line-height: math.div(28, 22);
 		color: $color-text;
+
+		span {
+			color: $color-primary;
+		}
 	}
 
 	// header-catalog__promo-text
 	&__promo-text {
-		margin: 0 0 rem(16);
+		margin: 0;
 		font-size: rem(14);
 		line-height: math.div(20, 14);
 		color: $color-muted;
@@ -1151,9 +1121,8 @@
 
 	// header-catalog__promo-btn
 	&__promo-btn {
+		order: 4;
 		width: 100%;
-		min-height: rem(48);
-		background: $color-primary;
 	}
 }
 
@@ -1179,44 +1148,50 @@
 
 	// header-buy__panel
 	&__panel {
-		width: rem(300);
+		width: rem(360);
 		padding: rem(20);
-		border-radius: rem(16);
+		border-radius: $radius-md;
 		background: $color-bg;
-		box-shadow: 0 #{rem(12)} #{rem(32)} rgba(0, 0, 0, 0.12);
+		box-shadow: $shadow-muted;
 	}
 
 	// header-buy__caption
 	&__caption {
-		margin: 0 0 rem(14);
-		font-size: rem(13);
-		font-weight: 400;
-		line-height: 1.2;
-		color: $color-muted;
+		margin-bottom: rem(16);
 	}
 
 	// header-buy__list
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: rem(4);
+		gap: rem(8);
 		margin-bottom: rem(16);
 	}
 
 	// header-buy__link
 	&__link {
+		@extend %icon-after-chevron;
 		display: flex;
 		align-items: center;
 		gap: rem(12);
-		padding: rem(8);
-		border-radius: rem(10);
+		padding: rem(4) rem(8);
+		border-radius: $radius-sm;
 		transition: background-color 0.2s ease;
 
-		&::before {
-			order: 1;
+		&::after {
 			margin-left: auto;
-			opacity: 0.35;
+			flex-shrink: 0;
 			font-size: rem(12);
+			color: $color-muted;
+		}
+
+		img {
+			display: block;
+			flex-shrink: 0;
+			width: rem(40);
+			height: rem(40);
+			border-radius: $radius-sm;
+			object-fit: contain;
 		}
 
 		@media (any-hover: hover) {
@@ -1224,97 +1199,28 @@
 				background: $color-surface;
 			}
 		}
-	}
 
-	// header-buy__logo
-	&__logo {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		flex-shrink: 0;
-		width: rem(40);
-		height: rem(40);
-		border-radius: 50%;
-		overflow: hidden;
-		background: $color-surface;
-
-		img {
-			width: 70%;
-			height: 70%;
-			object-fit: contain;
-		}
-
-		// header-buy__logo--ozon
-		&--ozon {
-			background: #005bff;
-		}
-
-		// header-buy__logo--wb
-		&--wb {
-			background: #cb11ab;
-
-			img {
-				width: 80%;
-				filter: brightness(0) invert(1);
-			}
-		}
-
-		// header-buy__logo--yandex
-		&--yandex {
-			background: #fc0;
-		}
-
-		// header-buy__logo--mega
-		&--mega {
-			background: #fff;
-			border: 1px solid $color-border;
-		}
-
-		// header-buy__logo--kazan
-		&--kazan {
-			background: #f5f5f5;
-		}
-
-		// header-buy__logo--vse
-		&--vse {
-			background: #e8f5e9;
+		&:focus-visible {
+			outline: none;
+			box-shadow: $focus-ring;
 		}
 	}
 
 	// header-buy__name
 	&__name {
 		flex: 1 1 auto;
-		font-size: rem(15);
-		font-weight: 500;
-		line-height: 1.2;
-		color: $color-text;
+		min-width: 0;
 	}
 
 	// header-buy__all
 	&__all {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: rem(10);
 		width: 100%;
-		min-height: rem(44);
-		padding: rem(12);
-		border-radius: rem(12);
 		background: $color-soft-green;
-		font-size: rem(14);
-		font-weight: 600;
-		line-height: 1.2;
-		color: $color-text;
-		transition: background-color 0.2s ease;
+		box-shadow: none;
+		white-space: nowrap;
 
 		&::before {
-			font-size: rem(16);
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				background: #e8efd4;
-			}
+			order: 1;
 		}
 	}
 }

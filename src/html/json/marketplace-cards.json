@@ -1,11 +1,12 @@
 [
 	{
 		"href": "#",
-		"aria_label": "Купить на Avito",
-		"logo": "@img/shared/logos/marketplaces/avito.svg",
-		"alt": "Avito",
+		"aria_label": "Купить на Wildberries",
+		"logo": "@img/shared/logos/marketplaces/wildberries.svg",
+		"alt": "Wildberries",
 		"width": "160",
-		"height": "24"
+		"height": "24",
+		"logo_mod": "marketplace-card__logo--wb"
 	},
 	{
 		"href": "#",
@@ -18,26 +19,26 @@
 	},
 	{
 		"href": "#",
-		"aria_label": "Купить на Wildberries",
-		"logo": "@img/shared/logos/marketplaces/wildberries.svg",
-		"alt": "Wildberries",
-		"width": "160",
-		"height": "24",
-		"logo_mod": "marketplace-card__logo--wb"
+		"aria_label": "Купить в Л'Этуаль",
+		"logo": "@img/shared/logos/marketplaces/letual.png",
+		"alt": "Л'Этуаль",
+		"width": "150",
+		"height": "23",
+		"logo_mod": "marketplace-card__logo--letual"
 	},
 	{
 		"href": "#",
-		"aria_label": "Купить на Мегамаркете",
-		"logo": "@img/shared/logos/marketplaces/megamarket.svg",
-		"alt": "Мегамаркет",
+		"aria_label": "Купить в Золотом Яблоке",
+		"logo": "@img/shared/logos/marketplaces/golden-apple.png",
+		"alt": "Золотое Яблоко",
 		"width": "195",
 		"height": "29",
-		"logo_mod": "marketplace-card__logo--mega"
+		"logo_mod": "marketplace-card__logo--golden"
 	},
 	{
 		"href": "#",
 		"aria_label": "Купить на Яндекс Маркете",
-		"logo": "@img/shared/logos/marketplaces/yandex-market.png",
+		"logo": "@img/shared/logos/marketplaces/yandex-market.svg",
 		"alt": "Яндекс Маркет",
 		"width": "174",
 		"height": "26",
@@ -45,11 +46,11 @@
 	},
 	{
 		"href": "#",
-		"aria_label": "Купить на Магнит Маркете",
-		"logo": "@img/shared/logos/marketplaces/magnit.png",
-		"alt": "Магнит Маркет",
-		"width": "191",
-		"height": "36",
-		"logo_mod": "marketplace-card__logo--magnit"
+		"aria_label": "Купить на ВсеИнструменты",
+		"logo": "@img/shared/logos/marketplaces/vse-instrumenty.svg",
+		"alt": "ВсеИнструменты",
+		"width": "184",
+		"height": "17",
+		"logo_mod": "marketplace-card__logo--vse"
 	}
 ]

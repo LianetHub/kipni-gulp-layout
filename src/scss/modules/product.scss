@@ -288,6 +288,17 @@
 		&.is-active {
 			background: $color-soft-green;
 			color: $color-link-dark;
+
+			&.icon-heart:before {
+				content: "\e911";
+				animation: favorite-btn-pulse 0.3s ease-in-out;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			&.is-active.icon-heart:before {
+				animation: none;
+			}
 		}
 	}
 

@@ -1,0 +1,37 @@
+[
+	{
+		"logo": "@img/shared/logos/marketplaces/wildberries.svg",
+		"alt": "Wildberries",
+		"width": "160",
+		"height": "24",
+		"score": "4.9",
+		"count": "54 040 оценок"
+	},
+	{
+		"logo": "@img/shared/logos/marketplaces/ozon.svg",
+		"alt": "Ozon",
+		"width": "98",
+		"height": "21",
+		"logo_mod": "rating-card__logo--ozon",
+		"score": "4.9",
+		"count": "54 040 оценок"
+	},
+	{
+		"logo": "@img/shared/logos/partners/letual.png",
+		"alt": "Лэтуаль",
+		"width": "150",
+		"height": "23",
+		"logo_mod": "rating-card__logo--letual",
+		"score": "4.9",
+		"count": "54 040 оценок"
+	},
+	{
+		"logo": "@img/shared/logos/partners/gold-apple.png",
+		"alt": "Золотое Яблоко",
+		"width": "195",
+		"height": "29",
+		"logo_mod": "rating-card__logo--gold",
+		"score": "4.9",
+		"count": "54 040 оценок"
+	}
+]

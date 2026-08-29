@@ -1,16 +1,22 @@
 @use "sass:math";
 
 .marketplaces {
+	position: relative;
+	z-index: 1;
 	padding-block: rem(32);
 
 	@media (min-width: $md4) {
 		padding-block: rem(48);
 	}
 
+	@media (min-width: $md2) {
+		padding-block: rem(80);
+	}
+
 	// marketplaces__panel
 	&__panel {
 		position: relative;
-		overflow: hidden;
+		overflow: visible;
 		padding: rem(27) rem(20) rem(32);
 		border-radius: rem(20);
 		background: linear-gradient(103deg, #f5f6f1 0.65%, #f6f6f0 99.35%);
@@ -18,50 +24,81 @@
 		&::after {
 			content: "";
 			position: absolute;
-			top: rem(-40);
-			right: rem(-40);
-			width: rem(180);
-			height: rem(180);
+			top: rem(-63);
+			right: 0;
+			width: rem(279);
+			height: rem(279);
 			pointer-events: none;
-			z-index: 1;
+			z-index: 3;
 			background-image: url("@img/shared/decor/chick.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-position: center;
+			transform: translate(28%, 0);
 
 			@media (min-width: $md4) {
-				top: rem(-50);
-				right: rem(-20);
-				width: rem(240);
-				height: rem(240);
+				top: rem(-48);
+				width: rem(360);
+				height: rem(360);
+				transform: translate(22%, 0);
 			}
 
 			@media (min-width: $md2) {
-				top: rem(-60);
-				right: rem(-30);
-				width: rem(320);
-				height: rem(320);
+				top: rem(-24);
+				width: rem(440);
+				height: rem(440);
+				transform: translate(28%, -8%);
+			}
+
+			@media (min-width: $md1) {
+				top: rem(-7);
+				right: rem(-80);
+				width: rem(536);
+				height: rem(536);
+				transform: none;
+			}
+
+			@media (min-width: $md0) {
+				right: rem(-200);
 			}
 		}
 
 		@media (min-width: $md4) {
-			padding: rem(40) rem(50) rem(48);
+			padding: rem(40) rem(32) rem(40);
 		}
 
 		@media (min-width: $md2) {
-			padding: rem(56) rem(50) rem(56);
+			padding: rem(56) rem(50);
 		}
 	}
 
 	// marketplaces__grid
 	&__grid {
 		position: relative;
+		z-index: 2;
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
+
+		@media (min-width: $md2) {
+			display: grid;
+			grid-template-columns: minmax(#{rem(280)}, #{rem(400)}) minmax(0, 1fr);
+			grid-template-rows: auto 1fr;
+			column-gap: rem(20);
+			row-gap: rem(24);
+			align-items: stretch;
+		}
 	}
 
 	// marketplaces__intro
 	&__intro {
 		position: relative;
 		z-index: 2;
+
+		@media (min-width: $md2) {
+			grid-column: 1;
+			grid-row: 1;
+		}
 	}
 
 	// marketplaces__title
@@ -85,8 +122,14 @@
 		color: $color-muted;
 
 		@media (min-width: $md4) {
+			margin-top: rem(20);
 			font-size: rem(16);
-			line-height: math.div(18, 16);
+			line-height: math.div(19, 16);
+		}
+
+		@media (min-width: $md2) {
+			font-size: rem(18);
+			line-height: math.div(22, 18);
 		}
 	}
 
@@ -94,6 +137,20 @@
 	&__shops {
 		position: relative;
 		z-index: 2;
+		--gutter-x: #{rem(8)};
+		--gutter-y: #{rem(8)};
+
+		@media (min-width: $md4) {
+			--gutter-x: #{rem(16)};
+			--gutter-y: #{rem(16)};
+		}
+
+		@media (min-width: $md2) {
+			grid-column: 2;
+			grid-row: 1 / span 2;
+			--gutter-x: #{rem(20)};
+			--gutter-y: #{rem(20)};
+		}
 	}
 
 	// marketplaces__perks
@@ -103,12 +160,15 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
+		justify-content: center;
 		gap: rem(16) rem(24);
-		margin-top: rem(24);
 
 		@media (min-width: $md2) {
-			margin-top: rem(28);
-			gap: rem(24);
+			grid-column: 1;
+			grid-row: 2;
+			align-self: end;
+			justify-content: flex-start;
+			gap: rem(16) rem(20);
 		}
 	}
 }
@@ -120,14 +180,15 @@
 	justify-content: center;
 	width: 100%;
 	min-height: rem(93);
-	padding: rem(16);
+	padding: rem(12) rem(10);
+	border: 1px solid $color-border-subtle;
 	border-radius: rem(15);
 	background: $color-white;
-	box-shadow: $shadow-muted;
 	transition: box-shadow 0.2s ease;
 
 	@media (min-width: $md4) {
 		min-height: rem(110);
+		padding: rem(16);
 	}
 
 	@media (min-width: $md2) {
@@ -137,11 +198,11 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			box-shadow: $shadow-soft;
+			box-shadow: $shadow-muted;
 
 			.marketplace-card__caption {
-				margin-top: rem(10);
-				max-height: rem(16);
+				margin-top: 0.625em;
+				max-height: 1.06em;
 				opacity: 1;
 			}
 		}
@@ -152,8 +213,8 @@
 		box-shadow: $focus-ring;
 
 		.marketplace-card__caption {
-			margin-top: rem(10);
-			max-height: rem(16);
+			margin-top: 0.625em;
+			max-height: 1.06em;
 			opacity: 1;
 		}
 	}
@@ -163,32 +224,67 @@
 		display: block;
 		width: auto;
 		max-width: 100%;
-		height: rem(24);
+		height: rem(18);
 		object-fit: contain;
 
+		@media (min-width: $md4) {
+			height: rem(22);
+		}
+
+		@media (min-width: $md2) {
+			height: rem(24);
+		}
+
 		&--ozon {
-			height: rem(21);
-			width: rem(98);
+			height: rem(16);
+
+			@media (min-width: $md2) {
+				height: rem(21);
+				width: rem(98);
+			}
 		}
 
 		&--wb {
-			height: rem(23);
-			width: rem(150);
+			@media (min-width: $md2) {
+				height: rem(24);
+				width: rem(160);
+			}
 		}
 
-		&--mega {
-			height: rem(29);
-			width: rem(180);
+		&--letual {
+			height: rem(17);
+
+			@media (min-width: $md2) {
+				height: rem(23);
+				width: rem(150);
+			}
+		}
+
+		&--golden {
+			height: rem(22);
+
+			@media (min-width: $md2) {
+				height: rem(29);
+				width: rem(195);
+			}
 		}
 
 		&--yandex {
-			height: rem(26);
-			width: rem(160);
+			height: rem(19);
+
+			@media (min-width: $md2) {
+				height: rem(26);
+				width: rem(174);
+			}
 		}
 
-		&--magnit {
-			height: rem(17);
-			width: rem(170);
+		&--vse {
+			height: rem(13);
+
+			@media (min-width: $md2) {
+				height: rem(17);
+				width: rem(184);
+			}
 		}
 	}
 
@@ -198,9 +294,9 @@
 		overflow: hidden;
 		opacity: 0;
 		font-family: $fontfamily, sans-serif;
-		font-size: rem(11);
-		font-weight: 500;
-		line-height: math.div(12, 11);
+		font-size: rem(16);
+		font-weight: 400;
+		line-height: math.div(17, 16);
 		color: $color-muted;
 		text-align: center;
 		transition: opacity 0.2s ease, max-height 0.2s ease, margin-top 0.2s ease;
@@ -214,26 +310,38 @@
 
 	&::before {
 		flex-shrink: 0;
-		width: rem(34);
-		height: rem(34);
+		width: rem(30);
+		height: rem(30);
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		font-size: rem(34);
+		overflow: visible;
+		font-size: rem(30);
+		color: $color-primary;
+
+		@media (min-width: $md2) {
+			width: rem(34);
+			height: rem(34);
+			font-size: rem(34);
+		}
+	}
+
+	&.icon-truck::before {
+		width: rem(36);
+		font-size: rem(28);
+
+		@media (min-width: $md2) {
+			width: rem(40);
+			font-size: rem(34);
+		}
 	}
 
 	// marketplace-perk__text
 	&__text {
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
-		font-weight: 500;
-		line-height: math.div(17, 14);
+		font-weight: 400;
+		line-height: math.div(15, 14);
 		color: $color-text;
-		white-space: nowrap;
-
-		@media (min-width: $md4) {
-			font-size: rem(16);
-			line-height: math.div(18, 16);
-		}
 	}
 }

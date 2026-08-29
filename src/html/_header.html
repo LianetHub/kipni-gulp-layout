@@ -24,7 +24,7 @@
           <nav class="header__menu-nav" aria-label="Основное меню">
 
             <div class="header__catalog-wrap header__menu-accordion">
-              <button class="header__catalog-btn header__menu-row--toggle btn btn--primary icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
+              <button class="header__catalog-btn header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
                 Каталог товаров
               </button>
               @@include('templates/header-catalog.html')
@@ -52,11 +52,11 @@
 
               <div class="header-buy" id="header-buy" hidden>
                 <div class="header-buy__panel">
-                  <p class="header-buy__caption">Мы на маркетплейсах</p>
+                  <p class="h4 header-buy__caption">Мы на маркетплейсах</p>
                   <ul class="header-buy__list">
                     @@loop('templates/header-buy-item.html', 'html/json/header-buy.json')
                   </ul>
-                  <a class="header-buy__all icon-grid" href="where-to-buy.html">
+                  <a class="btn btn--ghost header-buy__all icon-grid" href="where-to-buy.html">
                     Смотреть все площадки
                   </a>
                 </div>

@@ -1,133 +1,36 @@
-<section class="reviews section-space-md" aria-labelledby="reviews-title">
+<section class="reviews" aria-labelledby="reviews-title">
 	<div class="container">
 		<div class="row reviews__head gy-4">
 			<div class="col-12 col-xl-4 reviews__intro">
-				<h2 class="h2 reviews__title" id="reviews-title">Нам доверяют тысячи покупателей</h2>
+				<h2 class="h2 reviews__title" id="reviews-title">
+					Нам доверяют
+					<span class="reviews__title-accent">тысячи покупателей</span>
+				</h2>
 				<p class="reviews__lead">Более 100&nbsp;000 отзывов оставленных реальными покупателями</p>
 			</div>
 			<div class="col-12 col-xl-8">
-			<div class="row reviews__ratings gy-3">
-				<div class="col-6 col-xl-3">
-					<article class="rating-card">
-						<img class="rating-card__logo" src="@img/shared/logos/marketplaces/avito.svg" alt="Avito" width="160" height="24" loading="lazy">
-						<div class="rating-card__score icon-star">
-							<span>4.9</span>
-						</div>
-						<p class="rating-card__count">54 040 оценок</p>
-					</article>
+				<div class="row reviews__ratings gy-3">
+					@@loop('../templates/rating-card.html', 'html/json/rating-cards.json')
 				</div>
-				<div class="col-6 col-xl-3">
-					<article class="rating-card">
-						<img class="rating-card__logo rating-card__logo--ozon" src="@img/shared/logos/marketplaces/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
-						<div class="rating-card__score icon-star">
-							<span>4.9</span>
-						</div>
-						<p class="rating-card__count">54 040 оценок</p>
-					</article>
-				</div>
-				<div class="col-6 col-xl-3">
-					<article class="rating-card">
-						<img class="rating-card__logo rating-card__logo--wb" src="@img/shared/logos/marketplaces/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
-						<div class="rating-card__score icon-star">
-							<span>4.9</span>
-						</div>
-						<p class="rating-card__count">54 040 оценок</p>
-					</article>
-				</div>
-				<div class="col-6 col-xl-3">
-					<article class="rating-card">
-						<img class="rating-card__logo rating-card__logo--mega" src="@img/shared/logos/marketplaces/megamarket.svg" alt="Мегамаркет" width="195" height="29" loading="lazy">
-						<div class="rating-card__score icon-star">
-							<span>4.9</span>
-						</div>
-						<p class="rating-card__count">54 040 оценок</p>
-					</article>
-				</div>
-			</div>
 			</div>
 		</div>
 
 		<div class="reviews__slider-wrap">
 			<div class="swiper reviews__slider">
 				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<article class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__author">
-									<span class="review-card__avatar icon-user" aria-hidden="true"></span>
-									<div class="review-card__meta">
-										<p class="review-card__name">Наталья</p>
-										<div class="review-card__stars icon-star" aria-label="5 из 5"></div>
-									</div>
-								</div>
-								<img class="review-card__source" src="@img/shared/logos/marketplaces/avito.svg" alt="Отзыв с Avito" width="98" height="21" loading="lazy">
-							</div>
-							<p class="review-card__text">
-								Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!
-							</p>
-							<div class="review-card__footer">
-								<button type="button" class="review-card__expand icon-chevron-down">
-									<span class="review-card__expand-label">Раскрыть отзыв</span>
-								</button>
-								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__author">
-									<span class="review-card__avatar icon-user" aria-hidden="true"></span>
-									<div class="review-card__meta">
-										<p class="review-card__name">Татьяна</p>
-										<div class="review-card__stars icon-star" aria-label="5 из 5"></div>
-									</div>
-								</div>
-								<img class="review-card__source review-card__source--ozon" src="@img/shared/logos/marketplaces/ozon.svg" alt="Отзыв с Ozon" width="98" height="21" loading="lazy">
-							</div>
-							<p class="review-card__text">
-								Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!
-							</p>
-							<div class="review-card__footer">
-								<button type="button" class="review-card__expand icon-chevron-down">
-									<span class="review-card__expand-label">Раскрыть отзыв</span>
-								</button>
-								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-							</div>
-						</article>
-					</div>
-					<div class="swiper-slide">
-						<article class="review-card">
-							<div class="review-card__top">
-								<div class="review-card__author">
-									<span class="review-card__avatar icon-user" aria-hidden="true"></span>
-									<div class="review-card__meta">
-										<p class="review-card__name">Елена С.</p>
-										<div class="review-card__stars icon-star" aria-label="5 из 5"></div>
-									</div>
-								</div>
-								<img class="review-card__source review-card__source--ozon" src="@img/shared/logos/marketplaces/ozon.svg" alt="Отзыв с Ozon" width="98" height="21" loading="lazy">
-							</div>
-							<p class="review-card__text">
-								Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!
-							</p>
-							<div class="review-card__footer">
-								<button type="button" class="review-card__expand icon-chevron-down">
-									<span class="review-card__expand-label">Раскрыть отзыв</span>
-								</button>
-								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-							</div>
-						</article>
-					</div>
+					@@loop('../templates/review-card.html', 'html/json/review-cards.json')
 				</div>
 				<div class="reviews__pagination swiper-pagination"></div>
 			</div>
-			<button type="button" class="reviews__prev swiper-button-prev icon-prev" aria-label="Предыдущий отзыв"></button>
-			<button type="button" class="reviews__next swiper-button-next icon-next" aria-label="Следующий отзыв"></button>
+			<div class="reviews__bar">
+				<p class="reviews__note icon-certificate">
+					Все отзывы проверены и&nbsp;оставлены реальными покупателями
+				</p>
+				<div class="reviews__nav">
+					<button type="button" class="reviews__prev swiper-button-prev icon-prev" aria-label="Предыдущий отзыв"></button>
+					<button type="button" class="reviews__next swiper-button-next icon-next" aria-label="Следующий отзыв"></button>
+				</div>
+			</div>
 		</div>
-
-		<p class="reviews__note icon-certificate">
-			Все отзывы проверены и&nbsp;оставлены реальными покупателями
-		</p>
 	</div>
 </section>

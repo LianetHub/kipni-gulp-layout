@@ -33,14 +33,15 @@
 
 	// popular__slider
 	&__slider {
-		overflow: visible;
+		padding: 0 10px;
+		margin: 0 -10px;
 
 		.swiper-slide {
 			height: auto;
 			width: rem(182);
 
 			@media (min-width: $md4) {
-				width: rem(223);
+				width: rem(224);
 			}
 		}
 

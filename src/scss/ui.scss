@@ -30,7 +30,7 @@
 
 	// btn--primary
 	&--primary {
-		background: $color-button;
+		background: $color-primary;
 		color: $color-white;
 		box-shadow: $shadow-green;
 
@@ -41,7 +41,7 @@
 		}
 
 		&:active {
-			background: #4a7a2a;
+			background: $color-primary-dark;
 		}
 	}
 
@@ -203,7 +203,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			background: $color-button;
+			background: $color-primary-dark;
 		}
 	}
 
@@ -236,6 +236,37 @@
 	@media (min-width: $md4) {
 		right: 0;
 	}
+}
+
+.swiper-pagination {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(13);
+	transform: none;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+	--swiper-pagination-bottom: #{rem(20)};
+}
+
+.swiper-pagination-bullet {
+	width: rem(13);
+	height: rem(13);
+	margin: 0;
+	opacity: 1;
+	background: #d9d9d9;
+	border-radius: 50%;
+	transition: background-color 0.25s ease;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0;
+}
+
+.swiper-pagination-bullet-active {
+	background: $color-primary;
 }
 
 .badge {
@@ -287,6 +318,9 @@
 
 	// product-card__favorite
 	&__favorite {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
 		flex-shrink: 0;
 		width: rem(28);
 		height: rem(26);
@@ -295,20 +329,11 @@
 		border: none;
 		background: transparent;
 		cursor: pointer;
-		color: inherit;
+		color: $color-muted;
 		font-size: rem(26);
 		line-height: 1;
-		transition: transform 0.2s ease, opacity 0.2s ease;
-
-		@media (any-hover: hover) {
-			&:hover {
-				opacity: 0.8;
-			}
-		}
-
-		&:active {
-			transform: scale(0.9);
-		}
+		user-select: none;
+		transition: color 0.3s ease;
 
 		&:focus-visible {
 			outline: none;
@@ -316,8 +341,27 @@
 			border-radius: rem(4);
 		}
 
-		&.is-active.icon-heart:before {
-			content: "\e911";
+		@media (any-hover: hover) {
+			&:hover {
+				color: $color-primary;
+			}
+		}
+
+		&.is-active {
+			color: $color-primary;
+
+			&.icon-heart:before {
+				content: "\e911";
+				animation: favorite-btn-pulse 0.3s ease-in-out;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			transition: none;
+
+			&.is-active.icon-heart:before {
+				animation: none;
+			}
 		}
 	}
 
@@ -495,6 +539,20 @@ $scrollbarColor: $color-primary;
 				display: inline;
 			}
 		}
+	}
+}
+
+@keyframes favorite-btn-pulse {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.25);
+	}
+
+	100% {
+		transform: scale(1);
 	}
 }
 

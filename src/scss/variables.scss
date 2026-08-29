@@ -18,7 +18,7 @@ $containerPadding: 24;
 :root {
 	--color-primary: #8abd35;
 	--color-primary-dark: #3f8c2c;
-	--color-button: #5e9834;
+	--color-button: var(--color-primary);
 	--color-link: #528428;
 	--color-link-dark: #3d6c10;
 	--color-text: #4c4c4c;

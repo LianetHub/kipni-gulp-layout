@@ -162,6 +162,13 @@
 
 			&::before {
 				content: "\e911";
+				animation: favorite-btn-pulse 0.3s ease-in-out;
+			}
+		}
+
+		@media (prefers-reduced-motion: reduce) {
+			&.is-active::before {
+				animation: none;
 			}
 		}
 	}

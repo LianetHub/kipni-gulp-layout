@@ -305,15 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // sliders
-    function syncPaginationTheme(instance) {
-        const hero = instance.el.closest(".hero");
-        if (!hero) return;
-
-        const activeSlide = instance.el.querySelector(".swiper-slide-active");
-        const isDark = activeSlide?.classList.contains("hero-slide--dark");
-        hero.classList.toggle("is-dark-slide", Boolean(isDark));
-    }
-
     if (typeof Swiper !== "undefined") {
         if (document.querySelector(".hero__slider")) {
             const heroSlider = document.querySelector(".hero__slider");
@@ -336,10 +327,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 on: {
                     init(instance) {
                         instance.el.classList.add("is-swiper-ready");
-                        syncPaginationTheme(instance);
-                    },
-                    slideChange(instance) {
-                        syncPaginationTheme(instance);
                     },
                 },
             });

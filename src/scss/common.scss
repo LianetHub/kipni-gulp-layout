@@ -59,7 +59,7 @@ img {
 	box-sizing: border-box;
 	margin: 0 auto;
 	max-width: 100%;
-	padding: 0 rem(16);
+	padding-inline: rem(16);
 
 	@media (min-width: $md5) {
 		box-sizing: content-box;

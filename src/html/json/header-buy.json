@@ -1,44 +1,50 @@
 [
 	{
 		"href": "#",
-		"mod": "ozon",
-		"logo": "@img/shared/logos/marketplaces-sm/ozon.svg",
+		"logo": "@img/shared/logos/marketplaces/ozon-short.svg",
 		"alt": "Ozon",
-		"name": "Ozon"
+		"name": "Ozon",
+		"width": "40",
+		"height": "40"
 	},
 	{
 		"href": "#",
-		"mod": "wb",
-		"logo": "@img/shared/logos/marketplaces-sm/wildberries.png",
+		"logo": "@img/shared/logos/marketplaces/wildberries-short.svg",
 		"alt": "Wildberries",
-		"name": "Wildberries"
+		"name": "Wildberries",
+		"width": "40",
+		"height": "40"
 	},
 	{
 		"href": "#",
-		"mod": "yandex",
-		"logo": "@img/shared/logos/marketplaces-sm/yandex.png",
+		"logo": "@img/shared/logos/marketplaces/yandex-market-short.svg",
 		"alt": "Яндекс Маркет",
-		"name": "Яндекс Маркет"
+		"name": "Яндекс Маркет",
+		"width": "40",
+		"height": "40"
 	},
 	{
 		"href": "#",
-		"mod": "mega",
-		"logo": "@img/shared/logos/marketplaces-sm/megamarket.png",
+		"logo": "@img/shared/logos/marketplaces/megamarket-short.svg",
 		"alt": "Мегамаркет",
-		"name": "Мегамаркет"
+		"name": "Мегамаркет",
+		"width": "40",
+		"height": "40"
 	},
 	{
 		"href": "#",
-		"mod": "kazan",
-		"logo": "@img/shared/logos/marketplaces-sm/kazan.png",
+		"logo": "@img/shared/logos/marketplaces/KazanExpress-short.svg",
 		"alt": "KazanExpress",
-		"name": "KazanExpress"
+		"name": "KazanExpress",
+		"width": "40",
+		"height": "40"
 	},
 	{
 		"href": "#",
-		"mod": "vse",
-		"logo": "@img/shared/logos/marketplaces-sm/vseinstrumenty.png",
+		"logo": "@img/shared/logos/marketplaces/vse-instrumenti-short.svg",
 		"alt": "ВсеИнструменты",
-		"name": "ВсеИнструменты"
+		"name": "ВсеИнструменты",
+		"width": "40",
+		"height": "40"
 	}
 ]

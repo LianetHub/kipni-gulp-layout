@@ -1,0 +1,65 @@
+[
+	{
+		"name": "Наталья",
+		"source": "@img/shared/logos/marketplaces/wildberries.svg",
+		"source_alt": "Отзыв с Wildberries",
+		"source_width": "147",
+		"source_height": "22",
+		"text": "Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!",
+		"datetime": "2026-03-05",
+		"date": "05.03.2026"
+	},
+	{
+		"name": "Татьяна",
+		"source": "@img/shared/logos/marketplaces/ozon.svg",
+		"source_alt": "Отзыв с Ozon",
+		"source_width": "98",
+		"source_height": "21",
+		"source_mod": "review-card__source--ozon",
+		"text": "Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!",
+		"datetime": "2026-03-05",
+		"date": "05.03.2026"
+	},
+	{
+		"name": "Елена С.",
+		"source": "@img/shared/logos/marketplaces/ozon.svg",
+		"source_alt": "Отзыв с Ozon",
+		"source_width": "98",
+		"source_height": "21",
+		"source_mod": "review-card__source--ozon",
+		"text": "Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!",
+		"datetime": "2026-03-05",
+		"date": "05.03.2026"
+	},
+	{
+		"name": "Мария",
+		"source": "@img/shared/logos/marketplaces/wildberries.svg",
+		"source_alt": "Отзыв с Wildberries",
+		"source_width": "147",
+		"source_height": "22",
+		"text": "Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!",
+		"datetime": "2026-03-05",
+		"date": "05.03.2026"
+	},
+	{
+		"name": "Ольга",
+		"source": "@img/shared/logos/marketplaces/ozon.svg",
+		"source_alt": "Отзыв с Ozon",
+		"source_width": "98",
+		"source_height": "21",
+		"source_mod": "review-card__source--ozon",
+		"text": "Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!",
+		"datetime": "2026-03-05",
+		"date": "05.03.2026"
+	},
+	{
+		"name": "Анна",
+		"source": "@img/shared/logos/partners/letual.png",
+		"source_alt": "Отзыв с Лэтуаль",
+		"source_width": "150",
+		"source_height": "23",
+		"text": "Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!",
+		"datetime": "2026-03-05",
+		"date": "05.03.2026"
+	}
+]
