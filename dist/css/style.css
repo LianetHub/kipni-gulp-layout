@@ -22,19 +22,19 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "tthoves";
-  font-display: swap;
-  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
   font-family: "Onest";
   src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "tthoves";
+  font-display: swap;
+  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 :root {
   --color-primary: #8abd35;
@@ -3967,7 +3967,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   border-radius: 1.25rem;
   min-height: 23.3125rem;
   background-color: #e8f0f8;
-  background-image: url("../img/business/mobile.jpg");
+  background-image: url("../img/business/mobile.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right center;
@@ -3975,7 +3975,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 @media (min-width: 767.98px) {
   .business__banner {
     min-height: 22.5rem;
-    background-image: url("../img/business/banner.jpg");
+    background-image: url("../img/business/banner.webp");
   }
 }
 @media (min-width: 1199.98px) {
@@ -4128,7 +4128,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   top: 13.75rem;
   width: 11.3125rem;
   height: 15.875rem;
-  background-image: url("../img/reviews/leaves-left.png");
+  background-image: url("../img/reviews/leaves-left.webp");
 }
 @media (min-width: 1439.98px) {
   .reviews::before {
@@ -4141,7 +4141,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   top: 12.5rem;
   width: 12.375rem;
   height: 17.4375rem;
-  background-image: url("../img/reviews/leaves-right.png");
+  background-image: url("../img/reviews/leaves-right.webp");
 }
 @media (min-width: 1439.98px) {
   .reviews::after {
@@ -4700,7 +4700,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   z-index: 0;
   pointer-events: none;
   user-select: none;
-  background-image: url("../img/about/leaf-deco.png");
+  background-image: url("../img/about/leaf-deco.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -5397,7 +5397,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   pointer-events: none;
   user-select: none;
   transform: rotate(12deg);
-  background-image: url("../img/contacts/decor.png");
+  background-image: url("../img/contacts/decor.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -5729,7 +5729,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   right: -11.25rem;
   width: 26.25rem;
   height: 26.25rem;
-  background-image: url("../img/shared/decor/leaves.png");
+  background-image: url("../img/shared/decor/leaves.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -6592,7 +6592,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   right: -11.25rem;
   width: 22.5rem;
   height: 22.5rem;
-  background-image: url("../img/shared/decor/leaves.png");
+  background-image: url("../img/shared/decor/leaves.webp");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -9276,7 +9276,7 @@ img {
     height: 8.125rem;
     pointer-events: none;
     user-select: none;
-    background-image: url("../img/footer/leaf-deco.png");
+    background-image: url("../img/footer/leaf-deco.webp");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

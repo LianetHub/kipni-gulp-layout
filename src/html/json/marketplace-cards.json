@@ -20,7 +20,7 @@
 	{
 		"href": "#",
 		"aria_label": "Купить в Л'Этуаль",
-		"logo": "@img/shared/logos/marketplaces/letual.png",
+		"logo": "@img/shared/logos/marketplaces/letual.webp",
 		"alt": "Л'Этуаль",
 		"width": "150",
 		"height": "23",
@@ -29,7 +29,7 @@
 	{
 		"href": "#",
 		"aria_label": "Купить в Золотом Яблоке",
-		"logo": "@img/shared/logos/marketplaces/golden-apple.png",
+		"logo": "@img/shared/logos/marketplaces/golden-apple.webp",
 		"alt": "Золотое Яблоко",
 		"width": "195",
 		"height": "29",
