@@ -91,8 +91,8 @@
 		padding: 0;
 		border: none;
 		border-radius: 50%;
-		background: var(--color-primary);
-		box-shadow: var(--shadow-green);
+		background: $color-primary;
+		box-shadow: $shadow-green;
 		cursor: pointer;
 		transform: translateY(-50%);
 		transition: background-color 0.2s ease;
@@ -116,13 +116,13 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				background: var(--color-button);
+				background: $color-button;
 			}
 		}
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 
 		&.swiper-button-disabled {
@@ -138,10 +138,8 @@
 	overflow: hidden;
 	height: rem(140);
 	padding: rem(24) rem(16);
-	border-radius: var(--radius-btn);
+	border-radius: $radius-btn;
 	color: inherit;
-	text-decoration: none;
-	box-sizing: border-box;
 
 	@media (min-width: $md4) {
 		height: rem(161);
@@ -183,7 +181,7 @@
 		font-size: rem(20);
 		font-weight: 600;
 		line-height: 1.1;
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(24);
@@ -192,12 +190,11 @@
 
 	// catalog-cat__lead
 	&__lead {
-		margin: 0;
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 16);
-		color: var(--color-muted);
+		color: $color-muted;
 
 		@media (min-width: $md4) {
 			font-size: rem(16);
@@ -238,7 +235,7 @@
 
 .catalog-filters {
 	padding: rem(24) rem(20);
-	border-radius: var(--radius-md);
+	border-radius: $radius-md;
 	background: #f7f8f3;
 
 	@media (min-width: $md4) {
@@ -258,12 +255,11 @@
 
 	// catalog-filters__title
 	&__title {
-		margin: 0;
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(20);
 		font-weight: 600;
 		line-height: 1.1;
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(24);
@@ -282,19 +278,19 @@
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 		cursor: pointer;
 		transition: color 0.2s ease;
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-text);
+				color: $color-text;
 			}
 		}
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 			border-radius: rem(4);
 		}
 	}
@@ -339,7 +335,7 @@
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: 1.2;
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(18);
@@ -368,13 +364,13 @@
 	min-height: rem(32);
 	padding: rem(7) rem(12);
 	border: none;
-	border-radius: var(--radius-md);
-	background: var(--color-white);
+	border-radius: $radius-md;
+	background: $color-white;
 	font-family: $fontfamily, sans-serif;
 	font-size: rem(14);
 	font-weight: 500;
 	line-height: 1.1;
-	color: var(--color-text);
+	color: $color-text;
 	cursor: pointer;
 	transition: background-color 0.2s ease, color 0.2s ease;
 
@@ -391,12 +387,12 @@
 
 	&:focus-visible {
 		outline: none;
-		box-shadow: var(--focus-ring);
+		box-shadow: $focus-ring;
 	}
 
 	&.is-active {
-		background: var(--color-primary);
-		color: var(--color-white);
+		background: $color-primary;
+		color: $color-white;
 	}
 
 	// catalog-chip--brand
@@ -419,12 +415,11 @@
 
 	// catalog-toolbar__count
 	&__count {
-		margin: 0;
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: math.div(26, 16);
-		color: var(--color-text);
+		color: $color-text;
 
 		strong {
 			font-weight: 600;

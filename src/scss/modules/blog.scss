@@ -53,13 +53,13 @@
 	flex-direction: column;
 	height: 100%;
 	overflow: hidden;
-	border-radius: var(--radius-md);
+	border-radius: $radius-md;
 	background: #f7f7f7;
 
 	// blog-card__media
 	&__media {
 		overflow: hidden;
-		border-radius: var(--radius-md) var(--radius-md) 0 0;
+		border-radius: $radius-md $radius-md 0 0;
 		aspect-ratio: 712 / 401;
 
 		img {
@@ -101,28 +101,14 @@
 		display: inline-flex;
 		align-items: center;
 		gap: rem(5);
-	}
 
-	// blog-card__meta-icon
-	&__meta-icon {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(24);
-		height: rem(24);
-
-		img {
-			display: block;
-			width: 100%;
-			height: 100%;
-			object-fit: contain;
+		&::before {
+			flex-shrink: 0;
+			font-size: rem(24);
 		}
 
-		// blog-card__meta-icon--heart
-		&--heart {
-			width: rem(19);
-			height: rem(17);
+		&.icon-heart::before {
+			font-size: rem(17);
 		}
 	}
 
@@ -189,7 +175,6 @@
 		align-items: center;
 		gap: rem(8);
 		color: #727272;
-		text-decoration: none;
 		transition: opacity 0.2s ease;
 
 		@media (any-hover: hover) {
@@ -198,26 +183,22 @@
 			}
 		}
 
+		&::before {
+			font-size: rem(12);
+		}
+
 		// pagination__nav--prev
 		&--prev {
-			.pagination__nav-icon {
+			&::before {
 				transform: scaleX(-1);
 			}
 		}
-	}
 
-	// pagination__nav-icon
-	&__nav-icon {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(6);
-		height: rem(12);
-
-		img {
-			display: block;
-			width: 100%;
-			height: 100%;
+		// pagination__nav--next
+		&--next {
+			&::before {
+				order: 1;
+			}
 		}
 	}
 
@@ -250,13 +231,12 @@
 		font-size: rem(16);
 		line-height: math.div(26, 16);
 		color: #727272;
-		text-decoration: none;
 		border-radius: rem(100);
 		transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
 
 		@media (any-hover: hover) {
 			&:hover:not(.is-active) {
-				color: var(--color-text);
+				color: $color-text;
 			}
 		}
 
@@ -266,8 +246,8 @@
 			font-family: $fontfamily, sans-serif;
 			font-weight: 600;
 			line-height: 1.1;
-			color: var(--color-white);
-			background: var(--color-primary);
+			color: $color-white;
+			background: $color-primary;
 			box-shadow: 0 #{rem(10)} #{rem(25)} rgba(0, 0, 0, 0.05);
 		}
 	}

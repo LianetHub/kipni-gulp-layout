@@ -11,9 +11,7 @@
 
   <div class="header__bar">
     <div class="header__bar-container container">
-      <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="header__burger icon-burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню"></button>
 
       <a class="header__logo" href="/" aria-label="KIPNI — на главную">
         <img src="@img/logo.svg" alt="KIPNI" width="173" height="47">
@@ -25,18 +23,16 @@
 
           <nav class="header__menu-nav" aria-label="Основное меню">
 
-            <div class="header__catalog-wrap header__menu-accordion is-open">
+            <div class="header__catalog-wrap header__menu-accordion">
               <button class="header__catalog-btn header__menu-row--toggle btn btn--primary icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
                 Каталог товаров
-                <span class="header__menu-row-chevron header__menu-row-chevron--down icon-chevron-down" aria-hidden="true"></span>
               </button>
               @@include('templates/header-catalog.html')
             </div>
 
-            <div class="header-nav header__menu-accordion is-open">
+            <div class="header-nav header__menu-accordion">
               <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-people" type="button" aria-expanded="true">
                 Покупателям
-                <span class="header__menu-row-chevron header__menu-row-chevron--down icon-chevron-down" aria-hidden="true"></span>
               </button>
               <div class="header-nav__panel header__menu-panel">
                 <ul class="header-nav__list">
@@ -59,71 +55,62 @@
                   <p class="header-buy__caption">Мы на маркетплейсах</p>
                   <ul class="header-buy__list">
                     <li>
-                      <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                         <span class="header-buy__logo header-buy__logo--ozon">
                           <img src="@img/shared/logos/marketplaces-sm/ozon.svg" alt="Ozon" width="40" height="40" loading="lazy">
                         </span>
                         <span class="header-buy__name">Ozon</span>
-                        <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                       </a>
                     </li>
                     <li>
-                      <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                         <span class="header-buy__logo header-buy__logo--wb">
                           <img src="@img/shared/logos/marketplaces-sm/wildberries.png" alt="Wildberries" width="40" height="40" loading="lazy">
                         </span>
                         <span class="header-buy__name">Wildberries</span>
-                        <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                       </a>
                     </li>
                     <li>
-                      <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                         <span class="header-buy__logo header-buy__logo--yandex">
                           <img src="@img/shared/logos/marketplaces-sm/yandex.png" alt="Яндекс Маркет" width="40" height="40" loading="lazy">
                         </span>
                         <span class="header-buy__name">Яндекс Маркет</span>
-                        <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                       </a>
                     </li>
                     <li>
-                      <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                         <span class="header-buy__logo header-buy__logo--mega">
                           <img src="@img/shared/logos/marketplaces-sm/megamarket.png" alt="Мегамаркет" width="40" height="40" loading="lazy">
                         </span>
                         <span class="header-buy__name">Мегамаркет</span>
-                        <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                       </a>
                     </li>
                     <li>
-                      <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                         <span class="header-buy__logo header-buy__logo--kazan">
                           <img src="@img/shared/logos/marketplaces-sm/kazan.png" alt="KazanExpress" width="40" height="40" loading="lazy">
                         </span>
                         <span class="header-buy__name">KazanExpress</span>
-                        <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                       </a>
                     </li>
                     <li>
-                      <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                         <span class="header-buy__logo header-buy__logo--vse">
                           <img src="@img/shared/logos/marketplaces-sm/vseinstrumenty.png" alt="ВсеИнструменты" width="40" height="40" loading="lazy">
                         </span>
                         <span class="header-buy__name">ВсеИнструменты</span>
-                        <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                       </a>
                     </li>
                   </ul>
-                  <a class="header-buy__all" href="where-to-buy.html">
-                    <span class="header-buy__all-icon icon-grid" aria-hidden="true"></span>
+                  <a class="header-buy__all icon-grid" href="where-to-buy.html">
                     Смотреть все площадки
                   </a>
                 </div>
               </div>
 
-              <a class="header__menu-row header__menu-row--buy" href="where-to-buy.html">
-                <span class="header__menu-row-icon icon-shopping-cart" aria-hidden="true"></span>
+              <a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html">
                 <span class="header__menu-row-text">Где купить?</span>
-                <span class="header__menu-row-chevron icon-chevron-right" aria-hidden="true"></span>
               </a>
             </div>
           </nav>

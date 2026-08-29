@@ -46,9 +46,7 @@
 
         <div class="header__bar">
           <div class="header__bar-container container">
-            <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню">
-              <span></span><span></span><span></span>
-            </button>
+            <button class="header__burger icon-burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню"></button>
 
             <a class="header__logo" href="/" aria-label="KIPNI — на главную">
               <img src="img/logo.svg" alt="KIPNI" width="173" height="47">
@@ -60,143 +58,120 @@
 
                 <nav class="header__menu-nav" aria-label="Основное меню">
 
-                  <div class="header__catalog-wrap header__menu-accordion is-open">
+                  <div class="header__catalog-wrap header__menu-accordion">
                     <button class="header__catalog-btn header__menu-row--toggle btn btn--primary icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
                       Каталог товаров
-                      <span class="header__menu-row-chevron header__menu-row-chevron--down icon-chevron-down" aria-hidden="true"></span>
                     </button>
                     <div class="header-catalog header__menu-panel" id="header-catalog">
                       <div class="container header-catalog__container">
                         <div class="header-catalog__panel">
-                          <div class="header-catalog__col header-catalog__col--categories">
-                            <h2 class="header-catalog__title">
-                              <span class="header-catalog__title-icon icon-leaf" aria-hidden="true"></span>
+                          <div class="row">
+                          <div class="col-12 col-md-5 header-catalog__col header-catalog__col--categories">
+                            <h2 class="header-catalog__title icon-leaf">
                               Категории товаров
                             </h2>
                             <ul class="header-catalog__list">
                               <li>
-                                <a class="header-catalog__link" href="#">
+                                <a class="header-catalog__link icon-drop" href="#">
                                   <span class="header-catalog__link-thumb">
                                     <picture><source srcset="img/header/categories/gel.webp" type="image/webp"><img src="img/header/categories/gel.png" alt="Гели для душа KIPNI" width="36" height="36" loading="lazy"></picture>
                                   </span>
-                                  <span class="header-catalog__link-icon icon-drop" aria-hidden="true"></span>
                                   <span class="header-catalog__link-text">Гели для душа</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li>
-                                <a class="header-catalog__link" href="#">
+                                <a class="header-catalog__link icon-drop" href="#">
                                   <span class="header-catalog__link-thumb">
                                     <picture><source srcset="img/header/categories/soap.webp" type="image/webp"><img src="img/header/categories/soap.png" alt="Мыло KIPNI" width="36" height="36" loading="lazy"></picture>
                                   </span>
-                                  <span class="header-catalog__link-icon icon-drop" aria-hidden="true"></span>
                                   <span class="header-catalog__link-text">Мыло</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li>
-                                <a class="header-catalog__link" href="#">
+                                <a class="header-catalog__link icon-drop" href="#">
                                   <span class="header-catalog__link-thumb">
                                     <picture><source srcset="img/header/categories/shampoo.webp" type="image/webp"><img src="img/header/categories/shampoo.png" alt="Шампуни KIPNI" width="36" height="36" loading="lazy"></picture>
                                   </span>
-                                  <span class="header-catalog__link-icon icon-drop" aria-hidden="true"></span>
                                   <span class="header-catalog__link-text">Шампуни</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li>
-                                <a class="header-catalog__link" href="#">
+                                <a class="header-catalog__link icon-molecule" href="#">
                                   <span class="header-catalog__link-thumb">
                                     <picture><source srcset="img/header/categories/cleaning.webp" type="image/webp"><img src="img/header/categories/cleaning.png" alt="Средства для уборки KIPNI" width="36" height="36" loading="lazy"></picture>
                                   </span>
-                                  <span class="header-catalog__link-icon icon-molecule" aria-hidden="true"></span>
                                   <span class="header-catalog__link-text">Уборка</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li>
-                                <a class="header-catalog__link" href="#">
+                                <a class="header-catalog__link icon-box" href="#">
                                   <span class="header-catalog__link-thumb">
                                     <picture><source srcset="img/header/categories/laundry.webp" type="image/webp"><img src="img/header/categories/laundry.png" alt="Средства для стирки KIPNI" width="36" height="36" loading="lazy"></picture>
                                   </span>
-                                  <span class="header-catalog__link-icon icon-box" aria-hidden="true"></span>
                                   <span class="header-catalog__link-text">Стирка</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li class="header-catalog__item--desktop">
-                                <a class="header-catalog__link" href="#">
-                                  <span class="header-catalog__link-icon icon-box" aria-hidden="true"></span>
+                                <a class="header-catalog__link icon-box" href="#">
                                   <span class="header-catalog__link-text">Подарочные наборы</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li>
-                                <a class="header-catalog__link" href="#">
+                                <a class="header-catalog__link icon-grid" href="#">
                                   <span class="header-catalog__link-thumb">
                                     <picture><source srcset="img/header/categories/all-products.webp" type="image/webp"><img src="img/header/categories/all-products.png" alt="Вся продукция KIPNI" width="36" height="36" loading="lazy"></picture>
                                   </span>
-                                  <span class="header-catalog__link-icon icon-grid" aria-hidden="true"></span>
                                   <span class="header-catalog__link-text">Вся продукция</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                             </ul>
                           </div>
 
-                          <div class="header-catalog__col header-catalog__col--buyers">
-                            <h2 class="header-catalog__title">
-                              <span class="header-catalog__title-icon icon-box" aria-hidden="true"></span>
+                          <div class="col-12 col-md-4 header-catalog__col header-catalog__col--buyers">
+                            <h2 class="header-catalog__title icon-box">
                               Полезное для покупателя
                             </h2>
                             <ul class="header-catalog__list">
                               <li>
-                                <a class="header-catalog__link" href="where-to-buy.html">
-                                  <span class="header-catalog__link-icon icon-location" aria-hidden="true"></span>
+                                <a class="header-catalog__link icon-location" href="where-to-buy.html">
                                   <span class="header-catalog__link-text">Где купить</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li>
-                                <a class="header-catalog__link" href="delivery.html">
-                                  <span class="header-catalog__link-icon icon-truck" aria-hidden="true"></span>
+                                <a class="header-catalog__link icon-truck" href="delivery.html">
                                   <span class="header-catalog__link-text">Доставка и оплата</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li>
-                                <a class="header-catalog__link" href="#">
-                                  <span class="header-catalog__link-icon icon-star" aria-hidden="true"></span>
+                                <a class="header-catalog__link icon-star" href="#">
                                   <span class="header-catalog__link-text">Отзывы</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                               <li>
-                                <a class="header-catalog__link" href="blog.html">
-                                  <span class="header-catalog__link-icon icon-certificate" aria-hidden="true"></span>
+                                <a class="header-catalog__link icon-certificate" href="blog.html">
                                   <span class="header-catalog__link-text">Блог</span>
-                                  <span class="header-catalog__link-chevron icon-chevron-right" aria-hidden="true"></span>
                                 </a>
                               </li>
                             </ul>
                           </div>
 
-                          <div class="header-catalog__promo" style="--header-catalog-promo-image: url('img/header/catalog-promo.png');">
+                          <div class="col-12 col-md-3 header-catalog__promo" style="--header-catalog-promo-image: url('img/header/catalog-promo.png');">
                             <p class="header-catalog__promo-title">Чистота, которой доверяет семья</p>
                             <p class="header-catalog__promo-text">Экологичные средства для дома на каждый день</p>
                             <a class="btn btn--primary header-catalog__promo-btn icon-chevron-right" href="#">
                               Перейти в каталог
                             </a>
                           </div>
+                          </div>
                         </div>
                       </div>
                     </div>
+
                   </div>
 
-                  <div class="header-nav header__menu-accordion is-open">
+                  <div class="header-nav header__menu-accordion">
                     <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-people" type="button" aria-expanded="true">
                       Покупателям
-                      <span class="header__menu-row-chevron header__menu-row-chevron--down icon-chevron-down" aria-hidden="true"></span>
                     </button>
                     <div class="header-nav__panel header__menu-panel">
                       <ul class="header-nav__list">
@@ -219,71 +194,62 @@
                         <p class="header-buy__caption">Мы на маркетплейсах</p>
                         <ul class="header-buy__list">
                           <li>
-                            <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                               <span class="header-buy__logo header-buy__logo--ozon">
                                 <img src="img/shared/logos/marketplaces-sm/ozon.svg" alt="Ozon" width="40" height="40" loading="lazy">
                               </span>
                               <span class="header-buy__name">Ozon</span>
-                              <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                             </a>
                           </li>
                           <li>
-                            <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                               <span class="header-buy__logo header-buy__logo--wb">
                                 <picture><source srcset="img/shared/logos/marketplaces-sm/wildberries.webp" type="image/webp"><img src="img/shared/logos/marketplaces-sm/wildberries.png" alt="Wildberries" width="40" height="40" loading="lazy"></picture>
                               </span>
                               <span class="header-buy__name">Wildberries</span>
-                              <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                             </a>
                           </li>
                           <li>
-                            <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                               <span class="header-buy__logo header-buy__logo--yandex">
                                 <picture><source srcset="img/shared/logos/marketplaces-sm/yandex.webp" type="image/webp"><img src="img/shared/logos/marketplaces-sm/yandex.png" alt="Яндекс Маркет" width="40" height="40" loading="lazy"></picture>
                               </span>
                               <span class="header-buy__name">Яндекс Маркет</span>
-                              <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                             </a>
                           </li>
                           <li>
-                            <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                               <span class="header-buy__logo header-buy__logo--mega">
                                 <picture><source srcset="img/shared/logos/marketplaces-sm/megamarket.webp" type="image/webp"><img src="img/shared/logos/marketplaces-sm/megamarket.png" alt="Мегамаркет" width="40" height="40" loading="lazy"></picture>
                               </span>
                               <span class="header-buy__name">Мегамаркет</span>
-                              <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                             </a>
                           </li>
                           <li>
-                            <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                               <span class="header-buy__logo header-buy__logo--kazan">
                                 <picture><source srcset="img/shared/logos/marketplaces-sm/kazan.webp" type="image/webp"><img src="img/shared/logos/marketplaces-sm/kazan.png" alt="KazanExpress" width="40" height="40" loading="lazy"></picture>
                               </span>
                               <span class="header-buy__name">KazanExpress</span>
-                              <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                             </a>
                           </li>
                           <li>
-                            <a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+                            <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
                               <span class="header-buy__logo header-buy__logo--vse">
                                 <picture><source srcset="img/shared/logos/marketplaces-sm/vseinstrumenty.webp" type="image/webp"><img src="img/shared/logos/marketplaces-sm/vseinstrumenty.png" alt="ВсеИнструменты" width="40" height="40" loading="lazy"></picture>
                               </span>
                               <span class="header-buy__name">ВсеИнструменты</span>
-                              <span class="header-buy__chevron icon-chevron-right" aria-hidden="true"></span>
                             </a>
                           </li>
                         </ul>
-                        <a class="header-buy__all" href="where-to-buy.html">
-                          <span class="header-buy__all-icon icon-grid" aria-hidden="true"></span>
+                        <a class="header-buy__all icon-grid" href="where-to-buy.html">
                           Смотреть все площадки
                         </a>
                       </div>
                     </div>
 
-                    <a class="header__menu-row header__menu-row--buy" href="where-to-buy.html">
-                      <span class="header__menu-row-icon icon-shopping-cart" aria-hidden="true"></span>
+                    <a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html">
                       <span class="header__menu-row-text">Где купить?</span>
-                      <span class="header__menu-row-chevron icon-chevron-right" aria-hidden="true"></span>
                     </a>
                   </div>
                 </nav>
@@ -337,7 +303,7 @@
                 </div>
               </div>
               <div class="col-12 col-lg-6 promotions-intro__media">
-                <picture><source srcset="img/promotions/hero.webp" type="image/webp"><img src="img/promotions/hero.png" alt="Средства KIPNI для уборки и маскот-уточка" width="846" height="480" loading="lazy"></picture>
+                <picture><source srcset="img/promotions/hero.webp" type="image/webp"><img src="img/promotions/hero.png" alt="Средства KIPNI для уборки и маскот-уточка" width="846" height="480" fetchpriority="high"></picture>
               </div>
             </div>
           </div>
@@ -350,12 +316,11 @@
               <div class="col-12 col-lg-6">
                 <article class="promo-card" style="--promo-card-image: url('img/promotions/card-delivery.png');">
                 	<div class="promo-card__head">
-                		<p class="promo-card__date">
-                			<span class="promo-card__date-icon icon-calendar" aria-hidden="true"></span>
+                		<p class="promo-card__date icon-calendar">
                 			<span class="promo-card__date-text">Акция действует до 21.11.2026</span>
                 		</p>
                 		<span class="promo-card__badge" aria-hidden="true">
-                			<img src="img/shared/ui/gift.svg" alt="Подарок" width="40" height="40">
+                			<img src="img/shared/ui/gift.svg" alt="Подарок" width="40" height="40" loading="lazy">
                 		</span>
                 	</div>
                 	<h3 class="h2 promo-card__title">Бесплатная доставка от 1&nbsp;500&nbsp;₽</h3>
@@ -366,12 +331,11 @@
               <div class="col-12 col-lg-6">
                 <article class="promo-card" style="--promo-card-image: url('img/promotions/card-products.png');">
                 	<div class="promo-card__head">
-                		<p class="promo-card__date">
-                			<span class="promo-card__date-icon icon-calendar" aria-hidden="true"></span>
+                		<p class="promo-card__date icon-calendar">
                 			<span class="promo-card__date-text">Акция действует до 21.11.2026</span>
                 		</p>
                 		<span class="promo-card__badge" aria-hidden="true">
-                			<img src="img/shared/ui/gift.svg" alt="Подарок" width="40" height="40">
+                			<img src="img/shared/ui/gift.svg" alt="Подарок" width="40" height="40" loading="lazy">
                 		</span>
                 	</div>
                 	<h3 class="h2 promo-card__title">2+1 на средства<br>для уборки</h3>
@@ -382,12 +346,11 @@
               <div class="col-12 col-lg-6">
                 <article class="promo-card" style="--promo-card-image: url('img/promotions/card-delivery.png');">
                 	<div class="promo-card__head">
-                		<p class="promo-card__date">
-                			<span class="promo-card__date-icon icon-calendar" aria-hidden="true"></span>
+                		<p class="promo-card__date icon-calendar">
                 			<span class="promo-card__date-text">Акция действует до 21.11.2026</span>
                 		</p>
                 		<span class="promo-card__badge" aria-hidden="true">
-                			<img src="img/shared/ui/gift.svg" alt="Подарок" width="40" height="40">
+                			<img src="img/shared/ui/gift.svg" alt="Подарок" width="40" height="40" loading="lazy">
                 		</span>
                 	</div>
                 	<h3 class="h2 promo-card__title">Бесплатная доставка от 1&nbsp;500&nbsp;₽</h3>
@@ -398,12 +361,11 @@
               <div class="col-12 col-lg-6">
                 <article class="promo-card" style="--promo-card-image: url('img/promotions/card-products.png');">
                 	<div class="promo-card__head">
-                		<p class="promo-card__date">
-                			<span class="promo-card__date-icon icon-calendar" aria-hidden="true"></span>
+                		<p class="promo-card__date icon-calendar">
                 			<span class="promo-card__date-text">Акция действует до 21.11.2026</span>
                 		</p>
                 		<span class="promo-card__badge" aria-hidden="true">
-                			<img src="img/shared/ui/gift.svg" alt="Подарок" width="40" height="40">
+                			<img src="img/shared/ui/gift.svg" alt="Подарок" width="40" height="40" loading="lazy">
                 		</span>
                 	</div>
                 	<h3 class="h2 promo-card__title">2+1 на средства<br>для уборки</h3>
@@ -415,11 +377,11 @@
           </div>
         </section>
 
-        <section class="gifts section-space-md gifts--on-dark" aria-label="Подарочные наборы">
+        <section class="gifts section-space-md" aria-label="Подарочные наборы">
         	<div class="container">
         		<div class="gifts__banner" style="background-image: url('img/gifts/banner.jpg');">
         			<div class="gifts__content">
-        				<h2 class="gifts__title">Подарочные наборы для ваших близких</h2>
+        				<h2 class="h2 gifts__title">Подарочные наборы для ваших близких</h2>
         				<p class="gifts__lead">Покажите красиво заботу о&nbsp;ваших близких с&nbsp;KIPNI</p>
         				<a class="btn btn--ghost gifts__btn" href="catalog.html">Перейти в каталог</a>
         			</div>

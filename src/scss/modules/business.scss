@@ -14,14 +14,14 @@
 		border-radius: rem(20);
 		min-height: rem(373);
 		background-color: #e8f0f8;
-		background-image: var(--business-bg-mobile);
+		background-image: var(--business-mobile-image);
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: right center;
 
 		@media (min-width: $md4) {
 			min-height: rem(360);
-			background-image: var(--business-bg-desktop);
+			background-image: var(--business-desktop-image);
 		}
 
 		@media (min-width: $md2) {
@@ -55,22 +55,7 @@
 
 	// business__title
 	&__title {
-		margin: 0;
-		font-family: $font-golos, sans-serif;
-		font-size: rem(24);
-		font-weight: 500;
-		line-height: math.div(30, 24);
-		color: var(--color-text);
-
-		@media (min-width: $md4) {
-			font-size: rem(32);
-			line-height: math.div(38, 32);
-		}
-
-		@media (min-width: $md2) {
-			font-size: rem(36);
-			line-height: math.div(43, 36);
-		}
+		color: $color-text;
 	}
 
 	// business__lead
@@ -80,7 +65,7 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(17, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 
 		@media (min-width: $md4) {
 			font-size: rem(16);
@@ -126,8 +111,7 @@
 		max-width: rem(220);
 	}
 
-	// business-feature__icon
-	&__icon {
+	&::before {
 		flex-shrink: 0;
 		width: rem(34);
 		height: rem(34);
@@ -135,23 +119,14 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 50%;
-		background: var(--color-white);
-		box-shadow: var(--shadow-soft);
+		background: $color-white;
+		box-shadow: $shadow-soft;
+		font-size: rem(22);
 
 		@media (min-width: $md4) {
 			width: rem(40);
 			height: rem(40);
-		}
-
-		img {
-			width: rem(22);
-			height: rem(22);
-			object-fit: contain;
-
-			@media (min-width: $md4) {
-				width: rem(24);
-				height: rem(24);
-			}
+			font-size: rem(24);
 		}
 	}
 
@@ -160,7 +135,7 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(17, 14);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(15);

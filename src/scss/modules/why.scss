@@ -34,7 +34,7 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(17, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 
 		@media (min-width: $md4) {
 			font-size: rem(16);
@@ -111,22 +111,8 @@
 
 	// why__subtitle
 	&__subtitle {
-		margin: 0;
-		font-family: $fontfamily, sans-serif;
-		font-size: rem(24);
 		font-weight: 600;
-		line-height: math.div(29, 24);
-		color: var(--color-primary);
-
-		@media (min-width: $md4) {
-			font-size: rem(28);
-			line-height: math.div(34, 28);
-		}
-
-		@media (min-width: $md2) {
-			font-size: rem(30);
-			line-height: math.div(36, 30);
-		}
+		color: $color-primary;
 	}
 
 	// why__text
@@ -135,7 +121,7 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(15);
 		line-height: math.div(22, 15);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			margin-top: rem(24);

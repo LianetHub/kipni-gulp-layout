@@ -32,7 +32,7 @@
 
 	// certs-intro__accent
 	&__accent {
-		color: var(--color-primary);
+		color: $color-primary;
 	}
 
 	// certs-intro__text
@@ -66,24 +66,23 @@
 		align-items: center;
 		gap: rem(13);
 		max-width: rem(221);
-	}
 
-	// certs-intro__check
-	&__check {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(40);
-		height: rem(40);
-		font-size: rem(40);
+		&::before {
+			flex-shrink: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(40);
+			height: rem(40);
+			font-size: rem(40);
+		}
 	}
 
 	// certs-intro__benefit-text
 	&__benefit-text {
 		font-size: rem(16);
 		line-height: math.div(19, 16);
-		color: var(--color-text);
+		color: $color-text;
 	}
 
 	// certs-intro__media
@@ -114,7 +113,7 @@
 
 .certs-card {
 	background: #f7f8f3;
-	border-radius: var(--radius-md);
+	border-radius: $radius-md;
 	padding: rem(32) rem(20);
 
 	@media (min-width: $md4) {
@@ -208,7 +207,7 @@
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 
 		img {
@@ -240,23 +239,22 @@
 	display: flex;
 	align-items: center;
 	gap: rem(17);
-	color: var(--color-text);
+	color: $color-text;
 	transition: color 0.2s ease;
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: var(--color-primary);
+			color: $color-primary;
 		}
 	}
 
 	&:focus-visible {
 		outline: none;
-		box-shadow: var(--focus-ring);
+		box-shadow: $focus-ring;
 		border-radius: rem(4);
 	}
 
-	// certs-file__icon
-	&__icon {
+	&::before {
 		flex-shrink: 0;
 		display: inline-flex;
 		align-items: center;

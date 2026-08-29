@@ -41,17 +41,16 @@
 		display: inline-flex;
 		align-items: center;
 		gap: rem(5);
-	}
 
-	// article__meta-icon
-	&__meta-icon {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(24);
-		height: rem(24);
-		font-size: rem(24);
+		&::before {
+			flex-shrink: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(24);
+			height: rem(24);
+			font-size: rem(24);
+		}
 	}
 
 	// article__meta-text
@@ -99,7 +98,7 @@
 	&__media {
 		overflow: hidden;
 		margin-bottom: rem(32);
-		border-radius: var(--radius-md);
+		border-radius: $radius-md;
 
 		@media (min-width: $md4) {
 			margin-bottom: rem(40);
@@ -127,8 +126,8 @@
 	// article__callout
 	&__callout {
 		padding: rem(24) rem(20);
-		border-radius: var(--radius-md);
-		background: var(--color-surface);
+		border-radius: $radius-md;
+		background: $color-surface;
 
 		@media (min-width: $md4) {
 			padding: rem(44) rem(40);
@@ -137,12 +136,11 @@
 
 	// article__callout-text
 	&__callout-text {
-		margin: 0;
 		font-family: $font-golos, sans-serif;
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: math.div(22, 16);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(18);
@@ -159,47 +157,42 @@
 		align-self: flex-start;
 		min-height: rem(58);
 		padding: rem(16) rem(30);
-		border: 1px solid var(--color-primary);
-		border-radius: var(--radius-btn);
-		background: var(--color-bg);
-		box-shadow: var(--shadow-green);
+		border: 1px solid $color-primary;
+		border-radius: $radius-btn;
+		background: $color-bg;
+		box-shadow: $shadow-green;
 		cursor: pointer;
+		color: $color-primary;
+		font-size: rem(26);
 		transition: background-color 0.2s ease, color 0.2s ease;
+
+		&::before {
+			flex-shrink: 0;
+		}
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				background: var(--color-soft-green);
+				background: $color-soft-green;
 			}
 		}
 
 		&.is-active {
-			background: var(--color-primary);
-			color: var(--color-white);
+			background: $color-primary;
+			color: $color-white;
 
 			.article__like-text {
-				color: var(--color-white);
+				color: $color-white;
 			}
 
-			.article__like-icon {
-				color: var(--color-white);
+			&::before {
+				content: "\e911";
 			}
 		}
-	}
-
-	// article__like-icon
-	&__like-icon {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(28);
-		height: rem(26);
-		font-size: rem(26);
 	}
 
 	// article__like-text
@@ -208,7 +201,7 @@
 		font-size: rem(18);
 		font-weight: 400;
 		line-height: 1.1;
-		color: var(--color-primary);
+		color: $color-primary;
 		white-space: nowrap;
 	}
 }
@@ -247,7 +240,7 @@
 			padding-left: rem(24);
 			font-size: rem(16);
 			line-height: math.div(26, 16);
-			color: var(--color-text);
+			color: $color-text;
 
 			&::before {
 				content: "";
@@ -257,7 +250,7 @@
 				width: rem(5);
 				height: rem(5);
 				border-radius: 50%;
-				background: var(--color-text);
+				background: $color-text;
 			}
 		}
 	}
@@ -265,7 +258,7 @@
 
 .article-toc {
 	padding: rem(24) rem(20);
-	border-radius: var(--radius-md);
+	border-radius: $radius-md;
 	background: #f7f7f7;
 
 	@media (min-width: $md2) {
@@ -302,12 +295,12 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-primary);
+				color: $color-primary;
 			}
 		}
 
 		&.is-active {
-			color: var(--color-primary);
+			color: $color-primary;
 		}
 	}
 }
@@ -334,7 +327,7 @@
 	flex-direction: column;
 	height: 100%;
 	overflow: hidden;
-	border-radius: var(--radius-md);
+	border-radius: $radius-md;
 	background: #f7f7f7;
 
 	// article-card__media
@@ -382,7 +375,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-primary);
+				color: $color-primary;
 			}
 		}
 	}

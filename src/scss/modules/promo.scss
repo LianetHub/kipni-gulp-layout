@@ -69,26 +69,25 @@
 		align-items: center;
 		gap: rem(10);
 		margin: 0 0 rem(24);
-		color: var(--color-primary);
+		color: $color-primary;
 		font-size: rem(14);
 		line-height: math.div(16, 14);
+
+		&::before {
+			flex-shrink: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(24);
+			height: rem(24);
+			font-size: rem(24);
+		}
 
 		@media (min-width: $md4) {
 			margin-bottom: rem(28);
 			font-size: rem(16);
 			line-height: math.div(18, 16);
 		}
-	}
-
-	// promo-intro__date-icon
-	&__date-icon {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(24);
-		height: rem(24);
-		font-size: rem(24);
 	}
 
 	// promo-intro__date-text
@@ -120,7 +119,7 @@
 	// promo-intro__media
 	&__media {
 		overflow: hidden;
-		border-radius: var(--radius-md);
+		border-radius: $radius-md;
 		max-width: rem(621);
 
 		img {

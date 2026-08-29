@@ -74,7 +74,7 @@
 	padding: rem(28) rem(24);
 	border: 1px solid #f4f7e7;
 	border-radius: rem(20);
-	background: var(--color-bg);
+	background: $color-bg;
 
 	@media (min-width: $md4) {
 		min-height: rem(306);
@@ -84,16 +84,10 @@
 	// contacts-card__title
 	&__title {
 		margin: 0 0 rem(16);
-		font-family: $font-golos, sans-serif;
-		font-size: rem(24);
-		font-weight: 500;
-		line-height: math.div(29, 24);
-		color: var(--color-primary);
+		color: $color-primary;
 
 		@media (min-width: $md4) {
 			margin-bottom: rem(20);
-			font-size: rem(36);
-			line-height: math.div(43, 36);
 		}
 	}
 
@@ -127,24 +121,18 @@
 		align-items: flex-start;
 		gap: rem(8);
 
+		&::before {
+			display: flex;
+			flex-shrink: 0;
+			width: rem(24);
+			height: rem(24);
+			margin-top: rem(2);
+			font-size: rem(24);
+		}
+
 		// contacts-card__item--address
 		&--address {
 			margin-top: auto;
-		}
-	}
-
-	// contacts-card__icon
-	&__icon {
-		display: flex;
-		flex-shrink: 0;
-		width: rem(24);
-		height: rem(24);
-		margin-top: rem(2);
-
-		img {
-			display: block;
-			width: 100%;
-			height: 100%;
 		}
 	}
 
@@ -154,7 +142,7 @@
 		font-size: rem(20);
 		font-weight: 500;
 		line-height: math.div(24, 20);
-		color: var(--color-text);
+		color: $color-text;
 		transition: color 0.2s ease;
 
 		@media (min-width: $md4) {
@@ -164,19 +152,18 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-primary);
+				color: $color-primary;
 			}
 		}
 	}
 
 	// contacts-card__address
 	&__address {
-		margin: 0;
 		font-family: $font-golos, sans-serif;
 		font-size: rem(18);
 		font-weight: 500;
 		line-height: math.div(24, 18);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(20);
@@ -239,7 +226,7 @@
 		font-size: rem(24);
 		font-weight: 500;
 		line-height: math.div(29, 24);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			margin-bottom: rem(25);
@@ -250,7 +237,6 @@
 
 	// contacts-form__lead
 	&__lead {
-		margin: 0;
 		max-width: rem(771);
 		line-height: math.div(26, 16);
 	}
@@ -323,7 +309,7 @@
 		}
 
 		&:focus-visible+.contacts-form__check {
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 	}
 
@@ -335,9 +321,9 @@
 		justify-content: center;
 		width: rem(20);
 		height: rem(20);
-		border: 1px solid var(--color-primary);
+		border: 1px solid $color-primary;
 		border-radius: rem(4);
-		background: var(--color-bg);
+		background: $color-bg;
 
 		img {
 			display: block;
@@ -353,7 +339,7 @@
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(20, 14);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(16);
@@ -412,7 +398,7 @@
 		overflow: hidden;
 
 		&.is-open {
-			.contacts-faq__toggle {
+			.contacts-faq__question::before {
 				transform: rotate(45deg);
 			}
 
@@ -433,15 +419,36 @@
 		background: transparent;
 		text-align: left;
 		cursor: pointer;
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			padding: rem(22) rem(32);
 		}
 
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			order: 1;
+			width: rem(48);
+			height: rem(48);
+			border-radius: 50%;
+			background: $color-primary;
+			color: $color-white;
+			font-size: rem(20);
+			transition: transform 0.25s $ease-layout;
+
+			@media (min-width: $md4) {
+				width: rem(64);
+				height: rem(64);
+				font-size: rem(24);
+			}
+		}
+
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 	}
 
@@ -459,35 +466,6 @@
 		}
 	}
 
-	// contacts-faq__toggle
-	&__toggle {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-shrink: 0;
-		width: rem(48);
-		height: rem(48);
-		border-radius: 50%;
-		background: var(--color-primary);
-		transition: transform 0.25s var(--ease-layout);
-
-		@media (min-width: $md4) {
-			width: rem(64);
-			height: rem(64);
-		}
-
-		img {
-			display: block;
-			width: rem(20);
-			height: rem(20);
-
-			@media (min-width: $md4) {
-				width: rem(24);
-				height: rem(24);
-			}
-		}
-	}
-
 	// contacts-faq__answer
 	&__answer {
 		display: none;
@@ -499,7 +477,6 @@
 		}
 
 		p {
-			margin: 0;
 			line-height: math.div(26, 16);
 		}
 	}

@@ -26,8 +26,7 @@
 		<p class="product-card__volume">@@volume</p>
 		}
 		@@if (typeof rating !== 'undefined' && rating) {
-		<div class="product-card__rating">
-			<span class="product-card__star icon-star" aria-hidden="true"></span>
+		<div class="product-card__rating icon-star">
 			<span class="product-card__rating-value">@@rating</span>
 			@@if (typeof reviews !== 'undefined' && reviews) {
 			<span class="product-card__rating-count">(@@reviews)</span>
@@ -35,8 +34,7 @@
 		</div>
 		}
 		<div class="product-card__footer">
-			<a href="@@link" class="more-link product-card__link">Подробнее</a>
-			<span class="product-card__action icon-chevron-right" aria-hidden="true"></span>
+			<a href="@@link" class="more-link product-card__link icon-chevron-right">Подробнее</a>
 		</div>
 	</div>
 </article>

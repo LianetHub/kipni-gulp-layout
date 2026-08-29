@@ -33,6 +33,7 @@ export const html = () => {
             indent: true,
             context: {}
         }))
+        .pipe(app.plugins.replace(/^[ \t]*<!-- fileinclude -->[ \t]*\r?\n?/gm, ""))
         .pipe(app.plugins.replace(/@img\//g, "img/"))
         .pipe(webpHtmlNosvg())
         .pipe(

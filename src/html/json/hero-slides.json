@@ -1,0 +1,88 @@
+[
+	{
+		"heading": "h1",
+		"image": "@img/hero/slide-1.webp",
+		"title": "Чистота, которой",
+		"accent": "доверяет семья",
+		"lead": "Экологичные средства для дома на каждый день",
+		"primary_text": "Перейти в каталог",
+		"primary_href": "#",
+		"primary_icon": "icon-chevron-right",
+		"secondary_text": "Где купить",
+		"secondary_href": "where-to-buy.html",
+		"features": [
+			{
+				"icon_src": "@img/icons/leaf.svg",
+				"title": "Экологично",
+				"text": "На основе натуральных компонентов"
+			},
+			{
+				"icon_src": "@img/icons/box.svg",
+				"title": "Всегда в наличии",
+				"text": "Регулярные поставки на&nbsp;маркетплейсы"
+			},
+			{
+				"icon_src": "@img/icons/credit-card.svg",
+				"title": "Доступные цены",
+				"text": "Заботимся о качестве и&nbsp;вашем бюджете"
+			}
+		]
+	},
+	{
+		"heading": "h2",
+		"image": "@img/hero/slide-2.webp",
+		"title": "Эффективный",
+		"accent": "гель для стирки",
+		"lead": "С бережным уходом",
+		"primary_text": "Перейти в каталог",
+		"primary_href": "catalog.html",
+		"secondary_text": "Где купить",
+		"secondary_href": "where-to-buy.html",
+		"features": [
+			{
+				"icon_src": "@img/icons/drop.svg",
+				"title": "Отстирывает даже в&nbsp;холодной воде",
+				"text": "сохраняя цвет и&nbsp;структуру"
+			},
+			{
+				"icon_src": "@img/icons/favorite.svg",
+				"title": "Подходит для всех типов белья",
+				"text": "в&nbsp;том числе детского"
+			},
+			{
+				"icon_src": "@img/icons/certificate.svg",
+				"title": "Производство на&nbsp;своей фабрике",
+				"text": "без переплат и&nbsp;посредников"
+			}
+		]
+	},
+	{
+		"heading": "h2",
+		"modifier": "hero-slide--dark",
+		"image": "@img/hero/slide-3.webp",
+		"title": "Парфюмированное,",
+		"accent": "мыло — премиум-уход",
+		"lead": "Прямо от производителя",
+		"primary_text": "Перейти в каталог",
+		"primary_href": "catalog.html",
+		"secondary_text": "Где купить",
+		"secondary_href": "where-to-buy.html",
+		"features": [
+			{
+				"icon_src": "@img/icons/user.svg",
+				"title": "Прямо от производителя",
+				"text": "Без наценок и&nbsp;посредников"
+			},
+			{
+				"icon_src": "@img/icons/pressure-light.svg",
+				"title": "Утонченные ароматы",
+				"text": "Подарок, которым хочется пользоваться каждый день"
+			},
+			{
+				"icon_src": "@img/icons/molecule.svg",
+				"title": "Гармоничная формула",
+				"text": "Мягко очищает, поддерживает увлажненность кожи."
+			}
+		]
+	}
+]

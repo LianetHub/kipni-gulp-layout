@@ -26,6 +26,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.documentElement.style.setProperty("--header-banner-height", `${bannerHeight}px`);
     }
 
+    function setHeaderScrolled() {
+        if (!h) return;
+        h.root.classList.toggle("is-scrolled", window.scrollY > 0);
+    }
+
     function finishBannerHide() {
         if (!h) return;
 
@@ -294,6 +299,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         setHeaderHeight();
+        setHeaderScrolled();
+        window.addEventListener("scroll", setHeaderScrolled, { passive: true });
     }
 
 
@@ -310,7 +317,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof Swiper !== "undefined") {
         if (document.querySelector(".hero__slider")) {
             const heroSlider = document.querySelector(".hero__slider");
-            const heroPagination = heroSlider.closest(".hero")?.querySelector(".hero__pagination");
+            const heroPagination = heroSlider.querySelector(".swiper-pagination");
 
             new Swiper(heroSlider, {
                 slidesPerView: 1,
@@ -341,7 +348,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (document.querySelectorAll(".buy-partners__slider").length > 0) {
             document.querySelectorAll(".buy-partners__slider").forEach((slider) => {
                 const wrap = slider.closest(".buy-partners__slider-wrap");
-                const nextEl = wrap?.querySelector(".buy-partners__next");
+                const nextEl = wrap?.querySelector(".swiper-button-next");
 
                 new Swiper(slider, {
                     slidesPerView: 1.4,
@@ -382,17 +389,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (document.querySelector(".popular__slider")) {
             const popularSlider = document.querySelector(".popular__slider");
-            const popularNext = popularSlider.closest(".popular__slider-container")?.querySelector(".popular__next");
+            const popularWrap = popularSlider.closest(".popular__slider-container");
+            const popularPrev = popularWrap?.querySelector(".swiper-button-prev");
+            const popularNext = popularWrap?.querySelector(".swiper-button-next");
 
             new Swiper(popularSlider, {
                 slidesPerView: "auto",
                 spaceBetween: 11,
                 speed: 500,
-                navigation: popularNext
-                    ? {
-                        nextEl: popularNext,
-                    }
-                    : undefined,
+                navigation: {
+                    prevEl: popularPrev,
+                    nextEl: popularNext,
+                },
                 breakpoints: {
                     768: {
                         spaceBetween: 20,
@@ -407,9 +415,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (document.querySelector(".reviews__slider")) {
             const reviewsSlider = document.querySelector(".reviews__slider");
             const reviewsWrap = reviewsSlider.closest(".reviews__slider-wrap");
-            const reviewsPagination = reviewsWrap?.querySelector(".reviews__pagination");
-            const reviewsPrev = reviewsWrap?.querySelector(".reviews__prev");
-            const reviewsNext = reviewsWrap?.querySelector(".reviews__next");
+            const reviewsPagination = reviewsWrap?.querySelector(".swiper-pagination");
+            const reviewsPrev = reviewsWrap?.querySelector(".swiper-button-prev");
+            const reviewsNext = reviewsWrap?.querySelector(".swiper-button-next");
 
             new Swiper(reviewsSlider, {
                 slidesPerView: 1,
@@ -440,7 +448,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (document.querySelector(".catalog-cats__slider")) {
             const catalogCatsSlider = document.querySelector(".catalog-cats__slider");
-            const catalogCatsNext = catalogCatsSlider.closest(".catalog-cats__container")?.querySelector(".catalog-cats__next");
+            const catalogCatsNext = catalogCatsSlider.closest(".catalog-cats")?.querySelector(".swiper-button-next");
 
             new Swiper(catalogCatsSlider, {
                 slidesPerView: "auto",

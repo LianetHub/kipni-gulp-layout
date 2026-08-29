@@ -61,24 +61,23 @@
 		align-items: center;
 		gap: rem(13);
 		max-width: rem(221);
-	}
 
-	// vacancies-intro__check
-	&__check {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(40);
-		height: rem(40);
-		font-size: rem(40);
+		&::before {
+			flex-shrink: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(40);
+			height: rem(40);
+			font-size: rem(40);
+		}
 	}
 
 	// vacancies-intro__benefit-text
 	&__benefit-text {
 		font-size: rem(16);
 		line-height: math.div(19, 16);
-		color: var(--color-text);
+		color: $color-text;
 	}
 
 	// vacancies-intro__media
@@ -124,7 +123,6 @@
 
 	// vacancies-list__title
 	&__title {
-		margin: 0;
 	}
 
 	// vacancies-list__items
@@ -140,19 +138,13 @@
 }
 
 .vacancy-card {
-	border-radius: var(--radius-md);
+	border-radius: $radius-md;
 	background: #f7f7f7;
 	overflow: hidden;
 
 	&.is-open {
-		.vacancy-card__toggle {
-			img {
-				opacity: 0;
-			}
-
-			&::after {
-				opacity: 1;
-			}
+		.vacancy-card__header::before {
+			content: "\e904";
 		}
 
 		.vacancy-card__body {
@@ -171,7 +163,29 @@
 		background: transparent;
 		text-align: left;
 		cursor: pointer;
-		color: var(--color-text);
+		color: $color-text;
+
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			order: 1;
+			width: rem(48);
+			height: rem(48);
+			margin-left: auto;
+			border-radius: 50%;
+			background: $color-primary;
+			color: $color-white;
+			font-size: rem(20);
+
+			@media (min-width: $md4) {
+				width: rem(64);
+				height: rem(64);
+				margin-left: 0;
+				font-size: rem(24);
+			}
+		}
 
 		@media (min-width: $md4) {
 			flex-wrap: nowrap;
@@ -181,7 +195,7 @@
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 	}
 
@@ -193,7 +207,7 @@
 		font-size: rem(22);
 		font-weight: 500;
 		line-height: 1.2;
-		color: var(--color-primary);
+		color: $color-primary;
 
 		@media (min-width: $md4) {
 			font-size: rem(36);
@@ -206,59 +220,12 @@
 		font-size: rem(22);
 		font-weight: 500;
 		line-height: 1.2;
-		color: var(--color-text);
+		color: $color-text;
 		white-space: nowrap;
 
 		@media (min-width: $md4) {
 			font-size: rem(36);
 			margin-right: rem(24);
-		}
-	}
-
-	// vacancy-card__toggle
-	&__toggle {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-shrink: 0;
-		width: rem(48);
-		height: rem(48);
-		margin-left: auto;
-		border-radius: 50%;
-		background: var(--color-primary);
-
-		@media (min-width: $md4) {
-			width: rem(64);
-			height: rem(64);
-			margin-left: 0;
-		}
-
-		img {
-			display: block;
-			width: rem(20);
-			height: rem(20);
-			transition: opacity 0.2s ease;
-
-			@media (min-width: $md4) {
-				width: rem(24);
-				height: rem(24);
-			}
-		}
-
-		&::after {
-			content: "";
-			position: absolute;
-			width: rem(16);
-			height: rem(2);
-			border-radius: rem(51);
-			background: #fff;
-			opacity: 0;
-			transition: opacity 0.2s ease;
-
-			@media (min-width: $md4) {
-				width: rem(20);
-			}
 		}
 	}
 
@@ -309,7 +276,7 @@
 		li {
 			font-size: rem(16);
 			line-height: math.div(26, 16);
-			color: var(--color-text);
+			color: $color-text;
 
 			&:not(:last-child) {
 				margin-bottom: rem(10);
@@ -321,8 +288,8 @@
 	&__summary {
 		margin-top: rem(24);
 		padding: rem(28) rem(24);
-		border-radius: var(--radius-md);
-		background: var(--color-bg);
+		border-radius: $radius-md;
+		background: $color-bg;
 
 		@media (min-width: $md2) {
 			margin-top: rem(8);
@@ -364,9 +331,8 @@
 	position: relative;
 	width: min(100%, rem(896));
 	padding: rem(28) rem(20) rem(24);
-	border-radius: var(--radius-md);
+	border-radius: $radius-md;
 	background: #f7f8f3;
-	box-sizing: border-box;
 
 	@media (min-width: $md4) {
 		padding: rem(52) rem(40) rem(40);
@@ -374,7 +340,7 @@
 
 	// vacancy-modal--apply
 	&--apply {
-		background: var(--color-bg);
+		background: $color-bg;
 	}
 
 	// vacancy-modal__close
@@ -402,7 +368,7 @@
 		&:focus-visible {
 			outline: none;
 			border-radius: 50%;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 	}
 
@@ -423,7 +389,7 @@
 		font-size: rem(24);
 		font-weight: 500;
 		line-height: 1.2;
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(30);
@@ -433,7 +399,6 @@
 
 	// vacancy-modal__lead
 	&__lead {
-		margin: 0;
 		line-height: math.div(26, 16);
 		max-width: rem(540);
 	}
@@ -448,8 +413,8 @@
 
 		.form-control {
 			min-height: rem(56);
-			border-radius: var(--radius-sm);
-			box-shadow: var(--shadow-soft);
+			border-radius: $radius-sm;
+			box-shadow: $shadow-soft;
 
 			@media (min-width: $md4) {
 				min-height: rem(62);
@@ -498,11 +463,10 @@
 		width: 100%;
 		min-height: rem(56);
 		padding: rem(14) rem(20);
-		border: 1px solid var(--color-border-subtle);
-		border-radius: var(--radius-sm);
-		background: var(--color-bg);
-		box-shadow: var(--shadow-soft);
-		box-sizing: border-box;
+		border: 1px solid $color-border-subtle;
+		border-radius: $radius-sm;
+		background: $color-bg;
+		box-shadow: $shadow-soft;
 		transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
 		@media (min-width: $md4) {
@@ -517,8 +481,8 @@
 		}
 
 		.vacancy-modal__file-input:focus-visible+& {
-			border-color: var(--color-primary);
-			box-shadow: var(--focus-ring);
+			border-color: $color-primary;
+			box-shadow: $focus-ring;
 		}
 	}
 
@@ -528,7 +492,7 @@
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: 1.2;
-		color: var(--color-primary);
+		color: $color-primary;
 
 		@media (min-width: $md4) {
 			font-size: rem(18);
@@ -567,7 +531,7 @@
 		}
 
 		&:focus-visible+.vacancy-modal__check {
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 	}
 
@@ -594,7 +558,7 @@
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(20, 14);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(16);
@@ -630,7 +594,7 @@
 		background: transparent;
 		color: inherit;
 		max-width: rem(896);
-		border-radius: var(--radius-md);
+		border-radius: $radius-md;
 	}
 
 	.f-button.is-close-btn {

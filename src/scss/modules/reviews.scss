@@ -15,21 +15,10 @@
 
 	// reviews__head
 	&__head {
-		@media (min-width: $md2) {
-			display: flex;
-			align-items: flex-start;
-			gap: rem(40);
-			margin-bottom: rem(40);
-		}
-	}
-
-	// reviews__intro
-	&__intro {
 		margin-bottom: rem(24);
 
 		@media (min-width: $md2) {
-			flex: 0 0 rem(360);
-			margin-bottom: 0;
+			margin-bottom: rem(40);
 		}
 	}
 
@@ -45,7 +34,7 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(17, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 
 		@media (min-width: $md4) {
 			font-size: rem(16);
@@ -96,13 +85,12 @@
 		.swiper-pagination-bullet {
 			width: rem(8);
 			height: rem(8);
-			margin: 0;
 			background: rgba(76, 76, 76, 0.25);
 			opacity: 1;
 		}
 
 		.swiper-pagination-bullet-active {
-			background: var(--color-primary);
+			background: $color-primary;
 		}
 	}
 
@@ -120,13 +108,13 @@
 		padding: 0;
 		border: none;
 		border-radius: 50%;
-		background: var(--color-white);
-		box-shadow: var(--shadow-soft);
+		background: $color-white;
+		box-shadow: $shadow-soft;
 		cursor: pointer;
 		transform: translateY(-50%);
 		font-size: rem(15);
 		line-height: 1;
-		color: var(--color-text);
+		color: $color-text;
 
 		&::after {
 			content: none;
@@ -138,7 +126,7 @@
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 
 		&.swiper-button-disabled {
@@ -174,17 +162,14 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(17, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 
-		img {
+		&::before {
 			flex-shrink: 0;
-			width: rem(23);
-			height: rem(26);
-			object-fit: contain;
+			font-size: rem(23);
 
 			@media (min-width: $md4) {
-				width: rem(30);
-				height: rem(34);
+				font-size: rem(30);
 			}
 		}
 	}
@@ -198,8 +183,8 @@
 	min-height: rem(124);
 	padding: rem(20);
 	border-radius: rem(15);
-	background: var(--color-white);
-	border: 1px solid var(--color-border-subtle);
+	background: $color-white;
+	border: 1px solid $color-border-subtle;
 
 	@media (min-width: $md2) {
 		min-height: rem(154);
@@ -236,21 +221,20 @@
 		font-size: rem(22);
 		font-weight: 500;
 		line-height: math.div(26, 22);
-		color: var(--color-text);
+		color: $color-text;
 
-		img {
-			width: rem(20);
-			height: rem(20);
+		&::before {
+			font-size: rem(20);
+			color: $color-primary;
 		}
 	}
 
 	// rating-card__count
 	&__count {
-		margin: 0;
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(15, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 	}
 }
 
@@ -261,8 +245,8 @@
 	min-height: rem(262);
 	padding: rem(24) rem(20);
 	border-radius: rem(15);
-	background: var(--color-white);
-	border: 1px solid var(--color-border-subtle);
+	background: $color-white;
+	border: 1px solid $color-border-subtle;
 
 	@media (min-width: $md4) {
 		min-height: rem(305);
@@ -294,7 +278,7 @@
 		align-items: center;
 		justify-content: center;
 		border-radius: 50%;
-		background: var(--color-surface);
+		background: $color-surface;
 		overflow: hidden;
 
 		@media (min-width: $md4) {
@@ -312,24 +296,21 @@
 
 	// review-card__name
 	&__name {
-		margin: 0;
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 600;
 		line-height: math.div(18, 16);
-		color: var(--color-text);
+		color: $color-text;
 	}
 
 	// review-card__stars
 	&__stars {
+		@extend %icon-stars-5;
 		display: flex;
 		gap: rem(2);
 		margin-top: rem(6);
-
-		img {
-			width: rem(14);
-			height: rem(14);
-		}
+		color: $color-primary;
+		font-size: rem(14);
 	}
 
 	// review-card__source
@@ -354,7 +335,7 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(15);
 		line-height: math.div(22, 15);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(16);
@@ -369,7 +350,7 @@
 			overflow: visible;
 		}
 
-		.review-card__expand img {
+		.review-card__expand::before {
 			transform: rotate(180deg);
 		}
 	}
@@ -395,18 +376,18 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(18, 14);
-		color: var(--color-link);
+		color: $color-link;
 		cursor: pointer;
 
-		img {
-			width: rem(8);
-			height: rem(5);
+		&::before {
+			order: 1;
+			font-size: rem(10);
 			transition: transform 0.2s ease;
 		}
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 			border-radius: rem(2);
 		}
 	}
@@ -416,7 +397,7 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(18, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 		white-space: nowrap;
 	}
 }

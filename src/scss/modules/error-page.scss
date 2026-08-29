@@ -27,7 +27,7 @@
 		font-weight: 500;
 		font-size: rem(96);
 		line-height: math.div(115, 96);
-		color: var(--color-text);
+		color: $color-text;
 		margin-bottom: rem(12);
 
 		@media (min-width: $md4) {
@@ -39,7 +39,7 @@
 
 	// error-page__title
 	&__title {
-		color: var(--color-primary);
+		color: $color-primary;
 		margin-bottom: rem(16);
 
 		@media (min-width: $md4) {
@@ -70,9 +70,9 @@
 		}
 
 		.error-page__catalog {
-			color: var(--color-primary);
-			border: 1px solid var(--color-primary);
-			box-shadow: var(--shadow-green);
+			color: $color-primary;
+			border: 1px solid $color-primary;
+			box-shadow: $shadow-green;
 			padding-inline: rem(30);
 			font-size: rem(18);
 			font-weight: 500;

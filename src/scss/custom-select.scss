@@ -20,32 +20,36 @@
 
 	// custom-select__trigger
 	&__trigger {
+		@extend %icon-after-chevron-down;
 		display: inline-flex;
 		align-items: center;
 		gap: rem(10);
 		min-height: rem(50);
 		padding: rem(12) rem(26);
-		border-radius: var(--radius-btn);
+		border-radius: $radius-btn;
 		cursor: pointer;
 		transition: border-color 0.2s ease, box-shadow 0.2s ease;
 
+		&::before {
+			flex-shrink: 0;
+			width: rem(20);
+			height: rem(20);
+			font-size: rem(20);
+			color: $color-muted;
+		}
+
+		&::after {
+			flex-shrink: 0;
+			width: rem(12);
+			margin-left: rem(4);
+			font-size: rem(12);
+			transition: transform 0.2s ease;
+		}
+
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
-	}
-
-	// custom-select__icon
-	&__icon {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		flex-shrink: 0;
-		width: rem(20);
-		height: rem(20);
-		font-size: rem(20);
-		line-height: 1;
-		color: var(--color-muted);
 	}
 
 	// custom-select__value
@@ -55,20 +59,6 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
-	}
-
-	// custom-select__chevron
-	&__chevron {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		flex-shrink: 0;
-		width: rem(12);
-		height: rem(7);
-		margin-left: rem(4);
-		font-size: rem(12);
-		line-height: 1;
-		transition: transform 0.2s ease;
 	}
 
 	// custom-select__list
@@ -82,10 +72,9 @@
 		max-width: min(#{rem(320)}, calc(100vw - #{rem(32)}));
 		padding: rem(8);
 		border: 1px solid rgba(52, 52, 52, 0.05);
-		border-radius: var(--radius-btn);
-		background: var(--color-white);
-		box-shadow: var(--shadow-soft);
-		box-sizing: border-box;
+		border-radius: $radius-btn;
+		background: $color-white;
+		box-shadow: $shadow-soft;
 	}
 
 	// custom-select__option
@@ -96,31 +85,31 @@
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 14);
-		color: var(--color-text);
+		color: $color-text;
 		cursor: pointer;
 		transition: background-color 0.2s ease, color 0.2s ease;
 
 		@media (any-hover: hover) {
 			&:hover {
-				background: var(--color-soft-green);
+				background: $color-soft-green;
 			}
 		}
 
 		&.is-selected {
-			background: var(--color-soft-green);
-			color: var(--color-link-dark);
+			background: $color-soft-green;
+			color: $color-link-dark;
 			font-weight: 600;
 		}
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 	}
 
 	&.is-open {
-		.custom-select__chevron {
-			transform: rotate(180deg);
+		.custom-select__trigger::after {
+			transform: rotate(270deg);
 		}
 	}
 
@@ -128,8 +117,8 @@
 	&--catalog {
 		.custom-select__trigger {
 			border: 1px solid rgba(52, 52, 52, 0.05);
-			background: var(--color-white);
-			color: var(--color-text);
+			background: $color-white;
+			color: $color-text;
 
 			@media (any-hover: hover) {
 				&:hover {
@@ -148,13 +137,13 @@
 	&--vacancies {
 		.custom-select__trigger {
 			border: none;
-			background: var(--color-bg);
-			box-shadow: var(--shadow-soft);
-			color: var(--color-primary);
+			background: $color-bg;
+			box-shadow: $shadow-soft;
+			color: $color-primary;
 
 			@media (any-hover: hover) {
 				&:hover {
-					box-shadow: var(--shadow-green);
+					box-shadow: $shadow-green;
 				}
 			}
 		}

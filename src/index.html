@@ -7,13 +7,295 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-        @@include('html/sections/hero.html')
-        @@include('html/sections/categories.html')
+        <section class="hero" aria-label="Главный баннер">
+          <div class="swiper hero__slider">
+            <div class="swiper-wrapper">
+              @@loop('html/templates/hero-slide.html', 'html/json/hero-slides.json')
+            </div>
+            <div class="hero__pagination swiper-pagination"></div>
+          </div>
+        </section>
+        <section class="categories section-space-md" aria-label="Категории продукции">
+          <div class="container">
+            <div class="row gy-3">
+              @@loop('html/templates/category-card.html', 'html/json/categories.json')
+            </div>
+          </div>
+        </section>
         @@include('html/sections/gifts.html')
-        @@include('html/sections/popular.html')
-        @@include('html/sections/marketplaces.html')
-        @@include('html/sections/why.html')
-        @@include('html/sections/business.html')
+        <section class="popular section-space-md" aria-labelledby="popular-title">
+          <div class="container">
+            <h2 class="h2 popular__title" id="popular-title">Популярные товары бытовой химии</h2>
+          </div>
+          <div class="popular__slider-wrap">
+            <div class="container popular__slider-container">
+              <div class="swiper popular__slider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/toilet-gel.png",
+                    "image_alt": "Чистящий гель KIPNI для унитазов",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Гель для душа Канди шоп",
+                    "volume": "750 мл",
+                    "image": "img/products/candy-shop.png",
+                    "image_alt": "Гель для душа Канди шоп папайя виноград",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Жидкое мыло Тропические фрукты",
+                    "volume": "500 мл",
+                    "badge": "Новинка",
+                    "badge_mod": "badge--new",
+                    "image": "img/products/tropical-soap.png",
+                    "image_alt": "Жидкое мыло Тропические фрукты",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Мыло хозяйственное Кипни",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/household-soap.png",
+                    "image_alt": "Мыло хозяйственное Кипни",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Универсальный гель для стирки",
+                    "volume": "5 л",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/laundry-gel.png",
+                    "image_alt": "Универсальный гель для стирки KIPNI 5 л",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Средство для посуды",
+                    "volume": "750 мл",
+                    "image": "img/products/dish.png",
+                    "image_alt": "Средство для посуды OLLY",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/toilet-gel.png",
+                    "image_alt": "Чистящий гель KIPNI для унитазов",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Гель для душа Канди шоп",
+                    "volume": "750 мл",
+                    "image": "img/products/candy-shop.png",
+                    "image_alt": "Гель для душа Канди шоп папайя виноград",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Жидкое мыло Тропические фрукты",
+                    "volume": "500 мл",
+                    "badge": "Новинка",
+                    "badge_mod": "badge--new",
+                    "image": "img/products/tropical-soap.png",
+                    "image_alt": "Жидкое мыло Тропические фрукты",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Мыло хозяйственное Кипни",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/household-soap.png",
+                    "image_alt": "Мыло хозяйственное Кипни",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Универсальный гель для стирки",
+                    "volume": "5 л",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/laundry-gel.png",
+                    "image_alt": "Универсальный гель для стирки KIPNI 5 л",
+                    "link": "#"
+                    })
+                  </div>
+                  <div class="swiper-slide">
+                    @@include('html/templates/product-card.html', {
+                    "title": "Средство для посуды",
+                    "volume": "750 мл",
+                    "image": "img/products/dish.png",
+                    "image_alt": "Средство для посуды OLLY",
+                    "link": "#"
+                    })
+                  </div>
+                </div>
+              </div>
+              <button type="button" class="popular__prev swiper-button-prev icon-chevron-right" aria-label="Предыдущие товары"></button>
+              <button type="button" class="popular__next swiper-button-next icon-chevron-right" aria-label="Следующие товары"></button>
+            </div>
+          </div>
+        </section>
+        <section class="marketplaces section-space-md" aria-labelledby="marketplaces-title">
+          <div class="container">
+            <div class="marketplaces__panel">
+              <div class="row marketplaces__grid gy-4">
+                <div class="col-12 col-xl-4">
+                  <div class="marketplaces__intro">
+                    <h2 class="h2 marketplaces__title" id="marketplaces-title">
+                      Выбирайте удобный
+                      <span class="marketplaces__title-accent">способ покупки</span>
+                    </h2>
+                    <p class="marketplaces__lead">Наши товары есть на&nbsp;всех крупнейших маркетплейсах</p>
+                  </div>
+                  <div class="marketplaces__perks">
+                    <div class="marketplace-perk icon-truck">
+                      <span class="marketplace-perk__text">Быстрая доставка</span>
+                    </div>
+                    <div class="marketplace-perk icon-certificate">
+                      <span class="marketplace-perk__text">Оригинальная продукция</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-8">
+                  <div class="row g-3 marketplaces__shops">
+                    <div class="col-6 col-md-4">
+                      <a class="marketplace-card marketplace-card--avito" href="#" aria-label="Купить на Avito">
+                        <img class="marketplace-card__logo" src="@img/shared/logos/marketplaces/avito.svg" alt="Avito" width="160" height="24" loading="lazy">
+                        <span class="marketplace-card__caption">Перейти в магазин</span>
+                      </a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <a class="marketplace-card" href="#" aria-label="Купить на Ozon">
+                        <img class="marketplace-card__logo marketplace-card__logo--ozon" src="@img/shared/logos/marketplaces/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
+                      </a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <a class="marketplace-card" href="#" aria-label="Купить на Wildberries">
+                        <img class="marketplace-card__logo marketplace-card__logo--wb" src="@img/shared/logos/marketplaces/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
+                      </a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <a class="marketplace-card" href="#" aria-label="Купить на Мегамаркете">
+                        <img class="marketplace-card__logo marketplace-card__logo--mega" src="@img/shared/logos/marketplaces/megamarket.svg" alt="Мегамаркет" width="195" height="29" loading="lazy">
+                      </a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <a class="marketplace-card" href="#" aria-label="Купить на Яндекс Маркете">
+                        <img class="marketplace-card__logo marketplace-card__logo--yandex" src="@img/shared/logos/marketplaces/yandex-market.png" alt="Яндекс Маркет" width="174" height="26" loading="lazy">
+                      </a>
+                    </div>
+                    <div class="col-6 col-md-4">
+                      <a class="marketplace-card" href="#" aria-label="Купить на Магнит Маркете">
+                        <img class="marketplace-card__logo marketplace-card__logo--magnit" src="@img/shared/logos/marketplaces/magnit.png" alt="Магнит Маркет" width="191" height="36" loading="lazy">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="why section-space-md" aria-labelledby="why-title">
+          <div class="container">
+            <div class="why__head">
+              <h2 class="h2 why__title" id="why-title">Почему семьи выбирают KIPNI</h2>
+              <p class="why__lead">Создаем безопасные и&nbsp;эффективные средства для чистоты в&nbsp;доме и&nbsp;заботы о&nbsp;близких</p>
+            </div>
+
+            <div class="why__rows">
+              <div class="row why__row align-items-center">
+                <div class="col-12 col-xl-6 why__media">
+                  <img src="@img/why/safety.jpg" alt="Продукция KIPNI на столе в светлой ванной" width="720" height="350" loading="lazy">
+                </div>
+                <div class="col-12 col-xl-6">
+                  <div class="why__copy">
+                    <h3 class="h3 why__subtitle">Безопасность Превыше всего</h3>
+                    <p class="why__text">
+                      Продукция KiPNi безопасна для человека и&nbsp;окружающей среды, благодаря наличию растительных компонентов в&nbsp;составах и&nbsp;биоразлагаемой структуре.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row why__row why__row--reverse align-items-center">
+                <div class="col-12 col-xl-6 why__media">
+                  <img src="@img/why/quality.jpg" alt="Семья с двумя детьми в светлой гостиной" width="720" height="350" loading="lazy">
+                </div>
+                <div class="col-12 col-xl-6">
+                  <div class="why__copy why__copy--end">
+                    <h3 class="h3 why__subtitle">Забота о качестве</h3>
+                    <p class="why__text">
+                      Наша миссия состоит в&nbsp;том, чтобы создавать продукты, которые сочетали бы в&nbsp;себе высокое качество, безопасность и&nbsp;доступность широкому кругу потребителей.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row why__row align-items-center">
+                <div class="col-12 col-xl-6 why__media">
+                  <img src="@img/why/access.jpg" alt="Производственный комплекс KIPNI и логистика" width="720" height="350" loading="lazy">
+                </div>
+                <div class="col-12 col-xl-6">
+                  <div class="why__copy">
+                    <h3 class="h3 why__subtitle">Доступность нашей продукции</h3>
+                    <p class="why__text">
+                      Собственные четырёхпоточные линии по&nbsp;производству тары и&nbsp;развитая логистическая система помогают KIPNI снижать производственные расходы. Благодаря этому мы сохраняем доступные цены, не&nbsp;экономя на&nbsp;качестве сырья, безопасности и&nbsp;эффективности продукции.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="business section-space-md" aria-labelledby="business-title">
+          <div class="container">
+            <div class="business__banner" style="--business-mobile-image: url('@img/business/mobile.jpg'); --business-desktop-image: url('@img/business/banner.jpg');">
+              <div class="business__content">
+                <h2 class="h2 business__title" id="business-title">Товары для бизнеса</h2>
+                <p class="business__lead">Чистота и&nbsp;забота о&nbsp;клиентах - ваша репутация</p>
+                <ul class="business__features">
+                  <li class="business-feature icon-truck">
+                    <span class="business-feature__text">Стабильные поставки по&nbsp;всей России</span>
+                  </li>
+                  <li class="business-feature icon-box">
+                    <span class="business-feature__text">Выгодные условия оптовым клиентам</span>
+                  </li>
+                  <li class="business-feature icon-shop">
+                    <span class="business-feature__text">Широкий ассортимент товаров</span>
+                  </li>
+                </ul>
+                <a class="btn btn--info business__btn" href="#">Узнать условия</a>
+              </div>
+            </div>
+          </div>
+        </section>
         @@include('html/sections/reviews.html')
       </main>
       @@include('html/_footer.html', {})

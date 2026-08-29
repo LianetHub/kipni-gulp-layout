@@ -45,15 +45,15 @@
 		word-break: break-all;
 		overflow: hidden;
 		text-overflow: ellipsis;
-		color: var(--color-primary);
+		color: $color-primary;
 
 		&:is(a) {
-			color: var(--color-text);
+			color: $color-text;
 			transition: color 0.3s ease;
 
 			@media (any-hover: hover) {
 				&:hover {
-					color: var(--color-primary);
+					color: $color-primary;
 				}
 			}
 		}

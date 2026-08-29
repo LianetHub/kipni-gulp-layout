@@ -14,10 +14,8 @@
 		<option value="name">По названию</option>
 		}
 	</select>
-	<button type="button" class="custom-select__trigger" aria-haspopup="listbox" aria-expanded="false" aria-controls="@@id-list">
-		<span class="custom-select__icon @@icon" aria-hidden="true"></span>
+	<button type="button" class="custom-select__trigger @@icon" aria-haspopup="listbox" aria-expanded="false" aria-controls="@@id-list">
 		<span class="custom-select__value">@@placeholder</span>
-		<span class="custom-select__chevron icon-chevron-down" aria-hidden="true"></span>
 	</button>
 	<ul class="custom-select__list" id="@@id-list" role="listbox" tabindex="-1" hidden>
 		@@if(mod === 'catalog'){

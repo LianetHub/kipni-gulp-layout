@@ -32,7 +32,7 @@
 
 	// buy-intro__brand
 	&__brand {
-		color: var(--color-primary);
+		color: $color-primary;
 	}
 
 	// buy-intro__text
@@ -72,24 +72,23 @@
 		align-items: center;
 		gap: rem(13);
 		max-width: rem(221);
-	}
 
-	// buy-intro__check
-	&__check {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(40);
-		height: rem(40);
-		font-size: rem(40);
+		&::before {
+			flex-shrink: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(40);
+			height: rem(40);
+			font-size: rem(40);
+		}
 	}
 
 	// buy-intro__benefit-text
 	&__benefit-text {
 		font-size: rem(16);
 		line-height: math.div(19, 16);
-		color: var(--color-text);
+		color: $color-text;
 	}
 
 	// buy-intro__media
@@ -168,7 +167,7 @@
 		width: rem(48);
 		height: rem(48);
 		border-radius: 50%;
-		background: var(--color-soft-green);
+		background: $color-soft-green;
 		border: none;
 		cursor: pointer;
 		box-shadow: 0 rem(4) rem(16) rgba(83, 131, 40, 0.12);
@@ -184,7 +183,7 @@
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 
 		@media (any-hover: hover) {
@@ -265,20 +264,19 @@
 	width: 100%;
 	height: 100%;
 	padding: rem(20) rem(16);
-	border-radius: var(--radius-btn);
+	border-radius: $radius-btn;
 	background: #f7f8f3;
-	text-decoration: none;
 	transition: box-shadow 0.2s ease, background-color 0.2s ease;
 
 	@media (any-hover: hover) {
 		&:hover {
-			box-shadow: var(--shadow-soft);
+			box-shadow: $shadow-soft;
 		}
 	}
 
 	&:focus-visible {
 		outline: none;
-		box-shadow: var(--focus-ring);
+		box-shadow: $focus-ring;
 	}
 
 	// partner-card__logo
@@ -303,7 +301,7 @@
 	&__cta {
 		font-size: rem(16);
 		line-height: math.div(17, 16);
-		color: var(--color-muted);
+		color: $color-muted;
 		text-align: center;
 	}
 

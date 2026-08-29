@@ -64,7 +64,7 @@
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 
 		@media (min-width: $md2) {
 			max-width: rem(260);
@@ -88,7 +88,7 @@
 		font-size: rem(18);
 		font-weight: 500;
 		line-height: math.div(20, 18);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md2) {
 			margin-bottom: rem(28);
@@ -114,7 +114,7 @@
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 14);
-		color: var(--color-muted);
+		color: $color-muted;
 		transition: color 0.2s ease;
 
 		@media (min-width: $md2) {
@@ -124,7 +124,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-primary);
+				color: $color-primary;
 			}
 		}
 	}
@@ -142,7 +142,7 @@
 		font-size: rem(18);
 		font-weight: 600;
 		line-height: math.div(20, 18);
-		color: var(--color-primary);
+		color: $color-primary;
 		transition: opacity 0.2s ease;
 
 		@media (min-width: $md2) {
@@ -164,7 +164,7 @@
 		font-size: rem(12);
 		font-weight: 400;
 		line-height: math.div(14, 12);
-		color: var(--color-muted);
+		color: $color-muted;
 
 		@media (min-width: $md2) {
 			font-size: rem(14);
@@ -179,7 +179,7 @@
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: math.div(18, 16);
-		color: var(--color-text);
+		color: $color-text;
 		transition: color 0.2s ease;
 
 		@media (min-width: $md2) {
@@ -190,7 +190,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: var(--color-primary);
+				color: $color-primary;
 			}
 		}
 	}
@@ -214,11 +214,11 @@
 		justify-content: center;
 		width: rem(38);
 		height: rem(38);
-		border: 1px solid var(--color-primary);
+		border: 1px solid $color-primary;
 		border-radius: 50%;
 		font-size: rem(16);
 		line-height: 1;
-		color: var(--color-primary);
+		color: $color-primary;
 		transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
 		@media (min-width: $md2) {
@@ -236,13 +236,13 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				background: var(--color-soft-green);
+				background: $color-soft-green;
 			}
 		}
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 	}
 
@@ -251,7 +251,7 @@
 		margin-top: rem(20);
 		min-height: rem(44);
 		padding: rem(14) rem(24);
-		background: var(--color-primary);
+		background: $color-primary;
 		font-size: rem(14);
 		font-weight: 500;
 		line-height: math.div(16, 14);
@@ -302,7 +302,7 @@
 		font-size: rem(14);
 		font-weight: 500;
 		line-height: math.div(17, 14);
-		color: var(--color-primary);
+		color: $color-primary;
 		text-decoration: underline;
 		text-underline-offset: rem(2);
 		transition: opacity 0.2s ease;

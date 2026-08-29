@@ -32,7 +32,7 @@
 
 	// promotions-intro__accent
 	&__accent {
-		color: var(--color-primary);
+		color: $color-primary;
 	}
 
 	// promotions-intro__text
@@ -91,7 +91,7 @@
 	min-height: rem(360);
 	padding: rem(24) rem(20) rem(24);
 	overflow: hidden;
-	border-radius: var(--radius-md);
+	border-radius: $radius-md;
 	background: #f7f8f3;
 
 	@media (min-width: $md4) {
@@ -123,30 +123,28 @@
 		display: flex;
 		align-items: center;
 		gap: rem(10);
-		margin: 0;
 		padding-right: rem(56);
+
+		&::before {
+			flex-shrink: 0;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(24);
+			height: rem(24);
+			font-size: rem(24);
+		}
 
 		@media (min-width: $md4) {
 			padding-right: rem(72);
 		}
 	}
 
-	// promo-card__date-icon
-	&__date-icon {
-		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(24);
-		height: rem(24);
-		font-size: rem(24);
-	}
-
 	// promo-card__date-text
 	&__date-text {
 		font-size: rem(14);
 		line-height: math.div(18, 14);
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			font-size: rem(16);
@@ -165,7 +163,7 @@
 		width: rem(56);
 		height: rem(56);
 		border-radius: 50%;
-		background: var(--color-primary);
+		background: $color-primary;
 
 		@media (min-width: $md4) {
 			top: rem(20);
@@ -199,7 +197,6 @@
 		position: relative;
 		z-index: 1;
 		max-width: rem(265);
-		margin: 0;
 		line-height: math.div(26, 16);
 	}
 

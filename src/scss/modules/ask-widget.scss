@@ -48,7 +48,6 @@
 		height: rem(170);
 		margin-left: auto;
 		pointer-events: auto;
-		text-decoration: none;
 		color: inherit;
 		background-repeat: no-repeat;
 		background-size: contain;
@@ -66,8 +65,8 @@
 
 	@media (any-hover: hover) {
 		.ask-widget__link:hover .ask-widget__btn {
-			box-shadow: var(--shadow-green);
-			background: var(--color-soft-green);
+			box-shadow: $shadow-green;
+			background: $color-soft-green;
 		}
 	}
 }

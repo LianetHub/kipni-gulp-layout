@@ -22,7 +22,6 @@ body {
 
 a {
 	color: inherit;
-	text-decoration: none;
 
 	&:focus-visible {
 		outline: none;
@@ -99,15 +98,17 @@ img {
 .tablet-only {
 	display: none !important;
 
-	@media (min-width: $md4) and (max-width: $md3) {
+	@media (min-width: $md4) {
 		display: block !important;
+	}
+
+	@media (min-width: $md3) {
+		display: none !important;
 	}
 }
 
 .mobile-only {
-	display: none !important;
-
-	@media (max-width: $md5) {
-		display: block !important;
+	@media (min-width: $md5) {
+		display: none !important;
 	}
 }

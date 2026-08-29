@@ -28,7 +28,7 @@
                 </div>
               </div>
               <div class="col-12 col-lg-6 promotions-intro__media">
-                <img src="@img/promotions/hero.png" alt="Средства KIPNI для уборки и маскот-уточка" width="846" height="480" loading="lazy">
+                <img src="@img/promotions/hero.png" alt="Средства KIPNI для уборки и маскот-уточка" width="846" height="480" fetchpriority="high">
               </div>
             </div>
           </div>
@@ -90,9 +90,7 @@
           </div>
         </section>
 
-        @@include('html/sections/gifts.html', {
-          "mod": "gifts--on-dark"
-        })
+        @@include('html/sections/gifts.html')
       </main>
       @@include('html/_footer.html', {})
     </div>

@@ -53,22 +53,10 @@
 	// gifts__title
 	&__title {
 		max-width: rem(286);
-		margin: 0;
-		font-family: $font-golos, sans-serif;
-		font-size: rem(24);
-		font-weight: 500;
-		line-height: math.div(29, 24);
-		color: var(--color-text);
+		color: $color-white;
 
 		@media (min-width: $md4) {
 			max-width: rem(523);
-			font-size: rem(32);
-			line-height: math.div(38, 32);
-		}
-
-		@media (min-width: $md2) {
-			font-size: rem(36);
-			line-height: math.div(43, 36);
 		}
 	}
 
@@ -79,7 +67,7 @@
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		line-height: math.div(16, 14);
-		color: var(--color-muted);
+		color: $color-white;
 
 		@media (min-width: $md4) {
 			margin-top: rem(17);
@@ -97,15 +85,6 @@
 		@media (min-width: $md4) {
 			margin-top: rem(36);
 			padding-top: 0;
-		}
-	}
-
-	// gifts--on-dark
-	&--on-dark {
-
-		.gifts__title,
-		.gifts__lead {
-			color: var(--color-white);
 		}
 	}
 }

@@ -40,7 +40,7 @@
 	// help-aside__nav
 	&__nav {
 		padding: rem(28) rem(24);
-		border-radius: var(--radius-md);
+		border-radius: $radius-md;
 		background: #f7f8f3;
 
 		@media (min-width: $md4) {
@@ -71,32 +71,32 @@
 	// help-aside__link
 	&__link {
 		display: block;
-		color: var(--color-text);
+		color: $color-text;
 		font-size: rem(16);
 		line-height: math.div(26, 16);
-		transition: color 0.2s var(--ease-layout);
+		transition: color 0.2s $ease-layout;
 
 		&:hover,
 		&:focus-visible {
-			color: var(--color-primary);
+			color: $color-primary;
 		}
 
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 			border-radius: rem(4);
 		}
 	}
 
 	// help-aside__link--active
 	&__link--active {
-		color: var(--color-primary);
+		color: $color-primary;
 	}
 
 	// help-aside__promo
 	&__promo {
 		overflow: hidden;
-		border-radius: var(--radius-md);
+		border-radius: $radius-md;
 		background-color: #f7f8f3;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
@@ -127,7 +127,7 @@
 	// help-aside__promo-text
 	&__promo-text {
 		margin: 0 0 rem(20);
-		color: var(--color-muted);
+		color: $color-muted;
 		line-height: math.div(22, 16);
 	}
 
@@ -153,7 +153,6 @@
 
 	// delivery-intro__text
 	&__text {
-		margin: 0;
 		line-height: math.div(26, 16);
 	}
 
@@ -212,7 +211,7 @@
 			padding-left: rem(14);
 			font-size: rem(16);
 			line-height: math.div(16, 16);
-			color: var(--color-text);
+			color: $color-text;
 
 			&::before {
 				content: "";
@@ -222,7 +221,7 @@
 				width: rem(6);
 				height: rem(6);
 				border-radius: 50%;
-				background: var(--color-primary);
+				background: $color-primary;
 				transform: translateY(-50%);
 			}
 		}
@@ -234,8 +233,7 @@
 	gap: rem(16);
 	align-items: flex-start;
 
-	// delivery-method__icon
-	&__icon {
+	&::before {
 		display: flex;
 		flex-shrink: 0;
 		align-items: center;
@@ -244,31 +242,12 @@
 		height: rem(72);
 		border-radius: 50%;
 		background: #f6f7f1;
+		font-size: rem(40);
 
 		@media (min-width: $md4) {
 			width: rem(90);
 			height: rem(90);
-		}
-
-		img {
-			display: block;
-			width: rem(40);
-			height: rem(40);
-
-			@media (min-width: $md4) {
-				width: rem(50);
-				height: rem(50);
-			}
-		}
-
-		&.icon-truck,
-		&.icon-box,
-		&.icon-shop {
-			font-size: rem(40);
-
-			@media (min-width: $md4) {
-				font-size: rem(50);
-			}
+			font-size: rem(50);
 		}
 	}
 
@@ -288,10 +267,9 @@
 
 	// delivery-method__text
 	&__text {
-		margin: 0;
 		font-size: rem(14);
 		line-height: math.div(26, 14);
-		color: var(--color-text);
+		color: $color-text;
 		max-width: rem(212);
 	}
 }
@@ -320,7 +298,7 @@
 		overflow: hidden;
 
 		&.is-open {
-			.delivery-faq__toggle {
+			.delivery-faq__question::before {
 				transform: rotate(45deg);
 			}
 
@@ -341,15 +319,36 @@
 		background: transparent;
 		text-align: left;
 		cursor: pointer;
-		color: var(--color-text);
+		color: $color-text;
 
 		@media (min-width: $md4) {
 			padding: rem(18) rem(32);
 		}
 
+		&::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			order: 1;
+			width: rem(48);
+			height: rem(48);
+			border-radius: 50%;
+			background: $color-primary;
+			color: $color-white;
+			font-size: rem(20);
+			transition: transform 0.25s $ease-layout;
+
+			@media (min-width: $md4) {
+				width: rem(64);
+				height: rem(64);
+				font-size: rem(24);
+			}
+		}
+
 		&:focus-visible {
 			outline: none;
-			box-shadow: var(--focus-ring);
+			box-shadow: $focus-ring;
 		}
 	}
 
@@ -367,35 +366,6 @@
 		}
 	}
 
-	// delivery-faq__toggle
-	&__toggle {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-shrink: 0;
-		width: rem(48);
-		height: rem(48);
-		border-radius: 50%;
-		background: var(--color-primary);
-		transition: transform 0.25s var(--ease-layout);
-
-		@media (min-width: $md4) {
-			width: rem(64);
-			height: rem(64);
-		}
-
-		img {
-			display: block;
-			width: rem(20);
-			height: rem(20);
-
-			@media (min-width: $md4) {
-				width: rem(24);
-				height: rem(24);
-			}
-		}
-	}
-
 	// delivery-faq__answer
 	&__answer {
 		display: none;
@@ -407,7 +377,6 @@
 		}
 
 		p {
-			margin: 0;
 			line-height: math.div(26, 16);
 		}
 	}

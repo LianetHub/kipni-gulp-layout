@@ -18,7 +18,7 @@
           </div>
 
         <section class="product" aria-labelledby="product-title">
-          <div class="container product__inner">
+          <div class="container product__container">
 
             <div class="row gy-4 product__top">
               <div class="col-12 col-lg-7">
@@ -40,7 +40,7 @@
 
                   <div class="product-gallery__main">
                     <a class="product-gallery__zoom icon-arrows-maximize" href="img/product/gallery-1.png" data-fancybox="product-gallery" aria-label="Открыть фото в полном размере"></a>
-                    <img class="product-gallery__image" src="@img/product/gallery-1.png" alt="Гель для стирки белого белья KIPNI" width="642" height="663">
+                    <img class="product-gallery__image" src="@img/product/gallery-1.png" alt="Гель для стирки белого белья KIPNI" width="642" height="663" fetchpriority="high">
                     <a class="visually-hidden" href="img/product/gallery-2.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 2</a>
                     <a class="visually-hidden" href="img/product/gallery-3.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 3</a>
                     <a class="visually-hidden" href="img/product/gallery-4.png" data-fancybox="product-gallery" aria-hidden="true" tabindex="-1">Фото 4</a>
@@ -51,13 +51,7 @@
               <div class="col-12 col-lg-5">
                 <div class="product-info">
                   <div class="product-info__rating" aria-label="Рейтинг 4.9 из 5">
-                    <span class="product-info__stars" aria-hidden="true">
-                      <span class="icon-star" aria-hidden="true"></span>
-                      <span class="icon-star" aria-hidden="true"></span>
-                      <span class="icon-star" aria-hidden="true"></span>
-                      <span class="icon-star" aria-hidden="true"></span>
-                      <span class="icon-star" aria-hidden="true"></span>
-                    </span>
+                    <span class="product-info__stars icon-star" aria-hidden="true"></span>
                     <span class="product-info__score">4.9</span>
                   </div>
 
@@ -116,21 +110,23 @@
                 <div class="product-tabs__panel is-active" id="product-panel-desc" role="tabpanel" aria-labelledby="product-tab-desc">
                   <div class="row gy-4 product-tabs__row">
                     <div class="col-12 col-lg-7">
-                      <ul class="product-benefits">
-                        <li class="product-benefits__item">
-                          <span class="product-benefits__icon icon-check" aria-hidden="true"></span>
+                      <ul class="row product-benefits">
+                        <li class="col-12 col-sm-6 product-benefits__item icon-check">
                           <span class="product-benefits__text">Бережный и эффективный</span>
                         </li>
-                        <li class="product-benefits__item">
-                          <span class="product-benefits__icon icon-check" aria-hidden="true"></span>
+                        <li class="col-12 col-sm-6 product-benefits__item icon-check">
                           <span class="product-benefits__text">Для всей семьи</span>
                         </li>
-                        <li class="product-benefits__item">
-                          <span class="product-benefits__icon icon-check" aria-hidden="true"></span>
+                        <li class="col-12 col-sm-6 product-benefits__item icon-check">
+                          <span class="product-benefits__text">Экологичный состав</span>
+                        </li>
+                        <li class="col-12 col-sm-6 product-benefits__item icon-check">
+                          <span class="product-benefits__text">Подходит для чувствительной кожи</span>
+                        </li>
+                        <li class="col-12 col-sm-6 product-benefits__item icon-check">
                           <span class="product-benefits__text">Без парабенов</span>
                         </li>
-                        <li class="product-benefits__item">
-                          <span class="product-benefits__icon icon-check" aria-hidden="true"></span>
+                        <li class="col-12 col-sm-6 product-benefits__item icon-check">
                           <span class="product-benefits__text">Гипоаллергенный гель</span>
                         </li>
                       </ul>

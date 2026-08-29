@@ -1,3 +1,5 @@
+@use "sass:math";
+
 //Подключение шрифтов
 @mixin font($font_name, $file_name, $weight, $style) {
 	@font-face {
@@ -220,7 +222,6 @@ $dimensions: (
 			margin: 0 !important;
 			height: auto;
 			min-width: 0;
-			box-sizing: border-box;
 		}
 	}
 }
