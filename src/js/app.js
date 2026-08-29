@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // header
     const BANNER_STORAGE_KEY = "kipni-banner-hidden";
     const BANNER_CLOSE_MS = 460;
-    const HEADER_DESKTOP_MQ = "(min-width: 1199.98px)";
+    const HEADER_DESKTOP_MQ = "(min-width: 767.98px)";
 
     let h = null;
 
@@ -12,15 +12,24 @@ document.addEventListener("DOMContentLoaded", () => {
         return window.matchMedia(HEADER_DESKTOP_MQ).matches;
     }
 
+    function isBannerHidden() {
+        return document.documentElement.classList.contains("is-banner-hidden") || h?.root.classList.contains("is-banner-hidden");
+    }
+
     function setHeaderHeight() {
         if (!h) return;
         const height = Math.ceil(h.root.getBoundingClientRect().height);
         document.documentElement.style.setProperty("--header-height", `${height}px`);
+
+        const bannerVisible = h.banner && !h.banner.hidden && !isBannerHidden();
+        const bannerHeight = bannerVisible ? Math.ceil(h.banner.getBoundingClientRect().height) : 0;
+        document.documentElement.style.setProperty("--header-banner-height", `${bannerHeight}px`);
     }
 
     function finishBannerHide() {
         if (!h) return;
 
+        document.documentElement.classList.add("is-banner-hidden");
         h.root.classList.add("is-banner-hidden");
         if (h.banner) {
             h.banner.hidden = true;
@@ -35,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function hideBanner() {
-        if (!h?.banner || h.root.classList.contains("is-banner-hidden") || h.banner.classList.contains("is-closing")) {
+        if (!h?.banner || isBannerHidden() || h.banner.classList.contains("is-closing")) {
             return;
         }
 
@@ -54,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         h.banner.addEventListener("transitionend", onTransitionEnd);
         window.setTimeout(() => {
-            if (!h.root.classList.contains("is-banner-hidden")) {
+            if (!isBannerHidden()) {
                 h.banner.removeEventListener("transitionend", onTransitionEnd);
                 finishBannerHide();
             }
@@ -114,8 +123,27 @@ document.addEventListener("DOMContentLoaded", () => {
         h.buyBtn.setAttribute("aria-expanded", "true");
     }
 
+    function closeSearch() {
+        if (!h?.root.classList.contains("is-search-open")) return;
+
+        h.root.classList.remove("is-search-open");
+        h.searchToggle?.setAttribute("aria-expanded", "false");
+        setHeaderHeight();
+    }
+
+    function openSearch() {
+        if (!h?.searchToggle) return;
+
+        closeMobile();
+        h.root.classList.add("is-search-open");
+        h.searchToggle.setAttribute("aria-expanded", "true");
+        h.searchInput?.focus();
+        setHeaderHeight();
+    }
+
     function openMobile() {
         closeDesktopMenus();
+        closeSearch();
         if (!h?.menuPanel || !h.burger) return;
         h.menuPanel.hidden = false;
         h.burger.setAttribute("aria-expanded", "true");
@@ -152,19 +180,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function toggleSearchMobile() {
-        if (!h?.searchMobile || !h.searchPanel) return;
+        if (!h?.searchToggle) return;
 
-        closeMobile();
-        const isOpen = h.searchMobile.getAttribute("aria-expanded") === "true";
-        if (isOpen) {
-            h.searchPanel.hidden = true;
-            h.searchMobile.setAttribute("aria-expanded", "false");
-        } else {
-            h.searchPanel.hidden = false;
-            h.searchMobile.setAttribute("aria-expanded", "true");
-            h.searchInputMobile?.focus();
-        }
-        setHeaderHeight();
+        const isOpen = h.searchToggle.getAttribute("aria-expanded") === "true";
+        if (isOpen) closeSearch();
+        else openSearch();
     }
 
     function toggleHeaderAccordion(btn) {
@@ -188,6 +208,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!h.root.contains(target)) {
             closeDesktopMenus();
+            closeSearch();
             return;
         }
 
@@ -204,6 +225,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (h.buyPanel && !h.buyPanel.hidden && !h.buyPanel.contains(target) && h.buyBtn && !h.buyBtn.contains(target)) {
             closeBuy();
         }
+
+        if (
+            h.root.classList.contains("is-search-open") &&
+            !h.searchForm?.contains(target) &&
+            !h.searchToggle?.contains(target)
+        ) {
+            closeSearch();
+        }
     }
 
     const headerRoot = document.querySelector(".header");
@@ -217,13 +246,14 @@ document.addEventListener("DOMContentLoaded", () => {
             buyPanel: headerRoot.querySelector(".header-buy"),
             burger: headerRoot.querySelector(".header__burger"),
             menuPanel: headerRoot.querySelector(".header__menu"),
-            searchMobile: headerRoot.querySelector(".header__search-mobile"),
-            searchPanel: headerRoot.querySelector(".header__search-mobile-panel"),
-            searchInputMobile: headerRoot.querySelector("#header-search-input-mobile"),
+            searchToggle: headerRoot.querySelector(".header__search-mobile"),
+            searchForm: headerRoot.querySelector(".header-search"),
+            searchInput: headerRoot.querySelector("#header-search-input"),
         };
 
         try {
             if (sessionStorage.getItem(BANNER_STORAGE_KEY) === "1") {
+                document.documentElement.classList.add("is-banner-hidden");
                 h.root.classList.add("is-banner-hidden");
                 if (h.banner) h.banner.hidden = true;
             }
@@ -237,10 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 h.menuPanel.hidden = false;
                 closeDesktopMenus();
                 closeMobile();
-                if (h.searchPanel) {
-                    h.searchPanel.hidden = true;
-                    h.searchMobile?.setAttribute("aria-expanded", "false");
-                }
+                closeSearch();
             } else {
                 closeDesktopMenus();
                 syncMobileHeaderAccordions();
@@ -940,6 +967,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (e.key === "Escape") {
             closeDesktopMenus();
             closeMobile();
+            closeSearch();
             document.querySelectorAll(".custom-select.is-open").forEach((root) => {
                 closeCustomSelect(root);
             });

@@ -7,13 +7,13 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-          <div class="container">
-            @@include('html/templates/breadcrumbs.html', {
-              "parent": "Блог",
-              "parentHref": "blog.html",
-              "current": "5 шагов к чистой кухне без химии"
-            })
-          </div>
+        <div class="container">
+          @@include('html/templates/breadcrumbs.html', {
+          "parent": "Блог",
+          "parentHref": "blog.html",
+          "current": "5 шагов к чистой кухне без химии"
+          })
+        </div>
 
         <section class="article" aria-labelledby="article-title">
           <div class="container">
@@ -40,12 +40,7 @@
                 </p>
 
                 <div class="article__media">
-                  <img
-                    src="img/article/hero.png"
-                    alt="Экосредства для уборки кухни KIPNI, щётка и губка среди зелёных листьев"
-                    width="1054"
-                    height="507"
-                  >
+                  <img src="img/article/hero.png" alt="Экосредства для уборки кухни KIPNI, щётка и губка среди зелёных листьев" width="1054" height="507">
                 </div>
 
                 <div class="article__body">
@@ -154,25 +149,18 @@
               <div class="row gy-4 article-related__row">
                 <div class="col-12 col-md-6 col-xl-4">
                   <article class="article-card">
-                    <a class="article-card__media" href="#">
-                      <img
-                        src="img/article/related.png"
-                        alt="Бельё сушится на верёвке на улице"
-                        width="461"
-                        height="259"
-                        loading="lazy"
-                      >
+                    <a href="#" class="article-card__media">
+                      <img src="img/article/related.png" alt="Бельё сушится на верёвке на улице" width="461" height="259" loading="lazy">
                     </a>
                     <div class="article-card__body">
                       <h3 class="h3 article-card__title">
-                        <a class="article-card__title-link" href="#">Как правильно стирать разные ткани</a>
+                        <a href="#" class="article-card__title-link">Как правильно стирать разные ткани</a>
                       </h3>
                       <p class="text article-card__text">
                         Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств
                       </p>
-                      <a class="btn btn--primary article-card__btn" href="#">
+                      <a href="#" class="btn btn--primary article-card__btn icon-chevron-right">
                         Читать далее
-                        <span class="btn__chevron icon-chevron-right" aria-hidden="true"></span>
                       </a>
                     </div>
                   </article>

@@ -99,10 +99,6 @@
 			display: inline-flex;
 			min-width: rem(208);
 		}
-
-		.btn__chevron {
-			transform: rotate(-90deg);
-		}
 	}
 
 	// category-card--accent
@@ -111,10 +107,6 @@
 			font-size: rem(16);
 			font-weight: 600;
 			padding-block: rem(19);
-		}
-
-		.category-card__btn .btn__chevron {
-			filter: brightness(0) invert(1);
 		}
 	}
 }

@@ -169,13 +169,6 @@
 		@media (min-width: $md4) {
 			min-width: rem(233);
 		}
-
-		.btn__chevron {
-			width: rem(7);
-			height: rem(12);
-			transform: rotate(-90deg);
-			filter: brightness(0) invert(1);
-		}
 	}
 }
 

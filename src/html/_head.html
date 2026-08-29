@@ -20,4 +20,12 @@
 
   <link rel="stylesheet" href="css/reset.min.css">
   <link rel="stylesheet" href="css/style.min.css">
+
+  <script>
+    try {
+      if (sessionStorage.getItem("kipni-banner-hidden") === "1") {
+        document.documentElement.classList.add("is-banner-hidden");
+      }
+    } catch (e) {}
+  </script>
 </head>

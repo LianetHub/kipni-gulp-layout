@@ -35,6 +35,7 @@ $containerPadding: 24;
 	--color-info: #0c3162;
 	--color-accent: var(--color-primary);
 	--header-height: #{rem(86)};
+	--header-banner-height: #{rem(54)};
 	--radius-sm: #{rem(10)};
 	--radius-md: #{rem(20)};
 	--radius-btn: #{rem(15)};
@@ -53,6 +54,7 @@ $containerPadding: 24;
 
 	@media (min-width: $md4) {
 		--header-height: #{rem(106)};
+		--header-banner-height: #{rem(57)};
 	}
 
 	@media (prefers-reduced-motion: reduce) {

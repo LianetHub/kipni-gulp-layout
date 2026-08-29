@@ -3,7 +3,7 @@
 %heading {
 	font-family: $font-golos, sans-serif;
 	font-weight: 500;
-	color: var(--color-text);
+	color: $color-text;
 }
 
 h1,
@@ -54,7 +54,7 @@ h4,
 	font-size: rem(16);
 	font-weight: 400;
 	line-height: math.div(19, 16);
-	color: var(--color-text);
+	color: $color-text;
 }
 
 .text--sm {
@@ -62,7 +62,7 @@ h4,
 	font-size: rem(14);
 	font-weight: 400;
 	line-height: math.div(17, 14);
-	color: var(--color-text);
+	color: $color-text;
 }
 
 .caption,
@@ -71,15 +71,15 @@ h4,
 	font-size: rem(14);
 	font-weight: 400;
 	line-height: math.div(17, 14);
-	color: var(--color-text);
+	color: $color-text;
 }
 
 .text-muted {
-	color: var(--color-muted);
+	color: $color-muted;
 }
 
 .text-link {
-	color: var(--color-link-dark);
+	color: $color-link-dark;
 }
 
 .typography-block {
@@ -110,7 +110,7 @@ h4,
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: math.div(26, 16);
-		color: var(--color-text);
+		color: $color-text;
 
 		&+p {
 			margin-top: rem(15);
@@ -131,7 +131,7 @@ h4,
 			font-size: rem(16);
 			font-weight: 400;
 			line-height: math.div(16, 16);
-			color: var(--color-text);
+			color: $color-text;
 
 			&::before {
 				content: "";
@@ -141,7 +141,7 @@ h4,
 				width: rem(6);
 				height: rem(6);
 				border-radius: 50%;
-				background: var(--color-primary);
+				background: $color-primary;
 			}
 		}
 	}

@@ -1,16 +1,16 @@
 <header class="header">
   <div class="header-banner" style="background-image: url('@img/header-banner.webp');">
     <div class="container header-banner__container">
-      <p class="header-banner__text">
+      <p class="h4 header-banner__text">
         Любимые экосредства для дома и семьи в одной подборке.
-        <a class="header-banner__link" href="#">Перейти<span class="header-banner__link-icon icon-chevron-right" aria-hidden="true"></span></a>
+        <a class="header-banner__link icon-chevron-right" href="#"><span>Перейти</span></a>
       </p>
       <button class="header-banner__close icon-cross-circle" type="button" aria-label="Закрыть баннер"></button>
     </div>
   </div>
 
   <div class="header__bar">
-    <div class="container header__bar-container">
+    <div class="header__bar-container container">
       <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню">
         <span></span><span></span><span></span>
       </button>
@@ -24,30 +24,18 @@
           <a class="btn btn--primary header__menu-cta" href="catalog.html">Перейти в каталог</a>
 
           <nav class="header__menu-nav" aria-label="Основное меню">
-            <a class="header__menu-row header__menu-row--home" href="/">
-              <span class="header__menu-row-icon icon-home" aria-hidden="true"></span>
-              <span class="header__menu-row-text">Главная</span>
-              <span class="header__menu-row-chevron icon-chevron-right" aria-hidden="true"></span>
-            </a>
 
             <div class="header__catalog-wrap header__menu-accordion is-open">
-              <button class="btn btn--primary header__catalog-btn header__menu-row--toggle icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
-                <span class="header__catalog-btn-text">Каталог товаров</span>
-                <span class="btn__chevron header__catalog-chevron header__menu-row-chevron--down icon-chevron-down" aria-hidden="true"></span>
+              <button class="header__catalog-btn header__menu-row--toggle btn btn--primary icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
+                Каталог товаров
+                <span class="header__menu-row-chevron header__menu-row-chevron--down icon-chevron-down" aria-hidden="true"></span>
               </button>
               @@include('templates/header-catalog.html')
             </div>
 
-            <form class="header-search" action="search.html" method="get" role="search">
-              <label class="visually-hidden" for="header-search-input">Поиск по каталогу</label>
-              <input class="header-search__input" id="header-search-input" type="search" name="s" placeholder="Поиск по каталогу" autocomplete="off">
-              <button class="header-search__submit icon-search" type="submit" aria-label="Искать"></button>
-            </form>
-
             <div class="header-nav header__menu-accordion is-open">
-              <button class="header__menu-row header__menu-row--toggle header-nav__toggle" type="button" aria-expanded="true">
-                <span class="header__menu-row-icon icon-people" aria-hidden="true"></span>
-                <span class="header__menu-row-text">Покупателям</span>
+              <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-people" type="button" aria-expanded="true">
+                Покупателям
                 <span class="header__menu-row-chevron header__menu-row-chevron--down icon-chevron-down" aria-hidden="true"></span>
               </button>
               <div class="header-nav__panel header__menu-panel">
@@ -64,7 +52,6 @@
             <div class="header__buy-wrap">
               <button class="header-buy-btn icon-shopping-cart" type="button" aria-expanded="false" aria-controls="header-buy">
                 Где купить
-                <span class="header-buy-btn__chevron icon-chevron-down" aria-hidden="true"></span>
               </button>
 
               <div class="header-buy" id="header-buy" hidden>
@@ -144,17 +131,15 @@
       </div>
 
       <div class="header__actions">
-        <button class="header__search-mobile icon-search" type="button" aria-expanded="false" aria-controls="header-search-mobile-panel" aria-label="Поиск"></button>
+        <button class="header__search-mobile icon-search" type="button" aria-expanded="false" aria-controls="header-search" aria-label="Поиск"></button>
         <a class="header-favorite icon-heart" href="favorites.html" aria-label="Избранное, 2 товара">
           <span class="header-favorite__badge">2</span>
         </a>
       </div>
-    </div>
 
-    <div class="header__search-mobile-panel container" id="header-search-mobile-panel" hidden>
-      <form class="header-search header-search--mobile" action="search.html" method="get" role="search">
-        <label class="visually-hidden" for="header-search-input-mobile">Поиск по каталогу</label>
-        <input class="header-search__input" id="header-search-input-mobile" type="search" name="s" placeholder="Поиск по каталогу" autocomplete="off">
+      <form class="header-search" id="header-search" action="search.html" method="get" role="search">
+        <label class="visually-hidden" for="header-search-input">Поиск по каталогу</label>
+        <input class="header-search__input" id="header-search-input" type="search" name="s" placeholder="Поиск по каталогу" autocomplete="off">
         <button class="header-search__submit icon-search" type="submit" aria-label="Искать"></button>
       </form>
     </div>
