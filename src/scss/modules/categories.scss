@@ -33,6 +33,48 @@
 		border-radius: rem(15);
 	}
 
+	&::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-image: inherit;
+		background-repeat: inherit;
+		background-size: inherit;
+		background-position: inherit;
+		transition: transform 0.45s ease;
+	}
+
+	&:focus-visible {
+		outline: none;
+		box-shadow: $focus-ring;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				transform: scale(1.06);
+			}
+
+			.category-card__btn {
+				&.btn--soft {
+					background: $color-primary;
+					color: $color-white;
+					box-shadow: $shadow-green;
+				}
+
+				&.btn--primary {
+					background: $color-primary-dark;
+				}
+			}
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		&::before {
+			transition: none;
+		}
+	}
+
 	// category-card__content
 	&__content {
 		position: relative;
@@ -48,7 +90,7 @@
 		}
 
 		@media (min-width: $md2) {
-			padding: rem(30);
+			padding: rem(30) rem(30) rem(24);
 		}
 	}
 

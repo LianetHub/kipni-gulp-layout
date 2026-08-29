@@ -3,33 +3,35 @@
 		@@if (typeof badge !== 'undefined' && badge) {
 		<span class="badge @@badge_mod">@@badge</span>
 		}
-		<button
+		<!-- fileinclude -->
+			<button
 			type="button"
 			class="product-card__favorite icon-heart@@if(typeof favorited !== 'undefined' && favorited){ is-active}"
 			@@if(typeof favorited !== 'undefined' && favorited){
-			aria-pressed="true"
-			aria-label="Убрать из избранного"
+				aria-pressed="true"
+				aria-label="Убрать из избранного"
 			}
 			@@if(typeof favorited === 'undefined' || !favorited){
-			aria-pressed="false"
-			aria-label="Добавить в избранное"
+				aria-pressed="false"
+				aria-label="Добавить в избранное"
 			}
-		>
+			>
 		</button>
+		<!-- fileinclude -->
 	</div>
-	<div class="product-card__media">
+	<a href="@@link" class="product-card__media">
 		<img src="@@image" alt="@@image_alt" width="200" height="200" loading="lazy">
-	</div>
+	</a>
 	<div class="product-card__body">
-		<h3 class="product-card__title">@@title</h3>
+		<h3 class="h4 product-card__title"><a href="@@link" class="product-card__title-link">@@title</a></h3>
 		@@if (typeof volume !== 'undefined' && volume) {
-		<p class="product-card__volume">@@volume</p>
+		<p class="text text-muted product-card__volume">@@volume</p>
 		}
 		@@if (typeof rating !== 'undefined' && rating) {
-		<div class="product-card__rating icon-star">
+		<div class="text--sm product-card__rating icon-star">
 			<span class="product-card__rating-value">@@rating</span>
 			@@if (typeof reviews !== 'undefined' && reviews) {
-			<span class="product-card__rating-count">(@@reviews)</span>
+			<span class="text-muted product-card__rating-count">(@@reviews)</span>
 			}
 		</div>
 		}

@@ -1,7 +1,7 @@
 [
 	{
 		"href": "#",
-		"image": "@img/categories/shower.jpg",
+		"image": "@img/categories/shower.webp",
 		"aria_label": "Гели для душа KIPNI",
 		"title": "Гели для душа",
 		"lead": "Мягкое очищение с&nbsp;любимыми ароматами",
@@ -9,7 +9,7 @@
 	},
 	{
 		"href": "#",
-		"image": "@img/categories/soap.jpg",
+		"image": "@img/categories/soap.webp",
 		"aria_label": "Жидкое мыло KIPNI",
 		"title": "Мыло",
 		"lead": "Чистота и&nbsp;комфорт на&nbsp;каждый день",
@@ -17,15 +17,15 @@
 	},
 	{
 		"href": "#",
-		"image": "@img/categories/shampoo.jpg",
+		"image": "@img/categories/shampoo.webp",
 		"aria_label": "Шампуни KIPNI",
 		"title": "Шампуни",
-		"lead": "Уход от&nbsp;корней до&nbsp;самых кончиков",
+		"lead": "Уход от&nbsp;корней <br> до&nbsp;самых кончиков",
 		"btn_mod": "btn--soft"
 	},
 	{
 		"href": "#",
-		"image": "@img/categories/cleaning.jpg",
+		"image": "@img/categories/cleaning.webp",
 		"aria_label": "Средства для уборки KIPNI",
 		"title": "Уборка",
 		"lead": "Эффективная чистота каждый день",
@@ -33,7 +33,7 @@
 	},
 	{
 		"href": "#",
-		"image": "@img/categories/laundry.jpg",
+		"image": "@img/categories/laundry.webp",
 		"aria_label": "Средства для стирки KIPNI",
 		"title": "Стирка",
 		"lead": "Бережная забота о&nbsp;любимых вещах",
@@ -42,7 +42,7 @@
 	{
 		"modifier": "category-card--accent",
 		"href": "#",
-		"image": "@img/categories/all.jpg",
+		"image": "@img/categories/all.webp",
 		"aria_label": "Вся продукция KIPNI в корзине",
 		"title": "Вся продукция",
 		"lead": "Всё необходимое для вас и&nbsp;вашего дома",

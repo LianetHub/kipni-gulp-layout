@@ -16,6 +16,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: 70% center;
+		color: $color-white;
 
 		@media (min-width: $md4) {
 			min-height: rem(320);
@@ -53,7 +54,7 @@
 	// gifts__title
 	&__title {
 		max-width: rem(286);
-		color: $color-white;
+
 
 		@media (min-width: $md4) {
 			max-width: rem(523);
@@ -64,16 +65,12 @@
 	&__lead {
 		margin: rem(23) 0 0;
 		max-width: rem(180);
-		font-family: $fontfamily, sans-serif;
-		font-size: rem(14);
-		line-height: math.div(16, 14);
-		color: $color-white;
+
 
 		@media (min-width: $md4) {
 			margin-top: rem(17);
 			max-width: rem(250);
-			font-size: rem(16);
-			line-height: math.div(18, 16);
+
 		}
 	}
 

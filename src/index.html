@@ -25,13 +25,13 @@
         @@include('html/sections/gifts.html')
         <section class="popular section-space-md" aria-labelledby="popular-title">
           <div class="container">
-            <h2 class="h2 popular__title" id="popular-title">Популярные товары бытовой химии</h2>
+            <h2 class="h2 popular__title" id="popular-title">Популярные товары <span class="text-accent">бытовой химии</span></h2>
           </div>
           <div class="popular__slider-wrap">
             <div class="container popular__slider-container">
               <div class="swiper popular__slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Чистящий гель для унитазов",
                     "volume": "750 мл",
@@ -41,8 +41,8 @@
                     "image_alt": "Чистящий гель KIPNI для унитазов",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Гель для душа Канди шоп",
                     "volume": "750 мл",
@@ -50,8 +50,8 @@
                     "image_alt": "Гель для душа Канди шоп папайя виноград",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Жидкое мыло Тропические фрукты",
                     "volume": "500 мл",
@@ -61,8 +61,8 @@
                     "image_alt": "Жидкое мыло Тропические фрукты",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Мыло хозяйственное Кипни",
                     "volume": "750 мл",
@@ -72,8 +72,8 @@
                     "image_alt": "Мыло хозяйственное Кипни",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Универсальный гель для стирки",
                     "volume": "5 л",
@@ -83,8 +83,8 @@
                     "image_alt": "Универсальный гель для стирки KIPNI 5 л",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Средство для посуды",
                     "volume": "750 мл",
@@ -92,8 +92,8 @@
                     "image_alt": "Средство для посуды OLLY",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Чистящий гель для унитазов",
                     "volume": "750 мл",
@@ -103,8 +103,8 @@
                     "image_alt": "Чистящий гель KIPNI для унитазов",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Гель для душа Канди шоп",
                     "volume": "750 мл",
@@ -112,8 +112,8 @@
                     "image_alt": "Гель для душа Канди шоп папайя виноград",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Жидкое мыло Тропические фрукты",
                     "volume": "500 мл",
@@ -123,8 +123,8 @@
                     "image_alt": "Жидкое мыло Тропические фрукты",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Мыло хозяйственное Кипни",
                     "volume": "750 мл",
@@ -134,8 +134,8 @@
                     "image_alt": "Мыло хозяйственное Кипни",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Универсальный гель для стирки",
                     "volume": "5 л",
@@ -145,8 +145,8 @@
                     "image_alt": "Универсальный гель для стирки KIPNI 5 л",
                     "link": "#"
                     })
-                  </div>
-                  <div class="swiper-slide">
+                  </li>
+                  <li class="swiper-slide">
                     @@include('html/templates/product-card.html', {
                     "title": "Средство для посуды",
                     "volume": "750 мл",
@@ -154,8 +154,8 @@
                     "image_alt": "Средство для посуды OLLY",
                     "link": "#"
                     })
-                  </div>
-                </div>
+                  </li>
+                </ul>
               </div>
               <button type="button" class="popular__prev swiper-button-prev icon-chevron-right" aria-label="Предыдущие товары"></button>
               <button type="button" class="popular__next swiper-button-next icon-chevron-right" aria-label="Следующие товары"></button>
@@ -165,23 +165,29 @@
         <section class="marketplaces section-space-md" aria-labelledby="marketplaces-title">
           <div class="container">
             <div class="marketplaces__panel">
-              <div class="marketplaces__grid">
-                <div class="marketplaces__intro">
+              <img class="marketplaces__chick" src="@img/shared/decor/chick.webp" alt="Уточка KIPNI" width="536" height="536" aria-hidden="true" loading="lazy">
+              <div class="row marketplaces__layout">
+                <div class="col-12 col-xl-4 marketplaces__aside">
                   <h2 class="h2 marketplaces__title" id="marketplaces-title">
                     Выбирайте удобный
                     <span class="marketplaces__title-accent">способ покупки</span>
                   </h2>
-                  <p class="marketplaces__lead">Наши товары есть на&nbsp;всех крупнейших маркетплейсах</p>
+                  <p class="marketplaces__lead text--lg">Наши товары есть на&nbsp;всех крупнейших маркетплейсах</p>
+                  <ul class="marketplaces__perks">
+                    <li class="marketplace-perk">
+                      <img class="marketplace-perk__icon" src="@img/icons/truck-2.svg" alt="Быстрая доставка" width="42" height="31" loading="lazy">
+                      <span class="marketplace-perk__text">Быстрая<br>доставка</span>
+                    </li>
+                    <li class="marketplace-perk">
+                      <img class="marketplace-perk__icon" src="@img/icons/cert.svg" alt="Оригинальная продукция" width="34" height="34" loading="lazy">
+                      <span class="marketplace-perk__text">Оригинальная<br>продукция</span>
+                    </li>
+                  </ul>
+
                 </div>
-                <div class="row marketplaces__shops">
-                  @@loop('html/templates/marketplace-card.html', 'html/json/marketplace-cards.json')
-                </div>
-                <div class="marketplaces__perks">
-                  <div class="marketplace-perk icon-truck">
-                    <span class="marketplace-perk__text">Быстрая<br>доставка</span>
-                  </div>
-                  <div class="marketplace-perk icon-certificate">
-                    <span class="marketplace-perk__text">Оригинальная<br>продукция</span>
+                <div class="col-12 col-xl-6 marketplaces__main">
+                  <div class="row marketplaces__shops">
+                    @@loop('html/templates/marketplace-card.html', 'html/json/marketplace-cards.json')
                   </div>
                 </div>
               </div>
@@ -191,60 +197,20 @@
         <section class="why section-space-md" aria-labelledby="why-title">
           <div class="container">
             <div class="why__head">
-              <h2 class="h2 why__title" id="why-title">Почему семьи выбирают KIPNI</h2>
-              <p class="why__lead">Создаем безопасные и&nbsp;эффективные средства для чистоты в&nbsp;доме и&nbsp;заботы о&nbsp;близких</p>
+              <h2 class="h2 title-lg why__title" id="why-title">Почему семьи выбирают KIPNI</h2>
+              <p class="why__lead h3">Создаем безопасные и&nbsp;эффективные средства для чистоты в&nbsp;доме и&nbsp;заботы о&nbsp;близких</p>
             </div>
 
-            <div class="why__rows">
-              <div class="row why__row align-items-center">
-                <div class="col-12 col-xl-6 why__media">
-                  <img src="@img/why/safety.jpg" alt="Продукция KIPNI на столе в светлой ванной" width="720" height="350" loading="lazy">
-                </div>
-                <div class="col-12 col-xl-6">
-                  <div class="why__copy">
-                    <h3 class="h3 why__subtitle">Безопасность Превыше всего</h3>
-                    <p class="why__text">
-                      Продукция KiPNi безопасна для человека и&nbsp;окружающей среды, благодаря наличию растительных компонентов в&nbsp;составах и&nbsp;биоразлагаемой структуре.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row why__row why__row--reverse align-items-center">
-                <div class="col-12 col-xl-6 why__media">
-                  <img src="@img/why/quality.jpg" alt="Семья с двумя детьми в светлой гостиной" width="720" height="350" loading="lazy">
-                </div>
-                <div class="col-12 col-xl-6">
-                  <div class="why__copy why__copy--end">
-                    <h3 class="h3 why__subtitle">Забота о качестве</h3>
-                    <p class="why__text">
-                      Наша миссия состоит в&nbsp;том, чтобы создавать продукты, которые сочетали бы в&nbsp;себе высокое качество, безопасность и&nbsp;доступность широкому кругу потребителей.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row why__row align-items-center">
-                <div class="col-12 col-xl-6 why__media">
-                  <img src="@img/why/access.jpg" alt="Производственный комплекс KIPNI и логистика" width="720" height="350" loading="lazy">
-                </div>
-                <div class="col-12 col-xl-6">
-                  <div class="why__copy">
-                    <h3 class="h3 why__subtitle">Доступность нашей продукции</h3>
-                    <p class="why__text">
-                      Собственные четырёхпоточные линии по&nbsp;производству тары и&nbsp;развитая логистическая система помогают KIPNI снижать производственные расходы. Благодаря этому мы сохраняем доступные цены, не&nbsp;экономя на&nbsp;качестве сырья, безопасности и&nbsp;эффективности продукции.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ul class="why__rows">
+              @@loop('html/templates/why-row.html', 'html/json/why-rows.json')
+            </ul>
           </div>
         </section>
         <section class="business section-space-md" aria-labelledby="business-title">
           <div class="container">
             <div class="business__banner">
               <div class="business__content">
-                <h2 class="h2 business__title" id="business-title">Товары для бизнеса</h2>
+                <h2 class="h2 title-lg business__title" id="business-title">Товары для бизнеса</h2>
                 <p class="business__lead">Чистота и&nbsp;забота о&nbsp;клиентах - ваша репутация</p>
                 <ul class="business__features">
                   <li class="business-feature icon-truck">

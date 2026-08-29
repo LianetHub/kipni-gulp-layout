@@ -3,7 +3,6 @@
 %heading {
 	font-family: $font-golos, sans-serif;
 	font-weight: 500;
-	color: $color-text;
 }
 
 h1,
@@ -27,6 +26,24 @@ h2,
 	@media (min-width: $md4) {
 		font-size: rem(36);
 		line-height: math.div(43, 36);
+	}
+}
+
+.title-lg {
+	@media (min-width: $md4) {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(45);
+		font-weight: 600;
+		line-height: 1.2;
+	}
+}
+
+.title-md {
+	@media (min-width: $md4) {
+		font-family: $fontfamily, sans-serif;
+		font-size: rem(30);
+		font-weight: 600;
+		line-height: 1.2;
 	}
 }
 
@@ -54,7 +71,15 @@ h4,
 	font-size: rem(16);
 	font-weight: 400;
 	line-height: math.div(19, 16);
-	color: $color-text;
+
+}
+
+.text--lg {
+	font-family: $fontfamily, sans-serif;
+	font-size: rem(18);
+	font-weight: 400;
+	line-height: 1.06;
+
 }
 
 .text--sm {
@@ -62,7 +87,7 @@ h4,
 	font-size: rem(14);
 	font-weight: 400;
 	line-height: math.div(17, 14);
-	color: $color-text;
+
 }
 
 .caption,
@@ -71,11 +96,14 @@ h4,
 	font-size: rem(14);
 	font-weight: 400;
 	line-height: math.div(17, 14);
-	color: $color-text;
 }
 
 .text-muted {
 	color: $color-muted;
+}
+
+.text-accent {
+	color: $color-primary;
 }
 
 .text-link {
