@@ -4113,9 +4113,14 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 @media (min-width: 1199.98px) {
   .reviews {
     padding-block: 5.5rem;
+    padding-bottom: 7.5rem;
   }
 }
-.reviews::before, .reviews::after {
+.reviews .container {
+  position: relative;
+  z-index: 1;
+}
+.reviews .container::before, .reviews .container::after {
   content: "";
   display: none;
   position: absolute;
@@ -4126,39 +4131,23 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   background-position: center;
 }
 @media (min-width: 1199.98px) {
-  .reviews::before, .reviews::after {
+  .reviews .container::before, .reviews .container::after {
     display: block;
   }
 }
-.reviews::before {
-  left: -2.5rem;
-  top: 13.75rem;
+.reviews .container::before {
+  top: 16.25rem;
   width: 11.3125rem;
   height: 15.875rem;
   background-image: url("../img/reviews/leaves-left.webp");
+  right: calc(100% - 3rem);
 }
-@media (min-width: 1439.98px) {
-  .reviews::before {
-    left: 5.875rem;
-    top: 19.6875rem;
-  }
-}
-.reviews::after {
-  right: -2.5rem;
-  top: 12.5rem;
+.reviews .container::after {
+  top: 13.75rem;
   width: 12.375rem;
   height: 17.4375rem;
   background-image: url("../img/reviews/leaves-right.webp");
-}
-@media (min-width: 1439.98px) {
-  .reviews::after {
-    right: 5.5rem;
-    top: 17rem;
-  }
-}
-.reviews .container {
-  position: relative;
-  z-index: 1;
+  left: calc(100% - 3.75rem);
 }
 .reviews__head {
   margin-bottom: 0;
@@ -4283,13 +4272,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 .reviews__note-icon {
   flex-shrink: 0;
-  width: auto;
-  height: 1.4375rem;
-}
-@media (min-width: 767.98px) {
-  .reviews__note-icon {
-    height: 1.875rem;
-  }
 }
 
 .rating-card {
@@ -4360,8 +4342,8 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 @media (min-width: 767.98px) {
   .review-card {
-    min-height: 19.0625rem;
-    padding: 1.875rem 2.5rem 1.75rem;
+    min-height: 18.75rem;
+    padding: 2.25rem 1.5rem 1.75rem 2.5rem;
   }
 }
 .review-card__top {
@@ -4404,7 +4386,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 .review-card__stars {
   display: flex;
   gap: 0.125rem;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
   color: #ffb43d;
   font-size: 1rem;
 }
@@ -4442,7 +4424,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 @media (min-width: 767.98px) {
   .review-card__text {
-    margin-top: 1.625rem;
+    margin-top: 2rem;
     font-size: 1rem;
   }
 }
@@ -4460,7 +4442,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   justify-content: space-between;
   gap: 0.75rem;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 0.75rem;
 }
 .review-card__expand {
   display: inline-flex;

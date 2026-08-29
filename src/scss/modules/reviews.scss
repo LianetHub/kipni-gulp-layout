@@ -11,53 +11,49 @@
 
 	@media (min-width: $md2) {
 		padding-block: rem(88);
+		padding-bottom: rem(120);
 	}
 
-	&::before,
-	&::after {
-		content: "";
-		display: none;
-		position: absolute;
-		z-index: 0;
-		pointer-events: none;
-		background-repeat: no-repeat;
-		background-size: contain;
-		background-position: center;
 
-		@media (min-width: $md2) {
-			display: block;
-		}
-	}
-
-	&::before {
-		left: rem(-40);
-		top: rem(220);
-		width: rem(181);
-		height: rem(254);
-		background-image: url("@img/reviews/leaves-left.webp");
-
-		@media (min-width: $md1) {
-			left: rem(94);
-			top: rem(315);
-		}
-	}
-
-	&::after {
-		right: rem(-40);
-		top: rem(200);
-		width: rem(198);
-		height: rem(279);
-		background-image: url("@img/reviews/leaves-right.webp");
-
-		@media (min-width: $md1) {
-			right: rem(88);
-			top: rem(272);
-		}
-	}
 
 	.container {
 		position: relative;
 		z-index: 1;
+
+		&::before,
+		&::after {
+			content: "";
+			display: none;
+			position: absolute;
+			z-index: 0;
+			pointer-events: none;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: center;
+
+			@media (min-width: $md2) {
+				display: block;
+			}
+		}
+
+		&::before {
+
+			top: rem(260);
+			width: rem(181);
+			height: rem(254);
+			background-image: url("@img/reviews/leaves-left.webp");
+			right: calc(100% - #{rem(48)});
+
+		}
+
+		&::after {
+			top: rem(220);
+			width: rem(198);
+			height: rem(279);
+			background-image: url("@img/reviews/leaves-right.webp");
+
+			left: calc(100% - #{rem(60)});
+		}
 	}
 
 	// reviews__head
@@ -201,12 +197,8 @@
 	// reviews__note-icon
 	&__note-icon {
 		flex-shrink: 0;
-		width: auto;
-		height: rem(23);
 
-		@media (min-width: $md4) {
-			height: rem(30);
-		}
+
 	}
 }
 
@@ -280,8 +272,8 @@
 	background: #f8f8f8;
 
 	@media (min-width: $md4) {
-		min-height: rem(305);
-		padding: rem(30) rem(40) rem(28);
+		min-height: rem(300);
+		padding: rem(36) rem(24) rem(28) rem(40);
 	}
 
 	// review-card__top
@@ -331,7 +323,7 @@
 	&__stars {
 		display: flex;
 		gap: rem(2);
-		margin-top: rem(8);
+		margin-top: rem(12);
 		color: #ffb43d;
 		font-size: rem(16);
 
@@ -371,7 +363,7 @@
 		color: $color-text;
 
 		@media (min-width: $md4) {
-			margin-top: rem(26);
+			margin-top: rem(32);
 			font-size: rem(16);
 		}
 	}
@@ -395,7 +387,7 @@
 		justify-content: space-between;
 		gap: rem(12);
 		margin-top: auto;
-		padding-top: rem(16);
+		padding-top: rem(12);
 	}
 
 	// review-card__expand
