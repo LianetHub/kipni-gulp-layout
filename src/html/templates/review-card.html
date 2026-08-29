@@ -1,13 +1,22 @@
 <div class="swiper-slide">
-	<article class="review-card">
+	<div class="review-card">
 		<div class="review-card__top">
 			<div class="review-card__author">
-				<span class="review-card__avatar icon-user" aria-hidden="true"></span>
+				<span class="review-card__avatar">
+					<img class="cover-image" src="@img/avatar.svg" alt="@@name" width="44" height="44" loading="lazy">
+				</span>
 				<div class="review-card__meta">
 					<p class="review-card__name">@@name</p>
-					<div class="review-card__stars icon-star" aria-label="5 из 5"></div>
+					<div class="review-card__stars" aria-label="5 из 5">
+						<span class="icon-star" aria-hidden="true"></span>
+						<span class="icon-star" aria-hidden="true"></span>
+						<span class="icon-star" aria-hidden="true"></span>
+						<span class="icon-star" aria-hidden="true"></span>
+						<span class="icon-star" aria-hidden="true"></span>
+					</div>
 				</div>
 			</div>
+			<!-- fileinclude -->
 			<img
 				class="review-card__source@@if (typeof source_mod !== 'undefined' && source_mod) { @@source_mod}"
 				src="@@source"
@@ -15,14 +24,15 @@
 				width="@@source_width"
 				height="@@source_height"
 				loading="lazy"
-			>
+				>
+			<!-- fileinclude -->
 		</div>
-		<p class="review-card__text">@@text</p>
+		<blockquoute class="review-card__text">@@text</blockquoute>
 		<div class="review-card__footer">
 			<button type="button" class="review-card__expand icon-chevron-right">
 				<span class="review-card__expand-label">Раскрыть отзыв</span>
 			</button>
 			<time class="review-card__date" datetime="@@datetime">@@date</time>
 		</div>
-	</article>
+	</div>
 </div>

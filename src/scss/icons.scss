@@ -89,6 +89,10 @@
   content: "\e90e";
 }
 
+.icon-star:before {
+  content: "\e90f";
+}
+
 %icon-stars-5 {
   &::before {
     content: "\e90f\e90f\e90f\e90f\e90f";
