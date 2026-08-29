@@ -1,7 +1,7 @@
 .breadcrumbs {
 	position: relative;
 	z-index: 3;
-	padding: rem(16) 0 0;
+	padding: rem(56) 0 0;
 
 	// breadcrumbs__list
 	&__list {
@@ -30,14 +30,12 @@
 			text-overflow: clip;
 
 			&::after {
-				content: "";
+				@extend %ic;
+				@extend %icon-chevron-right;
 				display: inline-block;
-				width: rem(4);
-				height: rem(6);
 				margin-left: 0.5rem;
-				background: currentColor;
+				font-size: rem(8);
 				opacity: 0.45;
-				clip-path: polygon(0 0, 100% 50%, 0 100%);
 			}
 		}
 	}

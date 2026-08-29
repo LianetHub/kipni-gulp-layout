@@ -151,17 +151,6 @@ $dimensions: (
 }
 
 
-@mixin transition-layout($properties...) {
-	$list: (
-	);
-
-@each $property in $properties {
-	$list: append($list, #{$property} var(--duration-layout) var(--ease-layout), comma);
-}
-
-transition: $list;
-}
-
 /// Pre-JS / FOUC layout for Swiper: grid matching slidesPerView until .is-swiper-ready
 /// $cols — map of min-width (0 or px number) → column count (int or float for peek)
 @mixin swiper-grid-fallback($cols,

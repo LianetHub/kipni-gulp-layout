@@ -7,11 +7,11 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-          <div class="container">
-            @@include('html/templates/breadcrumbs.html', {
-              "current": "Поиск"
-            })
-          </div>
+        <div class="container">
+          @@include('html/templates/breadcrumbs.html', {
+          "current": "Поиск"
+          })
+        </div>
 
         <section class="error-page">
           <div class="container">
@@ -29,7 +29,7 @@
                 </div>
               </div>
               <div class="col-12 col-lg-6 error-page__media">
-                <img src="@img/error-page/box.png" alt="Пустая коробка KIPNI — товары по запросу не найдены" width="600" height="480" loading="lazy">
+                <img src="@img/box.webp" alt="Пустая коробка KIPNI — товары по запросу не найдены" width="600" height="480" fetchpriority="high">
               </div>
             </div>
           </div>

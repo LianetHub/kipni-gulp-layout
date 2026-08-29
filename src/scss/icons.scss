@@ -101,12 +101,16 @@
   content: "\e911";
 }
 
-.icon-chevron-right:before {
+%icon-chevron-right {
   content: "\e912";
 }
 
+.icon-chevron-right:before {
+  @extend %icon-chevron-right;
+}
+
 .icon-chevron-down:before {
-  content: "\e912";
+  @extend %icon-chevron-right;
   transform: rotate(90deg);
 }
 

@@ -394,7 +394,7 @@ $scrollbarColor: $color-primary;
 
 	@media (any-hover: hover) {
 		&:hover {
-			background: darken($color: $scrollbarColor, $amount: 10);
+			background: $color-primary-dark;
 		}
 	}
 }

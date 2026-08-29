@@ -7,16 +7,16 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-          <div class="container">
-            @@include('html/templates/breadcrumbs.html', {
-              "current": "Страница 404"
-            })
-          </div>
+        <div class="container">
+          @@include('html/templates/breadcrumbs.html', {
+          "current": "Страница 404"
+          })
+        </div>
 
         <section class="error-page">
-          <div class="container">
+          <div class="error-page__container container ">
             <div class="row error-page__row">
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-lg-4 offset-lg-2 col-md-6">
                 <div class="error-page__content">
                   <p class="error-page__code" aria-hidden="true">404</p>
                   <h1 class="h2 error-page__title">Страница не найдена</h1>
@@ -25,12 +25,12 @@
                   </p>
                   <div class="error-page__actions">
                     <a class="btn btn--primary" href="index.html">Вернуться на главную</a>
-                    <a class="btn btn--ghost error-page__catalog" href="catalog.html">Каталог товаров</a>
+                    <a class="error-page__catalog btn btn--ghost" href="catalog.html">Каталог товаров</a>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-6 error-page__media">
-                <img src="@img/error-page/mascot.png" alt="Уточка KIPNI с облачком: похоже эта страница куда-то улетела" width="600" height="480" loading="lazy">
+              <div class="col-12 col-lg-4 col-md-6 error-page__media">
+                <img src="@img/mascot.webp" alt="Уточка KIPNI с облачком: похоже эта страница куда-то улетела" width="600" height="480" fetchpriority="high">
               </div>
             </div>
           </div>
