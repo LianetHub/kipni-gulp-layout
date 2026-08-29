@@ -175,14 +175,20 @@
 .contacts-map {
 	position: relative;
 	z-index: 1;
-	margin-bottom: rem(32);
 	border-radius: rem(20);
 	overflow: hidden;
 	aspect-ratio: 1440 / 585;
 	min-height: rem(280);
 
+	.contacts & {
+		margin-bottom: rem(32);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(50);
+		}
+	}
+
 	@media (min-width: $md4) {
-		margin-bottom: rem(50);
 		min-height: rem(585);
 	}
 
@@ -353,131 +359,6 @@
 
 		@media (min-width: $md4) {
 			min-width: rem(233);
-		}
-	}
-}
-
-.contacts-faq {
-
-	// contacts-faq__title
-	&__title {
-		margin: 0 0 rem(12);
-		font-family: $font-golos, sans-serif;
-		font-size: rem(24);
-		font-weight: 500;
-		line-height: math.div(29, 24);
-		color: #565656;
-
-		@media (min-width: $md4) {
-			font-size: rem(30);
-			line-height: math.div(36, 30);
-		}
-	}
-
-	// contacts-faq__lead
-	&__lead {
-		margin: 0 0 rem(28);
-		line-height: math.div(26, 16);
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(32);
-		}
-	}
-
-	// contacts-faq__list
-	&__list {
-		display: flex;
-		flex-direction: column;
-		gap: rem(16);
-	}
-
-	// contacts-faq__item
-	&__item {
-		border-radius: rem(15);
-		background: #f7f7f7;
-		overflow: hidden;
-
-		&.is-open {
-			.contacts-faq__question::before {
-				transform: rotate(45deg);
-			}
-
-			.contacts-faq__answer {
-				display: block;
-			}
-		}
-	}
-
-	// contacts-faq__question
-	&__question {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: rem(16);
-		width: 100%;
-		padding: rem(18) rem(20);
-		background: transparent;
-		text-align: left;
-		cursor: pointer;
-		color: $color-text;
-
-		@media (min-width: $md4) {
-			padding: rem(22) rem(32);
-		}
-
-		&::before {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-shrink: 0;
-			order: 1;
-			width: rem(48);
-			height: rem(48);
-			border-radius: 50%;
-			background: $color-primary;
-			color: $color-white;
-			font-size: rem(20);
-			transition: transform 0.25s $ease-layout;
-
-			@media (min-width: $md4) {
-				width: rem(64);
-				height: rem(64);
-				font-size: rem(24);
-			}
-		}
-
-		&:focus-visible {
-			outline: none;
-			box-shadow: $focus-ring;
-		}
-	}
-
-	// contacts-faq__question-text
-	&__question-text {
-		font-family: $fontfamily, sans-serif;
-		font-size: rem(16);
-		font-weight: 500;
-		line-height: 1.5;
-		letter-spacing: rem(-0.5);
-		color: #4b4a50;
-
-		@media (min-width: $md4) {
-			font-size: rem(18);
-		}
-	}
-
-	// contacts-faq__answer
-	&__answer {
-		display: none;
-		padding: 0 rem(20) rem(24);
-
-		@media (min-width: $md4) {
-			padding: 0 rem(32) rem(28);
-			padding-right: rem(96);
-		}
-
-		p {
-			line-height: math.div(26, 16);
 		}
 	}
 }

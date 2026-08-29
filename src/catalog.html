@@ -114,6 +114,7 @@
                   </div>
                 </div>
               </div>
+              <button type="button" class="catalog-cats__prev swiper-button-prev icon-chevron-right" aria-label="Предыдущие категории"></button>
               <button type="button" class="catalog-cats__next swiper-button-next icon-chevron-right" aria-label="Следующие категории"></button>
             </div>
           </div>
@@ -121,60 +122,15 @@
           <div class="container catalog__body">
             <div class="row gy-4">
               <aside class="col-12 col-lg-3 catalog__aside">
-                <form class="catalog-filters" aria-labelledby="catalog-filters-title">
-                  <div class="catalog-filters__head">
-                    <h2 class="catalog-filters__title" id="catalog-filters-title">Фильтры</h2>
-                    <button type="button" class="catalog-filters__reset">
-                      Сбросить
-                      <span class="catalog-filters__reset-icon" aria-hidden="true"></span>
-                    </button>
-                  </div>
-
-                  <div class="catalog-filters__group">
-                    <h3 class="catalog-filters__group-title">Бренд</h3>
-                    <div class="catalog-filters__chips">
-                      <button type="button" class="catalog-chip catalog-chip--brand is-active" aria-pressed="true">KIPNI</button>
-                      <button type="button" class="catalog-chip catalog-chip--brand" aria-pressed="false">AXIT</button>
-                      <button type="button" class="catalog-chip catalog-chip--brand" aria-pressed="false">Olly</button>
-                      <button type="button" class="catalog-chip catalog-chip--brand" aria-pressed="false">Lutea</button>
-                    </div>
-                  </div>
-
-                  <div class="catalog-filters__group">
-                    <h3 class="catalog-filters__group-title">Литраж</h3>
-                    <div class="catalog-filters__chips">
-                      <button type="button" class="catalog-chip" aria-pressed="false">380 мл</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">500 мл</button>
-                      <button type="button" class="catalog-chip is-active" aria-pressed="true">750 мл</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">1 л</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">1.5 л</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">2.5 л</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">5 л</button>
-                    </div>
-                  </div>
-
-                  <div class="catalog-filters__group">
-                    <h3 class="catalog-filters__group-title">Тип</h3>
-                    <div class="catalog-filters__chips">
-                      <button type="button" class="catalog-chip" aria-pressed="false">Гель для душа</button>
-                      <button type="button" class="catalog-chip is-active" aria-pressed="true">Шампунь</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Кондиционер для белья</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Средство для мытья пола</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Жидкое мыло</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Мыло</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Средство для мытья посуды</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Мыло хозяйственное жидкое</button>
-                    </div>
-                  </div>
-
-                  <button type="submit" class="btn btn--primary catalog-filters__submit">Применить фильтр</button>
-                </form>
+                @@include('html/templates/catalog-filters.html', {
+                "title_id": "catalog-filters-title"
+                })
 
                 <article class="help-aside__promo catalog__promo" style="background-image: url('@img/shared/decor/promo.png');">
                   <div class="help-aside__promo-body">
                     <h2 class="h3 help-aside__promo-title">5 шагов к чистой кухне без химии</h2>
                     <p class="text help-aside__promo-text">Рассказываем, как поддерживать идеальную...</p>
-                    <a class="btn btn--primary help-aside__promo-btn icon-chevron-right" href="article.html">
+                    <a class="btn btn--primary btn--large help-aside__promo-btn icon-chevron-right" href="article.html">
                       Читать далее
                     </a>
                   </div>

@@ -74,42 +74,37 @@
 
 	// product-gallery__thumbs
 	&__thumbs {
-		display: flex;
-		flex-direction: row;
-		gap: rem(12);
 		order: 2;
-		overflow-x: auto;
-		padding-bottom: rem(4);
-		scrollbar-width: thin;
+		width: 100%;
+		height: rem(92);
+		overflow: hidden;
 
 		@media (min-width: $md4) {
-			flex-direction: column;
 			order: 0;
-			overflow: visible;
-			padding-bottom: 0;
 			flex-shrink: 0;
 			width: rem(107);
-			gap: rem(28);
+			height: auto;
+		}
+
+		.swiper-slide {
+			width: rem(88);
+			height: rem(92);
+
+			@media (min-width: $md4) {
+				width: rem(107);
+				height: rem(111);
+			}
 		}
 	}
 
 	// product-gallery__thumb
 	&__thumb {
-		flex-shrink: 0;
-		width: rem(88);
-		height: rem(92);
-		padding: 0;
 		overflow: hidden;
 		border: rem(2) solid transparent;
 		border-radius: $radius-md;
 		background: #f7f6f7;
 		cursor: pointer;
 		transition: border-color 0.2s ease;
-
-		@media (min-width: $md4) {
-			width: rem(107);
-			height: rem(111);
-		}
 
 		img {
 			display: block;
@@ -118,7 +113,7 @@
 			object-fit: cover;
 		}
 
-		&.is-active {
+		&.swiper-slide-thumb-active {
 			border-color: $color-primary;
 		}
 
@@ -143,6 +138,17 @@
 		border-radius: $radius-md;
 		background: #f7f6f7;
 		aspect-ratio: 642 / 663;
+
+		.swiper-wrapper,
+		.swiper-slide {
+			height: 100%;
+		}
+
+		.swiper-slide a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
 	}
 
 	// product-gallery__image
@@ -164,9 +170,12 @@
 		justify-content: center;
 		width: rem(45);
 		height: rem(45);
+		padding: 0;
+		border: none;
 		border-radius: 50%;
 		background: $color-bg;
 		box-shadow: 0 rem(10) rem(25.8) rgba(83, 131, 40, 0.2);
+		cursor: pointer;
 		transition: transform 0.2s ease;
 
 		img {
@@ -509,14 +518,14 @@
 	&__teaser {
 		max-width: rem(586);
 		margin-inline: auto;
-		background: transparent;
+		background-color: transparent;
 
 		@media (min-width: $md3) {
 			margin-inline: 0;
 			margin-left: auto;
 		}
 
-		.help-aside__promo::before {
+		&::before {
 			aspect-ratio: 586 / 214;
 			border-radius: 0 $radius-md 0 $radius-btn;
 		}

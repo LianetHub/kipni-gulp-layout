@@ -1,0 +1,66 @@
+<article class="vacancy-card@@if (typeof open !== 'undefined' && open) { is-open}">
+	<button class="vacancy-card__header icon-plus" type="button" aria-expanded="@@if (typeof open !== 'undefined' && open) {true}@@if (typeof open === 'undefined' || !open) {false}" aria-controls="vacancy-panel-@@id" id="vacancy-btn-@@id">
+		<span class="vacancy-card__title">@@title</span>
+		<span class="vacancy-card__salary">@@salary</span>
+	</button>
+	<div class="vacancy-card__body" id="vacancy-panel-@@id" role="region" aria-labelledby="vacancy-btn-@@id"@@if (typeof open === 'undefined' || !open) { hidden}>
+		<div class="row vacancy-card__row">
+			<div class="col-12 col-xl-8">
+				<div class="vacancy-card__details">
+					<div class="vacancy-card__block">
+						<h3 class="h3 vacancy-card__heading">Обязанности</h3>
+						<ul class="vacancy-card__list">
+							<!-- fileinclude -->
+							@@for (var i = 0; i < duties.length; i++) {
+							@@include('vacancy-list-item.html', {
+								"text": "`+duties[i]+`"
+							})
+							}
+							<!-- fileinclude -->
+						</ul>
+					</div>
+					<div class="vacancy-card__block">
+						<h3 class="h3 vacancy-card__heading">Требования</h3>
+						<ul class="vacancy-card__list">
+							<!-- fileinclude -->
+							@@for (var i = 0; i < requirements.length; i++) {
+							@@include('vacancy-list-item.html', {
+								"text": "`+requirements[i]+`"
+							})
+							}
+							<!-- fileinclude -->
+						</ul>
+					</div>
+					<div class="vacancy-card__block">
+						<h3 class="h3 vacancy-card__heading">Условия</h3>
+						<ul class="vacancy-card__list">
+							<!-- fileinclude -->
+							@@for (var i = 0; i < conditions.length; i++) {
+							@@include('vacancy-list-item.html', {
+								"text": "`+conditions[i]+`"
+							})
+							}
+							<!-- fileinclude -->
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-xl-4">
+				<div class="vacancy-card__summary">
+					<ul class="vacancy-card__meta">
+						<!-- fileinclude -->
+						@@for (var i = 0; i < meta.length; i++) {
+						@@include('vacancy-list-item.html', {
+							"text": "`+meta[i]+`"
+						})
+						}
+						<!-- fileinclude -->
+					</ul>
+					<a class="btn btn--primary btn--large vacancy-card__apply" href="#modal-vacancy-apply" data-fancybox data-src="#modal-vacancy-apply" data-type="inline">
+						Откликнуться
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>

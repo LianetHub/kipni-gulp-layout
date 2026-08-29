@@ -54,54 +54,7 @@
                 <div class="header-buy__panel">
                   <p class="header-buy__caption">Мы на маркетплейсах</p>
                   <ul class="header-buy__list">
-                    <li>
-                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
-                        <span class="header-buy__logo header-buy__logo--ozon">
-                          <img src="@img/shared/logos/marketplaces-sm/ozon.svg" alt="Ozon" width="40" height="40" loading="lazy">
-                        </span>
-                        <span class="header-buy__name">Ozon</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
-                        <span class="header-buy__logo header-buy__logo--wb">
-                          <img src="@img/shared/logos/marketplaces-sm/wildberries.png" alt="Wildberries" width="40" height="40" loading="lazy">
-                        </span>
-                        <span class="header-buy__name">Wildberries</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
-                        <span class="header-buy__logo header-buy__logo--yandex">
-                          <img src="@img/shared/logos/marketplaces-sm/yandex.png" alt="Яндекс Маркет" width="40" height="40" loading="lazy">
-                        </span>
-                        <span class="header-buy__name">Яндекс Маркет</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
-                        <span class="header-buy__logo header-buy__logo--mega">
-                          <img src="@img/shared/logos/marketplaces-sm/megamarket.png" alt="Мегамаркет" width="40" height="40" loading="lazy">
-                        </span>
-                        <span class="header-buy__name">Мегамаркет</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
-                        <span class="header-buy__logo header-buy__logo--kazan">
-                          <img src="@img/shared/logos/marketplaces-sm/kazan.png" alt="KazanExpress" width="40" height="40" loading="lazy">
-                        </span>
-                        <span class="header-buy__name">KazanExpress</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="header-buy__link icon-chevron-right" href="#" target="_blank" rel="noopener noreferrer">
-                        <span class="header-buy__logo header-buy__logo--vse">
-                          <img src="@img/shared/logos/marketplaces-sm/vseinstrumenty.png" alt="ВсеИнструменты" width="40" height="40" loading="lazy">
-                        </span>
-                        <span class="header-buy__name">ВсеИнструменты</span>
-                      </a>
-                    </li>
+                    @@loop('templates/header-buy-item.html', 'html/json/header-buy.json')
                   </ul>
                   <a class="header-buy__all icon-grid" href="where-to-buy.html">
                     Смотреть все площадки

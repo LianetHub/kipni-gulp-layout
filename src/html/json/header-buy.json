@@ -1,0 +1,44 @@
+[
+	{
+		"href": "#",
+		"mod": "ozon",
+		"logo": "@img/shared/logos/marketplaces-sm/ozon.svg",
+		"alt": "Ozon",
+		"name": "Ozon"
+	},
+	{
+		"href": "#",
+		"mod": "wb",
+		"logo": "@img/shared/logos/marketplaces-sm/wildberries.png",
+		"alt": "Wildberries",
+		"name": "Wildberries"
+	},
+	{
+		"href": "#",
+		"mod": "yandex",
+		"logo": "@img/shared/logos/marketplaces-sm/yandex.png",
+		"alt": "Яндекс Маркет",
+		"name": "Яндекс Маркет"
+	},
+	{
+		"href": "#",
+		"mod": "mega",
+		"logo": "@img/shared/logos/marketplaces-sm/megamarket.png",
+		"alt": "Мегамаркет",
+		"name": "Мегамаркет"
+	},
+	{
+		"href": "#",
+		"mod": "kazan",
+		"logo": "@img/shared/logos/marketplaces-sm/kazan.png",
+		"alt": "KazanExpress",
+		"name": "KazanExpress"
+	},
+	{
+		"href": "#",
+		"mod": "vse",
+		"logo": "@img/shared/logos/marketplaces-sm/vseinstrumenty.png",
+		"alt": "ВсеИнструменты",
+		"name": "ВсеИнструменты"
+	}
+]

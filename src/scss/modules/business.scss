@@ -14,14 +14,14 @@
 		border-radius: rem(20);
 		min-height: rem(373);
 		background-color: #e8f0f8;
-		background-image: var(--business-mobile-image);
+		background-image: url("@img/business/mobile.jpg");
 		background-repeat: no-repeat;
 		background-size: cover;
 		background-position: right center;
 
 		@media (min-width: $md4) {
 			min-height: rem(360);
-			background-image: var(--business-desktop-image);
+			background-image: url("@img/business/banner.jpg");
 		}
 
 		@media (min-width: $md2) {

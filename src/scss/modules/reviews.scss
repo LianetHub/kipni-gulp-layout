@@ -94,57 +94,24 @@
 		}
 	}
 
-	// reviews__prev, reviews__next
-	&__prev,
-	&__next {
-		position: absolute;
-		top: 50%;
-		z-index: 2;
+	.swiper-button-next,
+	.swiper-button-prev {
 		display: none;
-		align-items: center;
-		justify-content: center;
-		width: rem(40);
-		height: rem(40);
-		padding: 0;
-		border: none;
-		border-radius: 50%;
-		background: $color-white;
-		box-shadow: $shadow-soft;
-		cursor: pointer;
-		transform: translateY(-50%);
-		font-size: rem(15);
-		line-height: 1;
-		color: $color-text;
-
-		&::after {
-			content: none;
-		}
 
 		@media (min-width: $md4) {
 			display: inline-flex;
 		}
-
-		&:focus-visible {
-			outline: none;
-			box-shadow: $focus-ring;
-		}
-
-		&.swiper-button-disabled {
-			opacity: 0.35;
-			pointer-events: none;
-		}
 	}
 
-	&__prev {
+	.swiper-button-prev {
 		left: rem(-8);
-		transform: translateY(-50%) rotate(180deg);
 
 		@media (min-width: $md2) {
 			left: rem(-20);
 		}
 	}
 
-	&__next {
+	.swiper-button-next {
 		right: rem(-8);
 
 		@media (min-width: $md2) {

@@ -34,54 +34,9 @@
           <div class="container favorites__body">
             <div class="row gy-4">
               <aside class="col-12 col-lg-3 favorites__aside">
-                <form class="catalog-filters" aria-labelledby="favorites-filters-title">
-                  <div class="catalog-filters__head">
-                    <h2 class="catalog-filters__title" id="favorites-filters-title">Фильтры</h2>
-                    <button type="button" class="catalog-filters__reset">
-                      Сбросить
-                      <span class="catalog-filters__reset-icon" aria-hidden="true"></span>
-                    </button>
-                  </div>
-
-                  <div class="catalog-filters__group">
-                    <h3 class="catalog-filters__group-title">Бренд</h3>
-                    <div class="catalog-filters__chips">
-                      <button type="button" class="catalog-chip catalog-chip--brand is-active" aria-pressed="true">KIPNI</button>
-                      <button type="button" class="catalog-chip catalog-chip--brand" aria-pressed="false">AXIT</button>
-                      <button type="button" class="catalog-chip catalog-chip--brand" aria-pressed="false">Olly</button>
-                      <button type="button" class="catalog-chip catalog-chip--brand" aria-pressed="false">Lutea</button>
-                    </div>
-                  </div>
-
-                  <div class="catalog-filters__group">
-                    <h3 class="catalog-filters__group-title">Литраж</h3>
-                    <div class="catalog-filters__chips">
-                      <button type="button" class="catalog-chip" aria-pressed="false">380 мл</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">500 мл</button>
-                      <button type="button" class="catalog-chip is-active" aria-pressed="true">750 мл</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">1 л</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">1.5 л</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">2.5 л</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">5 л</button>
-                    </div>
-                  </div>
-
-                  <div class="catalog-filters__group">
-                    <h3 class="catalog-filters__group-title">Тип</h3>
-                    <div class="catalog-filters__chips">
-                      <button type="button" class="catalog-chip" aria-pressed="false">Гель для душа</button>
-                      <button type="button" class="catalog-chip is-active" aria-pressed="true">Шампунь</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Кондиционер для белья</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Средство для мытья пола</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Жидкое мыло</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Мыло</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Средство для мытья посуды</button>
-                      <button type="button" class="catalog-chip" aria-pressed="false">Мыло хозяйственное жидкое</button>
-                    </div>
-                  </div>
-
-                  <button type="submit" class="btn btn--primary catalog-filters__submit">Применить фильтр</button>
-                </form>
+                @@include('html/templates/catalog-filters.html', {
+                "title_id": "favorites-filters-title"
+                })
               </aside>
 
               <div class="col-12 col-lg-9 favorites__content">

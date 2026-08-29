@@ -68,15 +68,6 @@
 		@media (min-width: $md4) {
 			gap: rem(16);
 		}
-
-		.error-page__catalog {
-			color: $color-primary;
-			border: 1px solid $color-primary;
-			box-shadow: $shadow-green;
-			padding-inline: rem(30);
-			font-size: rem(18);
-			font-weight: 500;
-		}
 	}
 
 	// error-page__media

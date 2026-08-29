@@ -1,0 +1,18 @@
+@@if (typeof type !== 'undefined' && type === 'media') {
+<div class="col-12 col-md-6 col-xl-3 about-facts__media">
+	<img src="@@image" alt="@@alt" width="@@width" height="@@height" loading="lazy">
+</div>
+}
+@@if (typeof type === 'undefined' || type !== 'media') {
+<div class="col-12 col-md-6 col-xl-3">
+	<article class="about-fact@@if (typeof icon !== 'undefined' && icon) { @@icon}">
+		@@if (typeof icon_src !== 'undefined' && icon_src) {
+		<span class="about-fact__icon" aria-hidden="true">
+			<img src="@@icon_src" alt="@@icon_alt" width="50" height="50" loading="lazy">
+		</span>
+		}
+		<h3 class="about-fact__title">@@title</h3>
+		<p class="about-fact__text">@@text</p>
+	</article>
+</div>
+}

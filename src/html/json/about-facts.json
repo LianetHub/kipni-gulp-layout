@@ -1,0 +1,41 @@
+[
+	{
+		"icon": "icon-calendar",
+		"title": "6+ лет",
+		"text": "Стабильное производство с&nbsp;2020&nbsp;года"
+	},
+	{
+		"icon": "icon-leaf",
+		"title": "ГОСТ",
+		"text": "Сертифицированное качество соответствует ГОСТ и&nbsp;ТР&nbsp;ТС"
+	},
+	{
+		"icon": "icon-truck",
+		"title": "Автопарк",
+		"text": "Оперативная доставка собственным транспортом"
+	},
+	{
+		"type": "media",
+		"image": "@img/about/lab-duck.jpg",
+		"alt": "Маскот KIPNI в лаборатории среди пробирок",
+		"width": "360",
+		"height": "306"
+	},
+	{
+		"icon_src": "@img/shared/ui/icon-factory.svg",
+		"icon_alt": "Собственное производство",
+		"title": "Технологии",
+		"text": "Собственное автоматизированное предприятие в&nbsp;России"
+	},
+	{
+		"icon": "icon-shopping-cart",
+		"title": "80+ товаров",
+		"text": "Более 80&nbsp;товаров в&nbsp;каталоге"
+	},
+	{
+		"icon_src": "@img/shared/ui/icon-logistics.svg",
+		"icon_alt": "Логистика",
+		"title": "Логистика",
+		"text": "Поставка по всей России и&nbsp;СНГ, розница на&nbsp;маркетплейсах"
+	}
+]

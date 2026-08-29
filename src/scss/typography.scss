@@ -98,10 +98,39 @@ h4,
 	>h2 {
 		margin-top: rem(40);
 		margin-bottom: rem(20);
+		scroll-margin-top: calc(#{$header} + #{rem(24)});
 
 		@media (min-width: $md4) {
 			margin-top: rem(48);
 			margin-bottom: rem(40);
+		}
+	}
+
+	>img,
+	>picture {
+		align-self: stretch;
+		display: block;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+		margin-top: rem(24);
+		margin-bottom: rem(32);
+		border-radius: $radius-md;
+
+		@media (min-width: $md4) {
+			margin-top: rem(28);
+			margin-bottom: rem(40);
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			object-fit: cover;
+		}
+
+		&+h2 {
+			margin-top: 0;
 		}
 	}
 

@@ -26,18 +26,18 @@
                     которые создают эффективные и безопасные средства для дома.<br>
                     Присоединяйтесь к нам и развивайтесь вместе с нами!
                   </p>
-                  <ul class="buy-intro__benefits">
-                    <li class="buy-intro__benefit icon-check">
-                      <span class="buy-intro__benefit-text">Конкурентная заработная плата</span>
-                    </li>
-                    <li class="buy-intro__benefit icon-check">
-                      <span class="buy-intro__benefit-text">Комфортные условия труда</span>
-                    </li>
-                    <li class="buy-intro__benefit icon-check">
-                      <span class="buy-intro__benefit-text">Забота о здоровье сотрудников</span>
-                    </li>
-                  </ul>
                 </div>
+                <ul class="benefits">
+                  <li class="benefits__item icon-check">
+                    <span class="benefits__text">Конкурентная<br> заработная плата</span>
+                  </li>
+                  <li class="benefits__item icon-check">
+                    <span class="benefits__text">Комфортные условия<br> труда</span>
+                  </li>
+                  <li class="benefits__item icon-check">
+                    <span class="benefits__text">Забота о здоровье<br> сотрудников</span>
+                  </li>
+                </ul>
               </div>
               <div class="col-12 col-lg-6 buy-intro__media">
                 <img src="@img/where-to-buy/hero.png" alt="Уточка KIPNI с покупками рядом с продукцией и магазином бренда" width="775" height="480" fetchpriority="high">
@@ -210,9 +210,7 @@
         <section class="buy-map">
           <div class="container">
             <h2 class="h2 buy-map__title">Магазины на карте:</h2>
-            <div class="buy-map__frame rounded-20">
-              <img src="@img/where-to-buy/map.png" alt="Карта с точками магазинов, где представлена продукция KIPNI" width="1200" height="600" loading="lazy">
-            </div>
+            @@include('html/templates/contacts-map.html')
           </div>
         </section>
       </main>

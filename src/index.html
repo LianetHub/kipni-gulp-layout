@@ -185,37 +185,7 @@
                 </div>
                 <div class="col-12 col-xl-8">
                   <div class="row g-3 marketplaces__shops">
-                    <div class="col-6 col-md-4">
-                      <a class="marketplace-card marketplace-card--avito" href="#" aria-label="Купить на Avito">
-                        <img class="marketplace-card__logo" src="@img/shared/logos/marketplaces/avito.svg" alt="Avito" width="160" height="24" loading="lazy">
-                        <span class="marketplace-card__caption">Перейти в магазин</span>
-                      </a>
-                    </div>
-                    <div class="col-6 col-md-4">
-                      <a class="marketplace-card" href="#" aria-label="Купить на Ozon">
-                        <img class="marketplace-card__logo marketplace-card__logo--ozon" src="@img/shared/logos/marketplaces/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
-                      </a>
-                    </div>
-                    <div class="col-6 col-md-4">
-                      <a class="marketplace-card" href="#" aria-label="Купить на Wildberries">
-                        <img class="marketplace-card__logo marketplace-card__logo--wb" src="@img/shared/logos/marketplaces/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
-                      </a>
-                    </div>
-                    <div class="col-6 col-md-4">
-                      <a class="marketplace-card" href="#" aria-label="Купить на Мегамаркете">
-                        <img class="marketplace-card__logo marketplace-card__logo--mega" src="@img/shared/logos/marketplaces/megamarket.svg" alt="Мегамаркет" width="195" height="29" loading="lazy">
-                      </a>
-                    </div>
-                    <div class="col-6 col-md-4">
-                      <a class="marketplace-card" href="#" aria-label="Купить на Яндекс Маркете">
-                        <img class="marketplace-card__logo marketplace-card__logo--yandex" src="@img/shared/logos/marketplaces/yandex-market.png" alt="Яндекс Маркет" width="174" height="26" loading="lazy">
-                      </a>
-                    </div>
-                    <div class="col-6 col-md-4">
-                      <a class="marketplace-card" href="#" aria-label="Купить на Магнит Маркете">
-                        <img class="marketplace-card__logo marketplace-card__logo--magnit" src="@img/shared/logos/marketplaces/magnit.png" alt="Магнит Маркет" width="191" height="36" loading="lazy">
-                      </a>
-                    </div>
+                    @@loop('html/templates/marketplace-card.html', 'html/json/marketplace-cards.json')
                   </div>
                 </div>
               </div>
@@ -276,7 +246,7 @@
         </section>
         <section class="business section-space-md" aria-labelledby="business-title">
           <div class="container">
-            <div class="business__banner" style="--business-mobile-image: url('@img/business/mobile.jpg'); --business-desktop-image: url('@img/business/banner.jpg');">
+            <div class="business__banner">
               <div class="business__content">
                 <h2 class="h2 business__title" id="business-title">Товары для бизнеса</h2>
                 <p class="business__lead">Чистота и&nbsp;забота о&nbsp;клиентах - ваша репутация</p>

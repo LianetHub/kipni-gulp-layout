@@ -25,18 +25,18 @@
                   <p class="text about-intro__text">
                     KIPNI&nbsp;— российский производитель современных и&nbsp;безопасных средств для&nbsp;дома и&nbsp;личной гигиены. Создаём продукцию, которой можно доверять каждый день.
                   </p>
-                  <ul class="about-intro__benefits">
-                    <li class="about-intro__benefit icon-check">
-                      <span class="about-intro__benefit-text">Безопасно<br>для всей семьи</span>
-                    </li>
-                    <li class="about-intro__benefit icon-check">
-                      <span class="about-intro__benefit-text">Эффективно<br>и бережно</span>
-                    </li>
-                    <li class="about-intro__benefit icon-check">
-                      <span class="about-intro__benefit-text">С заботой<br>о природе</span>
-                    </li>
-                  </ul>
                 </div>
+                <ul class="benefits">
+                  <li class="benefits__item icon-check">
+                    <span class="benefits__text">Безопасно<br> для всей семьи</span>
+                  </li>
+                  <li class="benefits__item icon-check">
+                    <span class="benefits__text">Эффективно<br> и бережно</span>
+                  </li>
+                  <li class="benefits__item icon-check">
+                    <span class="benefits__text">С заботой<br> о природе</span>
+                  </li>
+                </ul>
               </div>
               <div class="col-12 col-lg-6 about-intro__media">
                 <img src="@img/about/hero.png" alt="Продукция KIPNI и маскот-уточка среди белых цветов" width="775" height="480" fetchpriority="high">
@@ -52,51 +52,7 @@
               <span class="about-facts__title-text">— это&nbsp;современное производство средств для&nbsp;личной гигиены и&nbsp;бытовой химии, основанное в&nbsp;2020&nbsp;году</span>
             </h2>
             <div class="row gy-3 about-facts__grid">
-              <div class="col-12 col-md-6 col-xl-3">
-                <article class="about-fact icon-calendar">
-                  <h3 class="about-fact__title">6+ лет</h3>
-                  <p class="about-fact__text">Стабильное производство с&nbsp;2020&nbsp;года</p>
-                </article>
-              </div>
-              <div class="col-12 col-md-6 col-xl-3">
-                <article class="about-fact icon-leaf">
-                  <h3 class="about-fact__title">ГОСТ</h3>
-                  <p class="about-fact__text">Сертифицированное качество соответствует ГОСТ и&nbsp;ТР&nbsp;ТС</p>
-                </article>
-              </div>
-              <div class="col-12 col-md-6 col-xl-3">
-                <article class="about-fact icon-truck">
-                  <h3 class="about-fact__title">Автопарк</h3>
-                  <p class="about-fact__text">Оперативная доставка собственным транспортом</p>
-                </article>
-              </div>
-              <div class="col-12 col-md-6 col-xl-3 about-facts__media">
-                <img src="@img/about/lab-duck.jpg" alt="Маскот KIPNI в лаборатории среди пробирок" width="360" height="306" loading="lazy">
-              </div>
-              <div class="col-12 col-md-6 col-xl-3">
-                <article class="about-fact">
-                  <span class="about-fact__icon" aria-hidden="true">
-                    <img src="@img/shared/ui/icon-factory.svg" alt="Собственное производство" width="50" height="50" loading="lazy">
-                  </span>
-                  <h3 class="about-fact__title">Технологии</h3>
-                  <p class="about-fact__text">Собственное автоматизированное предприятие в&nbsp;России</p>
-                </article>
-              </div>
-              <div class="col-12 col-md-6 col-xl-3">
-                <article class="about-fact icon-shopping-cart">
-                  <h3 class="about-fact__title">80+ товаров</h3>
-                  <p class="about-fact__text">Более 80&nbsp;товаров в&nbsp;каталоге</p>
-                </article>
-              </div>
-              <div class="col-12 col-md-6 col-xl-3">
-                <article class="about-fact">
-                  <span class="about-fact__icon" aria-hidden="true">
-                    <img src="@img/shared/ui/icon-logistics.svg" alt="Логистика" width="50" height="50" loading="lazy">
-                  </span>
-                  <h3 class="about-fact__title">Логистика</h3>
-                  <p class="about-fact__text">Поставка по всей России и&nbsp;СНГ, розница на&nbsp;маркетплейсах</p>
-                </article>
-              </div>
+              @@loop('html/templates/about-fact.html', 'html/json/about-facts.json')
             </div>
           </div>
         </section>
@@ -130,51 +86,20 @@
 
         @@include('html/sections/reviews.html')
 
-        <section class="about-faq section-space-md" aria-labelledby="about-faq-title">
+        <section class="faq section-space-md" aria-labelledby="faq-title">
           <div class="container">
-            <h2 class="h2 about-faq__title" id="about-faq-title">Частые вопросы</h2>
-            <div class="row gy-4 about-faq__row">
+            <h2 class="h2 faq__title" id="faq-title">Частые вопросы</h2>
+            <div class="row gy-4">
               <div class="col-12 col-xl-9">
-                <div class="about-faq__list">
-                  <div class="about-faq__item">
-                    <button class="about-faq__question icon-plus" type="button" aria-expanded="false" aria-controls="faq-answer-1" id="faq-question-1">
-                      <span class="about-faq__question-text">Как правильно хранить бытовую химию KiPNi?</span>
-                    </button>
-                    <div class="about-faq__answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1" hidden>
-                      <p class="text">Храните средства в&nbsp;оригинальной упаковке, в&nbsp;сухом месте при комнатной температуре, вдали от&nbsp;прямых солнечных лучей и&nbsp;в&nbsp;недоступном для детей месте. Плотно закрывайте крышку после использования.</p>
-                    </div>
-                  </div>
-                  <div class="about-faq__item">
-                    <button class="about-faq__question icon-plus" type="button" aria-expanded="false" aria-controls="faq-answer-2" id="faq-question-2">
-                      <span class="about-faq__question-text">Для каких поверхностей и материалов подходит продукция?</span>
-                    </button>
-                    <div class="about-faq__answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
-                      <p class="text">Ассортимент KIPNI рассчитан на&nbsp;повседневный уход за домом и&nbsp;личными вещами. Назначение и&nbsp;рекомендации по&nbsp;поверхностям указаны на&nbsp;этикетке каждого средства&nbsp;— следуйте инструкции на&nbsp;упаковке.</p>
-                    </div>
-                  </div>
-                  <div class="about-faq__item">
-                    <button class="about-faq__question icon-plus" type="button" aria-expanded="false" aria-controls="faq-answer-3" id="faq-question-3">
-                      <span class="about-faq__question-text">Безопасны ли средства для детей и домашних животных?</span>
-                    </button>
-                    <div class="about-faq__answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
-                      <p class="text">Мы&nbsp;разрабатываем формулы с&nbsp;заботой о&nbsp;семье. При этом любую бытовую химию нужно хранить в&nbsp;недоступном для детей и&nbsp;животных месте и&nbsp;использовать по&nbsp;назначению согласно инструкции на&nbsp;упаковке.</p>
-                    </div>
-                  </div>
-                  <div class="about-faq__item">
-                    <button class="about-faq__question icon-plus" type="button" aria-expanded="false" aria-controls="faq-answer-4" id="faq-question-4">
-                      <span class="about-faq__question-text">Как правильно рассчитать необходимое количество средства?</span>
-                    </button>
-                    <div class="about-faq__answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
-                      <p class="text">Дозировка указана на&nbsp;этикетке. Ориентируйтесь на&nbsp;рекомендации производителя и&nbsp;степень загрязнения&nbsp;— избыток средства не&nbsp;улучшает результат и&nbsp;не&nbsp;нужен для ежедневного ухода.</p>
-                    </div>
-                  </div>
+                <div class="faq__list">
+                  @@loop('html/templates/faq-item.html', 'html/json/faq-items.json')
                 </div>
               </div>
               <div class="col-12 col-xl-3">
-                <aside class="about-faq__aside">
-                  <h3 class="h3 about-faq__aside-title">Не нашли ответа<br>на вопрос?</h3>
-                  <p class="text text-muted about-faq__aside-text">Напишите нам - ответим на возникшие вопросы</p>
-                  <a class="btn btn--ghost about-faq__btn" href="#">Задать вопрос</a>
+                <aside class="faq__aside">
+                  <h3 class="h3 faq__aside-title">Не нашли ответа<br>на вопрос?</h3>
+                  <p class="text text-muted faq__aside-text">Напишите нам - ответим на возникшие вопросы</p>
+                  <a class="btn btn--outline btn--large faq__btn" href="#">Задать вопрос</a>
                 </aside>
               </div>
             </div>

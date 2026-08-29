@@ -448,17 +448,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (document.querySelector(".catalog-cats__slider")) {
             const catalogCatsSlider = document.querySelector(".catalog-cats__slider");
-            const catalogCatsNext = catalogCatsSlider.closest(".catalog-cats")?.querySelector(".swiper-button-next");
+            const catalogCatsWrap = catalogCatsSlider.closest(".catalog-cats");
+            const catalogCatsPrev = catalogCatsWrap?.querySelector(".swiper-button-prev");
+            const catalogCatsNext = catalogCatsWrap?.querySelector(".swiper-button-next");
 
             new Swiper(catalogCatsSlider, {
                 slidesPerView: "auto",
                 spaceBetween: 12,
                 speed: 500,
-                navigation: catalogCatsNext
-                    ? {
-                        nextEl: catalogCatsNext,
-                    }
-                    : undefined,
+                navigation: {
+                    prevEl: catalogCatsPrev,
+                    nextEl: catalogCatsNext,
+                },
                 breakpoints: {
                     768: {
                         spaceBetween: 16,
@@ -468,6 +469,48 @@ document.addEventListener("DOMContentLoaded", () => {
                     },
                 },
             });
+        }
+
+        if (document.querySelector("[data-product-gallery]")) {
+            const galleryRoot = document.querySelector(".product-gallery");
+            const thumbsEl = galleryRoot?.querySelector("[data-product-thumbs]");
+            const mainEl = galleryRoot?.querySelector("[data-product-gallery]");
+
+            if (thumbsEl && mainEl) {
+                const thumbsSwiper = new Swiper(thumbsEl, {
+                    direction: "horizontal",
+                    slidesPerView: "auto",
+                    spaceBetween: 12,
+                    speed: 400,
+                    watchSlidesProgress: true,
+                    watchOverflow: true,
+                    breakpoints: {
+                        768: {
+                            direction: "vertical",
+                            spaceBetween: 28,
+                        },
+                    },
+                    on: {
+                        init(instance) {
+                            instance.el.classList.add("is-swiper-ready");
+                        },
+                    },
+                });
+
+                new Swiper(mainEl, {
+                    slidesPerView: 1,
+                    speed: 400,
+                    watchOverflow: true,
+                    thumbs: {
+                        swiper: thumbsSwiper,
+                    },
+                    on: {
+                        init(instance) {
+                            instance.el.classList.add("is-swiper-ready");
+                        },
+                    },
+                });
+            }
         }
     }
 
@@ -554,10 +597,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // vacancy
-    if (document.querySelectorAll(".vacancy-modal__file-input").length > 0) {
-        document.querySelectorAll(".vacancy-modal__file-input").forEach((input) => {
-            const label = input.closest(".vacancy-modal__file")?.querySelector(".vacancy-modal__file-text");
+    // popup
+    if (document.querySelectorAll(".popup__file-input").length > 0) {
+        document.querySelectorAll(".popup__file-input").forEach((input) => {
+            const label = input.closest(".popup__file")?.querySelector(".popup__file-text");
             if (!label) return;
 
             const defaultText = label.textContent.trim();
@@ -569,8 +612,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    if (document.querySelectorAll(".vacancy-modal__form").length > 0) {
-        document.querySelectorAll(".vacancy-modal__form").forEach((form) => {
+    if (document.querySelectorAll(".popup__form").length > 0) {
+        document.querySelectorAll(".popup__form").forEach((form) => {
             form.addEventListener("submit", (event) => {
                 event.preventDefault();
             });
@@ -725,31 +768,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 panel.removeAttribute("hidden");
             } else {
                 panel.setAttribute("hidden", "");
-            }
-        });
-    }
-
-    function handleProductThumbClick(thumb) {
-        const root = thumb.closest(".product");
-        if (!root) return;
-
-        const src = thumb.querySelector("img")?.getAttribute("src");
-        const mainImage = root.querySelector(".product-gallery__image");
-        const zoomLink = root.querySelector(".product-gallery__zoom");
-        if (!src || !mainImage) return;
-
-        mainImage.setAttribute("src", src);
-        if (zoomLink) {
-            zoomLink.setAttribute("href", src);
-        }
-
-        root.querySelectorAll(".product-gallery__thumb").forEach((item) => {
-            const isActive = item === thumb;
-            item.classList.toggle("is-active", isActive);
-            if (isActive) {
-                item.setAttribute("aria-current", "true");
-            } else {
-                item.removeAttribute("aria-current");
             }
         });
     }
@@ -937,9 +955,15 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleProductCardFavorite(productCardFavorite);
         }
 
-        const productThumb = target.closest(".product-gallery__thumb");
-        if (productThumb) {
-            handleProductThumbClick(productThumb);
+        const productZoom = target.closest(".product-gallery__zoom");
+        if (productZoom) {
+            const gallery = productZoom.closest(".product-gallery");
+            const activeLink = gallery?.querySelector(
+                ".product-gallery__main .swiper-slide-active [data-fancybox]"
+            );
+            if (activeLink) {
+                activeLink.click();
+            }
         }
 
         const productVolume = target.closest(".product-info__chip");
@@ -999,5 +1023,7 @@ if (typeof Fancybox !== "undefined") {
         placeFocusBack: true,
         backdropClick: "close",
         dragToClose: (fancybox) => fancybox.getSlide()?.type !== "inline",
+        closeButtonTpl:
+            '<button class="f-button icon-cross-circle" title="Закрыть" data-fancybox-close></button>',
     });
 }

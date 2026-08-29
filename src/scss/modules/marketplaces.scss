@@ -118,7 +118,6 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: rem(10);
 	width: 100%;
 	min-height: rem(93);
 	padding: rem(16);
@@ -139,12 +138,24 @@
 	@media (any-hover: hover) {
 		&:hover {
 			box-shadow: $shadow-soft;
+
+			.marketplace-card__caption {
+				margin-top: rem(10);
+				max-height: rem(16);
+				opacity: 1;
+			}
 		}
 	}
 
 	&:focus-visible {
 		outline: none;
 		box-shadow: $focus-ring;
+
+		.marketplace-card__caption {
+			margin-top: rem(10);
+			max-height: rem(16);
+			opacity: 1;
+		}
 	}
 
 	// marketplace-card__logo
@@ -183,11 +194,16 @@
 
 	// marketplace-card__caption
 	&__caption {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
 		font-family: $fontfamily, sans-serif;
 		font-size: rem(11);
 		font-weight: 500;
 		line-height: math.div(12, 11);
 		color: $color-muted;
+		text-align: center;
+		transition: opacity 0.2s ease, max-height 0.2s ease, margin-top 0.2s ease;
 	}
 }
 

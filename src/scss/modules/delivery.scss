@@ -130,13 +130,6 @@
 		color: $color-muted;
 		line-height: math.div(22, 16);
 	}
-
-	// help-aside__promo-btn
-	&__promo-btn {
-		min-height: rem(50);
-		padding: rem(16) rem(30);
-		font-size: rem(18);
-	}
 }
 
 .delivery-intro {
@@ -271,113 +264,5 @@
 		line-height: math.div(26, 14);
 		color: $color-text;
 		max-width: rem(212);
-	}
-}
-
-.delivery-faq {
-	// delivery-faq__title
-	&__title {
-		margin: 0 0 rem(24);
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(32);
-		}
-	}
-
-	// delivery-faq__list
-	&__list {
-		display: flex;
-		flex-direction: column;
-		gap: rem(16);
-	}
-
-	// delivery-faq__item
-	&__item {
-		border-radius: rem(15);
-		background: #f7f7f7;
-		overflow: hidden;
-
-		&.is-open {
-			.delivery-faq__question::before {
-				transform: rotate(45deg);
-			}
-
-			.delivery-faq__answer {
-				display: block;
-			}
-		}
-	}
-
-	// delivery-faq__question
-	&__question {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		gap: rem(16);
-		width: 100%;
-		padding: rem(18) rem(20);
-		background: transparent;
-		text-align: left;
-		cursor: pointer;
-		color: $color-text;
-
-		@media (min-width: $md4) {
-			padding: rem(18) rem(32);
-		}
-
-		&::before {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-shrink: 0;
-			order: 1;
-			width: rem(48);
-			height: rem(48);
-			border-radius: 50%;
-			background: $color-primary;
-			color: $color-white;
-			font-size: rem(20);
-			transition: transform 0.25s $ease-layout;
-
-			@media (min-width: $md4) {
-				width: rem(64);
-				height: rem(64);
-				font-size: rem(24);
-			}
-		}
-
-		&:focus-visible {
-			outline: none;
-			box-shadow: $focus-ring;
-		}
-	}
-
-	// delivery-faq__question-text
-	&__question-text {
-		font-family: $fontfamily, sans-serif;
-		font-size: rem(16);
-		font-weight: 500;
-		line-height: 1.5;
-		letter-spacing: rem(-0.5);
-		color: #4b4a50;
-
-		@media (min-width: $md4) {
-			font-size: rem(18);
-		}
-	}
-
-	// delivery-faq__answer
-	&__answer {
-		display: none;
-		padding: 0 rem(20) rem(24);
-
-		@media (min-width: $md4) {
-			padding: 0 rem(32) rem(28);
-			padding-right: rem(112);
-		}
-
-		p {
-			line-height: math.div(26, 16);
-		}
 	}
 }

@@ -98,13 +98,4 @@
 			min-width: rem(208);
 		}
 	}
-
-	// category-card--accent
-	&.category-card--accent {
-		.category-card__btn.btn--primary {
-			font-size: rem(16);
-			font-weight: 600;
-			padding-block: rem(19);
-		}
-	}
 }

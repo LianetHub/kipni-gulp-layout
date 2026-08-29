@@ -61,9 +61,7 @@
               </div>
             </div>
 
-            <div class="contacts-map">
-              <iframe class="contacts-map__frame" src="https://yandex.ru/map-widget/v1/?ll=43.522513%2C56.458492&mode=search&oid=216863477058&ol=biz&z=16" title="Карта расположения производства KIPNI: Нижегородская область, р.п. Гидроторф, Административная улица, 21" loading="lazy" allowfullscreen></iframe>
-            </div>
+            @@include('html/templates/contacts-map.html')
 
             <div class="row gy-4 gy-xl-0 contacts-bottom">
               <div class="col-12 col-xl-8">
@@ -102,52 +100,17 @@
                       </span>
                     </label>
 
-                    <button class="btn btn--primary contacts-form__submit" type="submit">Задать вопрос</button>
+                    <button class="btn btn--primary btn--large contacts-form__submit" type="submit">Задать вопрос</button>
                   </form>
                 </div>
               </div>
 
               <div class="col-12 col-xl-4">
-                <section class="contacts-faq" aria-labelledby="contacts-faq-title">
-                  <h2 class="contacts-faq__title" id="contacts-faq-title">Частые вопросы</h2>
-                  <p class="text contacts-faq__lead">И у нас уже есть на них ответы!</p>
-
-                  <div class="contacts-faq__list">
-                    <div class="contacts-faq__item">
-                      <button class="contacts-faq__question icon-plus" type="button" aria-expanded="false" aria-controls="contacts-faq-answer-1" id="contacts-faq-question-1">
-                        <span class="contacts-faq__question-text">Как правильно хранить бытовую химию KiPNi?</span>
-                      </button>
-                      <div class="contacts-faq__answer" id="contacts-faq-answer-1" role="region" aria-labelledby="contacts-faq-question-1" hidden>
-                        <p class="text">Храните средства в&nbsp;оригинальной упаковке, в&nbsp;сухом месте при комнатной температуре, вдали от&nbsp;прямых солнечных лучей и&nbsp;в&nbsp;недоступном для детей месте. Плотно закрывайте крышку после использования.</p>
-                      </div>
-                    </div>
-
-                    <div class="contacts-faq__item">
-                      <button class="contacts-faq__question icon-plus" type="button" aria-expanded="false" aria-controls="contacts-faq-answer-2" id="contacts-faq-question-2">
-                        <span class="contacts-faq__question-text">Для каких поверхностей и материалов подходит продукция?</span>
-                      </button>
-                      <div class="contacts-faq__answer" id="contacts-faq-answer-2" role="region" aria-labelledby="contacts-faq-question-2" hidden>
-                        <p class="text">Ассортимент KIPNI рассчитан на&nbsp;повседневный уход за домом и&nbsp;личными вещами. Назначение и&nbsp;рекомендации по&nbsp;поверхностям указаны на&nbsp;этикетке каждого средства&nbsp;— следуйте инструкции на&nbsp;упаковке.</p>
-                      </div>
-                    </div>
-
-                    <div class="contacts-faq__item">
-                      <button class="contacts-faq__question icon-plus" type="button" aria-expanded="false" aria-controls="contacts-faq-answer-3" id="contacts-faq-question-3">
-                        <span class="contacts-faq__question-text">Безопасны ли средства для детей и домашних животных?</span>
-                      </button>
-                      <div class="contacts-faq__answer" id="contacts-faq-answer-3" role="region" aria-labelledby="contacts-faq-question-3" hidden>
-                        <p class="text">Мы&nbsp;разрабатываем формулы с&nbsp;заботой о&nbsp;семье. При этом любую бытовую химию нужно хранить в&nbsp;недоступном для детей и&nbsp;животных месте и&nbsp;использовать по&nbsp;назначению согласно инструкции на&nbsp;упаковке.</p>
-                      </div>
-                    </div>
-
-                    <div class="contacts-faq__item">
-                      <button class="contacts-faq__question icon-plus" type="button" aria-expanded="false" aria-controls="contacts-faq-answer-4" id="contacts-faq-question-4">
-                        <span class="contacts-faq__question-text">Как правильно рассчитать необходимое количество средства?</span>
-                      </button>
-                      <div class="contacts-faq__answer" id="contacts-faq-answer-4" role="region" aria-labelledby="contacts-faq-question-4" hidden>
-                        <p class="text">Дозировка указана на&nbsp;этикетке. Ориентируйтесь на&nbsp;рекомендации производителя и&nbsp;степень загрязнения&nbsp;— избыток средства не&nbsp;улучшает результат и&nbsp;не&nbsp;нужен для ежедневного ухода.</p>
-                      </div>
-                    </div>
+                <section class="faq" aria-labelledby="faq-title">
+                  <h2 class="h2 faq__title" id="faq-title">Частые вопросы</h2>
+                  <p class="text faq__lead">И у нас уже есть на них ответы!</p>
+                  <div class="faq__list">
+                    @@loop('html/templates/faq-item.html', 'html/json/faq-items.json')
                   </div>
                 </section>
               </div>

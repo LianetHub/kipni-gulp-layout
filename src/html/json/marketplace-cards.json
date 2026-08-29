@@ -1,0 +1,55 @@
+[
+	{
+		"href": "#",
+		"aria_label": "Купить на Avito",
+		"logo": "@img/shared/logos/marketplaces/avito.svg",
+		"alt": "Avito",
+		"width": "160",
+		"height": "24"
+	},
+	{
+		"href": "#",
+		"aria_label": "Купить на Ozon",
+		"logo": "@img/shared/logos/marketplaces/ozon.svg",
+		"alt": "Ozon",
+		"width": "98",
+		"height": "21",
+		"logo_mod": "marketplace-card__logo--ozon"
+	},
+	{
+		"href": "#",
+		"aria_label": "Купить на Wildberries",
+		"logo": "@img/shared/logos/marketplaces/wildberries.svg",
+		"alt": "Wildberries",
+		"width": "160",
+		"height": "24",
+		"logo_mod": "marketplace-card__logo--wb"
+	},
+	{
+		"href": "#",
+		"aria_label": "Купить на Мегамаркете",
+		"logo": "@img/shared/logos/marketplaces/megamarket.svg",
+		"alt": "Мегамаркет",
+		"width": "195",
+		"height": "29",
+		"logo_mod": "marketplace-card__logo--mega"
+	},
+	{
+		"href": "#",
+		"aria_label": "Купить на Яндекс Маркете",
+		"logo": "@img/shared/logos/marketplaces/yandex-market.png",
+		"alt": "Яндекс Маркет",
+		"width": "174",
+		"height": "26",
+		"logo_mod": "marketplace-card__logo--yandex"
+	},
+	{
+		"href": "#",
+		"aria_label": "Купить на Магнит Маркете",
+		"logo": "@img/shared/logos/marketplaces/magnit.png",
+		"alt": "Магнит Маркет",
+		"width": "191",
+		"height": "36",
+		"logo_mod": "marketplace-card__logo--magnit"
+	}
+]
