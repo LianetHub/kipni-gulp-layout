@@ -197,7 +197,6 @@
 	// about-fact__title
 	&__title {
 		margin: 0 0 rem(16);
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(20);
 		font-weight: 600;
 		line-height: math.div(24, 20);
@@ -301,7 +300,6 @@
 
 	// about-philosophy__name
 	&__name {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(18);
 		font-weight: 500;
 		line-height: math.div(26, 18);

@@ -9,7 +9,6 @@
 	padding: rem(19) rem(30);
 	border-radius: $radius-btn;
 	border: none;
-	font-family: $fontfamily, sans-serif;
 	font-size: rem(16);
 	font-weight: 600;
 	line-height: math.div(18, 16);
@@ -275,7 +274,6 @@
 	justify-content: center;
 	padding: rem(8) rem(9);
 	border-radius: $radius-md;
-	font-family: $fontfamily, sans-serif;
 	font-size: rem(14);
 	font-weight: 700;
 	line-height: math.div(15, 14);
@@ -572,7 +570,6 @@ $scrollbarColor: $color-primary;
 
 	// benefits__text
 	&__text {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: 1.2;

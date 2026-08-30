@@ -96,7 +96,6 @@
 
 	// category-card__title
 	&__title {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 600;
 		line-height: math.div(18, 16);
@@ -118,7 +117,6 @@
 		display: none;
 		margin: rem(16) 0 0;
 		max-width: rem(195);
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: math.div(17, 16);

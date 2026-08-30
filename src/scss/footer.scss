@@ -60,7 +60,6 @@
 	&__tagline {
 		max-width: rem(280);
 		margin-top: rem(16);
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 14);
@@ -91,7 +90,7 @@
 		color: $color-text;
 
 		@media (min-width: $md2) {
-			margin-bottom: rem(28);
+			margin-bottom: rem(24);
 			font-size: rem(20);
 			line-height: math.div(22, 20);
 		}
@@ -101,16 +100,11 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: rem(20);
-
-		@media (min-width: $md2) {
-			gap: rem(25);
-		}
+		gap: rem(16);
 	}
 
 	// footer__link
 	&__link {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 14);
@@ -138,7 +132,6 @@
 
 	// footer__phone
 	&__phone {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(18);
 		font-weight: 600;
 		line-height: math.div(20, 18);
@@ -160,7 +153,6 @@
 	// footer__hours
 	&__hours {
 		margin-top: rem(8);
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(12);
 		font-weight: 400;
 		line-height: math.div(14, 12);
@@ -175,7 +167,6 @@
 	// footer__email
 	&__email {
 		margin-top: rem(16);
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 500;
 		line-height: math.div(18, 16);
@@ -199,16 +190,14 @@
 	&__socials {
 		display: flex;
 		align-items: center;
-		gap: rem(10);
-		margin-top: rem(20);
-
-		@media (min-width: $md2) {
-			margin-top: rem(24);
-		}
+		gap: rem(8);
+		margin-top: rem(16);
 	}
 
 	// footer__social
 	&__social {
+		position: relative;
+		z-index: 1;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -226,17 +215,55 @@
 			height: rem(40);
 		}
 
-		img {
-			width: auto;
-			height: auto;
-			max-width: rem(20);
-			max-height: rem(16);
-			object-fit: contain;
+		&.icon-vk {
+			font-size: 0.75rem;
+
+			@media (any-hover: hover) {
+				&:hover {
+					background: #0077ff;
+					border-color: #0077ff;
+				}
+			}
+		}
+
+		&.icon-max {
+			&::after {
+				content: '';
+				position: absolute;
+				inset: -2px;
+				z-index: -1;
+				border-radius: 50%;
+				background: linear-gradient(309deg, #0cf -6.06%, #007aff 33.55%, #630eff 65.79%, #aa4cff 96.45%);
+				opacity: 0;
+				transition: all 0.3s ease;
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					&::after {
+						opacity: 1;
+					}
+
+					background: transparent;
+					border-color: transparent;
+				}
+			}
+		}
+
+		&.icon-telegram {
+			@media (any-hover: hover) {
+				&:hover {
+					background: #0088CC;
+					border-color: #0088CC;
+				}
+			}
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				background: $color-soft-green;
+				background: $color-primary;
+				border-color: $color-primary;
+				color: #fff;
 			}
 		}
 
@@ -259,13 +286,13 @@
 	&__legal {
 		display: flex;
 		flex-direction: column;
-		gap: rem(12);
+		gap: rem(24);
 
 		// footer__legal--desktop
 		&--desktop {
 			display: none;
 			margin-top: auto;
-			padding-top: rem(48);
+			padding-top: rem(60);
 			text-align: left;
 			align-items: flex-start;
 
@@ -288,7 +315,6 @@
 
 	// footer__legal-link
 	&__legal-link {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		font-weight: 500;
 		line-height: math.div(17, 14);
@@ -316,7 +342,6 @@
 
 	// footer__copy
 	&__copy {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(17, 14);

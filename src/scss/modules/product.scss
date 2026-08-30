@@ -231,7 +231,6 @@
 
 	// product-info__score
 	&__score {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(18);
 		font-weight: 600;
 		line-height: math.div(22, 18);
@@ -260,7 +259,6 @@
 		background: transparent;
 		box-shadow: $shadow-green;
 		color: $color-primary;
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(18);
 		font-weight: 400;
 		line-height: math.div(20, 18);
@@ -337,7 +335,6 @@
 		border-radius: $radius-md;
 		background: #f7f8f3;
 		color: $color-text;
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 700;
 		line-height: math.div(18, 16);
@@ -441,7 +438,6 @@
 		background: $color-bg;
 		box-shadow: $shadow-soft;
 		color: $color-primary;
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: math.div(18, 16);

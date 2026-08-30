@@ -192,7 +192,6 @@
 		padding: rem(12) rem(16);
 		border: none;
 		background: $color-bg;
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 600;
 		line-height: 1.1;
@@ -644,8 +643,6 @@
 		border: 1px solid rgba(52, 52, 52, 0.05);
 		border-radius: $radius-btn;
 		background: #f7f6f7;
-		font-family: $fontfamily,
-		sans-serif;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: 1.1;
@@ -768,7 +765,6 @@
 	// header-nav__link
 	&__link {
 		display: block;
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		font-weight: 500;
 		line-height: 1.1;
@@ -804,8 +800,6 @@
 	border: 1px solid rgba(52, 52, 52, 0.05);
 	border-radius: $radius-btn;
 	background: $color-bg;
-	font-family: $fontfamily,
-	sans-serif;
 	font-size: rem(14);
 	font-weight: 600;
 	line-height: 1.1;
@@ -899,7 +893,6 @@
 		padding: 0 rem(4);
 		border-radius: 50%;
 		background: $color-primary;
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(10);
 		font-weight: 600;
 		line-height: 1;
@@ -995,7 +988,6 @@
 		align-items: center;
 		gap: rem(10);
 		margin: 0 0 rem(20);
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 600;
 		line-height: 1.2;
@@ -1028,7 +1020,6 @@
 		align-items: center;
 		gap: rem(12);
 		padding: rem(6) 0;
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		font-weight: 500;
 		line-height: 1.1;

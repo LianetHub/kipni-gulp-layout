@@ -67,32 +67,25 @@ h4,
 }
 
 .text {
-	font-family: $fontfamily, sans-serif;
 	font-size: rem(16);
 	font-weight: 400;
 	line-height: math.div(19, 16);
-
 }
 
 .text--lg {
-	font-family: $fontfamily, sans-serif;
 	font-size: rem(18);
 	font-weight: 400;
 	line-height: 1.06;
-
 }
 
 .text--sm {
-	font-family: $fontfamily, sans-serif;
 	font-size: rem(14);
 	font-weight: 400;
 	line-height: math.div(17, 14);
-
 }
 
 .caption,
 .caption--2 {
-	font-family: $fontfamily, sans-serif;
 	font-size: rem(14);
 	font-weight: 400;
 	line-height: math.div(17, 14);
@@ -163,7 +156,6 @@ h4,
 	}
 
 	>p {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: math.div(26, 16);
@@ -184,7 +176,6 @@ h4,
 		li {
 			position: relative;
 			padding-left: rem(14);
-			font-family: $fontfamily, sans-serif;
 			font-size: rem(16);
 			font-weight: 400;
 			line-height: math.div(16, 16);

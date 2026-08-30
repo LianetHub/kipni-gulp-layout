@@ -290,7 +290,6 @@
 		max-height: 0;
 		overflow: hidden;
 		opacity: 0;
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(16);
 		font-weight: 400;
 		line-height: math.div(17, 16);
@@ -319,7 +318,6 @@
 
 	// marketplace-perk__text
 	&__text {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(15, 14);
