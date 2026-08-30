@@ -57,20 +57,18 @@
 			top: rem(-24);
 			width: rem(440);
 			height: rem(440);
-			transform: translate(28%, -8%);
+			transform: translate(50%, -8%);
 		}
 
-		@media (min-width: $md1) {
+		@media (min-width: $md0) {
 			top: rem(-7);
-			right: rem(-80);
+			right: rem(-240);
 			width: rem(536);
 			height: rem(536);
 			transform: none;
 		}
 
-		@media (min-width: $md0) {
-			right: rem(-240);
-		}
+
 	}
 
 	// marketplaces__layout
@@ -296,6 +294,12 @@
 		color: $color-muted;
 		text-align: center;
 		transition: opacity 0.2s ease, max-height 0.2s ease, margin-top 0.2s ease;
+
+		@media (hover: none) {
+			margin-top: 0.625em;
+			max-height: 1.06em;
+			opacity: 1;
+		}
 	}
 }
 

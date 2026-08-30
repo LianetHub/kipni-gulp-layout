@@ -12,8 +12,17 @@ h1,
 	line-height: math.div(43, 36);
 
 	@media (min-width: $md4) {
-		font-size: rem(64);
+		font-size: rem(48);
 		line-height: 1.1;
+	}
+
+	@media (min-width:$md2) {
+		font-size: rem(56);
+	}
+
+	@media (min-width: $md1) {
+		font-size: rem(64);
+
 	}
 }
 
@@ -24,26 +33,40 @@ h2,
 	line-height: math.div(34, 28);
 
 	@media (min-width: $md4) {
-		font-size: rem(36);
+		font-size: rem(32);
 		line-height: math.div(43, 36);
+	}
+
+	@media (min-width:$md1) {
+		font-size: rem(36);
+
 	}
 }
 
 .title-lg {
+	font-weight: 600;
+	line-height: 1.2;
+
 	@media (min-width: $md4) {
-		font-family: $fontfamily, sans-serif;
+		font-size: rem(36);
+	}
+
+	@media (min-width:$md2) {
+		font-size: rem(40);
+	}
+
+	@media (min-width:$md1) {
 		font-size: rem(45);
-		font-weight: 600;
-		line-height: 1.2;
+
 	}
 }
 
 .title-md {
+	font-weight: 600;
+	line-height: 1.2;
+
 	@media (min-width: $md4) {
-		font-family: $fontfamily, sans-serif;
 		font-size: rem(30);
-		font-weight: 600;
-		line-height: 1.2;
 	}
 }
 

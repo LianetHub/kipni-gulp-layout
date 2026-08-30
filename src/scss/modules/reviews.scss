@@ -11,7 +11,11 @@
 
 	@media (min-width: $md2) {
 		padding-block: rem(88);
+	}
+
+	@media (min-width:$md1) {
 		padding-bottom: rem(120);
+
 	}
 
 

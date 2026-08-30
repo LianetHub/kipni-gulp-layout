@@ -112,9 +112,12 @@
 
 	// btn--large
 	&--large {
-		font-size: rem(18);
-		font-weight: 500;
-		padding-block: rem(20);
+		@media (min-width:$md1) {
+			font-size: rem(18);
+			font-weight: 500;
+			padding-block: rem(20);
+
+		}
 	}
 
 	&.icon-chevron-right::before,

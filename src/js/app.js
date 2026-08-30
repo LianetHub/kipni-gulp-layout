@@ -384,15 +384,26 @@ document.addEventListener("DOMContentLoaded", () => {
                 slidesPerView: "auto",
                 spaceBetween: 11,
                 speed: 500,
+                watchOverflow: true,
                 navigation: {
                     prevEl: popularPrev,
                     nextEl: popularNext,
                 },
                 breakpoints: {
                     768: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    992: {
+                        slidesPerView: 4,
                         spaceBetween: 20,
                     },
                     1200: {
+                        slidesPerView: 5,
+                        spaceBetween: 21,
+                    },
+                    1440: {
+                        slidesPerView: 6,
                         spaceBetween: 21,
                     },
                 },

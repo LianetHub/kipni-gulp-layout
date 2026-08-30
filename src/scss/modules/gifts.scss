@@ -47,7 +47,12 @@
 
 		@media (min-width: $md2) {
 			min-height: rem(394);
+			padding: rem(60) rem(30);
+		}
+
+		@media (min-width:$md1) {
 			padding: rem(74) rem(68);
+
 		}
 	}
 

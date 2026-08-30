@@ -23,7 +23,11 @@
 
 	// popular__slider-wrap
 	&__slider-wrap {
-		overflow: hidden;
+		overflow: visible;
+
+		@media (min-width: $md4) {
+			overflow: hidden;
+		}
 	}
 
 	// popular__slider-container
@@ -33,15 +37,22 @@
 
 	// popular__slider
 	&__slider {
+		overflow: visible;
 		padding: 0 10px;
 		margin: 0 -10px;
+
+		@media (min-width: $md4) {
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+		}
 
 		.swiper-slide {
 			height: auto;
 			width: rem(182);
 
 			@media (min-width: $md4) {
-				width: rem(224);
+				width: auto;
 			}
 		}
 

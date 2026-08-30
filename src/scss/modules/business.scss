@@ -13,7 +13,7 @@
 		overflow: hidden;
 		border-radius: rem(20);
 		min-height: rem(373);
-		background-color: #e8f0f8;
+		background-color: #dfe9f1;
 
 		@media (min-width: $md4) {
 			min-height: rem(360);
@@ -35,8 +35,14 @@
 			display: block;
 			width: 100%;
 			height: 100%;
-			object-fit: cover;
 			object-position: right center;
+			object-fit: contain;
+			mix-blend-mode: multiply;
+
+			@media (min-width:$md1) {
+				object-fit: cover;
+
+			}
 		}
 	}
 
@@ -58,7 +64,12 @@
 
 		@media (min-width: $md2) {
 			min-height: rem(394);
+			padding: rem(32);
+		}
+
+		@media (min-width:$md1) {
 			padding: rem(59) rem(40) rem(59) rem(68);
+
 		}
 	}
 

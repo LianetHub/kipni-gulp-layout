@@ -79,7 +79,12 @@ img {
 	}
 
 	@media (min-width: $md1) {
+		max-width: rem(1320);
+	}
+
+	@media (min-width:$md0) {
 		max-width: $maxWidthContainer;
+
 	}
 }
 
