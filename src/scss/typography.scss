@@ -12,8 +12,13 @@ h1,
 	line-height: math.div(43, 36);
 
 	@media (min-width: $md4) {
-		font-size: rem(48);
+		font-size: rem(40);
 		line-height: 1.1;
+	}
+
+	@media (min-width:$md3) {
+		font-size: rem(48);
+
 	}
 
 	@media (min-width:$md2) {

@@ -5,15 +5,24 @@
 	align-items: center;
 	justify-content: center;
 	gap: rem(10);
-	min-height: rem(50);
-	padding: rem(19) rem(30);
-	border-radius: $radius-btn;
+	line-height: 1.1;
+
 	border: none;
-	font-size: rem(16);
 	font-weight: 600;
-	line-height: math.div(18, 16);
+	border-radius: rem(8);
 	cursor: pointer;
 	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+	padding: rem(15) rem(22);
+	font-size: rem(14);
+
+	@media (min-width:$md3) {
+		border-radius: $radius-btn;
+		padding: rem(19) rem(30);
+		min-height: rem(50);
+		font-size: rem(16);
+		line-height: math.div(18, 16);
+
+	}
 
 	&:focus-visible {
 		outline: none;

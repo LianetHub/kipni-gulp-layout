@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // header
     const BANNER_STORAGE_KEY = "kipni-banner-hidden";
     const BANNER_CLOSE_MS = 460;
-    const HEADER_DESKTOP_MQ = "(min-width: 767.98px)";
+    const HEADER_DESKTOP_MQ = "(min-width: 991.98px)";
     const HEADER_SEARCH_MQ = "(min-width: 1199.98px)";
 
     let h = null;
