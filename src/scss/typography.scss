@@ -8,8 +8,14 @@
 h1,
 .h1 {
 	@extend %heading;
-	font-size: rem(36);
-	line-height: math.div(43, 36);
+	font-size: rem(24);
+	line-height: 1.1;
+
+	@media (min-width:$md5) {
+		line-height: math.div(43, 36);
+		font-size: rem(36);
+
+	}
 
 	@media (min-width: $md4) {
 		font-size: rem(40);
@@ -34,8 +40,12 @@ h1,
 h2,
 .h2 {
 	@extend %heading;
-	font-size: rem(28);
 	line-height: math.div(34, 28);
+	font-size: rem(24);
+
+	@media (min-width:$md5) {
+		font-size: rem(28);
+	}
 
 	@media (min-width: $md4) {
 		font-size: rem(32);
@@ -51,6 +61,11 @@ h2,
 .title-lg {
 	font-weight: 600;
 	line-height: 1.2;
+	font-size: rem(24);
+
+	@media (min-width:$md5) {
+		font-size: rem(36);
+	}
 
 	@media (min-width: $md4) {
 		font-size: rem(36);
@@ -69,6 +84,7 @@ h2,
 .title-md {
 	font-weight: 600;
 	line-height: 1.2;
+	font-size: rem(24);
 
 	@media (min-width: $md4) {
 		font-size: rem(30);
@@ -95,20 +111,36 @@ h3,
 h4,
 .h4 {
 	@extend %heading;
-	font-size: rem(18);
 	line-height: math.div(22, 18);
+
+	font-size: rem(16);
+
+	@media (min-width:$md5) {
+		font-size: rem(18);
+
+	}
 }
 
 .text {
-	font-size: rem(16);
 	font-weight: 400;
 	line-height: math.div(19, 16);
+	font-size: rem(14);
+
+	@media (min-width:$md5) {
+		font-size: rem(16);
+
+	}
 }
 
 .text--lg {
-	font-size: rem(18);
 	font-weight: 400;
 	line-height: 1.06;
+	font-size: rem(14);
+
+	@media (min-width:$md5) {
+		font-size: rem(18);
+
+	}
 }
 
 .text--sm {

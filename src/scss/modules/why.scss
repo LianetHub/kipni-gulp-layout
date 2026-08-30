@@ -12,7 +12,12 @@
 	// why__head
 	&__head {
 		text-align: center;
-		margin-bottom: rem(32);
+		margin-bottom: rem(40);
+
+		@media (min-width:$md4) {
+			margin-bottom: rem(32);
+
+		}
 
 		@media (min-width: $md3) {
 			margin-bottom: rem(70);
@@ -21,16 +26,32 @@
 
 	// why__title
 	&__title {
-		max-width: rem(354);
-		margin-inline: auto;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		&.title-lg {
+
+			@media (max-width:$md5) {
+				font-size: rem(28);
+				font-weight: 600;
+			}
+		}
+
 	}
 
 	// why__lead
 	&__lead {
-		margin: rem(16) 0 0;
+		margin: rem(16) auto 0;
 		text-align: center;
 		color: $color-muted;
 		font-weight: 400;
+
+		@media (max-width:$md5) {
+			margin: rem(12) auto 0;
+			font-size: rem(16);
+			max-width: 80%;
+		}
 
 	}
 
@@ -38,17 +59,25 @@
 	&__rows {
 		display: flex;
 		flex-direction: column;
-		gap: rem(40);
+		gap: rem(20);
 
-		@media (min-width: $md2) {
+		@media (min-width: $md3) {
 			gap: rem(40);
 		}
 	}
 
 	// why__row
 	&__row {
-		--gutter-y: #{rem(20)};
 		align-items: center;
+
+		border-radius: rem(20);
+
+		@media (max-width:$md3) {
+			background: #F8F8F8;
+			--gutter-y: #{rem(0)};
+			--gutter-x: #{rem(0)};
+
+		}
 
 		@media (min-width: $md2) {
 			--gutter-y: 0;
@@ -67,6 +96,10 @@
 		overflow: hidden;
 		border-radius: rem(20);
 
+		& img {
+			min-height: rem(184);
+		}
+
 		@media (min-width: $md2) {
 			height: rem(350);
 		}
@@ -74,9 +107,9 @@
 
 	// why__copy
 	&__copy {
-		padding-top: rem(8);
+		padding: 1.5rem 1.5rem 1.5rem;
 
-		@media (min-width: $md2) {
+		@media (min-width: $md3) {
 			padding: rem(40) rem(40) rem(40) rem(40);
 			max-width: rem(520);
 		}
@@ -93,15 +126,20 @@
 
 	// why__subtitle
 	&__subtitle {
-		font-weight: 600;
 		color: $color-primary;
+		font-weight: 500;
+
+		@media (min-width:$md5) {
+			font-weight: 600;
+
+		}
 	}
 
 	// why__text
 	&__text {
-		margin: rem(16) 0 0;
-		font-size: rem(15);
-		line-height: math.div(22, 15);
+		margin: rem(12) 0 0;
+		font-size: rem(14);
+		line-height: math.div(18, 15);
 		color: $color-text;
 
 		@media (min-width: $md4) {

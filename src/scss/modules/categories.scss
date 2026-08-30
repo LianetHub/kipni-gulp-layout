@@ -10,6 +10,16 @@
 	@media (min-width: $md2) {
 		padding-block: rem(80);
 	}
+
+	.row {
+		--gutter-y: #{rem(12)};
+		--gutter-x: #{rem(12)};
+
+		@media (min-width: $md4) {
+			--gutter-y: #{rem(16)};
+			--gutter-x: #{rem(16)};
+		}
+	}
 }
 
 .category-card {
@@ -104,6 +114,7 @@
 		font-weight: 600;
 		line-height: math.div(18, 16);
 		color: $color-text;
+		max-width: 50%;
 
 		@media (min-width: $md4) {
 			font-size: rem(20);

@@ -316,28 +316,56 @@ document.addEventListener("DOMContentLoaded", () => {
     if (typeof Swiper !== "undefined") {
         if (document.querySelector(".hero__slider")) {
             const heroSlider = document.querySelector(".hero__slider");
-            const heroPagination = heroSlider.querySelector(".swiper-pagination");
+            const heroPagination = heroSlider.closest(".hero")?.querySelector(".swiper-pagination");
+            const heroDesktopMq = window.matchMedia("(min-width: 576px)");
+            let heroSwiper = null;
 
-            new Swiper(heroSlider, {
-                slidesPerView: 1,
-                speed: 600,
-                loop: true,
-                effect: "fade",
-                fadeEffect: {
-                    crossFade: true,
-                },
-                pagination: heroPagination
+            const initHeroSwiper = () => {
+                if (heroSwiper) {
+                    heroSwiper.destroy(true, true);
+                    heroSwiper = null;
+                }
+
+                const pagination = heroPagination
                     ? {
                         el: heroPagination,
                         clickable: true,
                     }
-                    : undefined,
-                on: {
+                    : undefined;
+
+                const onInit = {
                     init(instance) {
                         instance.el.classList.add("is-swiper-ready");
                     },
-                },
-            });
+                };
+
+                if (heroDesktopMq.matches) {
+                    heroSwiper = new Swiper(heroSlider, {
+                        slidesPerView: 1,
+                        speed: 600,
+                        loop: true,
+                        effect: "fade",
+                        fadeEffect: {
+                            crossFade: true,
+                        },
+                        pagination,
+                        on: onInit,
+                    });
+                } else {
+                    heroSwiper = new Swiper(heroSlider, {
+                        slidesPerView: "auto",
+                        centeredSlides: true,
+                        spaceBetween: 10,
+                        speed: 600,
+                        loop: true,
+                        pagination,
+                        on: onInit,
+                    });
+                }
+            };
+
+            initHeroSwiper();
+            heroDesktopMq.addEventListener("change", initHeroSwiper);
         }
 
         if (document.querySelectorAll(".buy-partners__slider").length > 0) {

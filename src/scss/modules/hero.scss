@@ -3,15 +3,23 @@
 .hero {
 	position: relative;
 	overflow: hidden;
+	padding: 0.5rem 0;
+
+	@media (min-width:$md5) {
+		padding: 0;
+	}
 
 	// hero__slider
 	&__slider {
 		width: 100%;
-		height: rem(380);
+		height: rem(354);
 
-		@media (min-width:$md4) {
+		@media (min-width: $md5) {
+			height: rem(380);
+		}
+
+		@media (min-width: $md4) {
 			height: rem(520);
-
 		}
 
 		@media (min-width: $md2) {
@@ -27,36 +35,70 @@
 				pointer-events: none;
 			}
 		}
+
+		.swiper-slide {
+			opacity: 0.5;
+			transition: opacity 0.3s ease;
+
+			@media (min-width: $md5) {
+				opacity: 1;
+			}
+		}
+
+		.swiper-slide-active,
+		.swiper-slide-duplicate-active {
+			opacity: 1;
+		}
 	}
 
 	// hero__pagination
 	&__pagination {
+		position: static;
+		margin-top: rem(16);
+
+		@media (min-width: $md5) {
+			position: absolute;
+			inset-inline: 0;
+			bottom: rem(20);
+			margin-top: 0;
+			z-index: $ui-index-2;
+		}
+
 		@media (min-width: $md4) {
-			--swiper-pagination-bottom: #{rem(28)};
+			bottom: rem(28);
 		}
 	}
 }
 
 .hero-slide {
 	position: relative;
+	width: calc(100% - #{rem(40)});
 	height: 100%;
 	overflow: hidden;
+	border-radius: $radius-md;
 	background: $color-surface;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: center;
-	padding-top: rem(40);
-	padding-bottom: rem(56);
+	background-position: 100% center;
+	padding-top: rem(24);
+	padding-bottom: rem(24);
+
+	@media (min-width: $md5) {
+		width: 100%;
+		border-radius: 0;
+		background-position: center;
+		padding-top: rem(40);
+		padding-bottom: rem(56);
+	}
 
 	@media (min-width: $md4) {
 		display: flex;
 		flex-direction: column;
-
 		padding-top: rem(48);
 		padding-bottom: rem(74);
 	}
 
-	@media (min-width:$md2) {
+	@media (min-width: $md2) {
 		justify-content: flex-end;
 	}
 
@@ -88,10 +130,17 @@
 		z-index: $ui-index-2;
 		display: flex;
 
-		@media (min-width:$md2) {
-			align-items: flex-end;
+		&.container {
+			padding-inline: rem(24);
+
+			@media (min-width: $md5) {
+				padding-inline: rem(16);
+			}
 		}
 
+		@media (min-width: $md2) {
+			align-items: flex-end;
+		}
 	}
 
 	// hero-slide__content
@@ -99,9 +148,8 @@
 		width: 100%;
 		max-width: rem(560);
 
-		@media (min-width:$md2) {
+		@media (min-width: $md2) {
 			max-width: rem(720);
-
 		}
 
 		@media (min-width: $md0) {
@@ -111,14 +159,21 @@
 
 	// hero-slide__title
 	&__title {
-		max-width: rem(550);
+
+
+		@media (min-width: $md5) {
+			max-width: rem(550);
+		}
 
 		@media (min-width: $md4) {
 			max-width: rem(700);
+
 		}
+
 
 		@media (min-width: $md1) {
 			max-width: rem(812);
+
 		}
 	}
 
@@ -130,31 +185,41 @@
 
 	// hero-slide__lead
 	&__lead {
-		margin-top: rem(16);
-		max-width: rem(329);
-		font-size: rem(18);
-		font-weight: 500;
+		margin-top: rem(22);
+		max-width: rem(181);
+		font-size: rem(14);
+		font-weight: 400;
 		line-height: 1.2;
 		color: $color-muted;
+
+		@media (min-width: $md5) {
+			margin-top: rem(16);
+			max-width: rem(329);
+			font-size: rem(18);
+			font-weight: 500;
+		}
 
 		@media (min-width: $md4) {
 			margin-top: rem(24);
 			font-size: rem(20);
 		}
 
-		@media (min-width:$md2) {
+		@media (min-width: $md2) {
 			font-size: rem(24);
-
 		}
 	}
 
 	// hero-slide__actions
 	&__actions {
-		display: flex;
+		display: none;
 		flex-wrap: wrap;
 		align-items: center;
 		gap: rem(12);
 		margin-top: rem(24);
+
+		@media (min-width: $md5) {
+			display: flex;
+		}
 
 		@media (min-width: $md2) {
 			gap: rem(20);
@@ -162,7 +227,6 @@
 		}
 
 		.btn {
-
 			@media (min-width: $md3) {
 				min-height: rem(60);
 				padding-inline: rem(45);
@@ -179,12 +243,11 @@
 	&__features {
 		display: none;
 
-		@media (min-width:$md4) {
+		@media (min-width: $md4) {
 			display: flex;
 			flex-direction: column;
 			gap: rem(16);
 			margin-top: rem(28);
-
 		}
 
 		@media (min-width: $md3) {
@@ -195,10 +258,9 @@
 			margin-top: rem(40);
 		}
 
-		@media (min-width:$md2) {
+		@media (min-width: $md2) {
 			margin-top: rem(60);
 			justify-content: space-between;
-
 		}
 	}
 
@@ -208,9 +270,8 @@
 		align-items: flex-start;
 		gap: rem(12);
 
-		@media (min-width:$md3) {
+		@media (min-width: $md3) {
 			max-width: rem(220);
-
 		}
 
 		@media (min-width: $md4) {
@@ -228,10 +289,9 @@
 		width: rem(40);
 		height: rem(40);
 
-		@media (min-width:$md2) {
+		@media (min-width: $md2) {
 			width: rem(48);
 			height: rem(48);
-
 		}
 
 		@media (min-width: $md0) {
@@ -277,9 +337,8 @@
 		line-height: math.div(15, 14);
 		color: $color-muted;
 
-		@media (min-width:$md2) {
+		@media (min-width: $md2) {
 			font-size: rem(14);
-
 		}
 	}
 }

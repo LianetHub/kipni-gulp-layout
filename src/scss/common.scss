@@ -59,9 +59,10 @@ img {
 	box-sizing: border-box;
 	margin: 0 auto;
 	max-width: 100%;
-	padding-inline: rem(16);
+	padding-inline: rem(10);
 
 	@media (min-width: $md5) {
+		padding-inline: rem(16);
 		box-sizing: content-box;
 		max-width: rem(540);
 	}
