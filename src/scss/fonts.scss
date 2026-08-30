@@ -16,6 +16,13 @@
 								font-style: normal;
 							}
 @font-face {
+								font-family: 'tthoves';
+								font-display: swap;
+								src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
+								font-weight: 500;
+								font-style: normal;
+							}
+@font-face {
 								font-family: 'Manrope';
 								src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"),
 									url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"),
@@ -34,11 +41,4 @@
 								font-stretch: 75% 125%;
 								font-style: normal;
 								font-display: swap;
-							}
-@font-face {
-								font-family: 'tthoves';
-								font-display: swap;
-								src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
-								font-weight: 500;
-								font-style: normal;
 							}

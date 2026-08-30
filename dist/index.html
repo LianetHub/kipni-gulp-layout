@@ -66,7 +66,7 @@
                       <div class="container header-catalog__container">
                         <div class="header-catalog__panel">
                           <div class="row">
-                            <div class="col-12 col-md-5 header-catalog__col header-catalog__col--categories">
+                            <div class="col-12 col-md-4 col-xl-5 header-catalog__col header-catalog__col--categories">
                               <h2 class="header-catalog__title icon-leaf">
                                 Категории товаров
                               </h2>
@@ -148,7 +148,7 @@
                               </ul>
                             </div>
 
-                            <div class="col-12 col-md-3 header-catalog__promo" style="background-image: url('img/catalog-banner.webp');">
+                            <div class="col-12 col-md-4 col-xl-3 header-catalog__promo" style="background-image: url('img/catalog-banner.webp');">
                               <p class="header-catalog__promo-title">Чистота, которой <span>доверяет семья</span></p>
                               <p class="header-catalog__promo-text">Экологичные средства для дома на каждый день</p>
                               <a class="btn btn--primary btn--large header-catalog__promo-btn icon-chevron-right" href="#">
@@ -246,7 +246,7 @@
 
             <form class="header-search" id="header-search" action="search.html" method="get" role="search">
               <label class="visually-hidden" for="header-search-input">Поиск по каталогу</label>
-              <input class="header-search__input" id="header-search-input" type="search" name="s" placeholder="Поиск по каталогу" autocomplete="off">
+              <input class="header-search__input" id="header-search-input" type="text" name="s" placeholder="Поиск по каталогу" autocomplete="off">
               <button class="header-search__submit icon-search" type="submit" aria-label="Искать"></button>
             </form>
           </div>
@@ -934,13 +934,13 @@
                   </h2>
                   <p class="marketplaces__lead text--lg">Наши товары есть на&nbsp;всех крупнейших маркетплейсах</p>
                   <ul class="marketplaces__perks">
-                    <li class="marketplace-perk">
-                      <img class="marketplace-perk__icon" src="img/icons/truck-2.svg" alt="Быстрая доставка" width="42" height="31" loading="lazy">
-                      <span class="marketplace-perk__text">Быстрая<br>доставка</span>
+                    <li class="marketplace__perk">
+                      <img class="marketplace__perk-icon" src="img/icons/truck-2.svg" alt="Быстрая доставка" width="42" height="31" loading="lazy">
+                      <span class="marketplace__perk-text">Быстрая<br>доставка</span>
                     </li>
-                    <li class="marketplace-perk">
-                      <img class="marketplace-perk__icon" src="img/icons/cert.svg" alt="Оригинальная продукция" width="34" height="34" loading="lazy">
-                      <span class="marketplace-perk__text">Оригинальная<br>продукция</span>
+                    <li class="marketplace__perk">
+                      <img class="marketplace__perk-icon" src="img/icons/cert.svg" alt="Оригинальная продукция" width="34" height="34" loading="lazy">
+                      <span class="marketplace__perk-text">Оригинальная<br>продукция</span>
                     </li>
                   </ul>
 
@@ -949,83 +949,77 @@
                   <div class="row marketplaces__shops">
                     <div class="col-6 col-md-4">
                     	<a class="marketplace-card" href="#" aria-label="Купить на Wildberries">
-                    		<img
-                    			class="marketplace-card__logo marketplace-card__logo--wb"
+                    			<img
+                    			class="marketplace-card__logo marketplace-card__logo--lg"
                     			src="img/shared/logos/marketplaces/wildberries.svg"
                     			alt="Wildberries"
                     			width="160"
                     			height="24"
                     			loading="lazy"
-                    		>
+                    			>
                     		<span class="marketplace-card__caption">Перейти в магазин</span>
                     	</a>
-                    </div>
-<div class="col-6 col-md-4">
+                    </div><div class="col-6 col-md-4">
                     	<a class="marketplace-card" href="#" aria-label="Купить на Ozon">
-                    		<img
-                    			class="marketplace-card__logo marketplace-card__logo--ozon"
+                    			<img
+                    			class="marketplace-card__logo marketplace-card__logo--sm"
                     			src="img/shared/logos/marketplaces/ozon.svg"
                     			alt="Ozon"
                     			width="98"
                     			height="21"
                     			loading="lazy"
-                    		>
+                    			>
                     		<span class="marketplace-card__caption">Перейти в магазин</span>
                     	</a>
-                    </div>
-<div class="col-6 col-md-4">
+                    </div><div class="col-6 col-md-4">
                     	<a class="marketplace-card" href="#" aria-label="Купить в Л'Этуаль">
-                    		<img
-                    			class="marketplace-card__logo marketplace-card__logo--letual"
+                    			<img
+                    			class="marketplace-card__logo marketplace-card__logo--md"
                     			src="img/shared/logos/marketplaces/letual.webp"
                     			alt="Л'Этуаль"
                     			width="150"
                     			height="23"
                     			loading="lazy"
-                    		>
+                    			>
                     		<span class="marketplace-card__caption">Перейти в магазин</span>
                     	</a>
-                    </div>
-<div class="col-6 col-md-4">
+                    </div><div class="col-6 col-md-4">
                     	<a class="marketplace-card" href="#" aria-label="Купить в Золотом Яблоке">
-                    		<img
-                    			class="marketplace-card__logo marketplace-card__logo--golden"
+                    			<img
+                    			class="marketplace-card__logo marketplace-card__logo--xxl"
                     			src="img/shared/logos/marketplaces/golden-apple.webp"
                     			alt="Золотое Яблоко"
                     			width="195"
                     			height="29"
                     			loading="lazy"
-                    		>
+                    			>
                     		<span class="marketplace-card__caption">Перейти в магазин</span>
                     	</a>
-                    </div>
-<div class="col-6 col-md-4">
+                    </div><div class="col-6 col-md-4">
                     	<a class="marketplace-card" href="#" aria-label="Купить на Яндекс Маркете">
-                    		<img
-                    			class="marketplace-card__logo marketplace-card__logo--yandex"
+                    			<img
+                    			class="marketplace-card__logo marketplace-card__logo--xl"
                     			src="img/shared/logos/marketplaces/yandex-market.svg"
                     			alt="Яндекс Маркет"
                     			width="174"
                     			height="26"
                     			loading="lazy"
-                    		>
+                    			>
                     		<span class="marketplace-card__caption">Перейти в магазин</span>
                     	</a>
-                    </div>
-<div class="col-6 col-md-4">
+                    </div><div class="col-6 col-md-4">
                     	<a class="marketplace-card" href="#" aria-label="Купить на ВсеИнструменты">
-                    		<img
-                    			class="marketplace-card__logo marketplace-card__logo--vse"
+                    			<img
+                    			class="marketplace-card__logo marketplace-card__logo--xs"
                     			src="img/shared/logos/marketplaces/vse-instrumenty.svg"
                     			alt="ВсеИнструменты"
                     			width="184"
                     			height="17"
                     			loading="lazy"
-                    		>
+                    			>
                     		<span class="marketplace-card__caption">Перейти в магазин</span>
                     	</a>
                     </div>
-
                   </div>
                 </div>
               </div>
@@ -1041,36 +1035,36 @@
 
             <ul class="why__rows">
               <li class="row why__row">
-              	<div class="col-12 col-xl-6">
+              	<div class="col-12 col-lg-6">
               		<div class="why__media">
               			<img src="img/why/safety.webp" class="cover-image" alt="Продукция KIPNI на столе в светлой ванной" width="720" height="350" loading="lazy">
               		</div>
               	</div>
-              	<div class="col-12 col-xl-6">
+              	<div class="col-12 col-lg-6">
               		<div class="why__copy">
               			<h3 class="title-md why__subtitle">Безопасность <br> Превыше всего</h3>
               			<p class="why__text">Продукция KiPNi безопасна для человека и&nbsp;окружающей среды, благодаря наличию растительных компонентов в&nbsp;составах и&nbsp;биоразлагаемой структуре.</p>
               		</div>
               	</div>
               </li><li class="row why__row why__row--reverse">
-              	<div class="col-12 col-xl-6">
+              	<div class="col-12 col-lg-6">
               		<div class="why__media">
               			<img src="img/why/quality.webp" class="cover-image" alt="Семья с двумя детьми в светлой гостиной" width="720" height="350" loading="lazy">
               		</div>
               	</div>
-              	<div class="col-12 col-xl-6">
+              	<div class="col-12 col-lg-6">
               		<div class="why__copy why__copy--end">
               			<h3 class="title-md why__subtitle">Забота <br> о качестве</h3>
               			<p class="why__text">Наша миссия состоит в&nbsp;том, чтобы создавать продукты, которые сочетали бы в&nbsp;себе высокое качество, безопасность и&nbsp;доступность широкому кругу потребителей.</p>
               		</div>
               	</div>
               </li><li class="row why__row">
-              	<div class="col-12 col-xl-6">
+              	<div class="col-12 col-lg-6">
               		<div class="why__media">
               			<img src="img/why/access.webp" class="cover-image" alt="Производственный комплекс KIPNI и логистика" width="720" height="350" loading="lazy">
               		</div>
               	</div>
-              	<div class="col-12 col-xl-6">
+              	<div class="col-12 col-lg-6">
               		<div class="why__copy">
               			<h3 class="title-md why__subtitle">Доступность <br> нашей продукции</h3>
               			<p class="why__text">Собственные четырёхпоточные линии по&nbsp;производству тары и&nbsp;развитая логистическая система помогают KIPNI снижать производственные расходы. Благодаря этому мы сохраняем доступные цены, не&nbsp;экономя на&nbsp;качестве сырья, безопасности и&nbsp;эффективности продукции.</p>
@@ -1088,7 +1082,7 @@
                 <img src="img/business/mobile.webp" alt="Товары для бизнеса" width="720" height="350" loading="lazy">
               </picture>
               <div class="row g-0">
-                <div class="col-12 col-md-6 col-xl-7">
+                <div class="col-12 col-md-8 col-xl-7">
                   <div class="business__content">
                     <h2 class="h2 title-lg business__title" id="business-title">Товары для бизнеса</h2>
                     <p class="business__lead h3">Чистота и&nbsp;забота о&nbsp;клиентах - ваша репутация</p>
@@ -1432,7 +1426,7 @@
       				</div>
       			</div>
 
-      			<div class="col-6 col-xl-2 footer__col">
+      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
       				<h3 class="footer__title">Компания</h3>
       				<ul class="footer__list">
       					<li><a class="footer__link" href="about.html">О компании</a></li>
@@ -1445,7 +1439,7 @@
       				</ul>
       			</div>
 
-      			<div class="col-6 col-xl-2 footer__col">
+      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
       				<h3 class="footer__title">Каталог</h3>
       				<ul class="footer__list">
       					<li><a class="footer__link" href="#">Уход за телом</a></li>
@@ -1456,7 +1450,7 @@
       				</ul>
       			</div>
 
-      			<div class="col-6 col-xl-2 footer__col">
+      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
       				<h3 class="footer__title">Помощь</h3>
       				<ul class="footer__list">
       					<li><a class="footer__link" href="#">Как купить</a></li>
@@ -1468,7 +1462,7 @@
       				</ul>
       			</div>
 
-      			<div class="col-6 col-xl-3 footer__col footer__contacts">
+      			<div class="col-6 col-lg-3 footer__col footer__contacts">
       				<h3 class="footer__title">Контакты</h3>
       				<a class="footer__phone" href="tel:88001013931">8 (800) 101-39-31</a>
       				<p class="footer__hours">пн-пт с 9:00 до 18:00</p>
@@ -1500,7 +1494,6 @@
       		</div>
       	</div>
       </footer>
-
       <aside class="ask-widget" aria-label="Задать вопрос" aria-hidden="true">
       	
       		

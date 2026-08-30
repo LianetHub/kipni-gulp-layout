@@ -157,12 +157,11 @@
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
-		justify-content: center;
+
 		gap: rem(16);
 		margin-top: rem(50);
 
 		@media (min-width: $md2) {
-			justify-content: flex-start;
 			gap: rem(24);
 		}
 	}
@@ -188,6 +187,9 @@
 
 	@media (min-width: $md2) {
 		min-height: rem(124);
+	}
+
+	@media (min-width:$md1) {
 		padding: rem(24);
 	}
 
@@ -197,7 +199,7 @@
 
 			.marketplace-card__caption {
 				margin-top: 0.625em;
-				max-height: 1.06em;
+				max-height: 2.5em;
 				opacity: 1;
 			}
 		}
@@ -209,7 +211,7 @@
 
 		.marketplace-card__caption {
 			margin-top: 0.625em;
-			max-height: 1.06em;
+			max-height: 2.5em;
 			opacity: 1;
 		}
 	}
@@ -230,32 +232,7 @@
 			height: rem(24);
 		}
 
-		&--ozon {
-			height: rem(16);
-
-			@media (min-width: $md2) {
-				height: rem(21);
-				width: rem(98);
-			}
-		}
-
-		&--wb {
-			@media (min-width: $md2) {
-				height: rem(24);
-				width: rem(160);
-			}
-		}
-
-		&--letual {
-			height: rem(17);
-
-			@media (min-width: $md2) {
-				height: rem(23);
-				width: rem(150);
-			}
-		}
-
-		&--golden {
+		&--xxl {
 			height: rem(22);
 
 			@media (min-width: $md2) {
@@ -264,7 +241,7 @@
 			}
 		}
 
-		&--yandex {
+		&--xl {
 			height: rem(19);
 
 			@media (min-width: $md2) {
@@ -273,7 +250,32 @@
 			}
 		}
 
-		&--vse {
+		&--lg {
+			@media (min-width: $md2) {
+				height: rem(24);
+				width: rem(160);
+			}
+		}
+
+		&--md {
+			height: rem(17);
+
+			@media (min-width: $md2) {
+				height: rem(23);
+				width: rem(150);
+			}
+		}
+
+		&--sm {
+			height: rem(16);
+
+			@media (min-width: $md2) {
+				height: rem(21);
+				width: rem(98);
+			}
+		}
+
+		&--xs {
 			height: rem(13);
 
 			@media (min-width: $md2) {
@@ -294,22 +296,28 @@
 		color: $color-muted;
 		text-align: center;
 		transition: opacity 0.2s ease, max-height 0.2s ease, margin-top 0.2s ease;
+		font-size: rem(14);
+
+		@media (min-width:$md1) {
+			font-size: rem(16);
+
+		}
 
 		@media (hover: none) {
 			margin-top: 0.625em;
-			max-height: 1.06em;
+			max-height: 2.5em;
 			opacity: 1;
 		}
 	}
 }
 
-.marketplace-perk {
+.marketplace__perk {
 	display: inline-flex;
 	align-items: center;
 	gap: rem(12);
 
-	// marketplace-perk__icon
-	&__icon {
+	// marketplace__perk-icon
+	&-icon {
 		flex-shrink: 0;
 		width: auto;
 		height: rem(30);
@@ -320,8 +328,8 @@
 		}
 	}
 
-	// marketplace-perk__text
-	&__text {
+	// marketplace__perk-text
+	&-text {
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(15, 14);

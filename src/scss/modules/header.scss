@@ -50,6 +50,7 @@
 
 	// header__bar-container
 	&__bar-container {
+		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		align-items: center;
@@ -421,7 +422,7 @@
 		line-height: 1;
 		color: $color-text;
 
-		@media (min-width: $md4) {
+		@media (min-width: $md2) {
 			display: none;
 		}
 
@@ -609,20 +610,51 @@
 }
 
 .header-search {
-	position: relative;
-	display: none;
-	flex: 1 1 100%;
-	width: 100%;
+	position: absolute;
+	z-index: $ui-index-4;
+	top: 100%;
+	left: 0;
+	right: 0;
+	margin-top: rem(8);
+	width: auto;
 	min-width: 0;
 	max-width: none;
-	order: 10;
+	padding: rem(12);
+	border-radius: $radius-btn;
+	background: $color-bg;
+	box-shadow: 0 #{rem(4)} #{rem(24)} 0 rgba(69, 153, 61, 0.08);
+	visibility: hidden;
+	opacity: 0;
+	transform: translateY(#{rem(-8)});
+	pointer-events: none;
+	transition:
+		opacity $duration-layout $ease-layout,
+		transform $duration-layout $ease-layout,
+		visibility $duration-layout $ease-layout;
 
 	.header.is-search-open & {
-		display: block;
+		visibility: visible;
+		opacity: 1;
+		transform: translateY(0);
+		pointer-events: auto;
 	}
 
-	@media (min-width: $md4) {
-		display: block;
+	@media (min-width: $md2) {
+		position: relative;
+		z-index: auto;
+		top: auto;
+		left: auto;
+		right: auto;
+		margin-top: 0;
+		padding: 0;
+		border-radius: 0;
+		background: transparent;
+		box-shadow: none;
+		visibility: visible;
+		opacity: 1;
+		transform: none;
+		pointer-events: auto;
+		transition: none;
 		flex: 0 1 rem(240);
 		width: auto;
 		min-width: rem(180);
@@ -694,13 +726,9 @@
 .header-nav {
 	flex-shrink: 0;
 
-	@media (min-width: $md4) {
-		display: none;
-	}
 
-	@media (min-width: $md2) {
+	@media (min-width: $md4) {
 		order: 4;
-		display: block;
 		flex: 1 1 auto;
 	}
 
@@ -1091,26 +1119,17 @@
 		@media (min-width: $md4) {
 			display: flex;
 			flex-direction: column;
+			justify-content: space-between;
 			padding: rem(24);
 			border-radius: rem(16);
 			background-color: $color-soft-green;
 			background-repeat: no-repeat;
-			background-size: 0 0;
+			background-size: cover;
+			background-position: center 100%;
+			min-height: rem(460);
 		}
 
-		&::before {
-			content: "";
-			display: block;
-			order: 3;
-			flex: 1 1 auto;
-			width: 100%;
-			min-height: rem(160);
-			margin: rem(16) 0;
-			background-image: inherit;
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-		}
+
 	}
 
 	// header-catalog__promo-title
@@ -1133,6 +1152,7 @@
 		font-size: rem(14);
 		line-height: math.div(20, 14);
 		color: $color-muted;
+		margin-bottom: auto;
 	}
 
 	// header-catalog__promo-btn

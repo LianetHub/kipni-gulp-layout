@@ -57,7 +57,7 @@
 
 	// why__row--reverse
 	&__row--reverse {
-		@media (min-width: $md2) {
+		@media (min-width: $md3) {
 			flex-direction: row-reverse;
 		}
 	}
@@ -66,11 +66,6 @@
 	&__media {
 		overflow: hidden;
 		border-radius: rem(20);
-		height: rem(184);
-
-		@media (min-width: $md4) {
-			height: rem(280);
-		}
 
 		@media (min-width: $md2) {
 			height: rem(350);
@@ -87,7 +82,7 @@
 		}
 
 		&--end {
-			@media (min-width: $md2) {
+			@media (min-width: $md3) {
 				margin-left: auto;
 				padding-left: rem(40);
 				padding-right: rem(68);

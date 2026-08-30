@@ -5,11 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
     const BANNER_STORAGE_KEY = "kipni-banner-hidden";
     const BANNER_CLOSE_MS = 460;
     const HEADER_DESKTOP_MQ = "(min-width: 767.98px)";
+    const HEADER_SEARCH_MQ = "(min-width: 1199.98px)";
 
     let h = null;
 
     function isDesktopHeader() {
         return window.matchMedia(HEADER_DESKTOP_MQ).matches;
+    }
+
+    function isSearchInline() {
+        return window.matchMedia(HEADER_SEARCH_MQ).matches;
     }
 
     function isBannerHidden() {
@@ -137,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function openSearch() {
-        if (!h?.searchToggle) return;
+        if (!h?.searchToggle || isSearchInline()) return;
 
         closeMobile();
         h.root.classList.add("is-search-open");
@@ -267,12 +272,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         const mq = window.matchMedia(HEADER_DESKTOP_MQ);
+        const searchMq = window.matchMedia(HEADER_SEARCH_MQ);
         const onBreakpoint = () => {
             if (mq.matches) {
                 h.menuPanel.hidden = false;
                 closeDesktopMenus();
                 closeMobile();
-                closeSearch();
             } else {
                 closeDesktopMenus();
                 syncMobileHeaderAccordions();
@@ -280,6 +285,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     h.menuPanel.hidden = true;
                 }
             }
+            if (searchMq.matches) closeSearch();
             setHeaderHeight();
         };
 
@@ -287,8 +293,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (typeof mq.addEventListener === "function") {
             mq.addEventListener("change", onBreakpoint);
+            searchMq.addEventListener("change", onBreakpoint);
         } else if (typeof mq.addListener === "function") {
             mq.addListener(onBreakpoint);
+            searchMq.addListener(onBreakpoint);
         }
 
         if (typeof ResizeObserver !== "undefined") {

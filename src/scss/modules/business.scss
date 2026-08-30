@@ -85,7 +85,7 @@
 		color: $color-muted;
 
 		&.h3 {
-			@media (min-width:$md4) {
+			@media (min-width:$md2) {
 				font-size: rem(22);
 			}
 		}
