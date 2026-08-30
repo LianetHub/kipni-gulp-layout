@@ -23,6 +23,10 @@
 	background-size: cover;
 	background-position: center;
 
+	@media (min-width:$md5) {
+		height: rem(160);
+	}
+
 	@media (min-width: $md4) {
 		height: rem(200);
 		border-radius: $radius-btn;
@@ -129,12 +133,17 @@
 
 	// category-card__btn
 	&__btn {
-		display: none;
+
 		margin-top: auto;
 		pointer-events: none;
 
-		@media (min-width: $md2) {
-			display: inline-flex;
+		@media (max-width:$md4) {
+			&.btn {
+				display: none;
+			}
+		}
+
+		@media (min-width: $md4) {
 			min-width: rem(208);
 		}
 	}

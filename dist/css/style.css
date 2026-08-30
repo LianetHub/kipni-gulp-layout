@@ -2136,21 +2136,31 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.75rem;
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
 }
+@media (min-width: 767.98px) {
+  .header-banner__container {
+    justify-content: center;
+  }
+}
 .header-banner__text {
-  text-align: center;
+  font-size: 0.75rem;
+}
+@media (min-width: 575.98px) {
+  .header-banner__text {
+    font-size: 0.875rem;
+  }
 }
 @media (min-width: 767.98px) {
   .header-banner__text {
-    max-width: none;
+    text-align: center;
+    font-size: 1rem;
   }
 }
-@media (max-width: 1199.98px) {
+@media (min-width: 1199.98px) {
   .header-banner__text {
-    font-size: 1rem;
+    font-size: 1.125rem;
   }
 }
 .header-banner__link {
@@ -2803,7 +2813,12 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 .hero__slider {
   width: 100%;
-  height: 32.5rem;
+  height: 23.75rem;
+}
+@media (min-width: 767.98px) {
+  .hero__slider {
+    height: 32.5rem;
+  }
 }
 @media (min-width: 1199.98px) {
   .hero__slider {
@@ -3474,6 +3489,11 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   background-size: cover;
   background-position: center;
 }
+@media (min-width: 575.98px) {
+  .category-card {
+    height: 10rem;
+  }
+}
 @media (min-width: 767.98px) {
   .category-card {
     height: 12.5rem;
@@ -3570,13 +3590,16 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   }
 }
 .category-card__btn {
-  display: none;
   margin-top: auto;
   pointer-events: none;
 }
-@media (min-width: 1199.98px) {
+@media (max-width: 767.98px) {
+  .category-card__btn.btn {
+    display: none;
+  }
+}
+@media (min-width: 767.98px) {
   .category-card__btn {
-    display: inline-flex;
     min-width: 13rem;
   }
 }

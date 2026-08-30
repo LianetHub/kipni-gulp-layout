@@ -582,26 +582,34 @@
 		z-index: $ui-index-1;
 		display: flex;
 		align-items: center;
-		justify-content: center;
 		gap: rem(12);
 
 		transition:
 			transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
 			opacity 0.3s ease;
 
+		@media (min-width:$md4) {
+			justify-content: center;
+
+		}
 
 	}
 
 	// header-banner__text
 	&__text {
-		text-align: center;
+		font-size: rem(12);
 
-		@media (min-width: $md4) {
-			max-width: none;
+		@media (min-width:$md5) {
+			font-size: rem(14);
 		}
 
-		@media (max-width:$md2) {
-			font-size: 1rem;
+		@media (min-width:$md4) {
+			text-align: center;
+			font-size: rem(16);
+		}
+
+		@media (min-width:$md2) {
+			font-size: rem(18);
 		}
 	}
 

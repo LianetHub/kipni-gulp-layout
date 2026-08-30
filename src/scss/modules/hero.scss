@@ -7,7 +7,12 @@
 	// hero__slider
 	&__slider {
 		width: 100%;
-		height: rem(520);
+		height: rem(380);
+
+		@media (min-width:$md4) {
+			height: rem(520);
+
+		}
 
 		@media (min-width: $md2) {
 			height: rem(600);
