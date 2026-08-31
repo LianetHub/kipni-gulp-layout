@@ -30,6 +30,15 @@
 			height: rem(668);
 		}
 
+		// FOUC guard: keep non-active slides invisible until Swiper settles.
+		// Use opacity/visibility only — display:none breaks fade measurements.
+		&:not(.is-swiper-ready) {
+			.swiper-slide:not(:first-child):not(.swiper-slide-active):not(.swiper-slide-duplicate-active) {
+				opacity: 0 !important;
+				visibility: hidden;
+			}
+		}
+
 		&.is-swiper-ready {
 			.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) {
 				pointer-events: none;

@@ -7,81 +7,77 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-          <div class="container">
-            @@include('html/templates/breadcrumbs.html', {
-              "current": "Блог"
-            })
-          </div>
+        <div class="container">
+          @@include('html/templates/breadcrumbs.html', {
+          "current": "Блог"
+          })
+        </div>
 
-        <section class="blog-intro" aria-labelledby="blog-intro-title">
+        <section class="blog" aria-labelledby="blog-title">
           <div class="container">
-            <div class="blog-intro__content">
-              <h1 class="h1 blog-intro__title" id="blog-intro-title">Блог</h1>
-              <p class="text blog-intro__text">
+            <div class="blog__content">
+              <h1 class="h1 blog__title" id="blog-title">Блог</h1>
+              <p class="text blog__text">
                 Полезные советы по&nbsp;уборке дома, заботе о&nbsp;вещах и&nbsp;окружающей среде.<br>
                 Используйте натуральные средства и&nbsp;живите в&nbsp;гармонии с&nbsp;природой.
               </p>
             </div>
-          </div>
-        </section>
 
-        <section class="blog-list" aria-label="Статьи блога">
-          <div class="container">
-            <div class="row blog-list__row gy-4">
+            <div class="row blog__row gy-4">
               <div class="col-12 col-lg-6">
                 @@include('html/templates/blog-card.html', {
-                  "views": "211 просмотров",
-                  "date": "20 июля 2026",
-                  "likes": "200 лайков",
-                  "title": "5 шагов к чистой кухне без химии",
-                  "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
-                  "link": "article.html",
-                  "image": "img/blog/card-laundry.webp",
-                  "image_alt": "Бельё на верёвке и натуральные средства для стирки",
-                  "image_width": "712",
-                  "image_height": "401"
+                "views": "211 просмотров",
+                "date": "20 июля 2026",
+                "likes": "200 лайков",
+                "title": "5 шагов к чистой кухне без химии",
+                "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                "link": "article.html",
+                "image": "img/blog/card-laundry.webp",
+                "image_alt": "Бельё на верёвке и натуральные средства для стирки",
+                "image_width": "712",
+                "image_height": "401"
                 })
               </div>
               <div class="col-12 col-lg-6">
                 @@include('html/templates/blog-card.html', {
-                  "views": "211 просмотров",
-                  "date": "20 июля 2026",
-                  "likes": "200 лайков",
-                  "title": "Как правильно стирать разные ткани",
-                  "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
-                  "link": "#",
-                  "image": "img/blog/card-bottles.webp",
-                  "image_alt": "Флаконы экологичных средств для уборки KIPNI",
-                  "image_width": "712",
-                  "image_height": "401"
+                "views": "211 просмотров",
+                "date": "20 июля 2026",
+                "likes": "200 лайков",
+                "title": "Как правильно стирать разные ткани",
+                "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                "link": "#",
+                "image": "img/blog/card-bottles.webp",
+                "image_alt": "Флаконы экологичных средств для уборки KIPNI",
+                "image_width": "712",
+                "image_height": "401"
                 })
               </div>
               <div class="col-12 col-lg-6">
                 @@include('html/templates/blog-card.html', {
-                  "views": "211 просмотров",
-                  "date": "20 июля 2026",
-                  "likes": "200 лайков",
-                  "title": "Как правильно стирать разные ткани",
-                  "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
-                  "link": "#",
-                  "image": "img/blog/card-sponges.webp",
-                  "image_alt": "Натуральные губки и экосредства для уборки",
-                  "image_width": "712",
-                  "image_height": "401"
+                "views": "211 просмотров",
+                "date": "20 июля 2026",
+                "likes": "200 лайков",
+                "title": "Как правильно стирать разные ткани",
+                "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                "link": "#",
+                "image": "img/blog/card-sponges.webp",
+                "image_alt": "Натуральные губки и экосредства для уборки",
+                "image_width": "712",
+                "image_height": "401"
                 })
               </div>
               <div class="col-12 col-lg-6">
                 @@include('html/templates/blog-card.html', {
-                  "views": "211 просмотров",
-                  "date": "20 июля 2026",
-                  "likes": "200 лайков",
-                  "title": "5 шагов к чистой кухне без химии",
-                  "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
-                  "link": "article.html",
-                  "image": "img/blog/card-laundry.webp",
-                  "image_alt": "Бельё на верёвке и натуральные средства для стирки",
-                  "image_width": "712",
-                  "image_height": "401"
+                "views": "211 просмотров",
+                "date": "20 июля 2026",
+                "likes": "200 лайков",
+                "title": "5 шагов к чистой кухне без химии",
+                "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                "link": "article.html",
+                "image": "img/blog/card-laundry.webp",
+                "image_alt": "Бельё на верёвке и натуральные средства для стирки",
+                "image_width": "712",
+                "image_height": "401"
                 })
               </div>
             </div>

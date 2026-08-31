@@ -19,7 +19,7 @@
           <div class="container">
 
 
-            <header class="article__header">
+            <div class="article__header">
               <h1 class="h1 article__title" id="article-title">5 шагов к чистой кухне без химии</h1>
               <ul class="article__meta">
                 <li class="article__meta-item icon-eye">
@@ -29,9 +29,9 @@
                   <time class="article__meta-text" datetime="2026-07-20">20 июля 2026</time>
                 </li>
               </ul>
-            </header>
+            </div>
 
-            <div class="row gy-4 article__layout">
+            <div class="row article__layout">
               <div class="col-12 col-xl-9 article__main">
                 <div class="typography-block">
                   <p>
@@ -96,19 +96,17 @@
                     <li>проветривать помещение.</li>
                   </ul>
                 </div>
-
-                <aside class="article__callout" aria-label="Важно">
+                <div class="article__callout" aria-label="Важно">
                   <p class="article__callout-text">
                     Чистая кухня начинается не с большого количества бытовой химии, а с регулярного ухода и внимательного отношения к поверхностям. Используйте подходящие средства строго по инструкции, не смешивайте разные составы и всегда учитывайте особенности материала, который планируете очистить.
                   </p>
-                </aside>
-
+                </div>
                 <button class="article__like icon-heart" type="button" aria-pressed="false">
                   <span class="article__like-text">Мне нравится</span>
                 </button>
               </div>
 
-              <div class="col-12 col-xl-3 article__aside">
+              <aside class="col-12 col-xl-3 article__aside">
                 <nav class="article-toc" aria-labelledby="article-toc-title">
                   <h2 class="h3 article-toc__title" id="article-toc-title">Содержание</h2>
                   <ol class="article-toc__list">
@@ -126,25 +124,26 @@
                     </li>
                   </ol>
                 </nav>
+              </aside>
+            </div>
+          </div>
+        </section>
+        <section class="article-related" aria-labelledby="article-related-title">
+          <div class="article-related__container container">
+            <h2 class="h2 article-related__title" id="article-related-title">Похожие статьи:</h2>
+            <div class="row gy-4 article-related__row">
+              <div class="col-12 col-md-6 col-xl-4">
+                @@include('html/templates/article-card.html', {
+                "title": "Как правильно стирать разные ткани",
+                "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
+                "link": "#",
+                "image": "img/article/related.webp",
+                "image_alt": "Бельё сушится на верёвке на улице",
+                "image_width": "461",
+                "image_height": "259"
+                })
               </div>
             </div>
-
-            <section class="article-related" aria-labelledby="article-related-title">
-              <h2 class="h2 article-related__title" id="article-related-title">Похожие статьи:</h2>
-              <div class="row gy-4 article-related__row">
-                <div class="col-12 col-md-6 col-xl-4">
-                  @@include('html/templates/article-card.html', {
-                    "title": "Как правильно стирать разные ткани",
-                    "text": "Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств",
-                    "link": "#",
-                    "image": "img/article/related.webp",
-                    "image_alt": "Бельё сушится на верёвке на улице",
-                    "image_width": "461",
-                    "image_height": "259"
-                  })
-                </div>
-              </div>
-            </section>
           </div>
         </section>
       </main>

@@ -1,5 +1,6 @@
 <article class="blog-card">
-	<div class="blog-card__media">
+	<a href="@@link" class="blog-card__media">
+		<!-- fileinclude -->
 		<img
 			class="cover-image"
 			src="@@image"
@@ -7,8 +8,9 @@
 			width="@@image_width"
 			height="@@image_height"
 			loading="lazy"
-		>
-	</div>
+			>
+		<!-- fileinclude -->
+	</a>
 	<div class="blog-card__body">
 		<ul class="blog-card__meta">
 			<li class="blog-card__meta-item icon-eye">
@@ -17,11 +19,13 @@
 			<li class="blog-card__meta-item icon-calendar">
 				<span class="blog-card__meta-text">@@date</span>
 			</li>
-			<li class="blog-card__meta-item icon-heart">
+			<li class="blog-card__meta-item icon-heart-fill">
 				<span class="blog-card__meta-text">@@likes</span>
 			</li>
 		</ul>
-		<h2 class="h2 blog-card__title">@@title</h2>
+		<h2 class="h2 blog-card__title">
+			<a href="@@link" class="blog-card__title-link">@@title</a>
+		</h2>
 		<p class="text blog-card__text">@@text</p>
 		<a class="btn btn--primary btn--large blog-card__btn icon-chevron-right" href="@@link">
 			Читать далее

@@ -1,4 +1,5 @@
 <header class="header">
+  <button class="header__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
   <div class="header-banner" style="background-image: url('@img/header-banner.webp');">
     <div class="container header-banner__container">
       <p class="h4 header-banner__text">
@@ -23,19 +24,19 @@
 
       <div class="header__menu" id="header-menu" hidden>
         <div class="header__menu-inner">
-          <a class="btn btn--primary header__menu-cta" href="catalog.html">Перейти в каталог</a>
+          <a class="btn btn--primary header__menu-cta" href="catalog.html">Вся продукция</a>
 
           <nav class="header__menu-nav" aria-label="Основное меню">
 
-            <div class="header__catalog-wrap header__menu-accordion">
-              <button class="header__catalog-btn header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
+            <div class="header__catalog-wrap header__menu-accordion is-open">
+              <button class="header__catalog-btn header__menu-row header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
                 Каталог товаров
               </button>
               @@include('templates/header-catalog.html')
             </div>
 
             <div class="header-nav header__menu-accordion is-open">
-              <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-people" type="button" aria-expanded="true">
+              <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-user" type="button" aria-expanded="true">
                 Покупателям
               </button>
               <div class="header-nav__panel header__menu-panel">
@@ -67,7 +68,7 @@
               </div>
 
               <a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html">
-                <span class="header__menu-row-text">Где купить?</span>
+                Где купить?
               </a>
             </div>
           </nav>

@@ -1,30 +1,29 @@
 @use "sass:math";
 
 .article {
-	padding-bottom: rem(48);
-
-	@media (min-width: $md4) {
-		padding-bottom: rem(80);
-	}
 
 	// article__header
 	&__header {
 		margin-top: rem(24);
-		margin-bottom: rem(24);
+		margin-bottom: rem(32);
 		max-width: rem(1084);
 
 		@media (min-width: $md4) {
 			margin-top: rem(40);
-			margin-bottom: rem(32);
+			margin-bottom: rem(56);
+		}
+
+		@media (min-width: $md2) {
+			margin-top: rem(74);
 		}
 	}
 
 	// article__title
 	&__title {
-		margin: 0 0 rem(16);
+		margin: 0 0 rem(12);
 
 		@media (min-width: $md4) {
-			margin-bottom: rem(24);
+			margin-bottom: rem(10);
 		}
 	}
 
@@ -69,6 +68,8 @@
 
 	// article__layout
 	&__layout {
+		--gutter-x: #{rem(40)};
+
 		@media (min-width: $md2) {
 			align-items: flex-start;
 		}
@@ -78,30 +79,64 @@
 	&__main {
 		display: flex;
 		flex-direction: column;
-		gap: rem(32);
+	}
 
-		@media (min-width: $md4) {
-			gap: rem(40);
+	// article typography spacing
+	.typography-block {
+
+		>img,
+		>picture {
+			margin-top: rem(21);
+
+			@media (min-width: $md4) {
+				margin-top: rem(23);
+				margin-bottom: rem(40);
+			}
+		}
+
+		>h2 {
+			margin-bottom: rem(22);
+
+			@media (min-width: $md4) {
+				margin-top: rem(40);
+				margin-bottom: rem(22);
+			}
+		}
+
+		>img+h2,
+		>picture+h2 {
+			margin-top: 0;
+		}
+
+		>ul {
+			gap: rem(12);
 		}
 	}
 
 	// article__aside
 	&__aside {
+		display: flex;
+		flex-direction: column;
+		gap: rem(24);
 		order: -1;
 
 		@media (min-width: $md2) {
 			order: 0;
+			position: sticky;
+			top: calc(#{$header} + #{rem(24)});
 		}
 	}
 
 	// article__callout
 	&__callout {
+		margin-top: rem(48);
 		padding: rem(24) rem(20);
 		border-radius: $radius-md;
 		background: $color-surface;
 
 		@media (min-width: $md4) {
-			padding: rem(44) rem(40);
+			margin-top: rem(78);
+			padding: rem(44) rem(41);
 		}
 	}
 
@@ -121,6 +156,7 @@
 
 	// article__like
 	&__like {
+		margin-top: rem(32);
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
@@ -144,6 +180,10 @@
 		&:focus-visible {
 			outline: none;
 			box-shadow: $focus-ring;
+		}
+
+		@media (min-width: $md4) {
+			margin-top: rem(42);
 		}
 
 		@media (any-hover: hover) {
@@ -189,8 +229,6 @@
 	background: #f7f7f7;
 
 	@media (min-width: $md2) {
-		position: sticky;
-		top: calc(#{$header} + #{rem(24)});
 		padding: rem(46) rem(31) rem(52);
 	}
 
@@ -234,9 +272,11 @@
 
 .article-related {
 	margin-top: rem(48);
+	padding-bottom: rem(56);
 
 	@media (min-width: $md4) {
-		margin-top: rem(72);
+		margin-top: rem(68);
+		padding-bottom: rem(80);
 	}
 
 	// article-related__title
@@ -244,7 +284,7 @@
 		margin: 0 0 rem(24);
 
 		@media (min-width: $md4) {
-			margin-bottom: rem(36);
+			margin-bottom: rem(43);
 		}
 	}
 }

@@ -34,6 +34,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
+        <button class="header__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
         <div class="header-banner" style="background-image: url('img/header-banner.webp');">
           <div class="container header-banner__container">
             <p class="h4 header-banner__text">
@@ -58,12 +59,12 @@
 
             <div class="header__menu" id="header-menu" hidden>
               <div class="header__menu-inner">
-                <a class="btn btn--primary header__menu-cta" href="catalog.html">Перейти в каталог</a>
+                <a class="btn btn--primary header__menu-cta" href="catalog.html">Вся продукция</a>
 
                 <nav class="header__menu-nav" aria-label="Основное меню">
 
-                  <div class="header__catalog-wrap header__menu-accordion">
-                    <button class="header__catalog-btn header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
+                  <div class="header__catalog-wrap header__menu-accordion is-open">
+                    <button class="header__catalog-btn header__menu-row header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
                       Каталог товаров
                     </button>
                     <div class="header-catalog header__menu-panel" id="header-catalog">
@@ -111,7 +112,7 @@
                                     <span class="header-catalog__link-text">Подарочные наборы</span>
                                   </a>
                                 </li>
-                                <li>
+                                <li class="header-catalog__item--cta">
                                   <a class="header-catalog__link" href="#">
                                     <img class="header-catalog__link-icon" src="img/icons/grid.svg" alt="Вся продукция" width="22" height="22" loading="lazy">
                                     <span class="header-catalog__link-text">Вся продукция</span>
@@ -166,7 +167,7 @@
                   </div>
 
                   <div class="header-nav header__menu-accordion is-open">
-                    <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-people" type="button" aria-expanded="true">
+                    <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-user" type="button" aria-expanded="true">
                       Покупателям
                     </button>
                     <div class="header-nav__panel header__menu-panel">
@@ -234,7 +235,7 @@
                     </div>
 
                     <a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html">
-                      <span class="header__menu-row-text">Где купить?</span>
+                      Где купить?
                     </a>
                   </div>
                 </nav>
@@ -276,7 +277,7 @@
         <section class="error-page">
           <div class="container">
             <div class="row error-page__row">
-              <div class="col-12 col-lg-4 offset-lg-2 col-md-6">
+              <div class="col-12 col-md-6">
                 <div class="error-page__content">
                   <h1 class="h2 error-page__title">Товары не найдены</h1>
                   <p class="text error-page__text">
@@ -288,7 +289,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-lg-5 col-md-6 error-page__media">
+              <div class="col-12 col-md-6 error-page__media">
                 <img src="img/box.webp" alt="Пустая коробка KIPNI — товары по запросу не найдены" width="600" height="480" fetchpriority="high">
               </div>
             </div>

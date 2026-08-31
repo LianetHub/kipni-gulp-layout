@@ -34,6 +34,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
+        <button class="header__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
         <div class="header-banner" style="background-image: url('img/header-banner.webp');">
           <div class="container header-banner__container">
             <p class="h4 header-banner__text">
@@ -58,12 +59,12 @@
 
             <div class="header__menu" id="header-menu" hidden>
               <div class="header__menu-inner">
-                <a class="btn btn--primary header__menu-cta" href="catalog.html">Перейти в каталог</a>
+                <a class="btn btn--primary header__menu-cta" href="catalog.html">Вся продукция</a>
 
                 <nav class="header__menu-nav" aria-label="Основное меню">
 
-                  <div class="header__catalog-wrap header__menu-accordion">
-                    <button class="header__catalog-btn header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
+                  <div class="header__catalog-wrap header__menu-accordion is-open">
+                    <button class="header__catalog-btn header__menu-row header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
                       Каталог товаров
                     </button>
                     <div class="header-catalog header__menu-panel" id="header-catalog">
@@ -111,7 +112,7 @@
                                     <span class="header-catalog__link-text">Подарочные наборы</span>
                                   </a>
                                 </li>
-                                <li>
+                                <li class="header-catalog__item--cta">
                                   <a class="header-catalog__link" href="#">
                                     <img class="header-catalog__link-icon" src="img/icons/grid.svg" alt="Вся продукция" width="22" height="22" loading="lazy">
                                     <span class="header-catalog__link-text">Вся продукция</span>
@@ -166,7 +167,7 @@
                   </div>
 
                   <div class="header-nav header__menu-accordion is-open">
-                    <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-people" type="button" aria-expanded="true">
+                    <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-user" type="button" aria-expanded="true">
                       Покупателям
                     </button>
                     <div class="header-nav__panel header__menu-panel">
@@ -234,7 +235,7 @@
                     </div>
 
                     <a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html">
-                      <span class="header__menu-row-text">Где купить?</span>
+                      Где купить?
                     </a>
                   </div>
                 </nav>
@@ -281,7 +282,7 @@
           <div class="container">
 
 
-            <header class="article__header">
+            <div class="article__header">
               <h1 class="h1 article__title" id="article-title">5 шагов к чистой кухне без химии</h1>
               <ul class="article__meta">
                 <li class="article__meta-item icon-eye">
@@ -291,9 +292,9 @@
                   <time class="article__meta-text" datetime="2026-07-20">20 июля 2026</time>
                 </li>
               </ul>
-            </header>
+            </div>
 
-            <div class="row gy-4 article__layout">
+            <div class="row article__layout">
               <div class="col-12 col-xl-9 article__main">
                 <div class="typography-block">
                   <p>
@@ -358,19 +359,17 @@
                     <li>проветривать помещение.</li>
                   </ul>
                 </div>
-
-                <aside class="article__callout" aria-label="Важно">
+                <div class="article__callout" aria-label="Важно">
                   <p class="article__callout-text">
                     Чистая кухня начинается не с большого количества бытовой химии, а с регулярного ухода и внимательного отношения к поверхностям. Используйте подходящие средства строго по инструкции, не смешивайте разные составы и всегда учитывайте особенности материала, который планируете очистить.
                   </p>
-                </aside>
-
+                </div>
                 <button class="article__like icon-heart" type="button" aria-pressed="false">
                   <span class="article__like-text">Мне нравится</span>
                 </button>
               </div>
 
-              <div class="col-12 col-xl-3 article__aside">
+              <aside class="col-12 col-xl-3 article__aside">
                 <nav class="article-toc" aria-labelledby="article-toc-title">
                   <h2 class="h3 article-toc__title" id="article-toc-title">Содержание</h2>
                   <ol class="article-toc__list">
@@ -388,31 +387,32 @@
                     </li>
                   </ol>
                 </nav>
+              </aside>
+            </div>
+          </div>
+        </section>
+        <section class="article-related" aria-labelledby="article-related-title">
+          <div class="article-related__container container">
+            <h2 class="h2 article-related__title" id="article-related-title">Похожие статьи:</h2>
+            <div class="row gy-4 article-related__row">
+              <div class="col-12 col-md-6 col-xl-4">
+                <article class="article-card">
+                	<a href="#" class="article-card__media">
+                		<img class="cover-image" src="img/article/related.webp" alt="Бельё сушится на верёвке на улице" width="461" height="259" loading="lazy">
+                	</a>
+                	<div class="article-card__body">
+                		<h3 class="h3 article-card__title">
+                			<a href="#" class="article-card__title-link">Как правильно стирать разные ткани</a>
+                		</h3>
+                		<p class="text article-card__text">Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств</p>
+                		<a href="#" class="btn btn--primary btn--large article-card__btn icon-chevron-right">
+                			Читать далее
+                		</a>
+                	</div>
+                </article>
+
               </div>
             </div>
-
-            <section class="article-related" aria-labelledby="article-related-title">
-              <h2 class="h2 article-related__title" id="article-related-title">Похожие статьи:</h2>
-              <div class="row gy-4 article-related__row">
-                <div class="col-12 col-md-6 col-xl-4">
-                  <article class="article-card">
-                  	<a href="#" class="article-card__media">
-                  		<img class="cover-image" src="img/article/related.webp" alt="Бельё сушится на верёвке на улице" width="461" height="259" loading="lazy">
-                  	</a>
-                  	<div class="article-card__body">
-                  		<h3 class="h3 article-card__title">
-                  			<a href="#" class="article-card__title-link">Как правильно стирать разные ткани</a>
-                  		</h3>
-                  		<p class="text article-card__text">Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств</p>
-                  		<a href="#" class="btn btn--primary btn--large article-card__btn icon-chevron-right">
-                  			Читать далее
-                  		</a>
-                  	</div>
-                  </article>
-
-                </div>
-              </div>
-            </section>
           </div>
         </section>
       </main>

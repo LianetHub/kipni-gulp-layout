@@ -34,6 +34,7 @@
   <body>
     <div class="wrapper">
       <header class="header">
+        <button class="header__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
         <div class="header-banner" style="background-image: url('img/header-banner.webp');">
           <div class="container header-banner__container">
             <p class="h4 header-banner__text">
@@ -58,12 +59,12 @@
 
             <div class="header__menu" id="header-menu" hidden>
               <div class="header__menu-inner">
-                <a class="btn btn--primary header__menu-cta" href="catalog.html">Перейти в каталог</a>
+                <a class="btn btn--primary header__menu-cta" href="catalog.html">Вся продукция</a>
 
                 <nav class="header__menu-nav" aria-label="Основное меню">
 
-                  <div class="header__catalog-wrap header__menu-accordion">
-                    <button class="header__catalog-btn header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
+                  <div class="header__catalog-wrap header__menu-accordion is-open">
+                    <button class="header__catalog-btn header__menu-row header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
                       Каталог товаров
                     </button>
                     <div class="header-catalog header__menu-panel" id="header-catalog">
@@ -111,7 +112,7 @@
                                     <span class="header-catalog__link-text">Подарочные наборы</span>
                                   </a>
                                 </li>
-                                <li>
+                                <li class="header-catalog__item--cta">
                                   <a class="header-catalog__link" href="#">
                                     <img class="header-catalog__link-icon" src="img/icons/grid.svg" alt="Вся продукция" width="22" height="22" loading="lazy">
                                     <span class="header-catalog__link-text">Вся продукция</span>
@@ -166,7 +167,7 @@
                   </div>
 
                   <div class="header-nav header__menu-accordion is-open">
-                    <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-people" type="button" aria-expanded="true">
+                    <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-user" type="button" aria-expanded="true">
                       Покупателям
                     </button>
                     <div class="header-nav__panel header__menu-panel">
@@ -234,7 +235,7 @@
                     </div>
 
                     <a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html">
-                      <span class="header__menu-row-text">Где купить?</span>
+                      Где купить?
                     </a>
                   </div>
                 </nav>
@@ -257,40 +258,36 @@
         </div>
       </header>
       <main class="page">
-          <div class="container">
-            <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            	<ol class="breadcrumbs__list">
-            		<li class="breadcrumbs__item">
-            			<a class="breadcrumbs__link" href="index.html">Главная</a>
-            		</li>
-            		
-            		
-            		<li class="breadcrumbs__item">
-            			<span class="breadcrumbs__link">Блог</span>
-            		</li>
-            	</ol>
-            </nav>
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          	<ol class="breadcrumbs__list">
+          		<li class="breadcrumbs__item">
+          			<a class="breadcrumbs__link" href="index.html">Главная</a>
+          		</li>
+          		
+          		
+          		<li class="breadcrumbs__item">
+          			<span class="breadcrumbs__link">Блог</span>
+          		</li>
+          	</ol>
+          </nav>
 
-          </div>
+        </div>
 
-        <section class="blog-intro" aria-labelledby="blog-intro-title">
+        <section class="blog" aria-labelledby="blog-title">
           <div class="container">
-            <div class="blog-intro__content">
-              <h1 class="h1 blog-intro__title" id="blog-intro-title">Блог</h1>
-              <p class="text blog-intro__text">
+            <div class="blog__content">
+              <h1 class="h1 blog__title" id="blog-title">Блог</h1>
+              <p class="text blog__text">
                 Полезные советы по&nbsp;уборке дома, заботе о&nbsp;вещах и&nbsp;окружающей среде.<br>
                 Используйте натуральные средства и&nbsp;живите в&nbsp;гармонии с&nbsp;природой.
               </p>
             </div>
-          </div>
-        </section>
 
-        <section class="blog-list" aria-label="Статьи блога">
-          <div class="container">
-            <div class="row blog-list__row gy-4">
+            <div class="row blog__row gy-4">
               <div class="col-12 col-lg-6">
                 <article class="blog-card">
-                	<div class="blog-card__media">
+                	<a href="article.html" class="blog-card__media">
                 		<img
                 			class="cover-image"
                 			src="img/blog/card-laundry.webp"
@@ -298,8 +295,8 @@
                 			width="712"
                 			height="401"
                 			loading="lazy"
-                		>
-                	</div>
+                			>
+                	</a>
                 	<div class="blog-card__body">
                 		<ul class="blog-card__meta">
                 			<li class="blog-card__meta-item icon-eye">
@@ -308,22 +305,23 @@
                 			<li class="blog-card__meta-item icon-calendar">
                 				<span class="blog-card__meta-text">20 июля 2026</span>
                 			</li>
-                			<li class="blog-card__meta-item icon-heart">
+                			<li class="blog-card__meta-item icon-heart-fill">
                 				<span class="blog-card__meta-text">200 лайков</span>
                 			</li>
                 		</ul>
-                		<h2 class="h2 blog-card__title">5 шагов к чистой кухне без химии</h2>
+                		<h2 class="h2 blog-card__title">
+                			<a href="article.html" class="blog-card__title-link">5 шагов к чистой кухне без химии</a>
+                		</h2>
                 		<p class="text blog-card__text">Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств</p>
                 		<a class="btn btn--primary btn--large blog-card__btn icon-chevron-right" href="article.html">
                 			Читать далее
                 		</a>
                 	</div>
                 </article>
-
               </div>
               <div class="col-12 col-lg-6">
                 <article class="blog-card">
-                	<div class="blog-card__media">
+                	<a href="#" class="blog-card__media">
                 		<img
                 			class="cover-image"
                 			src="img/blog/card-bottles.webp"
@@ -331,8 +329,8 @@
                 			width="712"
                 			height="401"
                 			loading="lazy"
-                		>
-                	</div>
+                			>
+                	</a>
                 	<div class="blog-card__body">
                 		<ul class="blog-card__meta">
                 			<li class="blog-card__meta-item icon-eye">
@@ -341,22 +339,23 @@
                 			<li class="blog-card__meta-item icon-calendar">
                 				<span class="blog-card__meta-text">20 июля 2026</span>
                 			</li>
-                			<li class="blog-card__meta-item icon-heart">
+                			<li class="blog-card__meta-item icon-heart-fill">
                 				<span class="blog-card__meta-text">200 лайков</span>
                 			</li>
                 		</ul>
-                		<h2 class="h2 blog-card__title">Как правильно стирать разные ткани</h2>
+                		<h2 class="h2 blog-card__title">
+                			<a href="#" class="blog-card__title-link">Как правильно стирать разные ткани</a>
+                		</h2>
                 		<p class="text blog-card__text">Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств</p>
                 		<a class="btn btn--primary btn--large blog-card__btn icon-chevron-right" href="#">
                 			Читать далее
                 		</a>
                 	</div>
                 </article>
-
               </div>
               <div class="col-12 col-lg-6">
                 <article class="blog-card">
-                	<div class="blog-card__media">
+                	<a href="#" class="blog-card__media">
                 		<img
                 			class="cover-image"
                 			src="img/blog/card-sponges.webp"
@@ -364,8 +363,8 @@
                 			width="712"
                 			height="401"
                 			loading="lazy"
-                		>
-                	</div>
+                			>
+                	</a>
                 	<div class="blog-card__body">
                 		<ul class="blog-card__meta">
                 			<li class="blog-card__meta-item icon-eye">
@@ -374,22 +373,23 @@
                 			<li class="blog-card__meta-item icon-calendar">
                 				<span class="blog-card__meta-text">20 июля 2026</span>
                 			</li>
-                			<li class="blog-card__meta-item icon-heart">
+                			<li class="blog-card__meta-item icon-heart-fill">
                 				<span class="blog-card__meta-text">200 лайков</span>
                 			</li>
                 		</ul>
-                		<h2 class="h2 blog-card__title">Как правильно стирать разные ткани</h2>
+                		<h2 class="h2 blog-card__title">
+                			<a href="#" class="blog-card__title-link">Как правильно стирать разные ткани</a>
+                		</h2>
                 		<p class="text blog-card__text">Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств</p>
                 		<a class="btn btn--primary btn--large blog-card__btn icon-chevron-right" href="#">
                 			Читать далее
                 		</a>
                 	</div>
                 </article>
-
               </div>
               <div class="col-12 col-lg-6">
                 <article class="blog-card">
-                	<div class="blog-card__media">
+                	<a href="article.html" class="blog-card__media">
                 		<img
                 			class="cover-image"
                 			src="img/blog/card-laundry.webp"
@@ -397,8 +397,8 @@
                 			width="712"
                 			height="401"
                 			loading="lazy"
-                		>
-                	</div>
+                			>
+                	</a>
                 	<div class="blog-card__body">
                 		<ul class="blog-card__meta">
                 			<li class="blog-card__meta-item icon-eye">
@@ -407,23 +407,24 @@
                 			<li class="blog-card__meta-item icon-calendar">
                 				<span class="blog-card__meta-text">20 июля 2026</span>
                 			</li>
-                			<li class="blog-card__meta-item icon-heart">
+                			<li class="blog-card__meta-item icon-heart-fill">
                 				<span class="blog-card__meta-text">200 лайков</span>
                 			</li>
                 		</ul>
-                		<h2 class="h2 blog-card__title">5 шагов к чистой кухне без химии</h2>
+                		<h2 class="h2 blog-card__title">
+                			<a href="article.html" class="blog-card__title-link">5 шагов к чистой кухне без химии</a>
+                		</h2>
                 		<p class="text blog-card__text">Рассказываем, как поддерживать идеальную чистоту на кухне с помощью наших натуральных средств</p>
                 		<a class="btn btn--primary btn--large blog-card__btn icon-chevron-right" href="article.html">
                 			Читать далее
                 		</a>
                 	</div>
                 </article>
-
               </div>
             </div>
 
             <nav class="pagination" aria-label="Пагинация">
-            	<a class="pagination__nav pagination__nav--prev icon-chevron-right" href="#">
+            	<a class="pagination__nav pagination__nav--prev icon-chevron-right" href="#" aria-label="Назад">
             		<span class="pagination__nav-text">Назад</span>
             	</a>
             	<ul class="pagination__list">
@@ -437,7 +438,7 @@
             			<a class="pagination__link" href="#">3</a>
             		</li>
             	</ul>
-            	<a class="pagination__nav pagination__nav--next icon-chevron-right" href="#">
+            	<a class="pagination__nav pagination__nav--next icon-chevron-right" href="#" aria-label="Далее">
             		<span class="pagination__nav-text">Далее</span>
             	</a>
             </nav>
