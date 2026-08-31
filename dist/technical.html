@@ -1,444 +1,376 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>KIPNI — Техническая страница</title>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="KIPNI">
-    <link rel="manifest" href="/site.webmanifest">
+<head>
+	<title>KIPNI — Техническая страница</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="KIPNI">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- plugins -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260831140144">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260831140144">
+	<!-- plugins -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260831140144">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260831140144">
+	<script>
+		try {
+			if (sessionStorage.getItem("kipni-banner-hidden") === "1") {
+				document.documentElement.classList.add("is-banner-hidden");
+			}
+		} catch (e) {}
 
+	</script>
+</head>
 
-    <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/libs/fancybox.css">
-    <!-- plugins -->
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<button class="header__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
+			<div class="header-banner" style="background-image: url('img/header-banner.webp');">
+				<div class="container header-banner__container">
+					<p class="h4 header-banner__text"> Любимые экосредства для дома и семьи в одной подборке. <a class="header-banner__link icon-chevron-right" href="#"><span>Перейти</span></a>
+					</p>
+					<button class="header-banner__close icon-cross-circle" type="button" aria-label="Закрыть баннер"></button>
+				</div>
+			</div>
+			<div class="header__bar">
+				<div class="header__bar-container container">
+					<button class="header__burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<a class="header__logo" href="/" aria-label="KIPNI — на главную">
+						<img src="img/logo.svg" alt="KIPNI" width="173" height="47">
+					</a>
+					<div class="header__menu" id="header-menu" hidden>
+						<div class="header__menu-inner">
+							<a class="btn btn--primary header__menu-cta" href="catalog.html">Вся продукция</a>
+							<nav class="header__menu-nav" aria-label="Основное меню">
+								<div class="header__catalog-wrap header__menu-accordion is-open">
+									<button class="header__catalog-btn header__menu-row header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog"> Каталог товаров </button>
+									<div class="header-catalog header__menu-panel" id="header-catalog">
+										<div class="container header-catalog__container">
+											<div class="header-catalog__panel">
+												<div class="row">
+													<div class="col-12 col-md-4 col-xl-5 header-catalog__col header-catalog__col--categories">
+														<h2 class="header-catalog__title icon-leaf"> Категории товаров </h2>
+														<ul class="header-catalog__list">
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/shower-gel.svg" alt="Гели для душа" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Гели для душа</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/soap.svg" alt="Мыло" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Мыло</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/shampoo.svg" alt="Шампуни" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Шампуни</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/spray.svg" alt="Уборка" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Уборка</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/laundry.svg" alt="Стирка" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Стирка</span>
+																</a>
+															</li>
+															<li class="header-catalog__item--desktop">
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/gift.svg" alt="Подарочные наборы" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Подарочные наборы</span>
+																</a>
+															</li>
+															<li class="header-catalog__item--cta">
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/grid.svg" alt="Вся продукция" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Вся продукция</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+													<div class="col-12 col-md-4 header-catalog__col header-catalog__col--buyers">
+														<h2 class="header-catalog__title icon-box"> Полезное для покупателя </h2>
+														<ul class="header-catalog__list">
+															<li>
+																<a class="header-catalog__link" href="where-to-buy.html">
+																	<img class="header-catalog__link-icon" src="img/icons/map-pin.svg" alt="Где купить" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Где купить</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="delivery.html">
+																	<img class="header-catalog__link-icon" src="img/icons/truck.svg" alt="Доставка и оплата" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Доставка и оплата</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/reviews.svg" alt="Отзывы" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Отзывы</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="blog.html">
+																	<img class="header-catalog__link-icon" src="img/icons/blog.svg" alt="Блог" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Блог</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+													<div class="col-12 col-md-4 col-xl-3 header-catalog__promo" style="background-image: url('img/catalog-banner.webp');">
+														<p class="header-catalog__promo-title">Чистота, которой <span>доверяет семья</span></p>
+														<p class="header-catalog__promo-text">Экологичные средства для дома на каждый день</p>
+														<a class="btn btn--primary btn--large header-catalog__promo-btn icon-chevron-right" href="catalog.html"> Перейти в каталог </a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="header-nav header__menu-accordion is-open">
+									<button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-user" type="button" aria-expanded="true"> Покупателям </button>
+									<div class="header-nav__panel header__menu-panel">
+										<ul class="header-nav__list">
+											<li class="header-nav__item"><a class="header-nav__link" href="about.html">О компании</a></li>
+											<li class="header-nav__item"><a class="header-nav__link" href="promotions.html">Акции</a></li>
+											<li class="header-nav__item header-nav__item--extra"><a class="header-nav__link" href="blog.html">Блог</a></li>
+											<li class="header-nav__item header-nav__item--extra"><a class="header-nav__link" href="certificates.html">Сертификаты</a></li>
+											<li class="header-nav__item"><a class="header-nav__link" href="contacts.html">Контакты</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="header__buy-wrap">
+									<button class="header-buy-btn icon-shopping-cart" type="button" aria-expanded="false" aria-controls="header-buy"> Где купить </button>
+									<div class="header-buy" id="header-buy" hidden>
+										<div class="header-buy__panel">
+											<p class="h4 header-buy__caption">Мы на маркетплейсах</p>
+											<ul class="header-buy__list">
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/ozon-short.svg" alt="Ozon" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">Ozon</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/wildberries-short.svg" alt="Wildberries" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">Wildberries</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/yandex-market-short.svg" alt="Яндекс Маркет" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">Яндекс Маркет</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/megamarket-short.svg" alt="Мегамаркет" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">Мегамаркет</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/KazanExpress-short.svg" alt="KazanExpress" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">KazanExpress</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/vse-instrumenti-short.svg" alt="ВсеИнструменты" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">ВсеИнструменты</span>
+													</a>
+												</li>
+											</ul>
+											<a class="btn btn--ghost header-buy__all icon-grid" href="where-to-buy.html"> Смотреть все площадки </a>
+										</div>
+									</div>
+									<a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html"> Где купить? </a>
+								</div>
+							</nav>
+						</div>
+					</div>
+					<div class="header__actions">
+						<button class="header__search-mobile icon-search" type="button" aria-expanded="false" aria-controls="header-search" aria-label="Поиск"></button>
+						<a class="header-favorite icon-heart" href="favorites.html" aria-label="Избранное, 2 товара">
+							<span class="header-favorite__badge">2</span>
+						</a>
+					</div>
+					<form class="header-search" id="header-search" action="search.html" method="get" role="search">
+						<label class="visually-hidden" for="header-search-input">Поиск по каталогу</label>
+						<input class="header-search__input" id="header-search-input" type="text" name="s" placeholder="Поиск по каталогу" autocomplete="off">
+						<button class="header-search__submit icon-search" type="submit" aria-label="Искать"></button>
+					</form>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="container">
+				<nav class="breadcrumbs" aria-label="Хлебные крошки">
+					<ol class="breadcrumbs__list">
+						<li class="breadcrumbs__item">
+							<a class="breadcrumbs__link" href="index.html">Главная</a>
+						</li>
+						<li class="breadcrumbs__item">
+							<span class="breadcrumbs__link">Доставка и оплата</span>
+						</li>
+					</ol>
+				</nav>
+			</div>
+			<section class="technical section-space-md" aria-labelledby="technical-title">
+				<div class="container">
+					<div class="typography-block">
+						<h1 id="technical-title">Техническая страница</h1>
+						<p> Если вы оказались на этой странице, то скорее всего вы очень внимательный покупатель или наш партнер. Здесь мы собрали сканы всех сертификатов, которые подтверждают экологичность и качество наших средств, ведь прозрачность&nbsp;— это тоже про экологичный подход. </p>
+						<h2>Как оформить заказ</h2>
+						<p> Так как сайт является каталогом продукции, оформить заказ напрямую через сайт нельзя. </p>
+						<p>Вы можете:</p>
+						<ul>
+							<li>оставить заявку через форму обратной связи;</li>
+							<li>позвонить нам;</li>
+							<li>написать в WhatsApp или Telegram;</li>
+							<li>приобрести продукцию на маркетплейсах.</li>
+						</ul>
+						<p> После обращения менеджер поможет подобрать средства, рассчитает стоимость и предложит удобный способ получения. </p>
+						<h2>Способы покупки</h2>
+						<p> Если вы оказались на этой странице, то скорее всего вы очень внимательный покупатель или наш партнер. Здесь мы собрали сканы всех сертификатов, которые подтверждают экологичность и качество наших средств, ведь прозрачность&nbsp;— это тоже про экологичный подход. </p>
+						<h2>Оплата</h2>
+						<p> Не стоит сразу пытаться оттереть засохший жир жёсткой губкой. Это может повредить поверхность плиты, фасадов или столешницы. </p>
+						<p> Нанесите на загрязнённый участок тёплую воду или мягкий моющий раствор и оставьте на несколько минут. За это время загрязнение размягчится, после чего его будет легче удалить обычной салфеткой. </p>
+						<p> Для регулярной уборки лучше выбирать средства без резкого запаха и слишком агрессивных компонентов. Перед использованием состава обязательно проверьте рекомендации производителя поверхности. </p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<div class="row footer__main">
+					<div class="col-12 col-xl-3 footer__brand">
+						<a class="footer__logo" href="/" aria-label="KIPNI — на главную">
+							<img src="img/logo.svg" alt="Логотип KIPNI" width="173" height="56" loading="lazy">
+						</a>
+						<p class="footer__tagline">Средства для дома и семьи, созданные с заботой о вас и природе</p>
+						<div class="footer__legal footer__legal--desktop">
+							<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
+							<a class="footer__legal-link" href="#">Уведомление об использовании рекомендательных технологий</a>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3 col-xl-2 footer__col">
+						<h3 class="footer__title">Компания</h3>
+						<ul class="footer__list">
+							<li><a class="footer__link" href="about.html">О компании</a></li>
+							<li><a class="footer__link" href="promotions.html">Акции</a></li>
+							<li><a class="footer__link" href="vacancies.html">Вакансии</a></li>
+							<li><a class="footer__link" href="certificates.html">Сертификаты</a></li>
+							<li><a class="footer__link" href="contacts.html">Контакты</a></li>
+							<li><a class="footer__link" href="#">Партнеры</a></li>
+							<li><a class="footer__link" href="blog.html">Блог</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 col-xl-2 footer__col">
+						<h3 class="footer__title">Каталог</h3>
+						<ul class="footer__list">
+							<li><a class="footer__link" href="#">Уход за телом</a></li>
+							<li><a class="footer__link" href="#">Уход за волосами</a></li>
+							<li><a class="footer__link" href="#">Подарочные наборы</a></li>
+							<li><a class="footer__link" href="#">Уборка</a></li>
+							<li><a class="footer__link" href="#">Сад</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 col-xl-2 footer__col">
+						<h3 class="footer__title">Помощь</h3>
+						<ul class="footer__list">
+							<li><a class="footer__link" href="#">Как купить</a></li>
+							<li><a class="footer__link" href="delivery.html">Доставка</a></li>
+							<li><a class="footer__link" href="delivery.html">Оплата</a></li>
+							<li><a class="footer__link" href="#">Гарантия, возврат</a></li>
+							<li><a class="footer__link" href="#">Юридическим лицам</a></li>
+							<li><a class="footer__link" href="#">Для поставщиков</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 footer__col footer__contacts">
+						<h3 class="footer__title">Контакты</h3>
+						<a class="footer__phone" href="tel:88001013931">8 (800) 101-39-31</a>
+						<p class="footer__hours">пн-пт с 9:00 до 18:00</p>
+						<a class="footer__email" href="mailto:kipni@kipni.ru">kipni@kipni.ru</a>
+						<ul class="footer__socials">
+							<li>
+								<a class="footer__social icon-vk" href="#" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"></a>
+							</li>
+							<li>
+								<a class="footer__social icon-max" href="#" target="_blank" rel="noopener noreferrer" aria-label="Мax"></a>
+							</li>
+							<li>
+								<a class="footer__social icon-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"></a>
+							</li>
+						</ul>
+						<a class="btn btn--primary footer__btn" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline">Задать вопрос</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__legal footer__legal--mobile">
+						<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
+						<a class="footer__legal-link" href="#">Уведомление об использовании рекомендательных технологий</a>
+					</div>
+					<p class="footer__copy">2003-2026 © ООО «Фабрика Кипни». Все права&nbsp;защищены</p>
+				</div>
+			</div>
+		</footer>
+		<div id="modal-ask-question" class="popup">
+			<div class="popup__head">
+				<h2 class="popup__title">Задать вопрос</h2>
+				<p class="text popup__lead"> Возникли вопросы? Напишите их в форме ниже и мы обязательно ответим Вам в ближайшее время </p>
+			</div>
+			<form class="popup__form" action="#" method="post">
+				<div class="row g-3 popup__fields">
+					<div class="col-12 col-md-4">
+						<label class="visually-hidden" for="ask-name">Имя</label>
+						<input class="form-control" id="ask-name" type="text" name="name" placeholder="Введите имя" required autocomplete="name">
+					</div>
+					<div class="col-12 col-md-4">
+						<label class="visually-hidden" for="ask-email">Электронная почта</label>
+						<input class="form-control" id="ask-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
+					</div>
+					<div class="col-12 col-md-4">
+						<label class="visually-hidden" for="ask-phone">Номер телефона</label>
+						<input class="form-control" id="ask-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
+					</div>
+					<div class="col-12">
+						<label class="visually-hidden" for="ask-message">Ваш вопрос</label>
+						<textarea class="form-control popup__textarea" id="ask-message" name="message" placeholder="Ваш вопрос" required rows="6"></textarea>
+					</div>
+				</div>
+				<label class="form-check">
+					<input class="visually-hidden form-check__input" type="checkbox" name="consent" required checked>
+					<span class="form-check__text"> Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных </span>
+				</label>
+				<button class="btn btn--primary btn--large popup__submit" type="submit">Задать вопрос</button>
+			</form>
+		</div>
+	</div> <!-- plugins -->
+	<script defer src="js/libs/swiper-bundle.min.js?_v=20260831140144"></script>
+	<script defer src="js/libs/fancybox.umd.js?_v=20260831140144"></script>
+	<!-- plugins -->
+	<script defer src="js/app.js?_v=20260831140144"></script>
+</body>
 
-    <link rel="stylesheet" href="css/reset.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-
-    <script>
-      try {
-        if (sessionStorage.getItem("kipni-banner-hidden") === "1") {
-          document.documentElement.classList.add("is-banner-hidden");
-        }
-      } catch (e) {}
-    </script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
-        <button class="header__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
-        <div class="header-banner" style="background-image: url('img/header-banner.webp');">
-          <div class="container header-banner__container">
-            <p class="h4 header-banner__text">
-              Любимые экосредства для дома и семьи в одной подборке.
-              <a class="header-banner__link icon-chevron-right" href="#"><span>Перейти</span></a>
-            </p>
-            <button class="header-banner__close icon-cross-circle" type="button" aria-label="Закрыть баннер"></button>
-          </div>
-        </div>
-
-        <div class="header__bar">
-          <div class="header__bar-container container">
-            <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-
-            <a class="header__logo" href="/" aria-label="KIPNI — на главную">
-              <img src="img/logo.svg" alt="KIPNI" width="173" height="47">
-            </a>
-
-            <div class="header__menu" id="header-menu" hidden>
-              <div class="header__menu-inner">
-                <a class="btn btn--primary header__menu-cta" href="catalog.html">Вся продукция</a>
-
-                <nav class="header__menu-nav" aria-label="Основное меню">
-
-                  <div class="header__catalog-wrap header__menu-accordion is-open">
-                    <button class="header__catalog-btn header__menu-row header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
-                      Каталог товаров
-                    </button>
-                    <div class="header-catalog header__menu-panel" id="header-catalog">
-                      <div class="container header-catalog__container">
-                        <div class="header-catalog__panel">
-                          <div class="row">
-                            <div class="col-12 col-md-4 col-xl-5 header-catalog__col header-catalog__col--categories">
-                              <h2 class="header-catalog__title icon-leaf">
-                                Категории товаров
-                              </h2>
-                              <ul class="header-catalog__list">
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/shower-gel.svg" alt="Гели для душа" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Гели для душа</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/soap.svg" alt="Мыло" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Мыло</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/shampoo.svg" alt="Шампуни" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Шампуни</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/spray.svg" alt="Уборка" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Уборка</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/laundry.svg" alt="Стирка" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Стирка</span>
-                                  </a>
-                                </li>
-                                <li class="header-catalog__item--desktop">
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/gift.svg" alt="Подарочные наборы" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Подарочные наборы</span>
-                                  </a>
-                                </li>
-                                <li class="header-catalog__item--cta">
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/grid.svg" alt="Вся продукция" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Вся продукция</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div class="col-12 col-md-4 header-catalog__col header-catalog__col--buyers">
-                              <h2 class="header-catalog__title icon-box">
-                                Полезное для покупателя
-                              </h2>
-                              <ul class="header-catalog__list">
-                                <li>
-                                  <a class="header-catalog__link" href="where-to-buy.html">
-                                    <img class="header-catalog__link-icon" src="img/icons/map-pin.svg" alt="Где купить" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Где купить</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="delivery.html">
-                                    <img class="header-catalog__link-icon" src="img/icons/truck.svg" alt="Доставка и оплата" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Доставка и оплата</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/reviews.svg" alt="Отзывы" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Отзывы</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="blog.html">
-                                    <img class="header-catalog__link-icon" src="img/icons/blog.svg" alt="Блог" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Блог</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div class="col-12 col-md-4 col-xl-3 header-catalog__promo" style="background-image: url('img/catalog-banner.webp');">
-                              <p class="header-catalog__promo-title">Чистота, которой <span>доверяет семья</span></p>
-                              <p class="header-catalog__promo-text">Экологичные средства для дома на каждый день</p>
-                              <a class="btn btn--primary btn--large header-catalog__promo-btn icon-chevron-right" href="catalog.html">
-                                Перейти в каталог
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="header-nav header__menu-accordion is-open">
-                    <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-user" type="button" aria-expanded="true">
-                      Покупателям
-                    </button>
-                    <div class="header-nav__panel header__menu-panel">
-                      <ul class="header-nav__list">
-                        <li class="header-nav__item"><a class="header-nav__link" href="about.html">О компании</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="promotions.html">Акции</a></li>
-                        <li class="header-nav__item header-nav__item--extra"><a class="header-nav__link" href="blog.html">Блог</a></li>
-                        <li class="header-nav__item header-nav__item--extra"><a class="header-nav__link" href="certificates.html">Сертификаты</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="contacts.html">Контакты</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="header__buy-wrap">
-                    <button class="header-buy-btn icon-shopping-cart" type="button" aria-expanded="false" aria-controls="header-buy">
-                      Где купить
-                    </button>
-
-                    <div class="header-buy" id="header-buy" hidden>
-                      <div class="header-buy__panel">
-                        <p class="h4 header-buy__caption">Мы на маркетплейсах</p>
-                        <ul class="header-buy__list">
-                          <li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/ozon-short.svg" alt="Ozon" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">Ozon</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/wildberries-short.svg" alt="Wildberries" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">Wildberries</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/yandex-market-short.svg" alt="Яндекс Маркет" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">Яндекс Маркет</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/megamarket-short.svg" alt="Мегамаркет" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">Мегамаркет</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/KazanExpress-short.svg" alt="KazanExpress" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">KazanExpress</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/vse-instrumenti-short.svg" alt="ВсеИнструменты" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">ВсеИнструменты</span>
-                          	</a>
-                          </li>
-
-                        </ul>
-                        <a class="btn btn--ghost header-buy__all icon-grid" href="where-to-buy.html">
-                          Смотреть все площадки
-                        </a>
-                      </div>
-                    </div>
-
-                    <a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html">
-                      Где купить?
-                    </a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-
-            <div class="header__actions">
-              <button class="header__search-mobile icon-search" type="button" aria-expanded="false" aria-controls="header-search" aria-label="Поиск"></button>
-              <a class="header-favorite icon-heart" href="favorites.html" aria-label="Избранное, 2 товара">
-                <span class="header-favorite__badge">2</span>
-              </a>
-            </div>
-
-            <form class="header-search" id="header-search" action="search.html" method="get" role="search">
-              <label class="visually-hidden" for="header-search-input">Поиск по каталогу</label>
-              <input class="header-search__input" id="header-search-input" type="text" name="s" placeholder="Поиск по каталогу" autocomplete="off">
-              <button class="header-search__submit icon-search" type="submit" aria-label="Искать"></button>
-            </form>
-          </div>
-        </div>
-      </header>
-      <main class="page">
-          <div class="container">
-            <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            	<ol class="breadcrumbs__list">
-            		<li class="breadcrumbs__item">
-            			<a class="breadcrumbs__link" href="index.html">Главная</a>
-            		</li>
-            		
-            		
-            		<li class="breadcrumbs__item">
-            			<span class="breadcrumbs__link">Доставка и оплата</span>
-            		</li>
-            	</ol>
-            </nav>
-
-          </div>
-
-        <section class="technical section-space-md" aria-labelledby="technical-title">
-          <div class="container">
-            <div class="typography-block">
-              <h1 id="technical-title">Техническая страница</h1>
-              <p>
-                Если вы оказались на этой странице, то скорее всего вы очень внимательный покупатель или наш партнер. Здесь мы собрали сканы всех сертификатов, которые подтверждают экологичность и качество наших средств, ведь прозрачность&nbsp;— это тоже про экологичный подход.
-              </p>
-
-              <h2>Как оформить заказ</h2>
-              <p>
-                Так как сайт является каталогом продукции, оформить заказ напрямую через сайт нельзя.
-              </p>
-              <p>Вы можете:</p>
-              <ul>
-                <li>оставить заявку через форму обратной связи;</li>
-                <li>позвонить нам;</li>
-                <li>написать в WhatsApp или Telegram;</li>
-                <li>приобрести продукцию на маркетплейсах.</li>
-              </ul>
-              <p>
-                После обращения менеджер поможет подобрать средства, рассчитает стоимость и предложит удобный способ получения.
-              </p>
-
-              <h2>Способы покупки</h2>
-              <p>
-                Если вы оказались на этой странице, то скорее всего вы очень внимательный покупатель или наш партнер. Здесь мы собрали сканы всех сертификатов, которые подтверждают экологичность и качество наших средств, ведь прозрачность&nbsp;— это тоже про экологичный подход.
-              </p>
-
-              <h2>Оплата</h2>
-              <p>
-                Не стоит сразу пытаться оттереть засохший жир жёсткой губкой. Это может повредить поверхность плиты, фасадов или столешницы.
-              </p>
-              <p>
-                Нанесите на загрязнённый участок тёплую воду или мягкий моющий раствор и оставьте на несколько минут. За это время загрязнение размягчится, после чего его будет легче удалить обычной салфеткой.
-              </p>
-              <p>
-                Для регулярной уборки лучше выбирать средства без резкого запаха и слишком агрессивных компонентов. Перед использованием состава обязательно проверьте рекомендации производителя поверхности.
-              </p>
-            </div>
-          </div>
-        </section>
-      </main>
-      <footer class="footer">
-      	<div class="container footer__container">
-      		<div class="row footer__main">
-      			<div class="col-12 col-xl-3 footer__brand">
-      				<a class="footer__logo" href="/" aria-label="KIPNI — на главную">
-      					<img src="img/logo.svg" alt="Логотип KIPNI" width="173" height="56" loading="lazy">
-      				</a>
-      				<p class="footer__tagline">Средства для дома и семьи, созданные с заботой о вас и природе</p>
-      				<div class="footer__legal footer__legal--desktop">
-      					<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
-      					<a class="footer__legal-link" href="#">Уведомление об использовании рекомендательных технологий</a>
-      				</div>
-      			</div>
-
-      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
-      				<h3 class="footer__title">Компания</h3>
-      				<ul class="footer__list">
-      					<li><a class="footer__link" href="about.html">О компании</a></li>
-      					<li><a class="footer__link" href="promotions.html">Акции</a></li>
-      					<li><a class="footer__link" href="vacancies.html">Вакансии</a></li>
-      					<li><a class="footer__link" href="certificates.html">Сертификаты</a></li>
-      					<li><a class="footer__link" href="contacts.html">Контакты</a></li>
-      					<li><a class="footer__link" href="#">Партнеры</a></li>
-      					<li><a class="footer__link" href="blog.html">Блог</a></li>
-      				</ul>
-      			</div>
-
-      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
-      				<h3 class="footer__title">Каталог</h3>
-      				<ul class="footer__list">
-      					<li><a class="footer__link" href="#">Уход за телом</a></li>
-      					<li><a class="footer__link" href="#">Уход за волосами</a></li>
-      					<li><a class="footer__link" href="#">Подарочные наборы</a></li>
-      					<li><a class="footer__link" href="#">Уборка</a></li>
-      					<li><a class="footer__link" href="#">Сад</a></li>
-      				</ul>
-      			</div>
-
-      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
-      				<h3 class="footer__title">Помощь</h3>
-      				<ul class="footer__list">
-      					<li><a class="footer__link" href="#">Как купить</a></li>
-      					<li><a class="footer__link" href="delivery.html">Доставка</a></li>
-      					<li><a class="footer__link" href="delivery.html">Оплата</a></li>
-      					<li><a class="footer__link" href="#">Гарантия, возврат</a></li>
-      					<li><a class="footer__link" href="#">Юридическим лицам</a></li>
-      					<li><a class="footer__link" href="#">Для поставщиков</a></li>
-      				</ul>
-      			</div>
-
-      			<div class="col-6 col-lg-3 footer__col footer__contacts">
-      				<h3 class="footer__title">Контакты</h3>
-      				<a class="footer__phone" href="tel:88001013931">8 (800) 101-39-31</a>
-      				<p class="footer__hours">пн-пт с 9:00 до 18:00</p>
-      				<a class="footer__email" href="mailto:kipni@kipni.ru">kipni@kipni.ru</a>
-      				<ul class="footer__socials">
-      					<li>
-      						<a class="footer__social icon-vk" href="#" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"></a>
-      					</li>
-      					<li>
-      						<a class="footer__social icon-max" href="#" target="_blank" rel="noopener noreferrer" aria-label="Мax"></a>
-      					</li>
-      					<li>
-      						<a class="footer__social icon-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"></a>
-      					</li>
-      				</ul>
-      				<a class="btn btn--primary footer__btn" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline">Задать вопрос</a>
-      			</div>
-      		</div>
-
-      		<div class="footer__bottom">
-      			<div class="footer__legal footer__legal--mobile">
-      				<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
-      				<a class="footer__legal-link" href="#">Уведомление об использовании рекомендательных технологий</a>
-      			</div>
-      			<p class="footer__copy">2003-2026 © ООО «Фабрика Кипни». Все права&nbsp;защищены</p>
-      		</div>
-      	</div>
-      </footer>
-      <div id="modal-ask-question" class="popup">
-      	<div class="popup__head">
-      		<h2 class="popup__title">Задать вопрос</h2>
-      		<p class="text popup__lead">
-      			Возникли вопросы? Напишите их в форме ниже и мы обязательно ответим Вам в ближайшее время
-      		</p>
-      	</div>
-      	<form class="popup__form" action="#" method="post">
-      		<div class="row g-3 popup__fields">
-      			<div class="col-12 col-md-4">
-      				<label class="visually-hidden" for="ask-name">Имя</label>
-      				<input class="form-control" id="ask-name" type="text" name="name" placeholder="Введите имя" required autocomplete="name">
-      			</div>
-      			<div class="col-12 col-md-4">
-      				<label class="visually-hidden" for="ask-email">Электронная почта</label>
-      				<input class="form-control" id="ask-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
-      			</div>
-      			<div class="col-12 col-md-4">
-      				<label class="visually-hidden" for="ask-phone">Номер телефона</label>
-      				<input class="form-control" id="ask-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
-      			</div>
-      			<div class="col-12">
-      				<label class="visually-hidden" for="ask-message">Ваш вопрос</label>
-      				<textarea class="form-control popup__textarea" id="ask-message" name="message" placeholder="Ваш вопрос" required rows="6"></textarea>
-      			</div>
-      		</div>
-
-      		<label class="form-check">
-      			<input class="visually-hidden form-check__input" type="checkbox" name="consent" required checked>
-      			<span class="form-check__text">
-      				Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных
-      			</span>
-      		</label>
-
-      		<button class="btn btn--primary btn--large popup__submit" type="submit">Задать вопрос</button>
-      	</form>
-      </div>
-
-    </div>
-    <!-- plugins -->
-    <script defer src="js/libs/swiper-bundle.min.js"></script>
-    <script defer src="js/libs/fancybox.umd.js"></script>
-    <!-- plugins -->
-
-    <script defer src="js/app.js"></script>
-  </body>
 </html>
