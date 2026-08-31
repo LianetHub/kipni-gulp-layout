@@ -604,9 +604,6 @@ $scrollbarColor: $color-primary;
 		gap: rem(50);
 	}
 
-	@media (min-width: $md1) {
-		flex-wrap: nowrap;
-	}
 
 	// benefits__item
 	&__item {

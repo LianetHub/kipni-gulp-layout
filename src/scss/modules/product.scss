@@ -187,12 +187,19 @@
 
 	// product-info__stars
 	&__stars {
-		@extend %icon-stars-5;
-		display: inline-flex;
-		align-items: center;
-		color: $color-primary;
-		font-size: rem(18);
-		letter-spacing: 0.15em;
+		display: flex;
+		gap: rem(2);
+		color: #ffb43d;
+		font-size: rem(16);
+
+		@media (min-width: $md4) {
+			font-size: rem(18);
+		}
+	}
+
+	// product-info__star--empty
+	&__star--empty {
+		color: #8A8A8A;
 	}
 
 	// product-info__score
@@ -437,13 +444,10 @@
 
 	// product-tabs__panels
 	&__panels {
+		overflow: hidden;
 		border: rem(1) solid $color-soft-green;
 		border-radius: $radius-md;
-		padding: rem(24) rem(20);
-
-		@media (min-width: $md4) {
-			padding: rem(40) rem(48);
-		}
+		padding: 0;
 	}
 
 	// product-tabs__panel
@@ -480,66 +484,101 @@
 		margin: rem(8) 0 0;
 	}
 
-	// product-tabs__teaser
-	&__teaser {
-		max-width: rem(586);
-		margin-inline: auto;
-		background-color: transparent;
-
-		@media (min-width: $md3) {
-			margin-inline: 0;
-			margin-left: auto;
-		}
-
-		&::before {
-			aspect-ratio: 586 / 214;
-			border-radius: 0 $radius-md 0 $radius-btn;
-		}
-
-		.help-aside__promo-body {
-			padding: rem(24) 0 0;
-		}
-
-		.help-aside__promo-text {
-			color: $color-text;
-			margin-bottom: rem(24);
-		}
-	}
-}
-
-.product-benefits {
-	margin-bottom: rem(24);
-
-	@media (min-width: $md4) {
-		margin-bottom: rem(32);
-	}
-
-	// product-benefits__item
-	&__item {
-		display: flex;
-		align-items: center;
-		gap: rem(14);
-
-		&::before {
-			flex-shrink: 0;
-			width: rem(40);
-			height: rem(40);
-			font-size: rem(40);
-		}
-	}
-
-	// product-benefits__text
-	&__text {
-		font-family: $font-golos, sans-serif;
-		font-size: rem(16);
-		font-weight: 500;
-		line-height: math.div(19, 16);
-		color: $color-text;
+	// product-tabs__main
+	&__main {
+		padding: rem(24) rem(20);
 
 		@media (min-width: $md4) {
-			font-size: rem(18);
-			line-height: math.div(22, 18);
+			padding: rem(44) rem(48) rem(40);
 		}
+
+		// product-tabs__main--solo
+		&--solo {
+			padding: rem(24) rem(20);
+
+			@media (min-width: $md4) {
+				padding: rem(40) rem(48);
+			}
+		}
+
+		.benefits {
+			margin-bottom: rem(24);
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: rem(24);
+
+			@media (min-width: $md4) {
+				margin-bottom: rem(32);
+			}
+
+			// benefits__item
+			&__item {
+				font-size: rem(16);
+				font-weight: 400;
+				line-height: 1.2;
+				color: $color-text;
+			}
+		}
+	}
+
+	// product-tabs__aside
+	&__aside {
+		@media (min-width: $md3) {
+			padding-bottom: rem(40);
+		}
+	}
+
+	// product-tabs__teaser
+	&__teaser {
+		overflow: hidden;
+		max-width: rem(586);
+		margin-inline: auto;
+
+		@media (min-width: $md3) {
+			margin-inline: 0 0 auto;
+		}
+	}
+
+	// product-tabs__teaser-media
+	&__teaser-media {
+		overflow: hidden;
+		border-radius: 0 $radius-md 0 $radius-btn;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 586 / 214;
+			object-fit: cover;
+		}
+	}
+
+	// product-tabs__teaser-body
+	&__teaser-body {
+		padding: rem(24) rem(20) rem(28);
+
+		@media (min-width: $md4) {
+			padding: rem(24) rem(27) rem(40);
+		}
+	}
+
+	// product-tabs__teaser-title
+	&__teaser-title {
+		margin: 0 0 rem(12);
+		line-height: 1.2;
+	}
+
+	// product-tabs__teaser-text
+	&__teaser-text {
+		margin: 0 0 rem(24);
+		line-height: math.div(26, 16);
+	}
+
+	// product-tabs__teaser-btn
+	&__teaser-btn {
+		font-family: $font-manrope, sans-serif;
+		font-weight: 400;
+		padding-inline: rem(41);
 	}
 }
 
@@ -603,8 +642,41 @@
 		}
 	}
 
-	// product-related__row
-	&__row {
+	// product-related__slider-wrap
+	&__slider-wrap {
+		overflow: visible;
+
+		@media (min-width: $md4) {
+			overflow: hidden;
+		}
+	}
+
+	// product-related__slider-container
+	&__slider-container {
+		position: relative;
+	}
+
+	// product-related__slider
+	&__slider {
+		overflow: visible;
+		padding: 0 rem(10);
+		margin: 0 rem(-10);
+
+		@media (min-width: $md4) {
+			overflow: hidden;
+			padding: 0;
+			margin: 0;
+		}
+
+		.swiper-slide {
+			height: auto;
+			width: rem(182);
+
+			@media (min-width: $md4) {
+				width: auto;
+			}
+		}
+
 		.product-card {
 			max-width: none;
 			height: 100%;

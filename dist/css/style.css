@@ -22,19 +22,19 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "tthoves";
+  font-display: swap;
+  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
   font-family: "Onest";
   src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
-}
-@font-face {
-  font-family: "tthoves";
-  font-display: swap;
-  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
 }
 :root {
   --color-primary: #8abd35;
@@ -451,12 +451,6 @@ h4,
 
 .icon-star:before {
   content: "\e90f";
-}
-
-.product-info__stars::before {
-  content: "\e90f\e90f\e90f\e90f\e90f";
-  display: inline;
-  letter-spacing: 0.15em;
 }
 
 .form-check__input:checked ~ .form-check__text::before, .icon-check:before {
@@ -5208,6 +5202,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 .about-facts__media {
   overflow: hidden;
+  height: 100%;
   border-radius: var(--radius-md);
 }
 
@@ -5222,7 +5217,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 @media (min-width: 767.98px) {
   .about-fact {
-    padding: 1.875rem 4.5rem 3.9375rem 2.875rem;
+    padding: 1.875rem 2rem;
   }
 }
 .about-fact__icon {
@@ -5273,25 +5268,39 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   color: var(--color-text);
 }
 
+@media (min-width: 767.98px) {
+  .about-philosophy {
+    padding-top: 10rem;
+  }
+}
 .about-philosophy__panel {
-  padding: 1.75rem 1.25rem;
+  position: relative;
+  padding: 1.75rem 1.25rem 0;
   border-radius: var(--radius-md);
-  background: var(--color-soft-blue);
+  background-color: var(--color-soft-blue);
+  background-image: url("../img/about/philosophy-pattern.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
 }
 @media (min-width: 767.98px) {
   .about-philosophy__panel {
-    padding: 2.5rem 2.25rem;
+    padding: 2.5rem 2.25rem 0;
   }
 }
 @media (min-width: 991.98px) {
   .about-philosophy__panel {
-    overflow: visible;
+    background-size: 97% auto;
+    background-position: right -8% top -5rem;
+    min-height: 25.375rem;
+    padding: 0 1.25rem;
+    background-size: 96.9% 287.8%;
+    background-position: 7.62% -13.4375rem;
   }
 }
-@media (min-width: 1199.98px) {
-  .about-philosophy__panel {
-    padding: 0rem 3.75rem 3.5rem;
-  }
+.about-philosophy__row {
+  position: relative;
+  z-index: 1;
 }
 @media (min-width: 991.98px) {
   .about-philosophy__row {
@@ -5301,12 +5310,16 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 .about-philosophy__media {
   max-width: 26.25rem;
   margin-inline: auto;
+  order: 1;
 }
 @media (min-width: 991.98px) {
   .about-philosophy__media {
-    max-width: none;
+    order: 0;
+    flex: 0 0 auto;
+    width: 32.0625rem;
+    max-width: 41%;
     margin-inline: 0;
-    margin-top: -4.5rem;
+    margin-top: calc(25.375rem - 100% * 1.1461988304);
   }
 }
 .about-philosophy__media img {
@@ -5316,13 +5329,13 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 @media (min-width: 991.98px) {
   .about-philosophy__content {
-    padding: 3rem 0 3rem 1.5rem;
+    padding: 3.5625rem 0 3rem 1rem;
   }
 }
 @media (min-width: 1199.98px) {
   .about-philosophy__content {
-    padding: 4.5rem 0 3rem 2.5rem;
-    max-width: 47.5rem;
+    padding: 3.5625rem 3.75rem 3.5rem 2.5rem;
+    max-width: 50.6875rem;
   }
 }
 .about-philosophy__title {
@@ -5336,10 +5349,15 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   margin: 0 0 1.75rem;
   line-height: 1.625;
 }
+@media (min-width: 991.98px) {
+  .about-philosophy__text {
+    margin-bottom: 2.6875rem;
+  }
+}
 .about-philosophy__author {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
+  gap: 0;
 }
 .about-philosophy__name {
   font-size: 1.125rem;
@@ -7101,11 +7119,18 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   }
 }
 .product-info__stars {
-  display: inline-flex;
-  align-items: center;
-  color: var(--color-primary);
-  font-size: 1.125rem;
-  letter-spacing: 0.15em;
+  display: flex;
+  gap: 0.125rem;
+  color: #ffb43d;
+  font-size: 1rem;
+}
+@media (min-width: 767.98px) {
+  .product-info__stars {
+    font-size: 1.125rem;
+  }
+}
+.product-info__star--empty {
+  color: #8A8A8A;
 }
 .product-info__score {
   font-size: 1.125rem;
@@ -7312,14 +7337,10 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   box-shadow: var(--focus-ring);
 }
 .product-tabs__panels {
+  overflow: hidden;
   border: 0.0625rem solid var(--color-soft-green);
   border-radius: var(--radius-md);
-  padding: 1.5rem 1.25rem;
-}
-@media (min-width: 767.98px) {
-  .product-tabs__panels {
-    padding: 2.5rem 3rem;
-  }
+  padding: 0;
 }
 .product-tabs__panel[hidden] {
   display: none;
@@ -7342,60 +7363,85 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 .product-tabs__subtitle {
   margin: 0.5rem 0 0;
 }
-.product-tabs__teaser {
-  max-width: 36.625rem;
-  margin-inline: auto;
-  background-color: transparent;
-}
-@media (min-width: 991.98px) {
-  .product-tabs__teaser {
-    margin-inline: 0;
-    margin-left: auto;
-  }
-}
-.product-tabs__teaser::before {
-  aspect-ratio: 586/214;
-  border-radius: 0 var(--radius-md) 0 var(--radius-btn);
-}
-.product-tabs__teaser .help-aside__promo-body {
-  padding: 1.5rem 0 0;
-}
-.product-tabs__teaser .help-aside__promo-text {
-  color: var(--color-text);
-  margin-bottom: 1.5rem;
-}
-
-.product-benefits {
-  margin-bottom: 1.5rem;
+.product-tabs__main {
+  padding: 1.5rem 1.25rem;
 }
 @media (min-width: 767.98px) {
-  .product-benefits {
+  .product-tabs__main {
+    padding: 2.75rem 3rem 2.5rem;
+  }
+}
+.product-tabs__main--solo {
+  padding: 1.5rem 1.25rem;
+}
+@media (min-width: 767.98px) {
+  .product-tabs__main--solo {
+    padding: 2.5rem 3rem;
+  }
+}
+.product-tabs__main .benefits {
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+@media (min-width: 767.98px) {
+  .product-tabs__main .benefits {
     margin-bottom: 2rem;
   }
 }
-.product-benefits__item {
-  display: flex;
-  align-items: center;
-  gap: 0.875rem;
-}
-.product-benefits__item::before {
-  flex-shrink: 0;
-  width: 2.5rem;
-  height: 2.5rem;
-  font-size: 2.5rem;
-}
-.product-benefits__text {
-  font-family: "GolosText", sans-serif, sans-serif;
+.product-tabs__main .benefits__item {
   font-size: 1rem;
-  font-weight: 500;
-  line-height: 1.1875;
+  font-weight: 400;
+  line-height: 1.2;
   color: var(--color-text);
 }
-@media (min-width: 767.98px) {
-  .product-benefits__text {
-    font-size: 1.125rem;
-    line-height: 1.2222222222;
+@media (min-width: 991.98px) {
+  .product-tabs__aside {
+    padding-bottom: 2.5rem;
   }
+}
+.product-tabs__teaser {
+  overflow: hidden;
+  max-width: 36.625rem;
+  margin-inline: auto;
+}
+@media (min-width: 991.98px) {
+  .product-tabs__teaser {
+    margin-inline: 0 0 auto;
+  }
+}
+.product-tabs__teaser-media {
+  overflow: hidden;
+  border-radius: 0 var(--radius-md) 0 var(--radius-btn);
+}
+.product-tabs__teaser-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 586/214;
+  object-fit: cover;
+}
+.product-tabs__teaser-body {
+  padding: 1.5rem 1.25rem 1.75rem;
+}
+@media (min-width: 767.98px) {
+  .product-tabs__teaser-body {
+    padding: 1.5rem 1.6875rem 2.5rem;
+  }
+}
+.product-tabs__teaser-title {
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+.product-tabs__teaser-text {
+  margin: 0 0 1.5rem;
+  line-height: 1.625;
+}
+.product-tabs__teaser-btn {
+  font-family: "Manrope", sans-serif, sans-serif;
+  font-weight: 400;
+  padding-inline: 2.5625rem;
 }
 
 .product-specs {
@@ -7447,7 +7493,39 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
     margin-bottom: 2.25rem;
   }
 }
-.product-related__row .product-card {
+.product-related__slider-wrap {
+  overflow: visible;
+}
+@media (min-width: 767.98px) {
+  .product-related__slider-wrap {
+    overflow: hidden;
+  }
+}
+.product-related__slider-container {
+  position: relative;
+}
+.product-related__slider {
+  overflow: visible;
+  padding: 0 0.625rem;
+  margin: 0 -0.625rem;
+}
+@media (min-width: 767.98px) {
+  .product-related__slider {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+  }
+}
+.product-related__slider .swiper-slide {
+  height: auto;
+  width: 11.375rem;
+}
+@media (min-width: 767.98px) {
+  .product-related__slider .swiper-slide {
+    width: auto;
+  }
+}
+.product-related__slider .product-card {
   max-width: none;
   height: 100%;
 }
@@ -9203,11 +9281,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
     flex-wrap: wrap;
     align-items: center;
     gap: 3.125rem;
-  }
-}
-@media (min-width: 1439.98px) {
-  .benefits {
-    flex-wrap: nowrap;
   }
 }
 .benefits__item {

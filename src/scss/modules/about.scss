@@ -72,6 +72,7 @@
 	// about-facts__media
 	&__media {
 		overflow: hidden;
+		height: 100%;
 		border-radius: $radius-md;
 	}
 }
@@ -86,7 +87,7 @@
 	background: #f7f8f3;
 
 	@media (min-width: $md4) {
-		padding: rem(30) rem(72) rem(63) rem(46);
+		padding: rem(30) rem(32);
 	}
 
 	// about-fact__icon
@@ -142,28 +143,42 @@
 }
 
 .about-philosophy {
+	@media (min-width:$md4) {
+		padding-top: rem(160);
+
+	}
 
 	// about-philosophy__panel
 	&__panel {
-		padding: rem(28) rem(20);
+		position: relative;
+		padding: rem(28) rem(20) 0;
 		border-radius: $radius-md;
-		background: $color-soft-blue;
+		background-color: $color-soft-blue;
+		background-image: url("@img/about/philosophy-pattern.svg");
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		background-position: center bottom;
 
 		@media (min-width: $md4) {
-			padding: rem(40) rem(36);
+			padding: rem(40) rem(36) 0;
 		}
 
 		@media (min-width: $md3) {
-			overflow: visible;
-		}
-
-		@media (min-width: $md2) {
-			padding: rem(0) rem(60) rem(56);
+			background-size: 97% auto;
+			background-position: right -8% top rem(-80);
+			min-height: rem(406);
+			padding: 0 rem(20);
+			background-size: 96.9% 287.8%;
+			background-position: 7.62% rem(-215);
 		}
 	}
 
 	// about-philosophy__row
 	&__row {
+		position: relative;
+		z-index: 1;
+
 		@media (min-width: $md3) {
 			align-items: flex-end;
 		}
@@ -173,11 +188,15 @@
 	&__media {
 		max-width: rem(420);
 		margin-inline: auto;
+		order: 1;
 
 		@media (min-width: $md3) {
-			max-width: none;
+			order: 0;
+			flex: 0 0 auto;
+			width: rem(513);
+			max-width: 41%;
 			margin-inline: 0;
-			margin-top: rem(-72);
+			margin-top: calc(#{rem(406)} - 100% * #{math.div(588, 513)});
 		}
 
 		img {
@@ -190,12 +209,12 @@
 	// about-philosophy__content
 	&__content {
 		@media (min-width: $md3) {
-			padding: rem(48) 0 rem(48) rem(24);
+			padding: rem(57) 0 rem(48) rem(16);
 		}
 
 		@media (min-width: $md2) {
-			padding: rem(72) 0 rem(48) rem(40);
-			max-width: rem(760);
+			padding: rem(57) rem(60) rem(56) rem(40);
+			max-width: rem(811);
 		}
 	}
 
@@ -214,13 +233,17 @@
 	&__text {
 		margin: 0 0 rem(28);
 		line-height: math.div(26, 16);
+
+		@media (min-width: $md3) {
+			margin-bottom: rem(43);
+		}
 	}
 
 	// about-philosophy__author
 	&__author {
 		display: flex;
 		flex-direction: column;
-		gap: rem(4);
+		gap: 0;
 	}
 
 	// about-philosophy__name
