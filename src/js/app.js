@@ -392,6 +392,63 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		}
 
+		if (document.querySelectorAll(".catalog-cats__slider").length > 0) {
+			const syncCatalogCatsFades = (swiper) => {
+				const wrap = swiper.el.closest(".catalog-cats__slider-wrap");
+				if (!wrap) return;
+				wrap.classList.toggle("is-at-start", swiper.isBeginning);
+				wrap.classList.toggle("is-at-end", swiper.isEnd);
+			};
+
+			document.querySelectorAll(".catalog-cats__slider").forEach((slider) => {
+				const wrap = slider.closest(".catalog-cats__slider-wrap");
+				const prevEl = wrap?.querySelector(".swiper-button-prev");
+				const nextEl = wrap?.querySelector(".swiper-button-next");
+
+				new Swiper(slider, {
+					slidesPerView: "auto",
+					spaceBetween: 12,
+					speed: 500,
+					watchOverflow: true,
+					navigation:
+						prevEl || nextEl
+							? {
+									prevEl,
+									nextEl,
+								}
+							: undefined,
+					breakpoints: {
+						575.98: {
+							spaceBetween: 16,
+						},
+						767.98: {
+							slidesPerView: 4,
+							spaceBetween: 20,
+						},
+						991.98: {
+							slidesPerView: 5,
+							spaceBetween: 20,
+						},
+						1199.98: {
+							slidesPerView: 6,
+							spaceBetween: 20,
+						},
+					},
+					on: {
+						init(instance) {
+							instance.el.classList.add("is-swiper-ready");
+							syncCatalogCatsFades(instance);
+						},
+						progress: syncCatalogCatsFades,
+						resize: syncCatalogCatsFades,
+						breakpoint: syncCatalogCatsFades,
+						lock: syncCatalogCatsFades,
+						unlock: syncCatalogCatsFades,
+					},
+				});
+			});
+		}
+
 		if (document.querySelector(".popular__slider")) {
 			const popularSlider = document.querySelector(".popular__slider");
 			const popularWrap = popularSlider.closest(".popular__slider-container");
@@ -462,31 +519,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			});
 		}
 
-		if (document.querySelector(".catalog-cats__slider")) {
-			const catalogCatsSlider = document.querySelector(".catalog-cats__slider");
-			const catalogCatsWrap = catalogCatsSlider.closest(".catalog-cats");
-			const catalogCatsPrev = catalogCatsWrap?.querySelector(".swiper-button-prev");
-			const catalogCatsNext = catalogCatsWrap?.querySelector(".swiper-button-next");
-
-			new Swiper(catalogCatsSlider, {
-				slidesPerView: "auto",
-				spaceBetween: 12,
-				speed: 500,
-				navigation: {
-					prevEl: catalogCatsPrev,
-					nextEl: catalogCatsNext,
-				},
-				breakpoints: {
-					767.98: {
-						spaceBetween: 16,
-					},
-					1199.98: {
-						spaceBetween: 18,
-					},
-				},
-			});
-		}
-
 		if (document.querySelector("[data-product-gallery]")) {
 			const galleryRoot = document.querySelector(".product-gallery");
 			const thumbsEl = galleryRoot?.querySelector("[data-product-thumbs]");
@@ -535,6 +567,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelectorAll(".catalog-filters").forEach((form) => {
 			form.addEventListener("submit", (event) => {
 				event.preventDefault();
+
+				if (typeof Fancybox !== "undefined") {
+					Fancybox.close();
+				}
 			});
 		});
 	}

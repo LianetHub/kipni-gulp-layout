@@ -1164,10 +1164,6 @@
 	&.header__menu-panel {
 		padding: rem(16) 0 0 rem(27);
 
-		@media (min-width: $md3) {
-			padding: rem(12) 0 0;
-		}
-
 		.header-catalog__container {
 			width: 100%;
 			max-width: none;
@@ -1184,17 +1180,6 @@
 		.row>* {
 			padding-right: 0;
 			padding-left: 0;
-		}
-
-		.header-catalog__panel {
-			padding: 0;
-			border-radius: 0;
-			background: transparent;
-			box-shadow: none;
-
-			&::before {
-				display: none;
-			}
 		}
 
 		.header-catalog__list {
@@ -1214,6 +1199,58 @@
 
 		.header-catalog__item--cta {
 			display: none;
+		}
+
+		@media (min-width: $md3) {
+			padding: rem(12) 0 0;
+
+			.header-catalog__container {
+				box-sizing: content-box;
+				padding-inline: rem(16);
+				max-width: rem(960);
+
+				@media (min-width: $md2) {
+					max-width: rem(1140);
+				}
+
+				@media (min-width: $md1) {
+					max-width: rem(1320);
+				}
+
+				@media (min-width: $md0) {
+					max-width: $maxWidthContainer;
+				}
+			}
+
+			.row {
+				--gutter-x: 1.5rem;
+				margin-right: calc(-0.5 * var(--gutter-x));
+				margin-left: calc(-0.5 * var(--gutter-x));
+			}
+
+			.row>* {
+				padding-right: calc(var(--gutter-x) * 0.5);
+				padding-left: calc(var(--gutter-x) * 0.5);
+			}
+
+			.header-catalog__list {
+				gap: rem(4);
+			}
+
+			.header-catalog__link {
+				padding: rem(10) rem(8);
+				border-radius: rem(10);
+				font-size: rem(15);
+
+				&::after {
+					display: block;
+					margin-left: auto;
+				}
+			}
+
+			.header-catalog__item--cta {
+				display: list-item;
+			}
 		}
 	}
 

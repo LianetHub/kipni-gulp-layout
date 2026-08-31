@@ -1,6 +1,12 @@
-<a class="catalog-cat catalog-cat--@@mod" href="@@link" aria-label="@@image_alt" style="--catalog-cat-image: url('@@image');">
+<a class="catalog-cat catalog-cat--@@mod" href="@@link">
 	<div class="catalog-cat__content">
 		<h3 class="catalog-cat__title">@@title</h3>
 		<p class="catalog-cat__lead">@@lead</p>
 	</div>
+	<img
+		class="catalog-cat__img"
+		src="@img/@@image"
+		alt="@@image_alt"
+		width="@@image_width"
+		height="@@image_height"@@if (typeof lazy !== 'undefined' && lazy) { loading="lazy"}>
 </a>

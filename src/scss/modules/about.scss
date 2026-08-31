@@ -9,40 +9,7 @@
 .about-facts {
 	position: relative;
 	overflow: hidden;
-
-	&::before,
-	&::after {
-		content: "";
-		display: none;
-		position: absolute;
-		z-index: 0;
-		pointer-events: none;
-		user-select: none;
-		background-image: url("@img/about/leaf-deco.webp");
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center;
-
-		@media (min-width: $md2) {
-			display: block;
-		}
-	}
-
-	&::before {
-		left: rem(-280);
-		top: rem(-140);
-		width: rem(472);
-		height: rem(748);
-		transform: rotate(26deg);
-	}
-
-	&::after {
-		right: rem(-260);
-		top: rem(-100);
-		width: rem(490);
-		height: rem(776);
-		transform: rotate(13deg);
-	}
+	background: url("@img/shared/decor/about-leave-1.webp") 0 0 / 20% auto no-repeat, url("@img/shared/decor/about-leave-2.webp") 100% 0 / 20% auto no-repeat;
 
 	// about-facts__title
 	&__title {
@@ -106,12 +73,6 @@
 	&__media {
 		overflow: hidden;
 		border-radius: $radius-md;
-		height: 100%;
-		min-height: rem(260);
-
-		@media (min-width: $md4) {
-			min-height: rem(306);
-		}
 	}
 }
 
@@ -120,13 +81,11 @@
 	flex-direction: column;
 	align-items: flex-start;
 	height: 100%;
-	min-height: rem(260);
 	padding: rem(24) rem(20) rem(32);
 	border-radius: $radius-md;
 	background: #f7f8f3;
 
 	@media (min-width: $md4) {
-		min-height: rem(306);
 		padding: rem(30) rem(72) rem(63) rem(46);
 	}
 
@@ -183,6 +142,7 @@
 }
 
 .about-philosophy {
+
 	// about-philosophy__panel
 	&__panel {
 		padding: rem(28) rem(20);

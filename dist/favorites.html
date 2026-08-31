@@ -156,7 +156,7 @@
                             <div class="col-12 col-md-4 col-xl-3 header-catalog__promo" style="background-image: url('img/catalog-banner.webp');">
                               <p class="header-catalog__promo-title">Чистота, которой <span>доверяет семья</span></p>
                               <p class="header-catalog__promo-text">Экологичные средства для дома на каждый день</p>
-                              <a class="btn btn--primary btn--large header-catalog__promo-btn icon-chevron-right" href="#">
+                              <a class="btn btn--primary btn--large header-catalog__promo-btn icon-chevron-right" href="catalog.html">
                                 Перейти в каталог
                               </a>
                             </div>
@@ -281,41 +281,52 @@
                 <span class="favorites__title-text">Избранное:</span>
                 <span class="favorites__count">9 товаров</span>
               </h1>
-              <div class="custom-select custom-select--vacancies">
-              	<label class="visually-hidden" for="favorites-sort">Сортировать товары</label>
-              	<select class="custom-select__native" id="favorites-sort" name="sort" tabindex="-1" aria-hidden="true">
-              		
-              		<option value="popular" selected>По популярности</option>
-              		<option value="price-asc">Сначала дешевле</option>
-              		<option value="price-desc">Сначала дороже</option>
-              		<option value="name">По названию</option>
-              		
-              		
-              	</select>
-              	<button type="button" class="custom-select__trigger icon-filter" aria-haspopup="listbox" aria-expanded="false" aria-controls="favorites-sort-list">
-              		<span class="custom-select__value">Сортировать</span>
-              	</button>
-              	<ul class="custom-select__list" id="favorites-sort-list" role="listbox" tabindex="-1" hidden>
-              		
-              		<li class="custom-select__option is-selected" role="option" value="popular" aria-selected="true" tabindex="-1">По популярности</li>
-              		<li class="custom-select__option" role="option" value="price-asc" aria-selected="false" tabindex="-1">Сначала дешевле</li>
-              		<li class="custom-select__option" role="option" value="price-desc" aria-selected="false" tabindex="-1">Сначала дороже</li>
-              		<li class="custom-select__option" role="option" value="name" aria-selected="false" tabindex="-1">По названию</li>
-              		
-              		
-              	</ul>
-              </div>
+              <div class="favorites__actions">
+                <a
+                  class="btn btn--muted catalog-filters-open icon-filter"
+                  href="#favorites-filters"
+                  data-fancybox
+                  data-src="#favorites-filters"
+                  data-type="inline"
+                >
+                  Фильтры
+                </a>
+                <div class="custom-select custom-select--vacancies">
+                	<label class="visually-hidden" for="favorites-sort">Сортировать товары</label>
+                	<select class="custom-select__native" id="favorites-sort" name="sort" tabindex="-1" aria-hidden="true">
+                		
+                		<option value="popular" selected>По популярности</option>
+                		<option value="price-asc">Сначала дешевле</option>
+                		<option value="price-desc">Сначала дороже</option>
+                		<option value="name">По названию</option>
+                		
+                		
+                	</select>
+                	<button type="button" class="custom-select__trigger icon-filter" aria-haspopup="listbox" aria-expanded="false" aria-controls="favorites-sort-list">
+                		<span class="custom-select__value">Сортировать</span>
+                	</button>
+                	<ul class="custom-select__list" id="favorites-sort-list" role="listbox" tabindex="-1" hidden>
+                		
+                		<li class="custom-select__option is-selected" role="option" value="popular" aria-selected="true" tabindex="-1">По популярности</li>
+                		<li class="custom-select__option" role="option" value="price-asc" aria-selected="false" tabindex="-1">Сначала дешевле</li>
+                		<li class="custom-select__option" role="option" value="price-desc" aria-selected="false" tabindex="-1">Сначала дороже</li>
+                		<li class="custom-select__option" role="option" value="name" aria-selected="false" tabindex="-1">По названию</li>
+                		
+                		
+                	</ul>
+                </div>
 
+              </div>
             </div>
           </div>
 
           <div class="container favorites__body">
             <div class="row gy-4">
               <aside class="col-12 col-lg-4 col-xl-3 favorites__aside">
-                <form class="catalog-filters" aria-labelledby="favorites-filters-title">
+                <form id="favorites-filters" class="catalog-filters" aria-labelledby="favorites-filters-title">
                 	<div class="catalog-filters__head">
                 		<h2 class="catalog-filters__title" id="favorites-filters-title">Фильтры</h2>
-                		<button type="button" class="catalog-filters__reset icon-cross">
+                		<button type="button" class="catalog-filters__reset catalog-filters__reset--head icon-cross">
                 			Сбросить
                 		</button>
                 	</div>
@@ -358,6 +369,9 @@
                 	</div>
 
                 	<button type="submit" class="btn btn--primary btn--large catalog-filters__submit">Применить фильтр</button>
+                	<button type="button" class="catalog-filters__reset catalog-filters__reset--foot icon-cross">
+                		Сбросить
+                	</button>
                 </form>
               </aside>
 

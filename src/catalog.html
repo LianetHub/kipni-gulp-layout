@@ -19,103 +19,105 @@
           </div>
 
           <div class="catalog-cats">
-            <div class="container catalog-cats__container">
-              <div class="swiper catalog-cats__slider">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    @@include('html/templates/catalog-category.html', {
-                    "mod": "gels",
-                    "title": "Гели",
-                    "lead": "очищение и уход",
-                    "link": "#",
-                    "image": "img/catalog/cat-gels.webp",
-                    "image_alt": "Гель для душа Tarzis Амбра",
-                    "image_width": "152",
-                    "image_height": "152"
-                    })
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('html/templates/catalog-category.html', {
-                    "mod": "soap",
-                    "title": "Мыло",
-                    "lead": "бережное очищение",
-                    "link": "#",
-                    "image": "img/catalog/cat-soap.webp",
-                    "image_alt": "Жидкое мыло Дюшес KIPNI",
-                    "image_width": "150",
-                    "image_height": "150",
-                    "lazy": true
-                    })
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('html/templates/catalog-category.html', {
-                    "mod": "hair",
-                    "title": "Волосы",
-                    "lead": "питание увлажнение",
-                    "link": "#",
-                    "image": "img/catalog/cat-hair.webp",
-                    "image_alt": "Шампунь Lutea для восстановления волос",
-                    "image_width": "141",
-                    "image_height": "141",
-                    "lazy": true
-                    })
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('html/templates/catalog-category.html', {
-                    "mod": "clean",
-                    "title": "Уборка",
-                    "lead": "чистота без усилий",
-                    "link": "#",
-                    "image": "img/catalog/cat-clean.webp",
-                    "image_alt": "Антижир-гель Лимон KIPNI",
-                    "image_width": "142",
-                    "image_height": "142",
-                    "lazy": true
-                    })
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('html/templates/catalog-category.html', {
-                    "mod": "laundry",
-                    "title": "Стирка",
-                    "lead": "кондиционеры и гели",
-                    "link": "#",
-                    "image": "img/catalog/cat-laundry.webp",
-                    "image_alt": "Кондиционер для белья KIPNI",
-                    "image_width": "152",
-                    "image_height": "152",
-                    "lazy": true
-                    })
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('html/templates/catalog-category.html', {
-                    "mod": "garden",
-                    "title": "Сад",
-                    "lead": "удобрения и защита",
-                    "link": "#",
-                    "image": "img/catalog/cat-garden.webp",
-                    "image_alt": "Зелёное мыло KIPNI Сад",
-                    "image_width": "145",
-                    "image_height": "145",
-                    "lazy": true
-                    })
-                  </div>
-                  <div class="swiper-slide">
-                    @@include('html/templates/catalog-category.html', {
-                    "mod": "gels",
-                    "title": "Гели",
-                    "lead": "очищение и уход",
-                    "link": "#",
-                    "image": "img/catalog/cat-gels.webp",
-                    "image_alt": "Гель для душа Tarzis Амбра",
-                    "image_width": "152",
-                    "image_height": "152",
-                    "lazy": true
-                    })
+            <div class="container">
+              <div class="catalog-cats__slider-wrap is-at-start">
+                <div class="swiper catalog-cats__slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      @@include('html/templates/catalog-category.html', {
+                      "mod": "gels",
+                      "title": "Гели",
+                      "lead": "очищение и уход",
+                      "link": "#",
+                      "image": "catalog/cat-gels.webp",
+                      "image_alt": "Гель для душа Tarzis Амбра",
+                      "image_width": "152",
+                      "image_height": "152"
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @@include('html/templates/catalog-category.html', {
+                      "mod": "soap",
+                      "title": "Мыло",
+                      "lead": "бережное очищение",
+                      "link": "#",
+                      "image": "catalog/cat-soap.webp",
+                      "image_alt": "Жидкое мыло Дюшес KIPNI",
+                      "image_width": "150",
+                      "image_height": "150",
+                      "lazy": true
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @@include('html/templates/catalog-category.html', {
+                      "mod": "hair",
+                      "title": "Волосы",
+                      "lead": "питание увлажнение",
+                      "link": "#",
+                      "image": "catalog/cat-hair.webp",
+                      "image_alt": "Шампунь Lutea для восстановления волос",
+                      "image_width": "141",
+                      "image_height": "141",
+                      "lazy": true
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @@include('html/templates/catalog-category.html', {
+                      "mod": "clean",
+                      "title": "Уборка",
+                      "lead": "чистота без усилий",
+                      "link": "#",
+                      "image": "catalog/cat-clean.webp",
+                      "image_alt": "Антижир-гель Лимон KIPNI",
+                      "image_width": "142",
+                      "image_height": "142",
+                      "lazy": true
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @@include('html/templates/catalog-category.html', {
+                      "mod": "laundry",
+                      "title": "Стирка",
+                      "lead": "кондиционеры и гели",
+                      "link": "#",
+                      "image": "catalog/cat-laundry.webp",
+                      "image_alt": "Кондиционер для белья KIPNI",
+                      "image_width": "152",
+                      "image_height": "152",
+                      "lazy": true
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @@include('html/templates/catalog-category.html', {
+                      "mod": "garden",
+                      "title": "Сад",
+                      "lead": "удобрения и защита",
+                      "link": "#",
+                      "image": "catalog/cat-garden.webp",
+                      "image_alt": "Зелёное мыло KIPNI Сад",
+                      "image_width": "145",
+                      "image_height": "145",
+                      "lazy": true
+                      })
+                    </div>
+                    <div class="swiper-slide">
+                      @@include('html/templates/catalog-category.html', {
+                      "mod": "gels",
+                      "title": "Гели",
+                      "lead": "очищение и уход",
+                      "link": "#",
+                      "image": "catalog/cat-gels.webp",
+                      "image_alt": "Гель для душа Tarzis Амбра",
+                      "image_width": "152",
+                      "image_height": "152",
+                      "lazy": true
+                      })
+                    </div>
                   </div>
                 </div>
+                <button class="catalog-cats__prev swiper-button-prev icon-prev" type="button" aria-label="Предыдущие категории"></button>
+                <button class="catalog-cats__next swiper-button-next icon-next" type="button" aria-label="Следующие категории"></button>
               </div>
-              <button type="button" class="catalog-cats__prev swiper-button-prev icon-chevron-right" aria-label="Предыдущие категории"></button>
-              <button type="button" class="catalog-cats__next swiper-button-next icon-chevron-right" aria-label="Следующие категории"></button>
             </div>
           </div>
 
@@ -123,6 +125,7 @@
             <div class="row gy-4">
               <aside class="col-12 col-lg-4 col-xl-3 catalog__aside">
                 @@include('html/templates/catalog-filters.html', {
+                "form_id": "catalog-filters",
                 "title_id": "catalog-filters-title"
                 })
 
@@ -142,14 +145,20 @@
                   <p class="catalog-toolbar__count">
                     Товаров: <strong>78</strong>
                   </p>
-                  @@include('html/templates/custom-select.html', {
-                  "id": "catalog-sort",
-                  "name": "sort",
-                  "mod": "catalog",
-                  "label": "Сортировать товары",
-                  "placeholder": "Сортировать",
-                  "icon": "icon-filter"
-                  })
+                  <div class="catalog-toolbar__actions">
+                    <a class="btn btn--muted catalog-filters-open icon-filter" href="#catalog-filters" data-fancybox data-src="#catalog-filters" data-type="inline">
+                      Фильтры
+                    </a>
+                    @@include('html/templates/custom-select.html', {
+                    "id": "catalog-sort",
+                    "name": "sort",
+                    "mod": "catalog",
+                    "skin": "vacancies",
+                    "label": "Сортировать товары",
+                    "placeholder": "Сортировать",
+                    "icon": "icon-filter"
+                    })
+                  </div>
                 </div>
 
                 <div class="row gy-4 catalog-products">

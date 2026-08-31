@@ -144,7 +144,8 @@
 	}
 }
 
-.fancybox__container:has(.popup) {
+.fancybox__container:has(.popup),
+.fancybox__container:has(.catalog-filters) {
 	--fancybox-bg: rgba(255, 255, 255, 0.6);
 	--fancybox-opacity: 1;
 
@@ -202,5 +203,21 @@
 			border-radius: 50%;
 			box-shadow: $focus-ring;
 		}
+	}
+}
+
+.fancybox__container:has(.catalog-filters) {
+	.fancybox__content {
+		max-width: rem(420);
+	}
+
+	.catalog-filters {
+		width: 100%;
+		max-height: calc(100dvh - #{rem(32)});
+		overflow-y: auto;
+	}
+
+	.catalog-filters__head {
+		padding-right: rem(44);
 	}
 }

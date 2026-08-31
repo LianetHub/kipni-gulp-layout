@@ -1,7 +1,7 @@
-<form class="catalog-filters" aria-labelledby="@@title_id">
+<form id="@@form_id" class="catalog-filters" aria-labelledby="@@title_id">
 	<div class="catalog-filters__head">
 		<h2 class="catalog-filters__title" id="@@title_id">Фильтры</h2>
-		<button type="button" class="catalog-filters__reset icon-cross">
+		<button type="button" class="catalog-filters__reset catalog-filters__reset--head icon-cross">
 			Сбросить
 		</button>
 	</div>
@@ -44,4 +44,7 @@
 	</div>
 
 	<button type="submit" class="btn btn--primary btn--large catalog-filters__submit">Применить фильтр</button>
+	<button type="button" class="catalog-filters__reset catalog-filters__reset--foot icon-cross">
+		Сбросить
+	</button>
 </form>

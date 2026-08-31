@@ -20,15 +20,26 @@
                 <span class="favorites__title-text">Избранное:</span>
                 <span class="favorites__count">9 товаров</span>
               </h1>
-              @@include('html/templates/custom-select.html', {
-              "id": "favorites-sort",
-              "name": "sort",
-              "mod": "catalog",
-              "skin": "vacancies",
-              "label": "Сортировать товары",
-              "placeholder": "Сортировать",
-              "icon": "icon-filter"
-              })
+              <div class="favorites__actions">
+                <a
+                  class="btn btn--muted catalog-filters-open icon-filter"
+                  href="#favorites-filters"
+                  data-fancybox
+                  data-src="#favorites-filters"
+                  data-type="inline"
+                >
+                  Фильтры
+                </a>
+                @@include('html/templates/custom-select.html', {
+                "id": "favorites-sort",
+                "name": "sort",
+                "mod": "catalog",
+                "skin": "vacancies",
+                "label": "Сортировать товары",
+                "placeholder": "Сортировать",
+                "icon": "icon-filter"
+                })
+              </div>
             </div>
           </div>
 
@@ -36,6 +47,7 @@
             <div class="row gy-4">
               <aside class="col-12 col-lg-4 col-xl-3 favorites__aside">
                 @@include('html/templates/catalog-filters.html', {
+                "form_id": "favorites-filters",
                 "title_id": "favorites-filters-title"
                 })
               </aside>
