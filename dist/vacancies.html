@@ -660,10 +660,7 @@
       						<a class="footer__social icon-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"></a>
       					</li>
       				</ul>
-      				
       				<a class="btn btn--primary footer__btn" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline">Задать вопрос</a>
-      				
-      				
       			</div>
       		</div>
 
@@ -676,92 +673,87 @@
       		</div>
       	</div>
       </footer>
-      <aside class="ask-widget" aria-label="Задать вопрос" aria-hidden="true">
-      	
-      		<a class="ask-widget__link" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline" style="background-image: url('img/ask/bird.webp');">
-      		
-      		
-      			<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
-      		</a>
-      </aside>
-      <div class="popups visually-hidden" aria-hidden="true">
-        <div id="modal-vacancy-apply" class="popup">
-          <div class="popup__head">
-            <h2 class="popup__title">Откликнуться на вакансию</h2>
-            <p class="text popup__lead">Оставьте свое резюме и контактные данные в форме</p>
-          </div>
-          <form class="popup__form" action="#" method="post" enctype="multipart/form-data">
-            <div class="row g-3 popup__fields">
-              <div class="col-12 col-md-7">
-                <label class="visually-hidden" for="vacancy-apply-name">ФИО</label>
-                <input class="form-control" id="vacancy-apply-name" type="text" name="name" placeholder="Введите ФИО" required autocomplete="name">
-              </div>
-              <div class="col-12 col-md-5">
-                <label class="visually-hidden" for="vacancy-apply-email">Электронная почта</label>
-                <input class="form-control" id="vacancy-apply-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
-              </div>
-              <div class="col-12 col-md-5">
-                <label class="visually-hidden" for="vacancy-apply-phone">Номер телефона</label>
-                <input class="form-control" id="vacancy-apply-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
-              </div>
-              <div class="col-12 col-md-7">
-                <label class="popup__file">
-                  <input class="visually-hidden popup__file-input" type="file" name="resume" accept=".pdf,.doc,.docx,.rtf">
-                  <span class="popup__file-btn icon-file">
-                    <span class="popup__file-text">Прикрепить резюме</span>
-                  </span>
-                </label>
-              </div>
-            </div>
+      <div id="modal-ask-question" class="popup">
+      	<div class="popup__head">
+      		<h2 class="popup__title">Задать вопрос</h2>
+      		<p class="text popup__lead">
+      			Возникли вопросы? Напишите их в форме ниже и мы обязательно ответим Вам в ближайшее время
+      		</p>
+      	</div>
+      	<form class="popup__form" action="#" method="post">
+      		<div class="row g-3 popup__fields">
+      			<div class="col-12 col-md-4">
+      				<label class="visually-hidden" for="ask-name">Имя</label>
+      				<input class="form-control" id="ask-name" type="text" name="name" placeholder="Введите имя" required autocomplete="name">
+      			</div>
+      			<div class="col-12 col-md-4">
+      				<label class="visually-hidden" for="ask-email">Электронная почта</label>
+      				<input class="form-control" id="ask-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
+      			</div>
+      			<div class="col-12 col-md-4">
+      				<label class="visually-hidden" for="ask-phone">Номер телефона</label>
+      				<input class="form-control" id="ask-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
+      			</div>
+      			<div class="col-12">
+      				<label class="visually-hidden" for="ask-message">Ваш вопрос</label>
+      				<textarea class="form-control popup__textarea" id="ask-message" name="message" placeholder="Ваш вопрос" required rows="6"></textarea>
+      			</div>
+      		</div>
 
-            <label class="popup__consent icon-check">
-              <input class="visually-hidden popup__checkbox" type="checkbox" name="consent" required checked>
-              <span class="popup__consent-text">
-                Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных
-              </span>
-            </label>
+      		<label class="popup__consent icon-check">
+      			<input class="visually-hidden popup__checkbox" type="checkbox" name="consent" required checked>
+      			<span class="popup__consent-text">
+      				Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных
+      			</span>
+      		</label>
 
-            <button class="btn btn--primary btn--large popup__submit" type="submit">Откликнуться</button>
-          </form>
+      		<button class="btn btn--primary btn--large popup__submit" type="submit">Задать вопрос</button>
+      	</form>
+      </div>
+
+      <div class="ask-widget">
+      	<a class="ask-widget__link" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline" style="background-image: url('img/ask/bird.webp');">
+      		<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
+      	</a>
+      </div>
+      <div id="modal-vacancy-apply" class="popup">
+        <div class="popup__head">
+          <h2 class="popup__title">Откликнуться на вакансию</h2>
+          <p class="text popup__lead">Оставьте свое резюме и контактные данные в форме</p>
         </div>
-
-        <div id="modal-ask-question" class="popup">
-          <div class="popup__head">
-            <h2 class="popup__title">Задать вопрос</h2>
-            <p class="text popup__lead">
-              Возникли вопросы? Напишите их в форме ниже и мы обязательно ответим Вам в ближайшее время
-            </p>
-          </div>
-          <form class="popup__form" action="#" method="post">
-            <div class="row g-3 popup__fields">
-              <div class="col-12 col-md-4">
-                <label class="visually-hidden" for="vacancy-ask-name">Имя</label>
-                <input class="form-control" id="vacancy-ask-name" type="text" name="name" placeholder="Введите имя" required autocomplete="name">
-              </div>
-              <div class="col-12 col-md-4">
-                <label class="visually-hidden" for="vacancy-ask-email">Электронная почта</label>
-                <input class="form-control" id="vacancy-ask-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
-              </div>
-              <div class="col-12 col-md-4">
-                <label class="visually-hidden" for="vacancy-ask-phone">Номер телефона</label>
-                <input class="form-control" id="vacancy-ask-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
-              </div>
-              <div class="col-12">
-                <label class="visually-hidden" for="vacancy-ask-message">Ваш вопрос</label>
-                <textarea class="form-control popup__textarea" id="vacancy-ask-message" name="message" placeholder="Ваш вопрос" required rows="6"></textarea>
-              </div>
+        <form class="popup__form" action="#" method="post" enctype="multipart/form-data">
+          <div class="row g-3 popup__fields">
+            <div class="col-12 col-md-7">
+              <label class="visually-hidden" for="vacancy-apply-name">ФИО</label>
+              <input class="form-control" id="vacancy-apply-name" type="text" name="name" placeholder="Введите ФИО" required autocomplete="name">
             </div>
+            <div class="col-12 col-md-5">
+              <label class="visually-hidden" for="vacancy-apply-email">Электронная почта</label>
+              <input class="form-control" id="vacancy-apply-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
+            </div>
+            <div class="col-12 col-md-5">
+              <label class="visually-hidden" for="vacancy-apply-phone">Номер телефона</label>
+              <input class="form-control" id="vacancy-apply-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
+            </div>
+            <div class="col-12 col-md-7">
+              <label class="popup__file">
+                <input class="visually-hidden popup__file-input" type="file" name="resume" accept=".pdf,.doc,.docx,.rtf">
+                <span class="popup__file-btn icon-file">
+                  <span class="popup__file-text">Прикрепить резюме</span>
+                </span>
+              </label>
+            </div>
+          </div>
 
-            <label class="popup__consent icon-check">
-              <input class="visually-hidden popup__checkbox" type="checkbox" name="consent" required checked>
-              <span class="popup__consent-text">
-                Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных
-              </span>
-            </label>
+          <label class="popup__consent icon-check">
+            <input class="visually-hidden popup__checkbox" type="checkbox" name="consent" required checked>
+            <span class="popup__consent-text">
+              Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных
+            </span>
+          </label>
 
-            <button class="btn btn--primary btn--large popup__submit" type="submit">Задать вопрос</button>
-          </form>
-        </div>
+          <button class="btn btn--primary btn--large popup__submit" type="submit">Откликнуться</button>
+        </form>
       </div>
     </div>
     <!-- plugins -->

@@ -1725,7 +1725,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   z-index: 2;
   border: none;
   padding: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.6);
   cursor: pointer;
 }
 @media (min-width: 991.98px) {
@@ -8400,6 +8400,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom center;
+  color: var(--color-primary);
 }
 .ask-widget__btn {
   position: absolute;
@@ -8418,11 +8419,11 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 .popup {
   position: relative;
   width: min(100%, 56rem);
-  height: auto;
-  max-height: 100%;
   padding: 1.75rem 1.25rem 1.5rem;
   border-radius: var(--radius-md);
   background: var(--color-surface);
+  display: none;
+  flex-direction: column;
 }
 @media (min-width: 767.98px) {
   .popup {
@@ -8454,7 +8455,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 .popup__lead {
   line-height: 1.625;
-  max-width: 33.75rem;
 }
 .popup__fields {
   margin-bottom: 1.25rem;
@@ -8478,7 +8478,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 .popup__textarea {
   min-height: 10rem;
-  resize: vertical;
+  resize: none;
 }
 @media (min-width: 767.98px) {
   .popup__textarea {
@@ -8574,6 +8574,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 .fancybox__container:has(.popup) .fancybox__backdrop {
   backdrop-filter: blur(8px);
+  --fancybox-backdrop-bg: rgba(255, 255, 255, 0.6);
 }
 .fancybox__container:has(.popup) .fancybox__slide {
   padding: 1rem;
@@ -8590,23 +8591,26 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   overflow: visible;
 }
 .fancybox__container:has(.popup) .f-button.is-close-button {
-  --f-close-button-width: 2.25rem;
-  --f-close-button-height: 2.25rem;
+  --f-close-button-width: 1.5rem;
+  --f-close-button-height: 1.5rem;
+  font-size: 1.5rem;
   --f-close-button-bg: transparent;
   --f-close-button-hover-bg: transparent;
   --f-close-button-active-bg: transparent;
   top: 1rem;
   right: 1rem;
   padding: 0;
-  color: var(--color-text);
-  font-size: 2.25rem;
+  color: var(--color-primary);
   line-height: 1;
   cursor: pointer;
 }
 @media (min-width: 767.98px) {
   .fancybox__container:has(.popup) .f-button.is-close-button {
+    --f-close-button-width: 2.25rem;
+    --f-close-button-height: 2.25rem;
     top: 1.6875rem;
     right: 1.6875rem;
+    font-size: 2.25rem;
   }
 }
 .fancybox__container:has(.popup) .f-button.is-close-button svg {

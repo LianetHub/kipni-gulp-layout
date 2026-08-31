@@ -772,7 +772,7 @@
                 <aside class="faq__aside">
                   <h3 class="h3 faq__aside-title">Не нашли ответа<br>на вопрос?</h3>
                   <p class="text text-muted faq__aside-text">Напишите нам - ответим на возникшие вопросы</p>
-                  <a class="btn btn--outline btn--large faq__btn" href="#">Задать вопрос</a>
+                  <a class="btn btn--outline btn--large faq__btn" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline">Задать вопрос</a>
                 </aside>
               </div>
             </div>
@@ -845,10 +845,7 @@
       						<a class="footer__social icon-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"></a>
       					</li>
       				</ul>
-      				
-      				
-      				<a class="btn btn--primary footer__btn" href="#">Задать вопрос</a>
-      				
+      				<a class="btn btn--primary footer__btn" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline">Задать вопрос</a>
       			</div>
       		</div>
 
@@ -861,14 +858,49 @@
       		</div>
       	</div>
       </footer>
-      <aside class="ask-widget" aria-label="Задать вопрос" aria-hidden="true">
-      	
-      		
-      		<a class="ask-widget__link" href="#" style="background-image: url('img/ask/bird.webp');">
-      			
-      			<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
-      		</a>
-      </aside>
+      <div id="modal-ask-question" class="popup">
+      	<div class="popup__head">
+      		<h2 class="popup__title">Задать вопрос</h2>
+      		<p class="text popup__lead">
+      			Возникли вопросы? Напишите их в форме ниже и мы обязательно ответим Вам в ближайшее время
+      		</p>
+      	</div>
+      	<form class="popup__form" action="#" method="post">
+      		<div class="row g-3 popup__fields">
+      			<div class="col-12 col-md-4">
+      				<label class="visually-hidden" for="ask-name">Имя</label>
+      				<input class="form-control" id="ask-name" type="text" name="name" placeholder="Введите имя" required autocomplete="name">
+      			</div>
+      			<div class="col-12 col-md-4">
+      				<label class="visually-hidden" for="ask-email">Электронная почта</label>
+      				<input class="form-control" id="ask-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
+      			</div>
+      			<div class="col-12 col-md-4">
+      				<label class="visually-hidden" for="ask-phone">Номер телефона</label>
+      				<input class="form-control" id="ask-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
+      			</div>
+      			<div class="col-12">
+      				<label class="visually-hidden" for="ask-message">Ваш вопрос</label>
+      				<textarea class="form-control popup__textarea" id="ask-message" name="message" placeholder="Ваш вопрос" required rows="6"></textarea>
+      			</div>
+      		</div>
+
+      		<label class="popup__consent icon-check">
+      			<input class="visually-hidden popup__checkbox" type="checkbox" name="consent" required checked>
+      			<span class="popup__consent-text">
+      				Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных
+      			</span>
+      		</label>
+
+      		<button class="btn btn--primary btn--large popup__submit" type="submit">Задать вопрос</button>
+      	</form>
+      </div>
+
+      <div class="ask-widget">
+      	<a class="ask-widget__link" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline" style="background-image: url('img/ask/bird.webp');">
+      		<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
+      	</a>
+      </div>
     </div>
     <!-- plugins -->
     <script defer src="js/libs/swiper-bundle.min.js"></script>

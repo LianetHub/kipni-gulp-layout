@@ -64,12 +64,7 @@
 						<a class="footer__social icon-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"></a>
 					</li>
 				</ul>
-				@@if(typeof askFancyboxSrc !== 'undefined' && askFancyboxSrc){
-				<a class="btn btn--primary footer__btn" href="@@askFancyboxSrc" data-fancybox data-src="@@askFancyboxSrc" data-type="inline">Задать вопрос</a>
-				}
-				@@if(typeof askFancyboxSrc === 'undefined' || !askFancyboxSrc){
-				<a class="btn btn--primary footer__btn" href="#">Задать вопрос</a>
-				}
+				<a class="btn btn--primary footer__btn" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline">Задать вопрос</a>
 			</div>
 		</div>
 
@@ -82,3 +77,4 @@
 		</div>
 	</div>
 </footer>
+@@include('sections/popup-ask-question.html')

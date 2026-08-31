@@ -1,10 +1,5 @@
-<aside class="ask-widget" aria-label="Задать вопрос" aria-hidden="true">
-	@@if(typeof fancyboxSrc !== 'undefined' && fancyboxSrc){
-		<a class="ask-widget__link" href="@@fancyboxSrc" data-fancybox data-src="@@fancyboxSrc" data-type="inline" style="background-image: url('@img/ask/bird.webp');">
-		}
-		@@if(typeof fancyboxSrc === 'undefined' || !fancyboxSrc){
-		<a class="ask-widget__link" href="#" style="background-image: url('@img/ask/bird.webp');">
-			}
-			<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
-		</a>
-</aside>
+<div class="ask-widget">
+	<a class="ask-widget__link" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline" style="background-image: url('@img/ask/bird.webp');">
+		<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
+	</a>
+</div>
