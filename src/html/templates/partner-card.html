@@ -1,3 +1,6 @@
+@@if(col){
+<div class="@@col">
+}
 <a class="partner-card@@if(mod){ @@mod}" href="@@href" aria-label="@@aria_label" target="_blank" rel="noopener noreferrer">
 	<img
 		class="partner-card__logo@@if (typeof logo_mod !== 'undefined' && logo_mod) { @@logo_mod}"
@@ -9,3 +12,6 @@
 	>
 	<span class="partner-card__cta">Перейти в магазин</span>
 </a>
+@@if(col){
+</div>
+}

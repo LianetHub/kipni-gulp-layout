@@ -7,7 +7,8 @@
 		"width": "160",
 		"height": "24",
 		"logo_mod": "partner-card__logo--lg",
-		"mod": ""
+		"mod": "",
+		"col": "col-6 col-md-4"
 	},
 	{
 		"href": "#",
@@ -17,7 +18,8 @@
 		"width": "98",
 		"height": "21",
 		"logo_mod": "partner-card__logo--sm",
-		"mod": ""
+		"mod": "",
+		"col": "col-6 col-md-4"
 	},
 	{
 		"href": "#",
@@ -27,7 +29,8 @@
 		"width": "150",
 		"height": "23",
 		"logo_mod": "partner-card__logo--md",
-		"mod": ""
+		"mod": "",
+		"col": "col-6 col-md-4"
 	},
 	{
 		"href": "#",
@@ -37,7 +40,8 @@
 		"width": "195",
 		"height": "29",
 		"logo_mod": "partner-card__logo--xxl",
-		"mod": ""
+		"mod": "",
+		"col": "col-6 col-md-4"
 	},
 	{
 		"href": "#",
@@ -47,7 +51,8 @@
 		"width": "174",
 		"height": "26",
 		"logo_mod": "partner-card__logo--xl",
-		"mod": ""
+		"mod": "",
+		"col": "col-6 col-md-4"
 	},
 	{
 		"href": "#",
@@ -57,6 +62,7 @@
 		"width": "184",
 		"height": "17",
 		"logo_mod": "partner-card__logo--xs",
-		"mod": ""
+		"mod": "",
+		"col": "col-6 col-md-4"
 	}
 ]

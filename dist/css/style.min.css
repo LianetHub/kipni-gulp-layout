@@ -5415,13 +5415,13 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 @media (min-width: 767.98px) {
   .help-aside__title {
-    margin-bottom: 2.3125rem;
+    margin-bottom: 1.5rem;
   }
 }
 .help-aside__list {
   display: flex;
   flex-direction: column;
-  gap: 2.125rem;
+  gap: 1rem;
 }
 .help-aside__link {
   display: block;

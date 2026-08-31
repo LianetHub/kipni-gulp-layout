@@ -55,7 +55,7 @@
 		margin: 0 0 rem(28);
 
 		@media (min-width: $md4) {
-			margin-bottom: rem(37);
+			margin-bottom: rem(24);
 		}
 	}
 
@@ -63,7 +63,7 @@
 	&__list {
 		display: flex;
 		flex-direction: column;
-		gap: rem(34);
+		gap: rem(16);
 	}
 
 	// help-aside__link
@@ -160,6 +160,7 @@
 }
 
 .delivery-block {
+
 	// delivery-block__title
 	&__title {
 		margin: 0 0 rem(20);
