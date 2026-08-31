@@ -97,7 +97,10 @@
 		border-radius: rem(20);
 
 		& img {
-			min-height: rem(184);
+			@media (max-width:$md3) {
+				min-height: rem(184);
+				aspect-ratio: math.div(373, 184);
+			}
 		}
 
 		@media (min-width: $md2) {

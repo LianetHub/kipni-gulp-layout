@@ -3,7 +3,7 @@
 .reviews {
 	position: relative;
 	overflow: hidden;
-	padding-block: rem(40);
+	padding-block: rem(32);
 
 	@media (min-width: $md4) {
 		padding-block: rem(56);
@@ -27,7 +27,7 @@
 		&::before,
 		&::after {
 			content: "";
-			display: none;
+
 			position: absolute;
 			z-index: 0;
 			pointer-events: none;
@@ -35,28 +35,38 @@
 			background-size: contain;
 			background-position: center;
 
-			@media (min-width: $md2) {
-				display: block;
-			}
+
 		}
 
 		&::before {
 
-			top: rem(260);
+
 			width: rem(181);
 			height: rem(254);
 			background-image: url("@img/reviews/leaves-left.webp");
 			right: calc(100% - #{rem(48)});
+			bottom: 0;
+
+			@media (min-width:$md4) {
+				top: rem(260);
+				bottom: auto;
+			}
 
 		}
 
 		&::after {
-			top: rem(220);
 			width: rem(198);
 			height: rem(279);
 			background-image: url("@img/reviews/leaves-right.webp");
-
+			bottom: 10rem;
 			left: calc(100% - #{rem(60)});
+
+			@media (min-width:$md4) {
+
+				top: rem(220);
+				bottom: auto;
+
+			}
 		}
 	}
 
@@ -69,6 +79,11 @@
 	// reviews__title
 	&__title {
 		max-width: rem(400);
+		padding: 0 0.5rem;
+
+		@media (min-width:$md5) {
+			padding: 0;
+		}
 	}
 
 	// reviews__title-accent
@@ -79,11 +94,17 @@
 
 	// reviews__lead
 	&__lead {
-		margin: 1.2em 0 0;
-		max-width: rem(354);
+		margin: 1.5em 0 0;
+		max-width: rem(280);
 		font-size: rem(14);
 		line-height: 1.2;
 		color: $color-muted;
+		padding: 0 0.5rem;
+
+		@media (min-width:$md5) {
+			max-width: rem(354);
+			padding: 0;
+		}
 
 		@media (min-width: $md4) {
 			margin-top: rem(25);
@@ -105,7 +126,7 @@
 	// reviews__slider-wrap
 	&__slider-wrap {
 		position: relative;
-		margin-top: rem(24);
+		margin-top: rem(66);
 
 		@media (min-width: $md2) {
 			margin-top: rem(64);
@@ -256,9 +277,14 @@
 	// rating-card__count
 	&__count {
 		margin-top: rem(12);
-		font-size: rem(14);
 		line-height: 1.2;
 		color: $color-muted;
+		font-size: rem(13);
+
+		@media (min-width:$md5) {
+			font-size: rem(14);
+
+		}
 
 		@media (min-width: $md2) {
 			font-size: rem(16);
@@ -360,7 +386,7 @@
 		overflow: hidden;
 		margin: rem(18) 0 0;
 		font-family: $font-manrope, sans-serif;
-		font-size: rem(15);
+		font-size: rem(14);
 		font-weight: 500;
 		line-height: 1.5;
 		letter-spacing: rem(0.32);
