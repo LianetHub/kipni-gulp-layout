@@ -1,8 +1,11 @@
-<a class="partner-card@@if(mod){ @@mod}" href="@@link" target="_blank" rel="noopener noreferrer">
-	<span class="partner-card__logo">
-		<img src="@@logo" alt="@@alt" width="@@width" height="@@height" loading="lazy">
-	</span>
-	@@if(cta){
-	<span class="partner-card__cta">@@cta</span>
-	}
+<a class="partner-card@@if(mod){ @@mod}" href="@@href" aria-label="@@aria_label" target="_blank" rel="noopener noreferrer">
+	<img
+		class="partner-card__logo@@if (typeof logo_mod !== 'undefined' && logo_mod) { @@logo_mod}"
+		src="@@logo"
+		alt="@@alt"
+		width="@@width"
+		height="@@height"
+		loading="lazy"
+	>
+	<span class="partner-card__cta">Перейти в магазин</span>
 </a>

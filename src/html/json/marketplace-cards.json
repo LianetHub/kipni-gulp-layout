@@ -6,7 +6,8 @@
 		"alt": "Wildberries",
 		"width": "160",
 		"height": "24",
-		"logo_mod": "marketplaces__card-logo--lg"
+		"logo_mod": "partner-card__logo--lg",
+		"mod": ""
 	},
 	{
 		"href": "#",
@@ -15,7 +16,8 @@
 		"alt": "Ozon",
 		"width": "98",
 		"height": "21",
-		"logo_mod": "marketplaces__card-logo--sm"
+		"logo_mod": "partner-card__logo--sm",
+		"mod": ""
 	},
 	{
 		"href": "#",
@@ -24,7 +26,8 @@
 		"alt": "Л'Этуаль",
 		"width": "150",
 		"height": "23",
-		"logo_mod": "marketplaces__card-logo--md"
+		"logo_mod": "partner-card__logo--md",
+		"mod": ""
 	},
 	{
 		"href": "#",
@@ -33,7 +36,8 @@
 		"alt": "Золотое Яблоко",
 		"width": "195",
 		"height": "29",
-		"logo_mod": "marketplaces__card-logo--xxl"
+		"logo_mod": "partner-card__logo--xxl",
+		"mod": ""
 	},
 	{
 		"href": "#",
@@ -42,7 +46,8 @@
 		"alt": "Яндекс Маркет",
 		"width": "174",
 		"height": "26",
-		"logo_mod": "marketplaces__card-logo--xl"
+		"logo_mod": "partner-card__logo--xl",
+		"mod": ""
 	},
 	{
 		"href": "#",
@@ -51,6 +56,7 @@
 		"alt": "ВсеИнструменты",
 		"width": "184",
 		"height": "17",
-		"logo_mod": "marketplaces__card-logo--xs"
+		"logo_mod": "partner-card__logo--xs",
+		"mod": ""
 	}
 ]

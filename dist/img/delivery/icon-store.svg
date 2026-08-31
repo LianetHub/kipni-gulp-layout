@@ -1,0 +1,16 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="building-store 1" clip-path="url(#clip_icon_store)">
+<g id="Vector">
+</g>
+<path id="Vector_2" d="M6.25 43.75H43.75" stroke="#8ABD35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M31.25 16.6667C31.25 18.3243 31.9085 19.914 33.0806 21.0861C34.2527 22.2582 35.8424 22.9167 37.5 22.9167C39.1576 22.9167 40.7473 22.2582 41.9194 21.0861C43.0915 19.914 43.75 18.3243 43.75 16.6667V14.5833L39.5833 6.25H10.4167L6.25 14.5833V16.6667C6.25 18.3243 6.90848 19.914 8.08058 21.0861C9.25269 22.2582 10.8424 22.9167 12.5 22.9167C14.1576 22.9167 15.7473 22.2582 16.9194 21.0861C18.0915 19.914 18.75 18.3243 18.75 16.6667M6.25 14.5833H43.75M18.75 16.6667V14.5833M18.75 16.6667C18.75 18.3243 19.4085 19.914 20.5806 21.0861C21.7527 22.2582 23.3424 22.9167 25 22.9167C26.6576 22.9167 28.2473 22.2582 29.4194 21.0861C30.5915 19.914 31.25 18.3243 31.25 16.6667M31.25 16.6667V14.5833" stroke="#8ABD35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M10.4167 43.75V22.6042" stroke="#8ABD35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M39.5833 43.75V22.6042" stroke="#8ABD35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M18.75 43.75V35.4167C18.75 34.3116 19.189 33.2518 19.9704 32.4704C20.7518 31.689 21.8116 31.25 22.9167 31.25H27.0833C28.1884 31.25 29.2482 31.689 30.0296 32.4704C30.811 33.2518 31.25 34.3116 31.25 35.4167V43.75" stroke="#8ABD35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip_icon_store">
+<rect width="50" height="50" fill="white"/>
+</clipPath>
+</defs>
+</svg>

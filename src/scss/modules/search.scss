@@ -13,9 +13,7 @@
 
 	// search__head
 	&__head {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
+		container-type: inline-size;
 		gap: rem(12) rem(18);
 		margin: rem(24) 0 rem(28);
 
@@ -26,20 +24,23 @@
 
 	// search__title
 	&__title {
-		font-size: rem(18);
-		font-weight: 400;
-		line-height: math.div(22, 18);
-		color: $color-text;
+		font-weight: 600;
+		display: inline;
 
-		@media (min-width: $md4) {
-			font-size: rem(20);
-			line-height: math.div(24, 20);
+		span {
+			white-space: normal;
+
+
+			@container (min-width: #{rem(720)}) {
+				white-space: nowrap;
+			}
 		}
 	}
 
 	// search__query
 	&__query {
 		color: $color-primary;
+		display: inline;
 	}
 
 	// search__count

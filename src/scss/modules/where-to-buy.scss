@@ -81,7 +81,6 @@
 
 	// buy-partners__slider
 	&__slider {
-
 		@include swiper-grid-fallback((0: 1.4, 576: 2.2), rem(12), rem(16));
 
 		.swiper-slide {
@@ -96,8 +95,6 @@
 				width: auto;
 			}
 		}
-
-
 	}
 }
 
@@ -145,7 +142,6 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	gap: rem(12);
 	width: 100%;
 	height: 100%;
 	padding: rem(20) rem(16);
@@ -156,38 +152,132 @@
 	@media (any-hover: hover) {
 		&:hover {
 			box-shadow: $shadow-soft;
+
+			.partner-card__cta {
+				margin-top: 0.625em;
+				max-height: 2.5em;
+				opacity: 1;
+			}
 		}
 	}
 
 	&:focus-visible {
 		outline: none;
 		box-shadow: $focus-ring;
+
+		.partner-card__cta {
+			margin-top: 0.625em;
+			max-height: 2.5em;
+			opacity: 1;
+		}
 	}
 
 	// partner-card__logo
 	&__logo {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: 100%;
-		max-width: rem(196);
+		display: block;
+		width: auto;
+		max-width: 100%;
+		height: rem(18);
+		object-fit: contain;
 
-		img {
-			display: block;
-			width: auto;
-			max-width: 100%;
+		@media (min-width: $md4) {
+			height: rem(22);
+		}
+
+		@media (min-width: $md2) {
+			height: rem(24);
+		}
+
+		// partner-card__logo--xxl
+		&--xxl {
+			height: rem(22);
+
+			@media (min-width: $md2) {
+				height: rem(29);
+				width: rem(195);
+			}
+		}
+
+		// partner-card__logo--xl
+		&--xl {
+			height: rem(19);
+
+			@media (min-width: $md2) {
+				height: rem(26);
+				width: rem(174);
+			}
+		}
+
+		// partner-card__logo--lg
+		&--lg {
+			@media (min-width: $md2) {
+				height: rem(24);
+				width: rem(160);
+			}
+		}
+
+		// partner-card__logo--md
+		&--md {
+			height: rem(17);
+
+			@media (min-width: $md2) {
+				height: rem(23);
+				width: rem(150);
+			}
+		}
+
+		// partner-card__logo--sm
+		&--sm {
+			height: rem(16);
+
+			@media (min-width: $md2) {
+				height: rem(21);
+				width: rem(98);
+			}
+		}
+
+		// partner-card__logo--xs
+		&--xs {
+			height: rem(13);
+
+			@media (min-width: $md2) {
+				height: rem(17);
+				width: rem(184);
+			}
+		}
+
+		// partner-card__logo--tall
+		&--tall {
 			height: auto;
 			max-height: rem(58);
-			object-fit: contain;
 		}
 	}
 
 	// partner-card__cta
 	&__cta {
-		font-size: rem(16);
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
 		line-height: math.div(17, 16);
+		font-weight: 400;
 		color: $color-muted;
 		text-align: center;
+		transition: opacity 0.2s ease, max-height 0.2s ease, margin-top 0.2s ease;
+		font-size: rem(11);
+
+		@media (min-width: $md4) {
+			font-size: rem(14);
+		}
+
+		@media (min-width: $md1) {
+			font-size: rem(16);
+		}
+
+		@media (hover: none) {
+			margin-top: 0.625em;
+			max-height: 2.5em;
+			opacity: 1;
+		}
 	}
 
 	// partner-card--market
@@ -203,14 +293,39 @@
 			min-height: rem(208);
 		}
 
-		.partner-card__logo img {
+		.partner-card__logo {
+			height: auto;
 			max-height: rem(58);
 		}
 	}
+}
 
-	// partner-card--cta
-	&--cta {
-		justify-content: center;
-		padding-block: rem(28);
+.marketplaces {
+	.partner-card {
+		min-height: rem(93);
+		padding: rem(12) rem(10);
+		border: 1px solid $color-border-subtle;
+		border-radius: rem(15);
+		background: $color-white;
+		transition: box-shadow 0.2s ease;
+
+		@media (min-width: $md4) {
+			min-height: rem(110);
+			padding: rem(16);
+		}
+
+		@media (min-width: $md2) {
+			min-height: rem(124);
+		}
+
+		@media (min-width: $md1) {
+			padding: rem(24);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: $shadow-muted;
+			}
+		}
 	}
 }
