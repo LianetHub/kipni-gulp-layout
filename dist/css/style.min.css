@@ -14,6 +14,14 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
   font-family: "Onest";
   src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
@@ -27,14 +35,6 @@
   src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
-}
-@font-face {
-  font-family: "Manrope";
-  src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-  font-style: normal;
-  font-display: swap;
 }
 :root {
   --color-primary: #8abd35;
@@ -6228,49 +6228,12 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
   overflow: hidden;
+  background: url("../img/shared/decor/leaves-page-decor.webp") 100% 0/20% auto no-repeat;
 }
 @media (min-width: 767.98px) {
   .promo-intro {
     padding-top: 2rem;
     padding-bottom: 3.5rem;
-  }
-}
-.promo-intro__container {
-  position: relative;
-}
-.promo-intro__container::before {
-  content: "";
-  display: none;
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
-  top: -5rem;
-  right: -11.25rem;
-  width: 26.25rem;
-  height: 26.25rem;
-  background-image: url("../img/shared/decor/leaves.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-@media (min-width: 991.98px) {
-  .promo-intro__container::before {
-    display: block;
-  }
-}
-@media (min-width: 1199.98px) {
-  .promo-intro__container::before {
-    top: -5.625rem;
-    right: -13.75rem;
-    width: 32.5rem;
-    height: 32.5rem;
-  }
-}
-@media (min-width: 1439.98px) {
-  .promo-intro__container::before {
-    right: -17.5rem;
-    width: 40.375rem;
-    height: 40.375rem;
   }
 }
 .promo-intro__title {
@@ -6291,7 +6254,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   align-items: center;
   gap: 0.625rem;
   margin: 0 0 1.5rem;
-  color: var(--color-primary);
   font-size: 0.875rem;
   line-height: 1.1428571429;
 }
@@ -6303,6 +6265,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   width: 1.5rem;
   height: 1.5rem;
   font-size: 1.5rem;
+  color: var(--color-primary);
 }
 @media (min-width: 767.98px) {
   .promo-intro__date {
@@ -7169,48 +7132,11 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   position: relative;
   padding-bottom: 1.5rem;
   overflow: hidden;
+  background: url("../img/shared/decor/leaves-page-decor.webp") 100% 0/20% auto no-repeat;
 }
 @media (min-width: 767.98px) {
   .product {
     padding-bottom: 2.5rem;
-  }
-}
-.product__container {
-  position: relative;
-}
-.product__container::before {
-  content: "";
-  display: none;
-  pointer-events: none;
-  position: absolute;
-  z-index: 0;
-  top: -2.5rem;
-  right: -11.25rem;
-  width: 22.5rem;
-  height: 22.5rem;
-  background-image: url("../img/shared/decor/leaves.webp");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-@media (min-width: 1199.98px) {
-  .product__container::before {
-    display: block;
-  }
-}
-@media (min-width: 1439.98px) {
-  .product__container::before {
-    top: -3.75rem;
-    right: -15rem;
-    width: 32.5rem;
-    height: 32.5rem;
-  }
-}
-@media (min-width: 1499.98px) {
-  .product__container::before {
-    right: -17.5rem;
-    width: 40.375rem;
-    height: 40.375rem;
   }
 }
 .product__top {

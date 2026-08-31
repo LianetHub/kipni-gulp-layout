@@ -5,6 +5,7 @@
 	padding-top: rem(24);
 	padding-bottom: rem(40);
 	overflow: hidden;
+	background: url("@img/shared/decor/leaves-page-decor.webp") 100% 0 / 20% auto no-repeat;
 
 	@media (min-width: $md4) {
 		padding-top: rem(32);
@@ -12,42 +13,7 @@
 	}
 
 	// promo-intro__container
-	&__container {
-		position: relative;
-
-		&::before {
-			content: "";
-			display: none;
-			pointer-events: none;
-			position: absolute;
-			z-index: 0;
-			top: rem(-80);
-			right: rem(-180);
-			width: rem(420);
-			height: rem(420);
-			background-image: url("@img/shared/decor/leaves.webp");
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-
-			@media (min-width: $md3) {
-				display: block;
-			}
-
-			@media (min-width: $md2) {
-				top: rem(-90);
-				right: rem(-220);
-				width: rem(520);
-				height: rem(520);
-			}
-
-			@media (min-width: $md1) {
-				right: rem(-280);
-				width: rem(646);
-				height: rem(646);
-			}
-		}
-	}
+	&__container {}
 
 	// promo-intro__title
 	&__title {
@@ -69,7 +35,7 @@
 		align-items: center;
 		gap: rem(10);
 		margin: 0 0 rem(24);
-		color: $color-primary;
+
 		font-size: rem(14);
 		line-height: math.div(16, 14);
 
@@ -81,6 +47,7 @@
 			width: rem(24);
 			height: rem(24);
 			font-size: rem(24);
+			color: $color-primary;
 		}
 
 		@media (min-width: $md4) {
@@ -151,6 +118,7 @@
 }
 
 .promo-products {
+
 	// promo-products__title
 	&__title {
 		margin: 0 0 rem(24);

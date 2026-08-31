@@ -4,48 +4,14 @@
 	position: relative;
 	padding-bottom: rem(24);
 	overflow: hidden;
+	background: url("@img/shared/decor/leaves-page-decor.webp") 100% 0 / 20% auto no-repeat;
 
 	@media (min-width: $md4) {
 		padding-bottom: rem(40);
 	}
 
 	// product__container
-	&__container {
-		position: relative;
-
-		&::before {
-			content: "";
-			display: none;
-			pointer-events: none;
-			position: absolute;
-			z-index: 0;
-			top: rem(-40);
-			right: rem(-180);
-			width: rem(360);
-			height: rem(360);
-			background-image: url("@img/shared/decor/leaves.webp");
-			background-repeat: no-repeat;
-			background-size: contain;
-			background-position: center;
-
-			@media (min-width: $md2) {
-				display: block;
-			}
-
-			@media (min-width: $md1) {
-				top: rem(-60);
-				right: rem(-240);
-				width: rem(520);
-				height: rem(520);
-			}
-
-			@media (min-width: $md0) {
-				right: rem(-280);
-				width: rem(646);
-				height: rem(646);
-			}
-		}
-	}
+	&__container {}
 
 	// product__top
 	&__top {
