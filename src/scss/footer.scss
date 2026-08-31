@@ -16,7 +16,9 @@
 		z-index: $ui-index-2;
 
 		@media (max-width:$md5) {
-			padding-inline: 2rem;
+			@media (min-width: 392.98px) {
+				padding-inline: 2rem;
+			}
 		}
 	}
 
