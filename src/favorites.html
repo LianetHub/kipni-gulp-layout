@@ -7,146 +7,147 @@
     <div class="wrapper">
       @@include('html/_header.html')
       <main class="page">
-          <div class="container">
-            @@include('html/templates/breadcrumbs.html', {
-              "current": "Избранное"
-            })
-          </div>
+        <div class="container">
+          @@include('html/templates/breadcrumbs.html', {
+          "current": "Избранное"
+          })
+        </div>
 
         <section class="favorites" aria-labelledby="favorites-title">
           <div class="container">
-        <div class="favorites__head">
+            <div class="favorites__head">
               <h1 class="favorites__title" id="favorites-title">
                 <span class="favorites__title-text">Избранное:</span>
                 <span class="favorites__count">9 товаров</span>
               </h1>
               @@include('html/templates/custom-select.html', {
-                "id": "favorites-sort",
-                "name": "sort",
-                "mod": "catalog",
-                "label": "Сортировать товары",
-                "placeholder": "Сортировать",
-                "icon": "icon-filter"
+              "id": "favorites-sort",
+              "name": "sort",
+              "mod": "catalog",
+              "skin": "vacancies",
+              "label": "Сортировать товары",
+              "placeholder": "Сортировать",
+              "icon": "icon-filter"
               })
             </div>
           </div>
 
           <div class="container favorites__body">
             <div class="row gy-4">
-              <aside class="col-12 col-lg-3 favorites__aside">
+              <aside class="col-12 col-lg-4 col-xl-3 favorites__aside">
                 @@include('html/templates/catalog-filters.html', {
                 "title_id": "favorites-filters-title"
                 })
               </aside>
 
-              <div class="col-12 col-lg-9 favorites__content">
+              <div class="col-12 col-lg-8 col-xl-9 favorites__content">
                 <div class="row gy-4 catalog-products">
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Хит",
-                      "badge_mod": "badge--hit",
-                      "image": "img/products/toilet-gel.webp",
-                      "image_alt": "Чистящий гель KIPNI для унитазов",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/toilet-gel.webp",
+                    "image_alt": "Чистящий гель KIPNI для унитазов",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Новинка",
-                      "badge_mod": "badge--new",
-                      "image": "img/products/candy-shop.webp",
-                      "image_alt": "Гель для душа Канди шоп",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Новинка",
+                    "badge_mod": "badge--new",
+                    "image": "img/products/candy-shop.webp",
+                    "image_alt": "Гель для душа Канди шоп",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Хит",
-                      "badge_mod": "badge--hit",
-                      "image": "img/products/tropical-soap.webp",
-                      "image_alt": "Жидкое мыло Тропические фрукты",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/tropical-soap.webp",
+                    "image_alt": "Жидкое мыло Тропические фрукты",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Хит",
-                      "badge_mod": "badge--hit",
-                      "image": "img/products/household-soap.webp",
-                      "image_alt": "Мыло хозяйственное Кипни",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/household-soap.webp",
+                    "image_alt": "Мыло хозяйственное Кипни",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Хит",
-                      "badge_mod": "badge--hit",
-                      "image": "img/products/laundry-gel.webp",
-                      "image_alt": "Универсальный гель для стирки KIPNI",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/laundry-gel.webp",
+                    "image_alt": "Универсальный гель для стирки KIPNI",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Хит",
-                      "badge_mod": "badge--hit",
-                      "image": "img/products/dish.webp",
-                      "image_alt": "Средство для посуды OLLY",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/dish.webp",
+                    "image_alt": "Средство для посуды OLLY",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Хит",
-                      "badge_mod": "badge--hit",
-                      "image": "img/products/toilet-gel.webp",
-                      "image_alt": "Чистящий гель KIPNI для унитазов",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/toilet-gel.webp",
+                    "image_alt": "Чистящий гель KIPNI для унитазов",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Новинка",
-                      "badge_mod": "badge--new",
-                      "image": "img/products/candy-shop.webp",
-                      "image_alt": "Гель для душа Канди шоп",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Новинка",
+                    "badge_mod": "badge--new",
+                    "image": "img/products/candy-shop.webp",
+                    "image_alt": "Гель для душа Канди шоп",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                   <div class="col-12 col-sm-6 col-xl-4">
                     @@include('html/templates/product-card.html', {
-                      "title": "Чистящий гель для унитазов",
-                      "volume": "750 мл",
-                      "badge": "Хит",
-                      "badge_mod": "badge--hit",
-                      "image": "img/products/tropical-soap.webp",
-                      "image_alt": "Жидкое мыло Тропические фрукты",
-                      "link": "#",
-                      "favorited": true
+                    "title": "Чистящий гель для унитазов",
+                    "volume": "750 мл",
+                    "badge": "Хит",
+                    "badge_mod": "badge--hit",
+                    "image": "img/products/tropical-soap.webp",
+                    "image_alt": "Жидкое мыло Тропические фрукты",
+                    "link": "#",
+                    "favorited": true
                     })
                   </div>
                 </div>

@@ -224,6 +224,11 @@
 		cursor: pointer;
 		transition: color 0.2s ease;
 
+		&::before {
+			order: 1;
+			font-size: 0.75em;
+		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: $color-text;
@@ -234,34 +239,6 @@
 			outline: none;
 			box-shadow: $focus-ring;
 			border-radius: rem(4);
-		}
-	}
-
-	// catalog-filters__reset-icon
-	&__reset-icon {
-		position: relative;
-		display: inline-block;
-		width: rem(10);
-		height: rem(10);
-
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			width: rem(10);
-			height: rem(1.5);
-			background: currentColor;
-			border-radius: rem(1);
-		}
-
-		&::before {
-			transform: translate(-50%, -50%) rotate(45deg);
-		}
-
-		&::after {
-			transform: translate(-50%, -50%) rotate(-45deg);
 		}
 	}
 
@@ -379,5 +356,12 @@
 	.product-card {
 		max-width: none;
 		height: 100%;
+	}
+
+	// высокое фото в сетках каталога (search / catalog / favorites)
+	.product-card__media {
+		@media (min-width: $md2) {
+			height: rem(325);
+		}
 	}
 }

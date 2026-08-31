@@ -22,19 +22,19 @@
   font-display: swap;
 }
 @font-face {
+  font-family: "tthoves";
+  font-display: swap;
+  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
   font-family: "Onest";
   src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
-}
-@font-face {
-  font-family: "tthoves";
-  font-display: swap;
-  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
 }
 :root {
   --color-primary: #8abd35;
@@ -5694,7 +5694,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 @media (min-width: 767.98px) {
   .certs-card__preview {
     flex-basis: 13.75rem;
-    border-width: 1.25rem;
   }
 }
 @media (any-hover: hover) {
@@ -5747,14 +5746,11 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   box-shadow: var(--focus-ring);
   border-radius: 0.25rem;
 }
-.certs-file::before {
+.certs-file__icon {
   flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
   width: 2.3125rem;
   height: 2.3125rem;
-  font-size: 2.3125rem;
 }
 .certs-file__meta {
   display: flex;
@@ -7864,6 +7860,10 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   cursor: pointer;
   transition: color 0.2s ease;
 }
+.catalog-filters__reset::before {
+  order: 1;
+  font-size: 0.75em;
+}
 @media (any-hover: hover) {
   .catalog-filters__reset:hover {
     color: var(--color-text);
@@ -7873,28 +7873,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   outline: none;
   box-shadow: var(--focus-ring);
   border-radius: 0.25rem;
-}
-.catalog-filters__reset-icon {
-  position: relative;
-  display: inline-block;
-  width: 0.625rem;
-  height: 0.625rem;
-}
-.catalog-filters__reset-icon::before, .catalog-filters__reset-icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 0.625rem;
-  height: 0.09375rem;
-  background: currentColor;
-  border-radius: 0.0625rem;
-}
-.catalog-filters__reset-icon::before {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-.catalog-filters__reset-icon::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .catalog-filters__group {
   margin-bottom: 1.5rem;
@@ -7998,6 +7976,11 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 .catalog-products .product-card {
   max-width: none;
   height: 100%;
+}
+@media (min-width: 1199.98px) {
+  .catalog-products .product-card__media {
+    height: 20.3125rem;
+  }
 }
 
 .favorites {
@@ -8865,11 +8848,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
     margin-inline: -0.5rem;
     margin-bottom: 0.625rem;
     width: calc(100% + 1rem);
-  }
-}
-@media (min-width: 1199.98px) {
-  .col-xl-3 .product-card__media {
-    height: 20.3125rem;
   }
 }
 .product-card__media img {

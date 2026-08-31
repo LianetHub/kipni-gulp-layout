@@ -1,4 +1,4 @@
-<div class="custom-select custom-select--@@mod">
+<div class="custom-select @@if(typeof skin !== 'undefined' && skin){custom-select--@@skin}@@if(typeof skin === 'undefined' || !skin){custom-select--@@mod}">
 	<label class="visually-hidden" for="@@id">@@label</label>
 	<select class="custom-select__native" id="@@id" name="@@name" tabindex="-1" aria-hidden="true">
 		@@if(mod === 'catalog'){

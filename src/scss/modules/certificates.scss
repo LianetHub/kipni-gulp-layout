@@ -21,7 +21,7 @@
 		padding: rem(69) rem(74);
 	}
 
-	& + & {
+	&+& {
 		margin-top: rem(24);
 
 		@media (min-width: $md4) {
@@ -92,7 +92,7 @@
 
 		@media (min-width: $md4) {
 			flex-basis: rem(220);
-			border-width: rem(20);
+
 		}
 
 		@media (any-hover: hover) {
@@ -151,14 +151,12 @@
 		border-radius: rem(4);
 	}
 
-	&::before {
+	// certs-file__icon
+	&__icon {
 		flex-shrink: 0;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
+		display: block;
 		width: rem(37);
 		height: rem(37);
-		font-size: rem(37);
 	}
 
 	// certs-file__meta

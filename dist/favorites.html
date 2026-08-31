@@ -258,30 +258,30 @@
         </div>
       </header>
       <main class="page">
-          <div class="container">
-            <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            	<ol class="breadcrumbs__list">
-            		<li class="breadcrumbs__item">
-            			<a class="breadcrumbs__link" href="index.html">Главная</a>
-            		</li>
-            		
-            		
-            		<li class="breadcrumbs__item">
-            			<span class="breadcrumbs__link">Избранное</span>
-            		</li>
-            	</ol>
-            </nav>
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          	<ol class="breadcrumbs__list">
+          		<li class="breadcrumbs__item">
+          			<a class="breadcrumbs__link" href="index.html">Главная</a>
+          		</li>
+          		
+          		
+          		<li class="breadcrumbs__item">
+          			<span class="breadcrumbs__link">Избранное</span>
+          		</li>
+          	</ol>
+          </nav>
 
-          </div>
+        </div>
 
         <section class="favorites" aria-labelledby="favorites-title">
           <div class="container">
-        <div class="favorites__head">
+            <div class="favorites__head">
               <h1 class="favorites__title" id="favorites-title">
                 <span class="favorites__title-text">Избранное:</span>
                 <span class="favorites__count">9 товаров</span>
               </h1>
-              <div class="custom-select custom-select--catalog">
+              <div class="custom-select custom-select--vacancies">
               	<label class="visually-hidden" for="favorites-sort">Сортировать товары</label>
               	<select class="custom-select__native" id="favorites-sort" name="sort" tabindex="-1" aria-hidden="true">
               		
@@ -311,13 +311,12 @@
 
           <div class="container favorites__body">
             <div class="row gy-4">
-              <aside class="col-12 col-lg-3 favorites__aside">
+              <aside class="col-12 col-lg-4 col-xl-3 favorites__aside">
                 <form class="catalog-filters" aria-labelledby="favorites-filters-title">
                 	<div class="catalog-filters__head">
                 		<h2 class="catalog-filters__title" id="favorites-filters-title">Фильтры</h2>
-                		<button type="button" class="catalog-filters__reset">
+                		<button type="button" class="catalog-filters__reset icon-cross">
                 			Сбросить
-                			<span class="catalog-filters__reset-icon" aria-hidden="true"></span>
                 		</button>
                 	</div>
 
@@ -360,10 +359,9 @@
 
                 	<button type="submit" class="btn btn--primary btn--large catalog-filters__submit">Применить фильтр</button>
                 </form>
-
               </aside>
 
-              <div class="col-12 col-lg-9 favorites__content">
+              <div class="col-12 col-lg-8 col-xl-9 favorites__content">
                 <div class="row gy-4 catalog-products">
                   <div class="col-12 col-sm-6 col-xl-4">
                     <article class="product-card">

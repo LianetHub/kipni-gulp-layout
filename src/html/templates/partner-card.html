@@ -1,7 +1,7 @@
-@@if(col){
+@@if (typeof col !== 'undefined' && col) {
 <div class="@@col">
 }
-<a class="partner-card@@if(mod){ @@mod}" href="@@href" aria-label="@@aria_label" target="_blank" rel="noopener noreferrer">
+<a class="partner-card@@if (typeof mod !== 'undefined' && mod) { @@mod}" href="@@href" aria-label="@@aria_label" target="_blank" rel="noopener noreferrer">
 	<img
 		class="partner-card__logo@@if (typeof logo_mod !== 'undefined' && logo_mod) { @@logo_mod}"
 		src="@@logo"
@@ -12,6 +12,6 @@
 	>
 	<span class="partner-card__cta">Перейти в магазин</span>
 </a>
-@@if(col){
+@@if (typeof col !== 'undefined' && col) {
 </div>
 }
