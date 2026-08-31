@@ -1,6 +1,8 @@
 @use "sass:math";
 
 .faq {
+
+
 	// faq__title
 	&__title {
 		margin: 0 0 rem(24);
@@ -29,6 +31,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: rem(16);
+
 	}
 
 	// faq__item
@@ -36,6 +39,8 @@
 		border-radius: rem(15);
 		background: #f7f7f7;
 		overflow: hidden;
+		align-content: center;
+		flex: 1 1 auto;
 
 		&.is-open {
 			.faq__question::before {

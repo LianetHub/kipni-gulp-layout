@@ -83,7 +83,6 @@ textarea.form-control {
 .form-check {
 	display: flex;
 	align-items: center;
-	gap: rem(8);
 	margin-bottom: rem(20);
 	cursor: pointer;
 
@@ -91,39 +90,47 @@ textarea.form-control {
 		margin-bottom: rem(24);
 	}
 
-	&::before {
-		@extend %ic;
-		flex-shrink: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		width: rem(20);
-		height: rem(20);
-		border: 1px solid $color-primary;
-		border-radius: rem(4);
-		background: $color-bg;
-		font-size: rem(20);
-		line-height: 1;
-		color: $color-primary;
-		content: "";
-	}
+	// form-check__input
+	&__input {
+		&:checked ~ .form-check__text::before {
+			@extend %icon-check;
+			font-size: 0.5rem;
+			color: #fff;
+			border-color: $color-primary;
+			background: $color-primary;
+		}
 
-	&:has(.form-check__input:checked)::before {
-		@extend %icon-check;
-		border-color: transparent;
-		background: transparent;
-	}
-
-	&:has(.form-check__input:focus-visible)::before {
-		box-shadow: $focus-ring;
+		&:focus-visible ~ .form-check__text::before {
+			box-shadow: $focus-ring;
+		}
 	}
 
 	// form-check__text
 	&__text {
+		display: inline-flex;
+		align-items: center;
+		gap: rem(8);
 		font-size: rem(14);
 		font-weight: 400;
 		line-height: math.div(20, 14);
 		color: $color-text;
+
+		&::before {
+			@extend %ic;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: rem(20);
+			height: rem(20);
+			border: 1px solid $color-primary;
+			border-radius: rem(4);
+			background: $color-bg;
+			font-size: rem(20);
+			line-height: 1;
+			color: $color-primary;
+			content: "";
+		}
 
 		& a {
 			text-decoration: underline;

@@ -367,7 +367,7 @@ h4,
   font-weight: normal;
   font-style: normal;
 }
-.form-check::before, .breadcrumbs__item:not(:last-child)::after, .custom-select__trigger::after, .header__menu-row--toggle::after, .header-buy__link::after, .header-catalog__link::after, .header__menu-row--buy::after, [class^=icon-]:before,
+.form-check__text::before, .breadcrumbs__item:not(:last-child)::after, .custom-select__trigger::after, .header__menu-row--toggle::after, .header-buy__link::after, .header-catalog__link::after, .header__menu-row--buy::after, [class^=icon-]:before,
 [class*=" icon-"]:before {
   font-family: "icons";
   font-style: normal;
@@ -459,7 +459,7 @@ h4,
   letter-spacing: 0.15em;
 }
 
-.form-check:has(.form-check__input:checked)::before, .icon-check:before {
+.form-check__input:checked ~ .form-check__text::before, .icon-check:before {
   content: "\e910";
 }
 
@@ -5055,6 +5055,8 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   border-radius: 0.9375rem;
   background: #f7f7f7;
   overflow: hidden;
+  align-content: center;
+  flex: 1 1 auto;
 }
 .faq__item.is-open .faq__question::before {
   transform: rotate(45deg);
@@ -6109,7 +6111,14 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 .contacts-bottom {
   position: relative;
   z-index: 1;
-  align-items: flex-start;
+}
+.contacts-bottom .faq {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.contacts-bottom .faq__list {
+  flex: 1 1 auto;
 }
 
 .contacts-form {
@@ -9358,7 +9367,6 @@ textarea.form-control {
 .form-check {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
   margin-bottom: 1.25rem;
   cursor: pointer;
 }
@@ -9367,7 +9375,25 @@ textarea.form-control {
     margin-bottom: 1.5rem;
   }
 }
-.form-check::before {
+.form-check__input:checked ~ .form-check__text::before {
+  font-size: 0.5rem;
+  color: #fff;
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+.form-check__input:focus-visible ~ .form-check__text::before {
+  box-shadow: var(--focus-ring);
+}
+.form-check__text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.4285714286;
+  color: var(--color-text);
+}
+.form-check__text::before {
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -9381,19 +9407,6 @@ textarea.form-control {
   line-height: 1;
   color: var(--color-primary);
   content: "";
-}
-.form-check:has(.form-check__input:checked)::before {
-  border-color: transparent;
-  background: transparent;
-}
-.form-check:has(.form-check__input:focus-visible)::before {
-  box-shadow: var(--focus-ring);
-}
-.form-check__text {
-  font-size: 0.875rem;
-  font-weight: 400;
-  line-height: 1.4285714286;
-  color: var(--color-text);
 }
 .form-check__text a {
   text-decoration: underline;
