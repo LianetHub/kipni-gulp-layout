@@ -90,26 +90,34 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: rem(12);
+		gap: rem(10);
 		width: 100%;
 		min-height: rem(56);
 		padding: rem(14) rem(20);
-		border: 1px solid $color-border-subtle;
-		border-radius: $radius-sm;
-		background: $color-bg;
-		box-shadow: $shadow-soft;
-		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+		border: 1px solid $color-primary;
+		border-radius: $radius-btn;
+		background: transparent;
+		color: $color-primary;
+		transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
 		@media (min-width: $md4) {
 			min-height: rem(62);
+			padding: rem(20) rem(30);
 		}
 
 		&::before {
+			flex-shrink: 0;
 			font-size: rem(22);
+			line-height: 1;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: $color-soft-green;
+			}
 		}
 
 		.popup__file-input:focus-visible+& {
-			border-color: $color-primary;
 			box-shadow: $focus-ring;
 		}
 	}
@@ -117,48 +125,12 @@
 	// popup__file-text
 	&__file-text {
 		font-size: rem(16);
-		font-weight: 500;
-		line-height: 1.2;
+		font-weight: 400;
+		line-height: 1.1;
 		color: $color-primary;
 
 		@media (min-width: $md4) {
 			font-size: rem(18);
-		}
-	}
-
-	// popup__consent
-	&__consent {
-		display: flex;
-		align-items: flex-start;
-		gap: rem(8);
-		margin-bottom: rem(20);
-		cursor: pointer;
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(24);
-		}
-
-		&::before {
-			flex-shrink: 0;
-			font-size: rem(20);
-		}
-
-		&:has(.popup__checkbox:focus-visible) {
-			border-radius: rem(4);
-			box-shadow: $focus-ring;
-		}
-	}
-
-	// popup__consent-text
-	&__consent-text {
-		font-size: rem(14);
-		font-weight: 400;
-		line-height: math.div(20, 14);
-		color: $color-text;
-
-		@media (min-width: $md4) {
-			font-size: rem(16);
-			line-height: math.div(26, 16);
 		}
 	}
 

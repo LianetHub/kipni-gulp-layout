@@ -79,3 +79,65 @@ textarea.form-control {
 	min-height: rem(120);
 	resize: vertical;
 }
+
+.form-check {
+	display: flex;
+	align-items: center;
+	gap: rem(8);
+	margin-bottom: rem(20);
+	cursor: pointer;
+
+	@media (min-width: $md4) {
+		margin-bottom: rem(24);
+	}
+
+	&::before {
+		@extend %ic;
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(20);
+		height: rem(20);
+		border: 1px solid $color-primary;
+		border-radius: rem(4);
+		background: $color-bg;
+		font-size: rem(20);
+		line-height: 1;
+		color: $color-primary;
+		content: "";
+	}
+
+	&:has(.form-check__input:checked)::before {
+		@extend %icon-check;
+		border-color: transparent;
+		background: transparent;
+	}
+
+	&:has(.form-check__input:focus-visible)::before {
+		box-shadow: $focus-ring;
+	}
+
+	// form-check__text
+	&__text {
+		font-size: rem(14);
+		font-weight: 400;
+		line-height: math.div(20, 14);
+		color: $color-text;
+
+		& a {
+			text-decoration: underline;
+
+			@media (any-hover: hover) {
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		@media (min-width: $md4) {
+			font-size: rem(16);
+			line-height: math.div(26, 16);
+		}
+	}
+}

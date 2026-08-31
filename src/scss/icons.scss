@@ -102,8 +102,12 @@
   }
 }
 
-.icon-check:before {
+%icon-check {
   content: "\e910";
+}
+
+.icon-check:before {
+  @extend %icon-check;
 }
 
 .icon-heart-fill:before {
