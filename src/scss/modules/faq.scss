@@ -130,8 +130,9 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		height: 100%;
+		height: fit-content;
 		min-height: rem(240);
+
 		padding: rem(28) rem(24);
 		border-radius: $radius-md;
 		background: #f7f8f3;

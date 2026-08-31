@@ -258,32 +258,32 @@
         </div>
       </header>
       <main class="page">
-          <div class="container">
-            <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            	<ol class="breadcrumbs__list">
-            		<li class="breadcrumbs__item">
-            			<a class="breadcrumbs__link" href="index.html">Главная</a>
-            		</li>
-            		
-            		
-            		<li class="breadcrumbs__item">
-            			<span class="breadcrumbs__link">О нас</span>
-            		</li>
-            	</ol>
-            </nav>
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          	<ol class="breadcrumbs__list">
+          		<li class="breadcrumbs__item">
+          			<a class="breadcrumbs__link" href="index.html">Главная</a>
+          		</li>
+          		
+          		
+          		<li class="breadcrumbs__item">
+          			<span class="breadcrumbs__link">О нас</span>
+          		</li>
+          	</ol>
+          </nav>
 
-          </div>
+        </div>
 
-        <section class="about-intro" aria-labelledby="about-intro-title">
+        <section class="page-intro page-intro--about" aria-labelledby="page-intro-title">
           <div class="container">
-            <div class="row about-intro__row">
+            <div class="row page-intro__row">
               <div class="col-12 col-lg-6">
-                <div class="about-intro__content">
-                  <h1 class="h1 about-intro__title" id="about-intro-title">
+                <div class="page-intro__content">
+                  <h1 class="title-lg page-intro__title" id="page-intro-title">
                     Производим простые и&nbsp;надежные средства
-                    <span class="about-intro__accent">для повседневного комфорта</span>
+                    <span class="page-intro__accent">для повседневного комфорта</span>
                   </h1>
-                  <p class="text about-intro__text">
+                  <p class="text page-intro__text">
                     KIPNI&nbsp;— российский производитель современных и&nbsp;безопасных средств для&nbsp;дома и&nbsp;личной гигиены. Создаём продукцию, которой можно доверять каждый день.
                   </p>
                 </div>
@@ -299,7 +299,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-12 col-lg-6 about-intro__media">
+              <div class="col-12 col-lg-6 page-intro__media">
                 <img src="img/about/hero.webp" alt="Продукция KIPNI и маскот-уточка среди белых цветов" width="775" height="480" fetchpriority="high">
               </div>
             </div>
@@ -309,15 +309,20 @@
         <section class="about-facts section-space-md" aria-labelledby="about-facts-title">
           <div class="container">
             <h2 class="h2 about-facts__title" id="about-facts-title">
-              <img class="about-facts__logo" src="img/logo.svg" alt="KIPNI" width="103" height="30" loading="lazy">
-              <span class="about-facts__title-text">— это&nbsp;современное производство средств для&nbsp;личной гигиены и&nbsp;бытовой химии, основанное в&nbsp;2020&nbsp;году</span>
+              <span class="about-facts__title-row">
+                <img class="about-facts__logo" src="img/logo.svg" alt="KIPNI" width="103" height="30" loading="lazy">
+                <span class="about-facts__title-text">— это&nbsp;современное производство средств для&nbsp;личной</span>
+              </span>
+              <span class="about-facts__title-row">гигиены и&nbsp;бытовой химии, основанное в&nbsp;2020&nbsp;году</span>
             </h2>
-            <div class="row gy-3 about-facts__grid">
+            <div class="row about-facts__grid">
               
               
               <div class="col-12 col-md-6 col-xl-3">
-              	<article class="about-fact icon-calendar">
-              		
+              	<article class="about-fact">
+              		<span class="about-fact__icon" aria-hidden="true">
+              			<img src="img/shared/ui/icon-calendar-time.svg" alt="Календарь" width="50" height="50" loading="lazy">
+              		</span>
               		<h3 class="about-fact__title">6+ лет</h3>
               		<p class="about-fact__text">Стабильное производство с&nbsp;2020&nbsp;года</p>
               	</article>
@@ -326,8 +331,10 @@
 
               
               <div class="col-12 col-md-6 col-xl-3">
-              	<article class="about-fact icon-leaf">
-              		
+              	<article class="about-fact">
+              		<span class="about-fact__icon" aria-hidden="true">
+              			<img src="img/shared/ui/icon-leaf.svg" alt="Лист" width="50" height="50" loading="lazy">
+              		</span>
               		<h3 class="about-fact__title">ГОСТ</h3>
               		<p class="about-fact__text">Сертифицированное качество соответствует ГОСТ и&nbsp;ТР&nbsp;ТС</p>
               	</article>
@@ -336,8 +343,10 @@
 
               
               <div class="col-12 col-md-6 col-xl-3">
-              	<article class="about-fact icon-truck">
-              		
+              	<article class="about-fact">
+              		<span class="about-fact__icon" aria-hidden="true">
+              			<img src="img/shared/ui/icon-truck.svg" alt="Грузовик" width="50" height="50" loading="lazy">
+              		</span>
               		<h3 class="about-fact__title">Автопарк</h3>
               		<p class="about-fact__text">Оперативная доставка собственным транспортом</p>
               	</article>
@@ -345,7 +354,7 @@
               
 
               <div class="col-12 col-md-6 col-xl-3 about-facts__media">
-              	<img class="cover-image" src="img/about/lab-duck.webp" alt="Маскот KIPNI в лаборатории среди пробирок" width="360" height="306" loading="lazy">
+              	<img class="cover-image" src="img/about/lab-duck.webp" alt="Маскот KIPNI в лаборатории среди пробирок" width="350" height="306" loading="lazy">
               </div>
               
               
@@ -353,11 +362,9 @@
               
               <div class="col-12 col-md-6 col-xl-3">
               	<article class="about-fact">
-              		
               		<span class="about-fact__icon" aria-hidden="true">
               			<img src="img/shared/ui/icon-factory.svg" alt="Собственное производство" width="50" height="50" loading="lazy">
               		</span>
-              		
               		<h3 class="about-fact__title">Технологии</h3>
               		<p class="about-fact__text">Собственное автоматизированное предприятие в&nbsp;России</p>
               	</article>
@@ -366,8 +373,10 @@
 
               
               <div class="col-12 col-md-6 col-xl-3">
-              	<article class="about-fact icon-shopping-cart">
-              		
+              	<article class="about-fact">
+              		<span class="about-fact__icon" aria-hidden="true">
+              			<img src="img/shared/ui/icon-shopping-cart.svg" alt="Корзина" width="50" height="50" loading="lazy">
+              		</span>
               		<h3 class="about-fact__title">80+ товаров</h3>
               		<p class="about-fact__text">Более 80&nbsp;товаров в&nbsp;каталоге</p>
               	</article>
@@ -377,11 +386,9 @@
               
               <div class="col-12 col-md-6 col-xl-3">
               	<article class="about-fact">
-              		
               		<span class="about-fact__icon" aria-hidden="true">
               			<img src="img/shared/ui/icon-logistics.svg" alt="Логистика" width="50" height="50" loading="lazy">
               		</span>
-              		
               		<h3 class="about-fact__title">Логистика</h3>
               		<p class="about-fact__text">Поставка по всей России и&nbsp;СНГ, розница на&nbsp;маркетплейсах</p>
               	</article>

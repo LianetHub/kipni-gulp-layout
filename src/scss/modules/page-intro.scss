@@ -1,0 +1,64 @@
+@use "sass:math";
+
+.page-intro {
+	padding-bottom: rem(20);
+
+	// page-intro__row
+	&__row {
+		@media (min-width: $md3) {
+			align-items: center;
+		}
+	}
+
+	// page-intro__content
+	&__content {
+		padding-top: 2rem;
+
+		@media (min-width: $md4) {
+			padding-top: 3.75rem;
+		}
+	}
+
+	// page-intro__title
+	&__title {
+		margin-bottom: rem(24);
+
+		@media (min-width: $md4) {
+			margin-bottom: rem(36);
+		}
+	}
+
+	// page-intro__accent
+	&__accent {
+		color: $color-primary;
+	}
+
+	// page-intro__text
+	&__text {
+		line-height: math.div(26, 16);
+	}
+
+	// page-intro__media
+	&__media {
+		margin-top: rem(24);
+
+		@media (min-width: $md3) {
+			margin-top: 0;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+			margin-inline: auto;
+		}
+	}
+
+	.benefits {
+		margin-top: rem(32);
+
+		@media (min-width: $md4) {
+			margin-top: rem(48);
+		}
+	}
+}

@@ -107,7 +107,7 @@
 
 	// btn--outline
 	&--outline {
-		background: $color-white;
+		background: transparent;
 		color: $color-primary;
 		border: 1px solid $color-primary;
 		box-shadow: $shadow-green;
@@ -197,14 +197,14 @@
 	padding: 0;
 	border: none;
 	border-radius: 50%;
-	background: $color-primary;
-	box-shadow: $shadow-green;
-	color: $color-white;
+	background: $color-soft-green;
+	box-shadow: $shadow-muted;
+	color: $color-muted;
 	font-size: rem(12);
 	line-height: 1;
 	cursor: pointer;
 	transform: translateY(-50%);
-	transition: background-color 0.2s ease;
+	transition: background-color 0.2s ease, color 0.2s ease;
 
 	&::after {
 		content: none;
@@ -218,7 +218,7 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			background: $color-primary-dark;
+			color: $color-text;
 		}
 	}
 
@@ -230,6 +230,10 @@
 	&.swiper-button-disabled {
 		opacity: 0.4;
 		pointer-events: none;
+	}
+
+	&.swiper-button-lock {
+		display: none;
 	}
 }
 

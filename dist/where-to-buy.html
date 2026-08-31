@@ -258,31 +258,31 @@
         </div>
       </header>
       <main class="page">
-          <div class="container">
-            <nav class="breadcrumbs" aria-label="Хлебные крошки">
-            	<ol class="breadcrumbs__list">
-            		<li class="breadcrumbs__item">
-            			<a class="breadcrumbs__link" href="index.html">Главная</a>
-            		</li>
-            		
-            		
-            		<li class="breadcrumbs__item">
-            			<span class="breadcrumbs__link">Где купить</span>
-            		</li>
-            	</ol>
-            </nav>
+        <div class="container">
+          <nav class="breadcrumbs" aria-label="Хлебные крошки">
+          	<ol class="breadcrumbs__list">
+          		<li class="breadcrumbs__item">
+          			<a class="breadcrumbs__link" href="index.html">Главная</a>
+          		</li>
+          		
+          		
+          		<li class="breadcrumbs__item">
+          			<span class="breadcrumbs__link">Где купить</span>
+          		</li>
+          	</ol>
+          </nav>
 
-          </div>
+        </div>
 
-        <section class="buy-intro">
+        <section class="page-intro" aria-labelledby="page-intro-title">
           <div class="container">
-            <div class="row buy-intro__row">
+            <div class="row page-intro__row">
               <div class="col-12 col-lg-6">
-                <div class="buy-intro__content">
-                  <h1 class="h1 buy-intro__title">
-                    Где купить <span class="buy-intro__brand">KIPNI</span>
+                <div class="page-intro__content">
+                  <h1 class="h1 page-intro__title" id="page-intro-title">
+                    Где купить <span class="page-intro__accent">KIPNI</span>
                   </h1>
-                  <p class="text buy-intro__text">
+                  <p class="text page-intro__text">
                     KIPNI - это команда профессионалов,<br>
                     которые создают эффективные и безопасные средства для дома.<br>
                     Присоединяйтесь к нам и развивайтесь вместе с нами!
@@ -300,7 +300,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-12 col-lg-6 buy-intro__media">
+              <div class="col-12 col-lg-6 page-intro__media">
                 <img src="img/where-to-buy/hero.webp" alt="Уточка KIPNI с покупками рядом с продукцией и магазином бренда" width="775" height="480" fetchpriority="high">
               </div>
             </div>
@@ -310,7 +310,7 @@
         <section class="buy-partners">
           <div class="container">
             <h2 class="h2 buy-partners__title">Покупайте на маркетплейсах:</h2>
-            <div class="buy-partners__slider-wrap">
+            <div class="buy-partners__slider-wrap is-at-start">
               <div class="swiper buy-partners__slider">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -369,8 +369,63 @@
                     </a>
 
                   </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--offline" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/partners/pyaterochka.svg" alt="Пятёрочка" width="188" height="45" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--offline" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/marketplaces/magnit.webp" alt="Магнит" width="191" height="36" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--offline" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/partners/spar.svg" alt="SPAR" width="196" height="31" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--offline" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/partners/auchan.svg" alt="Ашан" width="150" height="46" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--offline" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/partners/lenta.svg" alt="Лента" width="176" height="58" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--offline" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/partners/dixy.svg" alt="Дикси" width="182" height="46" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
                 </div>
               </div>
+              <button class="buy-partners__prev swiper-button-prev icon-prev" type="button" aria-label="Предыдущие маркетплейсы"></button>
               <button class="buy-partners__next swiper-button-next icon-next" type="button" aria-label="Следующие маркетплейсы"></button>
             </div>
           </div>
@@ -382,7 +437,7 @@
             <p class="text text-muted buy-offline__subtitle">
               Наша продукция представлена в крупных розничных сетях по всей России
             </p>
-            <div class="buy-partners__slider-wrap">
+            <div class="buy-partners__slider-wrap is-at-start">
               <div class="swiper buy-partners__slider">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
@@ -424,7 +479,7 @@
                   <div class="swiper-slide">
                     <a class="partner-card partner-card--offline" href="#" target="_blank" rel="noopener noreferrer">
                     	<span class="partner-card__logo">
-                    		<img src="img/shared/logos/partners/lenta.webp" alt="Лента" width="176" height="58" loading="lazy">
+                    		<img src="img/shared/logos/partners/lenta.svg" alt="Лента" width="176" height="58" loading="lazy">
                     	</span>
                     	
                     </a>
@@ -439,8 +494,65 @@
                     </a>
 
                   </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--market partner-card--cta" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/marketplaces/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
+                    	</span>
+                    	
+                    	<span class="partner-card__cta">Перейти в магазин</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--market" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/marketplaces/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--market" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/partners/letual.webp" alt="ЛЭТУАЛЬ" width="150" height="23" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--market" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/partners/gold-apple.webp" alt="Золотое Яблоко" width="195" height="29" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--market" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/marketplaces/yandex-market.svg" alt="Яндекс Маркет" width="174" height="26" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
+                  <div class="swiper-slide">
+                    <a class="partner-card partner-card--market" href="#" target="_blank" rel="noopener noreferrer">
+                    	<span class="partner-card__logo">
+                    		<img src="img/shared/logos/partners/vseinstrumenty.svg" alt="ВсеИнструменты" width="184" height="17" loading="lazy">
+                    	</span>
+                    	
+                    </a>
+
+                  </div>
                 </div>
               </div>
+              <button class="buy-partners__prev swiper-button-prev icon-prev" type="button" aria-label="Предыдущие оффлайн магазины"></button>
               <button class="buy-partners__next swiper-button-next icon-next" type="button" aria-label="Следующие оффлайн магазины"></button>
             </div>
           </div>

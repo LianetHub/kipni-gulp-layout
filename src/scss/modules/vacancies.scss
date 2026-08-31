@@ -1,63 +1,14 @@
 @use "sass:math";
 
-.vacancies-intro {
-	padding-top: rem(24);
-	padding-bottom: rem(40);
-
-	@media (min-width: $md4) {
-		padding-top: rem(40);
-		padding-bottom: rem(48);
-	}
-
-	// vacancies-intro__row
-	&__row {
+.page-intro--vacancies {
+	.page-intro__media {
 		@media (min-width: $md3) {
-			align-items: center;
-		}
-	}
-
-	// vacancies-intro__content
-	&__content {
-		max-width: rem(830);
-	}
-
-	// vacancies-intro__title
-	&__title {
-		margin-bottom: rem(24);
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(36);
-		}
-	}
-
-	// vacancies-intro__text
-	&__text {
-		line-height: math.div(26, 16);
-		margin-bottom: rem(32);
-		max-width: rem(540);
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(48);
-			max-width: rem(507);
-		}
-	}
-
-	// vacancies-intro__media
-	&__media {
-		margin-top: rem(32);
-
-		@media (min-width: $md3) {
-			margin-top: 0;
 			display: flex;
 			justify-content: flex-end;
 		}
 
 		img {
-			display: block;
-			width: 100%;
 			max-width: rem(460);
-			height: auto;
-			margin-inline: auto;
 		}
 	}
 }

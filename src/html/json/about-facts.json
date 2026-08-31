@@ -1,16 +1,19 @@
 [
 	{
-		"icon": "icon-calendar",
+		"icon_src": "@img/shared/ui/icon-calendar-time.svg",
+		"icon_alt": "Календарь",
 		"title": "6+ лет",
 		"text": "Стабильное производство с&nbsp;2020&nbsp;года"
 	},
 	{
-		"icon": "icon-leaf",
+		"icon_src": "@img/shared/ui/icon-leaf.svg",
+		"icon_alt": "Лист",
 		"title": "ГОСТ",
 		"text": "Сертифицированное качество соответствует ГОСТ и&nbsp;ТР&nbsp;ТС"
 	},
 	{
-		"icon": "icon-truck",
+		"icon_src": "@img/shared/ui/icon-truck.svg",
+		"icon_alt": "Грузовик",
 		"title": "Автопарк",
 		"text": "Оперативная доставка собственным транспортом"
 	},
@@ -18,7 +21,7 @@
 		"type": "media",
 		"image": "@img/about/lab-duck.webp",
 		"alt": "Маскот KIPNI в лаборатории среди пробирок",
-		"width": "360",
+		"width": "350",
 		"height": "306"
 	},
 	{
@@ -28,7 +31,8 @@
 		"text": "Собственное автоматизированное предприятие в&nbsp;России"
 	},
 	{
-		"icon": "icon-shopping-cart",
+		"icon_src": "@img/shared/ui/icon-shopping-cart.svg",
+		"icon_alt": "Корзина",
 		"title": "80+ товаров",
 		"text": "Более 80&nbsp;товаров в&nbsp;каталоге"
 	},

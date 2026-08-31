@@ -1,67 +1,8 @@
 @use "sass:math";
 
-.about-intro {
-	padding-top: rem(24);
-	padding-bottom: rem(48);
-
-	@media (min-width: $md4) {
-		padding-top: rem(40);
-		padding-bottom: rem(64);
-	}
-
-	// about-intro__row
-	&__row {
-		@media (min-width: $md3) {
-			align-items: center;
-		}
-	}
-
-	// about-intro__content
-	&__content {
-		max-width: rem(737);
-	}
-
-	// about-intro__title
-	&__title {
-		margin-bottom: rem(24);
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(36);
-		}
-	}
-
-	// about-intro__accent
-	&__accent {
+.page-intro--about {
+	.page-intro__accent {
 		display: block;
-		color: $color-primary;
-	}
-
-	// about-intro__text
-	&__text {
-		line-height: math.div(26, 16);
-		margin-bottom: rem(32);
-		max-width: rem(560);
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(48);
-		}
-	}
-
-	// about-intro__media
-	&__media {
-		margin-top: rem(32);
-
-		@media (min-width: $md3) {
-			margin-top: 0;
-		}
-
-		img {
-			display: block;
-			width: 100%;
-			height: auto;
-			max-width: rem(775);
-			margin-inline: auto;
-		}
 	}
 }
 
@@ -79,9 +20,8 @@
 		user-select: none;
 		background-image: url("@img/about/leaf-deco.webp");
 		background-repeat: no-repeat;
-		background-size: contain;
+		background-size: cover;
 		background-position: center;
-		opacity: 0.55;
 
 		@media (min-width: $md2) {
 			display: block;
@@ -89,18 +29,18 @@
 	}
 
 	&::before {
-		left: rem(-180);
-		top: rem(-40);
-		width: rem(380);
-		height: rem(380);
+		left: rem(-280);
+		top: rem(-140);
+		width: rem(472);
+		height: rem(748);
 		transform: rotate(26deg);
 	}
 
 	&::after {
-		right: rem(-220);
-		top: rem(0);
-		width: rem(360);
-		height: rem(360);
+		right: rem(-260);
+		top: rem(-100);
+		width: rem(490);
+		height: rem(776);
 		transform: rotate(13deg);
 	}
 
@@ -109,17 +49,32 @@
 		position: relative;
 		z-index: 1;
 		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: rem(8);
+		max-width: rem(1124);
+		margin: 0 auto rem(40);
+		text-align: center;
+		line-height: 1.2;
+		color: $color-text;
+
+		@media (min-width: $md4) {
+			gap: rem(10);
+			margin-bottom: rem(80);
+		}
+
+		@media (min-width: $md2) {
+			margin-bottom: rem(156);
+		}
+	}
+
+	// about-facts__title-row
+	&__title-row {
+		display: inline-flex;
 		flex-wrap: wrap;
 		align-items: center;
 		justify-content: center;
-		gap: rem(12) rem(16);
-		max-width: rem(1100);
-		margin: 0 auto rem(40);
-		text-align: center;
-
-		@media (min-width: $md4) {
-			margin-bottom: rem(56);
-		}
+		gap: rem(8) rem(12);
 	}
 
 	// about-facts__logo
@@ -136,7 +91,6 @@
 
 	// about-facts__title-text
 	&__title-text {
-		flex: 1 1 rem(280);
 		max-width: rem(1008);
 	}
 
@@ -144,7 +98,7 @@
 	&__grid {
 		position: relative;
 		z-index: 1;
-		--gutter-x: #{rem(20)};
+		--gutter-x: #{rem(21)};
 		--gutter-y: #{rem(20)};
 	}
 
@@ -164,18 +118,20 @@
 .about-fact {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	height: 100%;
 	min-height: rem(260);
-	padding: rem(30) rem(24) rem(40);
+	padding: rem(24) rem(20) rem(32);
 	border-radius: $radius-md;
 	background: #f7f8f3;
 
 	@media (min-width: $md4) {
 		min-height: rem(306);
-		padding: rem(30) rem(46) rem(63);
+		padding: rem(30) rem(72) rem(63) rem(46);
 	}
 
-	&::before {
+	// about-fact__icon
+	&__icon {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -184,13 +140,23 @@
 		margin-bottom: rem(28);
 		border-radius: rem(50);
 		background: $color-bg;
-		font-size: rem(44);
+		flex-shrink: 0;
 
 		@media (min-width: $md4) {
 			width: rem(100);
 			height: rem(100);
 			margin-bottom: rem(40);
-			font-size: rem(50);
+		}
+
+		img {
+			display: block;
+			width: rem(40);
+			height: rem(40);
+
+			@media (min-width: $md4) {
+				width: rem(50);
+				height: rem(50);
+			}
 		}
 	}
 
@@ -199,13 +165,12 @@
 		margin: 0 0 rem(16);
 		font-size: rem(20);
 		font-weight: 600;
-		line-height: math.div(24, 20);
+		line-height: 1.2;
 		color: $color-primary;
 
 		@media (min-width: $md4) {
 			margin-bottom: rem(25);
 			font-size: rem(24);
-			line-height: math.div(29, 24);
 		}
 	}
 

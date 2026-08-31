@@ -182,26 +182,11 @@
 		height: rem(40);
 		font-size: rem(12);
 		box-shadow: none;
-		color: $color-primary;
 
 		@media (min-width: $md4) {
 			width: rem(40);
 			height: rem(40);
 		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				background: $color-soft-green;
-			}
-		}
-	}
-
-	.swiper-button-prev {
-		background: #f7f8f3;
-	}
-
-	.swiper-button-next {
-		background: #f0ffd1;
 	}
 
 	// reviews__note

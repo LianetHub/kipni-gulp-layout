@@ -161,7 +161,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		closeSearch();
 		if (!h?.menuPanel || !h.burger) return;
 
-		// Снимаем glass у bar до показа меню: backdrop-filter создаёт containing block для fixed
 		h.root.classList.remove("is-scrolled");
 		h.root.classList.add("is-mobile-open");
 		document.body.classList.add("is-locked");
@@ -337,42 +336,57 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 
 		if (document.querySelectorAll(".buy-partners__slider").length > 0) {
+			const syncBuyPartnersFades = (swiper) => {
+				const wrap = swiper.el.closest(".buy-partners__slider-wrap");
+				if (!wrap) return;
+				wrap.classList.toggle("is-at-start", swiper.isBeginning);
+				wrap.classList.toggle("is-at-end", swiper.isEnd);
+			};
+
 			document.querySelectorAll(".buy-partners__slider").forEach((slider) => {
 				const wrap = slider.closest(".buy-partners__slider-wrap");
+				const prevEl = wrap?.querySelector(".swiper-button-prev");
 				const nextEl = wrap?.querySelector(".swiper-button-next");
 
 				new Swiper(slider, {
-					slidesPerView: 1.4,
+					slidesPerView: "auto",
 					spaceBetween: 12,
 					speed: 500,
 					watchOverflow: true,
-					navigation: nextEl
-						? {
-								nextEl,
-							}
-						: undefined,
+					navigation:
+						prevEl || nextEl
+							? {
+									prevEl,
+									nextEl,
+								}
+							: undefined,
 					breakpoints: {
-						576: {
-							slidesPerView: 2.2,
+						575.98: {
 							spaceBetween: 16,
 						},
-						768: {
-							slidesPerView: 3.2,
+						767.98: {
+							slidesPerView: 4,
 							spaceBetween: 20,
 						},
-						992: {
-							slidesPerView: 4.5,
+						991.98: {
+							slidesPerView: 5,
 							spaceBetween: 20,
 						},
-						1200: {
-							slidesPerView: 5.5,
+						1199.98: {
+							slidesPerView: 6,
 							spaceBetween: 20,
 						},
 					},
 					on: {
 						init(instance) {
 							instance.el.classList.add("is-swiper-ready");
+							syncBuyPartnersFades(instance);
 						},
+						progress: syncBuyPartnersFades,
+						resize: syncBuyPartnersFades,
+						breakpoint: syncBuyPartnersFades,
+						lock: syncBuyPartnersFades,
+						unlock: syncBuyPartnersFades,
 					},
 				});
 			});
@@ -394,19 +408,19 @@ document.addEventListener("DOMContentLoaded", () => {
 					nextEl: popularNext,
 				},
 				breakpoints: {
-					768: {
+					767.98: {
 						slidesPerView: 3,
 						spaceBetween: 20,
 					},
-					992: {
+					991.98: {
 						slidesPerView: 4,
 						spaceBetween: 20,
 					},
-					1200: {
+					1199.98: {
 						slidesPerView: 5,
 						spaceBetween: 21,
 					},
-					1440: {
+					1439.98: {
 						slidesPerView: 6,
 						spaceBetween: 21,
 					},
@@ -436,11 +450,11 @@ document.addEventListener("DOMContentLoaded", () => {
 					nextEl: reviewsNext || undefined,
 				},
 				breakpoints: {
-					768: {
+					767.98: {
 						slidesPerView: 2,
 						spaceBetween: 20,
 					},
-					1200: {
+					1199.98: {
 						slidesPerView: 3,
 						spaceBetween: 20,
 					},
@@ -463,10 +477,10 @@ document.addEventListener("DOMContentLoaded", () => {
 					nextEl: catalogCatsNext,
 				},
 				breakpoints: {
-					768: {
+					767.98: {
 						spaceBetween: 16,
 					},
-					1200: {
+					1199.98: {
 						spaceBetween: 18,
 					},
 				},
@@ -487,7 +501,7 @@ document.addEventListener("DOMContentLoaded", () => {
 					watchSlidesProgress: true,
 					watchOverflow: true,
 					breakpoints: {
-						768: {
+						767.98: {
 							direction: "vertical",
 							spaceBetween: 28,
 						},
