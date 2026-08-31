@@ -11,10 +11,12 @@
 
 	// hero__slider
 	&__slider {
-		width: 100%;
 		height: rem(354);
+		width: calc(100% - #{rem(40)});
+		overflow: visible;
 
 		@media (min-width: $md5) {
+			width: 100%;
 			height: rem(380);
 		}
 
@@ -30,34 +32,6 @@
 			height: rem(668);
 		}
 
-		// FOUC guard: keep non-active slides invisible until Swiper settles.
-		// Use opacity/visibility only — display:none breaks fade measurements.
-		&:not(.is-swiper-ready) {
-			.swiper-slide:not(:first-child):not(.swiper-slide-active):not(.swiper-slide-duplicate-active) {
-				opacity: 0 !important;
-				visibility: hidden;
-			}
-		}
-
-		&.is-swiper-ready {
-			.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-duplicate-active) {
-				pointer-events: none;
-			}
-		}
-
-		.swiper-slide {
-			opacity: 0.5;
-			transition: opacity 0.3s ease;
-
-			@media (min-width: $md5) {
-				opacity: 1;
-			}
-		}
-
-		.swiper-slide-active,
-		.swiper-slide-duplicate-active {
-			opacity: 1;
-		}
 	}
 
 	// hero__pagination
@@ -81,7 +55,7 @@
 
 .hero-slide {
 	position: relative;
-	width: calc(100% - #{rem(40)});
+
 	height: 100%;
 	overflow: hidden;
 	border-radius: $radius-md;

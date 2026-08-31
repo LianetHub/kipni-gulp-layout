@@ -156,21 +156,21 @@ document.addEventListener("DOMContentLoaded", () => {
 		setHeaderHeight();
 	}
 
-    function openMobile() {
-        closeDesktopMenus();
-        closeSearch();
-        if (!h?.menuPanel || !h.burger) return;
+	function openMobile() {
+		closeDesktopMenus();
+		closeSearch();
+		if (!h?.menuPanel || !h.burger) return;
 
-        // Снимаем glass у bar до показа меню: backdrop-filter создаёт containing block для fixed
-        h.root.classList.remove("is-scrolled");
-        h.root.classList.add("is-mobile-open");
-        document.body.classList.add("is-locked");
-        void h.root.offsetHeight;
+		// Снимаем glass у bar до показа меню: backdrop-filter создаёт containing block для fixed
+		h.root.classList.remove("is-scrolled");
+		h.root.classList.add("is-mobile-open");
+		document.body.classList.add("is-locked");
+		void h.root.offsetHeight;
 
-        h.menuPanel.hidden = false;
-        h.burger.setAttribute("aria-expanded", "true");
-        h.burger.setAttribute("aria-label", "Закрыть меню");
-    }
+		h.menuPanel.hidden = false;
+		h.burger.setAttribute("aria-expanded", "true");
+		h.burger.setAttribute("aria-label", "Закрыть меню");
+	}
 
 	function toggleCatalog() {
 		if (!h?.catalogBtn) return;
@@ -322,6 +322,10 @@ document.addEventListener("DOMContentLoaded", () => {
 				centeredSlides: true,
 				spaceBetween: 10,
 				speed: 600,
+				effect: "fade",
+				fadeEffect: {
+					crossFade: true,
+				},
 				loop: true,
 				pagination: heroPagination
 					? {
@@ -329,26 +333,6 @@ document.addEventListener("DOMContentLoaded", () => {
 							clickable: true,
 						}
 					: undefined,
-				breakpoints: {
-					576: {
-						slidesPerView: 1,
-						centeredSlides: false,
-						spaceBetween: 0,
-						effect: "fade",
-						fadeEffect: {
-							crossFade: true,
-						},
-					},
-				},
-				on: {
-					init(instance) {
-						requestAnimationFrame(() => {
-							requestAnimationFrame(() => {
-								instance.el.classList.add("is-swiper-ready");
-							});
-						});
-					},
-				},
 			});
 		}
 

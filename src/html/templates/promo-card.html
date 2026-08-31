@@ -1,4 +1,4 @@
-<article class="promo-card" style="background-image: url('@@image');">
+<a class="promo-card" href="@@link">
 	<div class="promo-card__head">
 		<p class="promo-card__date icon-calendar">
 			<span class="promo-card__date-text">Акция действует до @@until</span>
@@ -9,5 +9,13 @@
 	</div>
 	<h3 class="h2 promo-card__title">@@title</h3>
 	<p class="text promo-card__text">@@text</p>
-	<a class="btn btn--primary btn--large promo-card__btn" href="@@link">Подробнее</a>
-</article>
+	<img
+		class="promo-card__img"
+		src="@@image"
+		alt="@@image_alt"
+		width="@@image_width"
+		height="@@image_height"
+		loading="lazy"
+	>
+	<span class="btn btn--primary btn--large promo-card__btn">Подробнее</span>
+</a>
