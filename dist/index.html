@@ -1,1576 +1,1162 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <title>KIPNI — Главная</title>
-    <meta charset="UTF-8">
-    <meta name="format-detection" content="telephone=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <meta name="apple-mobile-web-app-title" content="KIPNI">
-    <link rel="manifest" href="/site.webmanifest">
+<head>
+	<title>KIPNI — Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-title" content="KIPNI">
+	<link rel="manifest" href="/site.webmanifest">
+	<!-- plugins -->
+	<link rel="stylesheet" href="css/libs/swiper-bundle.min.css?_v=20260901170522">
+	<link rel="stylesheet" href="css/libs/fancybox.css?_v=20260901170522">
+	<!-- plugins -->
+	<link rel="stylesheet" href="css/reset.min.css?_v=20260901170522">
+	<link rel="stylesheet" href="css/style.min.css?_v=20260901170522">
+	<script>
+		try {
+			if (sessionStorage.getItem("kipni-banner-hidden") === "1") {
+				document.documentElement.classList.add("is-banner-hidden");
+			}
+		} catch (e) {}
 
+	</script>
+</head>
 
-    <!-- plugins -->
-    <link rel="stylesheet" href="css/libs/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/libs/fancybox.css">
-    <!-- plugins -->
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<button class="header__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
+			<div class="header-banner" style="background-image: url('img/header-banner.webp');">
+				<div class="container header-banner__container">
+					<p class="h4 header-banner__text"> Любимые экосредства для дома и семьи в одной подборке. <a class="header-banner__link icon-chevron-right" href="#"><span>Перейти</span></a>
+					</p>
+					<button class="header-banner__close icon-cross-circle" type="button" aria-label="Закрыть баннер"></button>
+				</div>
+			</div>
+			<div class="header__bar">
+				<div class="header__bar-container container">
+					<button class="header__burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню">
+						<span></span>
+						<span></span>
+						<span></span>
+					</button>
+					<a class="header__logo" href="/" aria-label="KIPNI — на главную">
+						<img src="img/logo.svg" alt="KIPNI" width="173" height="47">
+					</a>
+					<div class="header__menu" id="header-menu" hidden>
+						<div class="header__menu-inner">
+							<a class="btn btn--primary header__menu-cta" href="catalog.html">Вся продукция</a>
+							<nav class="header__menu-nav" aria-label="Основное меню">
+								<div class="header__catalog-wrap header__menu-accordion is-open">
+									<button class="header__catalog-btn header__menu-row header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog"> Каталог товаров </button>
+									<div class="header-catalog header__menu-panel" id="header-catalog">
+										<div class="container header-catalog__container">
+											<div class="header-catalog__panel">
+												<div class="row">
+													<div class="col-12 col-md-4 col-xl-5 header-catalog__col header-catalog__col--categories">
+														<h2 class="header-catalog__title icon-leaf"> Категории товаров </h2>
+														<ul class="header-catalog__list">
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/shower-gel.svg" alt="Гели для душа" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Гели для душа</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/soap.svg" alt="Мыло" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Мыло</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/shampoo.svg" alt="Шампуни" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Шампуни</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/spray.svg" alt="Уборка" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Уборка</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/laundry.svg" alt="Стирка" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Стирка</span>
+																</a>
+															</li>
+															<li class="header-catalog__item--desktop">
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/gift.svg" alt="Подарочные наборы" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Подарочные наборы</span>
+																</a>
+															</li>
+															<li class="header-catalog__item--cta">
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/grid.svg" alt="Вся продукция" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Вся продукция</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+													<div class="col-12 col-md-4 header-catalog__col header-catalog__col--buyers">
+														<h2 class="header-catalog__title icon-box"> Полезное для покупателя </h2>
+														<ul class="header-catalog__list">
+															<li>
+																<a class="header-catalog__link" href="where-to-buy.html">
+																	<img class="header-catalog__link-icon" src="img/icons/map-pin.svg" alt="Где купить" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Где купить</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="delivery.html">
+																	<img class="header-catalog__link-icon" src="img/icons/truck.svg" alt="Доставка и оплата" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Доставка и оплата</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="#">
+																	<img class="header-catalog__link-icon" src="img/icons/reviews.svg" alt="Отзывы" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Отзывы</span>
+																</a>
+															</li>
+															<li>
+																<a class="header-catalog__link" href="blog.html">
+																	<img class="header-catalog__link-icon" src="img/icons/blog.svg" alt="Блог" width="22" height="22" loading="lazy">
+																	<span class="header-catalog__link-text">Блог</span>
+																</a>
+															</li>
+														</ul>
+													</div>
+													<div class="col-12 col-md-4 col-xl-3 header-catalog__promo" style="background-image: url('img/catalog-banner.webp');">
+														<p class="header-catalog__promo-title">Чистота, которой <span>доверяет семья</span></p>
+														<p class="header-catalog__promo-text">Экологичные средства для дома на каждый день</p>
+														<a class="btn btn--primary btn--large header-catalog__promo-btn icon-chevron-right" href="catalog.html"> Перейти в каталог </a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="header-nav header__menu-accordion is-open">
+									<button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-user" type="button" aria-expanded="true"> Покупателям </button>
+									<div class="header-nav__panel header__menu-panel">
+										<ul class="header-nav__list">
+											<li class="header-nav__item"><a class="header-nav__link" href="about.html">О компании</a></li>
+											<li class="header-nav__item"><a class="header-nav__link" href="promotions.html">Акции</a></li>
+											<li class="header-nav__item header-nav__item--extra"><a class="header-nav__link" href="blog.html">Блог</a></li>
+											<li class="header-nav__item header-nav__item--extra"><a class="header-nav__link" href="certificates.html">Сертификаты</a></li>
+											<li class="header-nav__item"><a class="header-nav__link" href="contacts.html">Контакты</a></li>
+										</ul>
+									</div>
+								</div>
+								<div class="header__buy-wrap">
+									<button class="header-buy-btn icon-shopping-cart" type="button" aria-expanded="false" aria-controls="header-buy"> Где купить </button>
+									<div class="header-buy" id="header-buy" hidden>
+										<div class="header-buy__panel">
+											<p class="h4 header-buy__caption">Мы на маркетплейсах</p>
+											<ul class="header-buy__list">
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/ozon-short.svg" alt="Ozon" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">Ozon</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/wildberries-short.svg" alt="Wildberries" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">Wildberries</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/yandex-market-short.svg" alt="Яндекс Маркет" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">Яндекс Маркет</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/megamarket-short.svg" alt="Мегамаркет" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">Мегамаркет</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/KazanExpress-short.svg" alt="KazanExpress" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">KazanExpress</span>
+													</a>
+												</li>
+												<li>
+													<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
+														<img src="img/shared/logos/marketplaces/vse-instrumenti-short.svg" alt="ВсеИнструменты" width="40" height="40" loading="lazy">
+														<span class="text header-buy__name">ВсеИнструменты</span>
+													</a>
+												</li>
+											</ul>
+											<a class="btn btn--ghost header-buy__all icon-grid" href="where-to-buy.html"> Смотреть все площадки </a>
+										</div>
+									</div>
+									<a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html"> Где купить? </a>
+								</div>
+							</nav>
+						</div>
+					</div>
+					<div class="header__actions">
+						<button class="header__search-mobile icon-search" type="button" aria-expanded="false" aria-controls="header-search" aria-label="Поиск"></button>
+						<a class="header-favorite icon-heart" href="favorites.html" aria-label="Избранное, 2 товара">
+							<span class="header-favorite__badge">2</span>
+						</a>
+					</div>
+					<form class="header-search" id="header-search" action="search.html" method="get" role="search">
+						<label class="visually-hidden" for="header-search-input">Поиск по каталогу</label>
+						<input class="header-search__input" id="header-search-input" type="text" name="s" placeholder="Поиск по каталогу" autocomplete="off">
+						<button class="header-search__submit icon-search" type="submit" aria-label="Искать"></button>
+					</form>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="hero" aria-label="Главный баннер">
+				<div class="swiper hero__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide hero-slide" style="--hero-slide-image: url('../img/hero/slide-1.webp'); --hero-slide-image-mobile: url('../img/hero/slide-1-mobile.webp');">
+							<div class="container hero-slide__container">
+								<div class="hero-slide__content">
+									<h1 class="h1 hero-slide__title"> Чистота, которой <span class="hero-slide__accent">доверяет семья</span>
+									</h1>
+									<p class="hero-slide__lead">Экологичные средства для дома на&nbsp;каждый день</p>
+									<div class="hero-slide__actions">
+										<a class="btn btn--primary btn--large icon-chevron-right" href="#"> Перейти в каталог </a>
+										<a class="btn btn--ghost" href="where-to-buy.html">Где купить</a>
+									</div>
+									<ul class="hero-slide__features">
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/leaf.svg" alt="Экологично" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Экологично</span>
+												<span class="hero-slide__feature-text">На основе натуральных компонентов</span>
+											</span>
+										</li>
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/box.svg" alt="Всегда в наличии" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Всегда в наличии</span>
+												<span class="hero-slide__feature-text">Регулярные поставки на&nbsp;маркетплейсы</span>
+											</span>
+										</li>
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/credit-card.svg" alt="Доступные цены" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Доступные цены</span>
+												<span class="hero-slide__feature-text">Заботимся о качестве и&nbsp;вашем бюджете</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide hero-slide hero-slide--dark" style="--hero-slide-image: url('../img/hero/slide-2.webp');">
+							<div class="container hero-slide__container">
+								<div class="hero-slide__content">
+									<h2 class="h1 hero-slide__title"> Эффективный <span class="hero-slide__accent">гель для стирки</span>
+									</h2>
+									<p class="hero-slide__lead">С бережным уходом</p>
+									<div class="hero-slide__actions">
+										<a class="btn btn--primary btn--large" href="catalog.html"> Перейти в каталог </a>
+										<a class="btn btn--ghost" href="where-to-buy.html">Где купить</a>
+									</div>
+									<ul class="hero-slide__features">
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/drop.svg" alt="Отстирывает даже в&nbsp;холодной воде" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Отстирывает даже в&nbsp;холодной воде</span>
+												<span class="hero-slide__feature-text">сохраняя цвет и&nbsp;структуру</span>
+											</span>
+										</li>
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/favorite.svg" alt="Подходит для всех типов белья" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Подходит для всех типов белья</span>
+												<span class="hero-slide__feature-text">в&nbsp;том числе детского</span>
+											</span>
+										</li>
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/certificate.svg" alt="Производство на&nbsp;своей фабрике" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Производство на&nbsp;своей фабрике</span>
+												<span class="hero-slide__feature-text">без переплат и&nbsp;посредников</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide hero-slide" style="--hero-slide-image: url('../img/hero/slide-3.webp');">
+							<div class="container hero-slide__container">
+								<div class="hero-slide__content">
+									<h2 class="h1 hero-slide__title"> Парфюмированное, <span class="hero-slide__accent">мыло — премиум-уход</span>
+									</h2>
+									<p class="hero-slide__lead">Прямо от производителя</p>
+									<div class="hero-slide__actions">
+										<a class="btn btn--primary btn--large" href="catalog.html"> Перейти в каталог </a>
+										<a class="btn btn--ghost" href="where-to-buy.html">Где купить</a>
+									</div>
+									<ul class="hero-slide__features">
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/user.svg" alt="Прямо от производителя" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Прямо от производителя</span>
+												<span class="hero-slide__feature-text">Без наценок и&nbsp;посредников</span>
+											</span>
+										</li>
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/pressure-light.svg" alt="Утонченные ароматы" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Утонченные ароматы</span>
+												<span class="hero-slide__feature-text">Подарок, которым хочется пользоваться каждый день</span>
+											</span>
+										</li>
+										<li class="hero-slide__feature">
+											<span class="hero-slide__feature-icon" aria-hidden="true">
+												<img src="img/icons/molecule.svg" alt="Гармоничная формула" width="55" height="55">
+											</span>
+											<span class="hero-slide__feature-body">
+												<span class="hero-slide__feature-title">Гармоничная формула</span>
+												<span class="hero-slide__feature-text">Мягко очищает, поддерживает увлажненность кожи.</span>
+											</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hero__pagination swiper-pagination"></div>
+			</section>
+			<section class="categories section-space-md" aria-label="Категории продукции">
+				<div class="container">
+					<div class="row">
+						<div class="col-6 col-xl-4">
+							<a class="category-card" href="#" aria-label="Гели для душа KIPNI" style="background-image: url('img/categories/shower.webp');">
+								<div class="category-card__content">
+									<h3 class="category-card__title">Гели для душа</h3>
+									<p class="category-card__lead">Мягкое очищение с&nbsp;любимыми ароматами</p>
+									<span class="btn btn--soft category-card__btn icon-chevron-right"> Смотреть все </span>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-xl-4">
+							<a class="category-card" href="#" aria-label="Жидкое мыло KIPNI" style="background-image: url('img/categories/soap.webp');">
+								<div class="category-card__content">
+									<h3 class="category-card__title">Мыло</h3>
+									<p class="category-card__lead">Чистота и&nbsp;комфорт на&nbsp;каждый день</p>
+									<span class="btn btn--soft category-card__btn icon-chevron-right"> Смотреть все </span>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-xl-4">
+							<a class="category-card" href="#" aria-label="Шампуни KIPNI" style="background-image: url('img/categories/shampoo.webp');">
+								<div class="category-card__content">
+									<h3 class="category-card__title">Шампуни</h3>
+									<p class="category-card__lead">Уход от&nbsp;корней <br> до&nbsp;самых кончиков</p>
+									<span class="btn btn--soft category-card__btn icon-chevron-right"> Смотреть все </span>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-xl-4">
+							<a class="category-card" href="#" aria-label="Средства для уборки KIPNI" style="background-image: url('img/categories/cleaning.webp');">
+								<div class="category-card__content">
+									<h3 class="category-card__title">Уборка</h3>
+									<p class="category-card__lead">Эффективная чистота каждый день</p>
+									<span class="btn btn--soft category-card__btn icon-chevron-right"> Смотреть все </span>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-xl-4">
+							<a class="category-card" href="#" aria-label="Средства для стирки KIPNI" style="background-image: url('img/categories/laundry.webp');">
+								<div class="category-card__content">
+									<h3 class="category-card__title">Стирка</h3>
+									<p class="category-card__lead">Бережная забота о&nbsp;любимых вещах</p>
+									<span class="btn btn--soft category-card__btn icon-chevron-right"> Смотреть все </span>
+								</div>
+							</a>
+						</div>
+						<div class="col-6 col-xl-4">
+							<a class="category-card category-card--accent" href="#" aria-label="Вся продукция KIPNI в корзине" style="background-image: url('img/categories/all.webp');">
+								<div class="category-card__content">
+									<h3 class="category-card__title">Вся продукция</h3>
+									<p class="category-card__lead">Всё необходимое для вас и&nbsp;вашего дома</p>
+									<span class="btn btn--primary category-card__btn icon-chevron-right"> Смотреть все </span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="gifts section-space-md" aria-label="Подарочные наборы">
+				<div class="container">
+					<div class="gifts__banner">
+						<div class="gifts__content">
+							<h2 class="title-lg gifts__title">Подарочные наборы для&nbsp;ваших близких</h2>
+							<p class="gifts__lead text--lg">Покажите красиво заботу о&nbsp;ваших близких с&nbsp;KIPNI</p>
+							<a class="btn btn--ghost gifts__btn" href="catalog.html">Перейти в каталог</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="popular section-space-md" aria-labelledby="popular-title">
+				<div class="container">
+					<h2 class="h2 popular__title" id="popular-title">Популярные товары <span class="text-accent">бытовой химии</span></h2>
+				</div>
+				<div class="popular__slider-wrap">
+					<div class="container popular__slider-container">
+						<div class="swiper popular__slider">
+							<ul class="swiper-wrapper">
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<span class="badge badge--hit">Хит</span>
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/toilet-gel.webp" alt="Чистящий гель KIPNI для унитазов" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Чистящий гель для унитазов</a></h3>
+											<p class="text text-muted product-card__volume">750 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/candy-shop.webp" alt="Гель для душа Канди шоп папайя виноград" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Гель для душа Канди шоп</a></h3>
+											<p class="text text-muted product-card__volume">750 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<span class="badge badge--new">Новинка</span>
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/tropical-soap.webp" alt="Жидкое мыло Тропические фрукты" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Жидкое мыло Тропические фрукты</a></h3>
+											<p class="text text-muted product-card__volume">500 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<span class="badge badge--hit">Хит</span>
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/household-soap.webp" alt="Мыло хозяйственное Кипни" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Мыло хозяйственное Кипни</a></h3>
+											<p class="text text-muted product-card__volume">750 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<span class="badge badge--hit">Хит</span>
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/laundry-gel.webp" alt="Универсальный гель для стирки KIPNI 5 л" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Универсальный гель для стирки</a></h3>
+											<p class="text text-muted product-card__volume">5 л</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/dish.webp" alt="Средство для посуды OLLY" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Средство для посуды</a></h3>
+											<p class="text text-muted product-card__volume">750 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<span class="badge badge--hit">Хит</span>
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/toilet-gel.webp" alt="Чистящий гель KIPNI для унитазов" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Чистящий гель для унитазов</a></h3>
+											<p class="text text-muted product-card__volume">750 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/candy-shop.webp" alt="Гель для душа Канди шоп папайя виноград" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Гель для душа Канди шоп</a></h3>
+											<p class="text text-muted product-card__volume">750 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<span class="badge badge--new">Новинка</span>
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/tropical-soap.webp" alt="Жидкое мыло Тропические фрукты" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Жидкое мыло Тропические фрукты</a></h3>
+											<p class="text text-muted product-card__volume">500 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<span class="badge badge--hit">Хит</span>
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/household-soap.webp" alt="Мыло хозяйственное Кипни" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Мыло хозяйственное Кипни</a></h3>
+											<p class="text text-muted product-card__volume">750 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<span class="badge badge--hit">Хит</span>
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/laundry-gel.webp" alt="Универсальный гель для стирки KIPNI 5 л" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Универсальный гель для стирки</a></h3>
+											<p class="text text-muted product-card__volume">5 л</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+								<li class="swiper-slide">
+									<article class="product-card">
+										<div class="product-card__head">
+											<button type="button" class="product-card__favorite icon-heart" aria-pressed="false" aria-label="Добавить в избранное">
+											</button>
+										</div>
+										<a href="product.html" class="product-card__media">
+											<img src="img/products/dish.webp" alt="Средство для посуды OLLY" width="200" height="200" loading="lazy">
+										</a>
+										<div class="product-card__body">
+											<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Средство для посуды</a></h3>
+											<p class="text text-muted product-card__volume">750 мл</p>
+											<div class="product-card__footer">
+												<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
+											</div>
+										</div>
+									</article>
+								</li>
+							</ul>
+						</div>
+						<button type="button" class="popular__prev swiper-button-prev icon-chevron-right" aria-label="Предыдущие товары"></button>
+						<button type="button" class="popular__next swiper-button-next icon-chevron-right" aria-label="Следующие товары"></button>
+					</div>
+				</div>
+			</section>
+			<section class="marketplaces section-space-md" aria-labelledby="marketplaces-title">
+				<div class="container">
+					<div class="marketplaces__panel">
+						<img class="marketplaces__chick" src="img/shared/decor/chick.webp" alt="Уточка KIPNI" width="536" height="536" aria-hidden="true" loading="lazy">
+						<div class="row marketplaces__layout">
+							<div class="col-12 col-xl-4 marketplaces__aside">
+								<h2 class="h2 marketplaces__title" id="marketplaces-title"> Выбирайте удобный <span class="marketplaces__title-accent">способ покупки</span>
+								</h2>
+								<p class="marketplaces__lead text--lg">Наши товары есть на&nbsp;всех крупнейших маркетплейсах</p>
+								<ul class="marketplaces__perks">
+									<li class="marketplaces__perk">
+										<img class="marketplaces__perk-icon" src="img/icons/truck-2.svg" alt="Быстрая доставка" width="42" height="31" loading="lazy">
+										<span class="marketplaces__perk-text">Быстрая<br>доставка</span>
+									</li>
+									<li class="marketplaces__perk">
+										<img class="marketplaces__perk-icon" src="img/icons/cert.svg" alt="Оригинальная продукция" width="34" height="34" loading="lazy">
+										<span class="marketplaces__perk-text">Оригинальная<br>продукция</span>
+									</li>
+								</ul>
+							</div>
+							<div class="col-12 col-xl-6 marketplaces__main">
+								<div class="row marketplaces__shops">
+									<div class="col-6 col-md-4">
+										<a class="partner-card" href="#" aria-label="Купить на Wildberries" target="_blank" rel="noopener noreferrer">
+											<img class="partner-card__logo partner-card__logo--lg" src="img/shared/logos/marketplaces/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
+											<span class="partner-card__cta">Перейти в магазин</span>
+										</a>
+									</div>
+									<div class="col-6 col-md-4">
+										<a class="partner-card" href="#" aria-label="Купить на Ozon" target="_blank" rel="noopener noreferrer">
+											<img class="partner-card__logo partner-card__logo--sm" src="img/shared/logos/marketplaces/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
+											<span class="partner-card__cta">Перейти в магазин</span>
+										</a>
+									</div>
+									<div class="col-6 col-md-4">
+										<a class="partner-card" href="#" aria-label="Купить в Л'Этуаль" target="_blank" rel="noopener noreferrer">
+											<img class="partner-card__logo partner-card__logo--md" src="img/shared/logos/marketplaces/letual.webp" alt="Л'Этуаль" width="150" height="23" loading="lazy">
+											<span class="partner-card__cta">Перейти в магазин</span>
+										</a>
+									</div>
+									<div class="col-6 col-md-4">
+										<a class="partner-card" href="#" aria-label="Купить в Золотом Яблоке" target="_blank" rel="noopener noreferrer">
+											<img class="partner-card__logo partner-card__logo--xxl" src="img/shared/logos/marketplaces/golden-apple.webp" alt="Золотое Яблоко" width="195" height="29" loading="lazy">
+											<span class="partner-card__cta">Перейти в магазин</span>
+										</a>
+									</div>
+									<div class="col-6 col-md-4">
+										<a class="partner-card" href="#" aria-label="Купить на Яндекс Маркете" target="_blank" rel="noopener noreferrer">
+											<img class="partner-card__logo partner-card__logo--xl" src="img/shared/logos/marketplaces/yandex-market.svg" alt="Яндекс Маркет" width="174" height="26" loading="lazy">
+											<span class="partner-card__cta">Перейти в магазин</span>
+										</a>
+									</div>
+									<div class="col-6 col-md-4">
+										<a class="partner-card" href="#" aria-label="Купить на ВсеИнструменты" target="_blank" rel="noopener noreferrer">
+											<img class="partner-card__logo partner-card__logo--xs" src="img/shared/logos/marketplaces/vse-instrumenty.svg" alt="ВсеИнструменты" width="184" height="17" loading="lazy">
+											<span class="partner-card__cta">Перейти в магазин</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="why section-space-md" aria-labelledby="why-title">
+				<div class="container">
+					<div class="why__head">
+						<h2 class="h2 title-lg why__title" id="why-title">Почему семьи <span class="text-accent">выбирают KIPNI</span></h2>
+						<p class="why__lead h3">Создаем безопасные и&nbsp;эффективные средства для чистоты в&nbsp;доме и&nbsp;заботы о&nbsp;близких</p>
+					</div>
+					<ul class="why__rows">
+						<li class="row why__row">
+							<div class="col-12 col-lg-6">
+								<div class="why__media">
+									<img src="img/why/safety.webp" class="cover-image" alt="Продукция KIPNI на столе в светлой ванной" width="720" height="350" loading="lazy">
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="why__copy">
+									<h3 class="title-md why__subtitle">Безопасность <br> Превыше всего</h3>
+									<p class="why__text">Продукция KiPNi безопасна для человека и&nbsp;окружающей среды, благодаря наличию растительных компонентов в&nbsp;составах и&nbsp;биоразлагаемой структуре.</p>
+								</div>
+							</div>
+						</li>
+						<li class="row why__row why__row--reverse">
+							<div class="col-12 col-lg-6">
+								<div class="why__media">
+									<img src="img/why/quality.webp" class="cover-image" alt="Семья с двумя детьми в светлой гостиной" width="720" height="350" loading="lazy">
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="why__copy why__copy--end">
+									<h3 class="title-md why__subtitle">Забота <br> о качестве</h3>
+									<p class="why__text">Наша миссия состоит в&nbsp;том, чтобы создавать продукты, которые сочетали бы в&nbsp;себе высокое качество, безопасность и&nbsp;доступность широкому кругу потребителей.</p>
+								</div>
+							</div>
+						</li>
+						<li class="row why__row">
+							<div class="col-12 col-lg-6">
+								<div class="why__media">
+									<img src="img/why/access.webp" class="cover-image" alt="Производственный комплекс KIPNI и логистика" width="720" height="350" loading="lazy">
+								</div>
+							</div>
+							<div class="col-12 col-lg-6">
+								<div class="why__copy">
+									<h3 class="title-md why__subtitle">Доступность <br> нашей продукции</h3>
+									<p class="why__text">Собственные четырёхпоточные линии по&nbsp;производству тары и&nbsp;развитая логистическая система помогают KIPNI снижать производственные расходы. Благодаря этому мы сохраняем доступные цены, не&nbsp;экономя на&nbsp;качестве сырья, безопасности и&nbsp;эффективности продукции.</p>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="business section-space-md" aria-labelledby="business-title">
+				<div class="container">
+					<div class="business__banner" style="background-image: url('img/business-banner.webp');">
+						<div class="row g-0">
+							<div class="col-9 col-md-8 col-xl-7">
+								<div class="business__content">
+									<h2 class="h2 title-lg business__title" id="business-title">Товары для бизнеса</h2>
+									<p class="business__lead h3">Чистота и&nbsp;забота о&nbsp;клиентах - ваша репутация</p>
+									<ul class="business__features">
+										<li class="business__feature icon-check"> Стабильные поставки по&nbsp;всей России </li>
+										<li class="business__feature icon-check"> Выгодные условия оптовым клиентам </li>
+										<li class="business__feature icon-check"> Широкий ассортимент товаров </li>
+									</ul>
+									<a class="btn btn--info business__btn" href="#">Узнать условия</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="reviews" aria-labelledby="reviews-title">
+				<div class="container">
+					<div class="row reviews__head gy-4">
+						<div class="col-12 col-xl-4 reviews__intro">
+							<h2 class="h2 reviews__title" id="reviews-title"> Нам доверяют <span class="reviews__title-accent">тысячи покупателей</span>
+							</h2>
+							<p class="reviews__lead">Более 100&nbsp;000 отзывов оставленных реальными покупателями</p>
+						</div>
+						<div class="col-12 col-xl-8">
+							<div class="row reviews__ratings gy-3">
+								<div class="col-6 col-xl-3">
+									<div class="rating-card">
+										<img class="rating-card__logo" src="img/shared/logos/marketplaces/wildberries.svg" alt="Wildberries" width="160" height="24" loading="lazy">
+										<div class="rating-card__score icon-star">
+											<span>4.9</span>
+										</div>
+										<p class="rating-card__count">54 040 оценок</p>
+									</div>
+								</div>
+								<div class="col-6 col-xl-3">
+									<div class="rating-card">
+										<img class="rating-card__logo" src="img/shared/logos/marketplaces/ozon.svg" alt="Ozon" width="98" height="21" loading="lazy">
+										<div class="rating-card__score icon-star">
+											<span>4.9</span>
+										</div>
+										<p class="rating-card__count">54 040 оценок</p>
+									</div>
+								</div>
+								<div class="col-6 col-xl-3">
+									<div class="rating-card">
+										<img class="rating-card__logo" src="img/shared/logos/marketplaces/letoile.svg" alt="Лэтуаль" width="150" height="23" loading="lazy">
+										<div class="rating-card__score icon-star">
+											<span>4.9</span>
+										</div>
+										<p class="rating-card__count">54 040 оценок</p>
+									</div>
+								</div>
+								<div class="col-6 col-xl-3">
+									<div class="rating-card">
+										<img class="rating-card__logo" src="img/shared/logos/marketplaces/golden-apple.svg" alt="Золотое Яблоко" width="195" height="32" loading="lazy">
+										<div class="rating-card__score icon-star">
+											<span>4.9</span>
+										</div>
+										<p class="rating-card__count">54 040 оценок</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="reviews__slider-wrap">
+						<div class="swiper reviews__slider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="review-card">
+										<div class="review-card__top">
+											<div class="review-card__author">
+												<span class="review-card__avatar">
+													<img class="cover-image" src="img/avatar.svg" alt="Наталья" width="44" height="44" loading="lazy">
+												</span>
+												<div class="review-card__meta">
+													<p class="review-card__name">Наталья</p>
+													<div class="review-card__stars" aria-label="5 из 5">
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+													</div>
+												</div>
+											</div>
+											<img class="review-card__source" src="img/shared/logos/marketplaces/wildberries.svg" alt="Отзыв с Wildberries" width="147" height="22" loading="lazy">
+										</div>
+										<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
+										<div class="review-card__footer">
+											<button type="button" class="review-card__expand icon-chevron-right">
+												<span class="review-card__expand-label">Раскрыть отзыв</span>
+											</button>
+											<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-card">
+										<div class="review-card__top">
+											<div class="review-card__author">
+												<span class="review-card__avatar">
+													<img class="cover-image" src="img/avatar.svg" alt="Татьяна" width="44" height="44" loading="lazy">
+												</span>
+												<div class="review-card__meta">
+													<p class="review-card__name">Татьяна</p>
+													<div class="review-card__stars" aria-label="5 из 5">
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+													</div>
+												</div>
+											</div>
+											<img class="review-card__source review-card__source--ozon" src="img/shared/logos/marketplaces/ozon.svg" alt="Отзыв с Ozon" width="98" height="21" loading="lazy">
+										</div>
+										<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
+										<div class="review-card__footer">
+											<button type="button" class="review-card__expand icon-chevron-right">
+												<span class="review-card__expand-label">Раскрыть отзыв</span>
+											</button>
+											<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-card">
+										<div class="review-card__top">
+											<div class="review-card__author">
+												<span class="review-card__avatar">
+													<img class="cover-image" src="img/avatar.svg" alt="Елена С." width="44" height="44" loading="lazy">
+												</span>
+												<div class="review-card__meta">
+													<p class="review-card__name">Елена С.</p>
+													<div class="review-card__stars" aria-label="5 из 5">
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+													</div>
+												</div>
+											</div>
+											<img class="review-card__source review-card__source--ozon" src="img/shared/logos/marketplaces/ozon.svg" alt="Отзыв с Ozon" width="98" height="21" loading="lazy">
+										</div>
+										<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
+										<div class="review-card__footer">
+											<button type="button" class="review-card__expand icon-chevron-right">
+												<span class="review-card__expand-label">Раскрыть отзыв</span>
+											</button>
+											<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-card">
+										<div class="review-card__top">
+											<div class="review-card__author">
+												<span class="review-card__avatar">
+													<img class="cover-image" src="img/avatar.svg" alt="Мария" width="44" height="44" loading="lazy">
+												</span>
+												<div class="review-card__meta">
+													<p class="review-card__name">Мария</p>
+													<div class="review-card__stars" aria-label="5 из 5">
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+													</div>
+												</div>
+											</div>
+											<img class="review-card__source" src="img/shared/logos/marketplaces/wildberries.svg" alt="Отзыв с Wildberries" width="147" height="22" loading="lazy">
+										</div>
+										<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
+										<div class="review-card__footer">
+											<button type="button" class="review-card__expand icon-chevron-right">
+												<span class="review-card__expand-label">Раскрыть отзыв</span>
+											</button>
+											<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-card">
+										<div class="review-card__top">
+											<div class="review-card__author">
+												<span class="review-card__avatar">
+													<img class="cover-image" src="img/avatar.svg" alt="Ольга" width="44" height="44" loading="lazy">
+												</span>
+												<div class="review-card__meta">
+													<p class="review-card__name">Ольга</p>
+													<div class="review-card__stars" aria-label="5 из 5">
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+													</div>
+												</div>
+											</div>
+											<img class="review-card__source review-card__source--ozon" src="img/shared/logos/marketplaces/ozon.svg" alt="Отзыв с Ozon" width="98" height="21" loading="lazy">
+										</div>
+										<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
+										<div class="review-card__footer">
+											<button type="button" class="review-card__expand icon-chevron-right">
+												<span class="review-card__expand-label">Раскрыть отзыв</span>
+											</button>
+											<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="review-card">
+										<div class="review-card__top">
+											<div class="review-card__author">
+												<span class="review-card__avatar">
+													<img class="cover-image" src="img/avatar.svg" alt="Анна" width="44" height="44" loading="lazy">
+												</span>
+												<div class="review-card__meta">
+													<p class="review-card__name">Анна</p>
+													<div class="review-card__stars" aria-label="5 из 5">
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+														<span class="icon-star" aria-hidden="true"></span>
+													</div>
+												</div>
+											</div>
+											<img class="review-card__source" src="img/shared/logos/marketplaces/letoile.svg" alt="Отзыв с Лэтуаль" width="150" height="23" loading="lazy">
+										</div>
+										<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
+										<div class="review-card__footer">
+											<button type="button" class="review-card__expand icon-chevron-right">
+												<span class="review-card__expand-label">Раскрыть отзыв</span>
+											</button>
+											<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="reviews__pagination swiper-pagination"></div>
+						</div>
+						<div class="reviews__bar">
+							<p class="reviews__note">
+								<img class="reviews__note-icon" src="img/icons/shield.svg" alt="Проверено" width="30" height="36" loading="lazy"> Все отзывы проверены и&nbsp;оставлены реальными покупателями
+							</p>
+							<div class="reviews__nav">
+								<button type="button" class="reviews__prev swiper-button-prev icon-prev" aria-label="Предыдущий отзыв"></button>
+								<button type="button" class="reviews__next swiper-button-next icon-next" aria-label="Следующий отзыв"></button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="container footer__container">
+				<div class="row footer__main">
+					<div class="col-12 col-xl-3 footer__brand">
+						<a class="footer__logo" href="/" aria-label="KIPNI — на главную">
+							<img src="img/logo.svg" alt="Логотип KIPNI" width="173" height="56" loading="lazy">
+						</a>
+						<p class="footer__tagline">Средства для дома и семьи, созданные с заботой о вас и природе</p>
+						<div class="footer__legal footer__legal--desktop">
+							<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
+							<a class="footer__legal-link" href="#">Уведомление об использовании рекомендательных технологий</a>
+						</div>
+					</div>
+					<div class="col-6 col-lg-3 col-xl-2 footer__col">
+						<h3 class="footer__title">Компания</h3>
+						<ul class="footer__list">
+							<li><a class="footer__link" href="about.html">О компании</a></li>
+							<li><a class="footer__link" href="promotions.html">Акции</a></li>
+							<li><a class="footer__link" href="vacancies.html">Вакансии</a></li>
+							<li><a class="footer__link" href="certificates.html">Сертификаты</a></li>
+							<li><a class="footer__link" href="contacts.html">Контакты</a></li>
+							<li><a class="footer__link" href="#">Партнеры</a></li>
+							<li><a class="footer__link" href="blog.html">Блог</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 col-xl-2 footer__col">
+						<h3 class="footer__title">Каталог</h3>
+						<ul class="footer__list">
+							<li><a class="footer__link" href="#">Уход за телом</a></li>
+							<li><a class="footer__link" href="#">Уход за волосами</a></li>
+							<li><a class="footer__link" href="#">Подарочные наборы</a></li>
+							<li><a class="footer__link" href="#">Уборка</a></li>
+							<li><a class="footer__link" href="#">Сад</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 col-xl-2 footer__col">
+						<h3 class="footer__title">Помощь</h3>
+						<ul class="footer__list">
+							<li><a class="footer__link" href="#">Как купить</a></li>
+							<li><a class="footer__link" href="delivery.html">Доставка</a></li>
+							<li><a class="footer__link" href="delivery.html">Оплата</a></li>
+							<li><a class="footer__link" href="#">Гарантия, возврат</a></li>
+							<li><a class="footer__link" href="#">Юридическим лицам</a></li>
+							<li><a class="footer__link" href="#">Для поставщиков</a></li>
+						</ul>
+					</div>
+					<div class="col-6 col-lg-3 footer__col footer__contacts">
+						<h3 class="footer__title">Контакты</h3>
+						<a class="footer__phone" href="tel:88001013931">8 (800) 101-39-31</a>
+						<p class="footer__hours">пн-пт с 9:00 до 18:00</p>
+						<a class="footer__email" href="mailto:kipni@kipni.ru">kipni@kipni.ru</a>
+						<ul class="footer__socials">
+							<li>
+								<a class="footer__social icon-vk" href="#" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"></a>
+							</li>
+							<li>
+								<a class="footer__social icon-max" href="#" target="_blank" rel="noopener noreferrer" aria-label="Мax"></a>
+							</li>
+							<li>
+								<a class="footer__social icon-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"></a>
+							</li>
+						</ul>
+						<a class="btn btn--primary footer__btn" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline">Задать вопрос</a>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__legal footer__legal--mobile">
+						<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
+						<a class="footer__legal-link" href="#">Уведомление об использовании рекомендательных технологий</a>
+					</div>
+					<p class="footer__copy">2003-2026 © ООО «Фабрика Кипни». Все права&nbsp;защищены</p>
+				</div>
+			</div>
+		</footer>
+		<div id="modal-ask-question" class="popup">
+			<div class="popup__head">
+				<h2 class="popup__title">Задать вопрос</h2>
+				<p class="text popup__lead"> Возникли вопросы? Напишите их в форме ниже и мы обязательно ответим Вам в ближайшее время </p>
+			</div>
+			<form class="popup__form" action="#" method="post">
+				<div class="row g-3 popup__fields">
+					<div class="col-12 col-md-4">
+						<label class="visually-hidden" for="ask-name">Имя</label>
+						<input class="form-control" id="ask-name" type="text" name="name" placeholder="Введите имя" required autocomplete="name">
+					</div>
+					<div class="col-12 col-md-4">
+						<label class="visually-hidden" for="ask-email">Электронная почта</label>
+						<input class="form-control" id="ask-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
+					</div>
+					<div class="col-12 col-md-4">
+						<label class="visually-hidden" for="ask-phone">Номер телефона</label>
+						<input class="form-control" id="ask-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
+					</div>
+					<div class="col-12">
+						<label class="visually-hidden" for="ask-message">Ваш вопрос</label>
+						<textarea class="form-control popup__textarea" id="ask-message" name="message" placeholder="Ваш вопрос" required rows="6"></textarea>
+					</div>
+				</div>
+				<label class="form-check">
+					<input class="visually-hidden form-check__input" type="checkbox" name="consent" required checked>
+					<span class="form-check__text"> Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных </span>
+				</label>
+				<button class="btn btn--primary btn--large popup__submit" type="submit">Задать вопрос</button>
+			</form>
+		</div>
+		<div class="ask-widget">
+			<a class="ask-widget__link" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline" style="background-image: url('img/ask/bird.webp');">
+				<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
+			</a>
+		</div>
+	</div> <!-- plugins -->
+	<script defer src="js/libs/swiper-bundle.min.js?_v=20260901170522"></script>
+	<script defer src="js/libs/fancybox.umd.js?_v=20260901170522"></script>
+	<!-- plugins -->
+	<script defer src="js/app.js?_v=20260901170522"></script>
+</body>
 
-    <link rel="stylesheet" href="css/reset.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
-
-    <script>
-      try {
-        if (sessionStorage.getItem("kipni-banner-hidden") === "1") {
-          document.documentElement.classList.add("is-banner-hidden");
-        }
-      } catch (e) {}
-    </script>
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
-        <button class="header__overlay" type="button" aria-label="Закрыть меню" tabindex="-1"></button>
-        <div class="header-banner" style="background-image: url('img/header-banner.webp');">
-          <div class="container header-banner__container">
-            <p class="h4 header-banner__text">
-              Любимые экосредства для дома и семьи в одной подборке.
-              <a class="header-banner__link icon-chevron-right" href="#"><span>Перейти</span></a>
-            </p>
-            <button class="header-banner__close icon-cross-circle" type="button" aria-label="Закрыть баннер"></button>
-          </div>
-        </div>
-
-        <div class="header__bar">
-          <div class="header__bar-container container">
-            <button class="header__burger" type="button" aria-expanded="false" aria-controls="header-menu" aria-label="Открыть меню">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
-
-            <a class="header__logo" href="/" aria-label="KIPNI — на главную">
-              <img src="img/logo.svg" alt="KIPNI" width="173" height="47">
-            </a>
-
-            <div class="header__menu" id="header-menu" hidden>
-              <div class="header__menu-inner">
-                <a class="btn btn--primary header__menu-cta" href="catalog.html">Вся продукция</a>
-
-                <nav class="header__menu-nav" aria-label="Основное меню">
-
-                  <div class="header__catalog-wrap header__menu-accordion is-open">
-                    <button class="header__catalog-btn header__menu-row header__menu-row--toggle btn btn--primary btn--large icon-grid" type="button" aria-expanded="false" aria-controls="header-catalog">
-                      Каталог товаров
-                    </button>
-                    <div class="header-catalog header__menu-panel" id="header-catalog">
-                      <div class="container header-catalog__container">
-                        <div class="header-catalog__panel">
-                          <div class="row">
-                            <div class="col-12 col-md-4 col-xl-5 header-catalog__col header-catalog__col--categories">
-                              <h2 class="header-catalog__title icon-leaf">
-                                Категории товаров
-                              </h2>
-                              <ul class="header-catalog__list">
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/shower-gel.svg" alt="Гели для душа" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Гели для душа</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/soap.svg" alt="Мыло" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Мыло</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/shampoo.svg" alt="Шампуни" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Шампуни</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/spray.svg" alt="Уборка" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Уборка</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/laundry.svg" alt="Стирка" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Стирка</span>
-                                  </a>
-                                </li>
-                                <li class="header-catalog__item--desktop">
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/gift.svg" alt="Подарочные наборы" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Подарочные наборы</span>
-                                  </a>
-                                </li>
-                                <li class="header-catalog__item--cta">
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/grid.svg" alt="Вся продукция" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Вся продукция</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div class="col-12 col-md-4 header-catalog__col header-catalog__col--buyers">
-                              <h2 class="header-catalog__title icon-box">
-                                Полезное для покупателя
-                              </h2>
-                              <ul class="header-catalog__list">
-                                <li>
-                                  <a class="header-catalog__link" href="where-to-buy.html">
-                                    <img class="header-catalog__link-icon" src="img/icons/map-pin.svg" alt="Где купить" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Где купить</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="delivery.html">
-                                    <img class="header-catalog__link-icon" src="img/icons/truck.svg" alt="Доставка и оплата" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Доставка и оплата</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="#">
-                                    <img class="header-catalog__link-icon" src="img/icons/reviews.svg" alt="Отзывы" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Отзывы</span>
-                                  </a>
-                                </li>
-                                <li>
-                                  <a class="header-catalog__link" href="blog.html">
-                                    <img class="header-catalog__link-icon" src="img/icons/blog.svg" alt="Блог" width="22" height="22" loading="lazy">
-                                    <span class="header-catalog__link-text">Блог</span>
-                                  </a>
-                                </li>
-                              </ul>
-                            </div>
-
-                            <div class="col-12 col-md-4 col-xl-3 header-catalog__promo" style="background-image: url('img/catalog-banner.webp');">
-                              <p class="header-catalog__promo-title">Чистота, которой <span>доверяет семья</span></p>
-                              <p class="header-catalog__promo-text">Экологичные средства для дома на каждый день</p>
-                              <a class="btn btn--primary btn--large header-catalog__promo-btn icon-chevron-right" href="catalog.html">
-                                Перейти в каталог
-                              </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="header-nav header__menu-accordion is-open">
-                    <button class="header__menu-row header__menu-row--toggle header-nav__toggle icon-user" type="button" aria-expanded="true">
-                      Покупателям
-                    </button>
-                    <div class="header-nav__panel header__menu-panel">
-                      <ul class="header-nav__list">
-                        <li class="header-nav__item"><a class="header-nav__link" href="about.html">О компании</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="promotions.html">Акции</a></li>
-                        <li class="header-nav__item header-nav__item--extra"><a class="header-nav__link" href="blog.html">Блог</a></li>
-                        <li class="header-nav__item header-nav__item--extra"><a class="header-nav__link" href="certificates.html">Сертификаты</a></li>
-                        <li class="header-nav__item"><a class="header-nav__link" href="contacts.html">Контакты</a></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                  <div class="header__buy-wrap">
-                    <button class="header-buy-btn icon-shopping-cart" type="button" aria-expanded="false" aria-controls="header-buy">
-                      Где купить
-                    </button>
-
-                    <div class="header-buy" id="header-buy" hidden>
-                      <div class="header-buy__panel">
-                        <p class="h4 header-buy__caption">Мы на маркетплейсах</p>
-                        <ul class="header-buy__list">
-                          <li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/ozon-short.svg" alt="Ozon" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">Ozon</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/wildberries-short.svg" alt="Wildberries" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">Wildberries</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/yandex-market-short.svg" alt="Яндекс Маркет" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">Яндекс Маркет</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/megamarket-short.svg" alt="Мегамаркет" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">Мегамаркет</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/KazanExpress-short.svg" alt="KazanExpress" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">KazanExpress</span>
-                          	</a>
-                          </li>
-<li>
-                          	<a class="header-buy__link" href="#" target="_blank" rel="noopener noreferrer">
-                          		<img src="img/shared/logos/marketplaces/vse-instrumenti-short.svg" alt="ВсеИнструменты" width="40" height="40" loading="lazy">
-                          		<span class="text header-buy__name">ВсеИнструменты</span>
-                          	</a>
-                          </li>
-
-                        </ul>
-                        <a class="btn btn--ghost header-buy__all icon-grid" href="where-to-buy.html">
-                          Смотреть все площадки
-                        </a>
-                      </div>
-                    </div>
-
-                    <a class="header__menu-row header__menu-row--buy icon-shopping-cart" href="where-to-buy.html">
-                      Где купить?
-                    </a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-
-            <div class="header__actions">
-              <button class="header__search-mobile icon-search" type="button" aria-expanded="false" aria-controls="header-search" aria-label="Поиск"></button>
-              <a class="header-favorite icon-heart" href="favorites.html" aria-label="Избранное, 2 товара">
-                <span class="header-favorite__badge">2</span>
-              </a>
-            </div>
-
-            <form class="header-search" id="header-search" action="search.html" method="get" role="search">
-              <label class="visually-hidden" for="header-search-input">Поиск по каталогу</label>
-              <input class="header-search__input" id="header-search-input" type="text" name="s" placeholder="Поиск по каталогу" autocomplete="off">
-              <button class="header-search__submit icon-search" type="submit" aria-label="Искать"></button>
-            </form>
-          </div>
-        </div>
-      </header>
-      <main class="page">
-        <section class="hero" aria-label="Главный баннер">
-          <div class="swiper hero__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide hero-slide" style="--hero-slide-image: url('../img/hero/slide-1.webp'); --hero-slide-image-mobile: url('../img/hero/slide-1-mobile.webp');">
-              	<div class="container hero-slide__container">
-              		<div class="hero-slide__content">
-              			<h1 class="h1 hero-slide__title">
-              				Чистота, которой
-              				<span class="hero-slide__accent">доверяет семья</span>
-              			</h1>
-              			<p class="hero-slide__lead">Экологичные средства для дома на&nbsp;каждый день</p>
-              			<div class="hero-slide__actions">
-              				<a class="btn btn--primary btn--large icon-chevron-right" href="#">
-              					Перейти в каталог
-              				</a>
-              				<a class="btn btn--ghost" href="where-to-buy.html">Где купить</a>
-              			</div>
-              			<ul class="hero-slide__features">
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/leaf.svg" alt="Экологично" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Экологично</span>
-              						<span class="hero-slide__feature-text">На основе натуральных компонентов</span>
-              					</span>
-              				</li>
-
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/box.svg" alt="Всегда в наличии" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Всегда в наличии</span>
-              						<span class="hero-slide__feature-text">Регулярные поставки на&nbsp;маркетплейсы</span>
-              					</span>
-              				</li>
-
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/credit-card.svg" alt="Доступные цены" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Доступные цены</span>
-              						<span class="hero-slide__feature-text">Заботимся о качестве и&nbsp;вашем бюджете</span>
-              					</span>
-              				</li>
-
-              				
-              			</ul>
-              		</div>
-              	</div>
-              </div><div class="swiper-slide hero-slide hero-slide--dark" style="--hero-slide-image: url('../img/hero/slide-2.webp');">
-              	<div class="container hero-slide__container">
-              		<div class="hero-slide__content">
-              			<h2 class="h1 hero-slide__title">
-              				Эффективный
-              				<span class="hero-slide__accent">гель для стирки</span>
-              			</h2>
-              			<p class="hero-slide__lead">С бережным уходом</p>
-              			<div class="hero-slide__actions">
-              				<a class="btn btn--primary btn--large" href="catalog.html">
-              					Перейти в каталог
-              				</a>
-              				<a class="btn btn--ghost" href="where-to-buy.html">Где купить</a>
-              			</div>
-              			<ul class="hero-slide__features">
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/drop.svg" alt="Отстирывает даже в&nbsp;холодной воде" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Отстирывает даже в&nbsp;холодной воде</span>
-              						<span class="hero-slide__feature-text">сохраняя цвет и&nbsp;структуру</span>
-              					</span>
-              				</li>
-
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/favorite.svg" alt="Подходит для всех типов белья" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Подходит для всех типов белья</span>
-              						<span class="hero-slide__feature-text">в&nbsp;том числе детского</span>
-              					</span>
-              				</li>
-
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/certificate.svg" alt="Производство на&nbsp;своей фабрике" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Производство на&nbsp;своей фабрике</span>
-              						<span class="hero-slide__feature-text">без переплат и&nbsp;посредников</span>
-              					</span>
-              				</li>
-
-              				
-              			</ul>
-              		</div>
-              	</div>
-              </div><div class="swiper-slide hero-slide" style="--hero-slide-image: url('../img/hero/slide-3.webp');">
-              	<div class="container hero-slide__container">
-              		<div class="hero-slide__content">
-              			<h2 class="h1 hero-slide__title">
-              				Парфюмированное,
-              				<span class="hero-slide__accent">мыло — премиум-уход</span>
-              			</h2>
-              			<p class="hero-slide__lead">Прямо от производителя</p>
-              			<div class="hero-slide__actions">
-              				<a class="btn btn--primary btn--large" href="catalog.html">
-              					Перейти в каталог
-              				</a>
-              				<a class="btn btn--ghost" href="where-to-buy.html">Где купить</a>
-              			</div>
-              			<ul class="hero-slide__features">
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/user.svg" alt="Прямо от производителя" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Прямо от производителя</span>
-              						<span class="hero-slide__feature-text">Без наценок и&nbsp;посредников</span>
-              					</span>
-              				</li>
-
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/pressure-light.svg" alt="Утонченные ароматы" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Утонченные ароматы</span>
-              						<span class="hero-slide__feature-text">Подарок, которым хочется пользоваться каждый день</span>
-              					</span>
-              				</li>
-
-              				
-              				<li class="hero-slide__feature">
-              					<span class="hero-slide__feature-icon" aria-hidden="true">
-              						<img src="img/icons/molecule.svg" alt="Гармоничная формула" width="55" height="55">
-              					</span>
-              					<span class="hero-slide__feature-body">
-              						<span class="hero-slide__feature-title">Гармоничная формула</span>
-              						<span class="hero-slide__feature-text">Мягко очищает, поддерживает увлажненность кожи.</span>
-              					</span>
-              				</li>
-
-              				
-              			</ul>
-              		</div>
-              	</div>
-              </div>
-            </div>
-          </div>
-          <div class="hero__pagination swiper-pagination"></div>
-        </section>
-        <section class="categories section-space-md" aria-label="Категории продукции">
-          <div class="container">
-            <div class="row">
-              <div class="col-6 col-xl-4">
-              	<a
-              		class="category-card"
-              		href="#"
-              		aria-label="Гели для душа KIPNI"
-              		style="background-image: url('img/categories/shower.webp');"
-              	>
-              		<div class="category-card__content">
-              			<h3 class="category-card__title">Гели для душа</h3>
-              			<p class="category-card__lead">Мягкое очищение с&nbsp;любимыми ароматами</p>
-              			<span class="btn btn--soft category-card__btn icon-chevron-right">
-              				Смотреть все
-              			</span>
-              		</div>
-              	</a>
-              </div>
-<div class="col-6 col-xl-4">
-              	<a
-              		class="category-card"
-              		href="#"
-              		aria-label="Жидкое мыло KIPNI"
-              		style="background-image: url('img/categories/soap.webp');"
-              	>
-              		<div class="category-card__content">
-              			<h3 class="category-card__title">Мыло</h3>
-              			<p class="category-card__lead">Чистота и&nbsp;комфорт на&nbsp;каждый день</p>
-              			<span class="btn btn--soft category-card__btn icon-chevron-right">
-              				Смотреть все
-              			</span>
-              		</div>
-              	</a>
-              </div>
-<div class="col-6 col-xl-4">
-              	<a
-              		class="category-card"
-              		href="#"
-              		aria-label="Шампуни KIPNI"
-              		style="background-image: url('img/categories/shampoo.webp');"
-              	>
-              		<div class="category-card__content">
-              			<h3 class="category-card__title">Шампуни</h3>
-              			<p class="category-card__lead">Уход от&nbsp;корней <br> до&nbsp;самых кончиков</p>
-              			<span class="btn btn--soft category-card__btn icon-chevron-right">
-              				Смотреть все
-              			</span>
-              		</div>
-              	</a>
-              </div>
-<div class="col-6 col-xl-4">
-              	<a
-              		class="category-card"
-              		href="#"
-              		aria-label="Средства для уборки KIPNI"
-              		style="background-image: url('img/categories/cleaning.webp');"
-              	>
-              		<div class="category-card__content">
-              			<h3 class="category-card__title">Уборка</h3>
-              			<p class="category-card__lead">Эффективная чистота каждый день</p>
-              			<span class="btn btn--soft category-card__btn icon-chevron-right">
-              				Смотреть все
-              			</span>
-              		</div>
-              	</a>
-              </div>
-<div class="col-6 col-xl-4">
-              	<a
-              		class="category-card"
-              		href="#"
-              		aria-label="Средства для стирки KIPNI"
-              		style="background-image: url('img/categories/laundry.webp');"
-              	>
-              		<div class="category-card__content">
-              			<h3 class="category-card__title">Стирка</h3>
-              			<p class="category-card__lead">Бережная забота о&nbsp;любимых вещах</p>
-              			<span class="btn btn--soft category-card__btn icon-chevron-right">
-              				Смотреть все
-              			</span>
-              		</div>
-              	</a>
-              </div>
-<div class="col-6 col-xl-4">
-              	<a
-              		class="category-card category-card--accent"
-              		href="#"
-              		aria-label="Вся продукция KIPNI в корзине"
-              		style="background-image: url('img/categories/all.webp');"
-              	>
-              		<div class="category-card__content">
-              			<h3 class="category-card__title">Вся продукция</h3>
-              			<p class="category-card__lead">Всё необходимое для вас и&nbsp;вашего дома</p>
-              			<span class="btn btn--primary category-card__btn icon-chevron-right">
-              				Смотреть все
-              			</span>
-              		</div>
-              	</a>
-              </div>
-
-            </div>
-          </div>
-        </section>
-        <section class="gifts section-space-md" aria-label="Подарочные наборы">
-        	<div class="container">
-        		<div class="gifts__banner">
-        			<div class="gifts__content">
-        				<h2 class="title-lg gifts__title">Подарочные наборы для&nbsp;ваших близких</h2>
-        				<p class="gifts__lead text--lg">Покажите красиво заботу о&nbsp;ваших близких с&nbsp;KIPNI</p>
-        				<a class="btn btn--ghost gifts__btn" href="catalog.html">Перейти в каталог</a>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-        <section class="popular section-space-md" aria-labelledby="popular-title">
-          <div class="container">
-            <h2 class="h2 popular__title" id="popular-title">Популярные товары <span class="text-accent">бытовой химии</span></h2>
-          </div>
-          <div class="popular__slider-wrap">
-            <div class="container popular__slider-container">
-              <div class="swiper popular__slider">
-                <ul class="swiper-wrapper">
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    		<span class="badge badge--hit">Хит</span>
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/toilet-gel.webp" alt="Чистящий гель KIPNI для унитазов" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Чистящий гель для унитазов</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">750 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/candy-shop.webp" alt="Гель для душа Канди шоп папайя виноград" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Гель для душа Канди шоп</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">750 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    		<span class="badge badge--new">Новинка</span>
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/tropical-soap.webp" alt="Жидкое мыло Тропические фрукты" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Жидкое мыло Тропические фрукты</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">500 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    		<span class="badge badge--hit">Хит</span>
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/household-soap.webp" alt="Мыло хозяйственное Кипни" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Мыло хозяйственное Кипни</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">750 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    		<span class="badge badge--hit">Хит</span>
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/laundry-gel.webp" alt="Универсальный гель для стирки KIPNI 5 л" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Универсальный гель для стирки</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">5 л</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/dish.webp" alt="Средство для посуды OLLY" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Средство для посуды</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">750 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    		<span class="badge badge--hit">Хит</span>
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/toilet-gel.webp" alt="Чистящий гель KIPNI для унитазов" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Чистящий гель для унитазов</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">750 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/candy-shop.webp" alt="Гель для душа Канди шоп папайя виноград" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Гель для душа Канди шоп</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">750 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    		<span class="badge badge--new">Новинка</span>
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/tropical-soap.webp" alt="Жидкое мыло Тропические фрукты" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Жидкое мыло Тропические фрукты</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">500 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    		<span class="badge badge--hit">Хит</span>
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/household-soap.webp" alt="Мыло хозяйственное Кипни" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Мыло хозяйственное Кипни</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">750 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    		<span class="badge badge--hit">Хит</span>
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/laundry-gel.webp" alt="Универсальный гель для стирки KIPNI 5 л" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Универсальный гель для стирки</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">5 л</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                  <li class="swiper-slide">
-                    <article class="product-card">
-                    	<div class="product-card__head">
-                    		
-                    			<button
-                    			type="button"
-                    			class="product-card__favorite icon-heart"
-                    			
-                    			
-                    				aria-pressed="false"
-                    				aria-label="Добавить в избранное"
-                    			
-                    			>
-                    		</button>
-                    	</div>
-                    	<a href="product.html" class="product-card__media">
-                    		<img src="img/products/dish.webp" alt="Средство для посуды OLLY" width="200" height="200" loading="lazy">
-                    	</a>
-                    	<div class="product-card__body">
-                    		<h3 class="h4 product-card__title"><a href="product.html" class="product-card__title-link">Средство для посуды</a></h3>
-                    		
-                    		<p class="text text-muted product-card__volume">750 мл</p>
-                    		
-                    		
-                    		<div class="product-card__footer">
-                    			<a href="product.html" class="more-link product-card__link icon-chevron-right">Подробнее</a>
-                    		</div>
-                    	</div>
-                    </article>
-                  </li>
-                </ul>
-              </div>
-              <button type="button" class="popular__prev swiper-button-prev icon-chevron-right" aria-label="Предыдущие товары"></button>
-              <button type="button" class="popular__next swiper-button-next icon-chevron-right" aria-label="Следующие товары"></button>
-            </div>
-          </div>
-        </section>
-        <section class="marketplaces section-space-md" aria-labelledby="marketplaces-title">
-          <div class="container">
-            <div class="marketplaces__panel">
-              <img class="marketplaces__chick" src="img/shared/decor/chick.webp" alt="Уточка KIPNI" width="536" height="536" aria-hidden="true" loading="lazy">
-              <div class="row marketplaces__layout">
-                <div class="col-12 col-xl-4 marketplaces__aside">
-                  <h2 class="h2 marketplaces__title" id="marketplaces-title">
-                    Выбирайте удобный
-                    <span class="marketplaces__title-accent">способ покупки</span>
-                  </h2>
-                  <p class="marketplaces__lead text--lg">Наши товары есть на&nbsp;всех крупнейших маркетплейсах</p>
-                  <ul class="marketplaces__perks">
-                    <li class="marketplaces__perk">
-                      <img class="marketplaces__perk-icon" src="img/icons/truck-2.svg" alt="Быстрая доставка" width="42" height="31" loading="lazy">
-                      <span class="marketplaces__perk-text">Быстрая<br>доставка</span>
-                    </li>
-                    <li class="marketplaces__perk">
-                      <img class="marketplaces__perk-icon" src="img/icons/cert.svg" alt="Оригинальная продукция" width="34" height="34" loading="lazy">
-                      <span class="marketplaces__perk-text">Оригинальная<br>продукция</span>
-                    </li>
-                  </ul>
-
-                </div>
-                <div class="col-12 col-xl-6 marketplaces__main">
-                  <div class="row marketplaces__shops">
-                    
-                    <div class="col-6 col-md-4">
-                    
-                    <a class="partner-card" href="#" aria-label="Купить на Wildberries" target="_blank" rel="noopener noreferrer">
-                    	<img
-                    		class="partner-card__logo partner-card__logo--lg"
-                    		src="img/shared/logos/marketplaces/wildberries.svg"
-                    		alt="Wildberries"
-                    		width="160"
-                    		height="24"
-                    		loading="lazy"
-                    	>
-                    	<span class="partner-card__cta">Перейти в магазин</span>
-                    </a>
-                    
-                    </div>
-                    
-
-                    <div class="col-6 col-md-4">
-                    
-                    <a class="partner-card" href="#" aria-label="Купить на Ozon" target="_blank" rel="noopener noreferrer">
-                    	<img
-                    		class="partner-card__logo partner-card__logo--sm"
-                    		src="img/shared/logos/marketplaces/ozon.svg"
-                    		alt="Ozon"
-                    		width="98"
-                    		height="21"
-                    		loading="lazy"
-                    	>
-                    	<span class="partner-card__cta">Перейти в магазин</span>
-                    </a>
-                    
-                    </div>
-                    
-
-                    <div class="col-6 col-md-4">
-                    
-                    <a class="partner-card" href="#" aria-label="Купить в Л'Этуаль" target="_blank" rel="noopener noreferrer">
-                    	<img
-                    		class="partner-card__logo partner-card__logo--md"
-                    		src="img/shared/logos/marketplaces/letual.webp"
-                    		alt="Л'Этуаль"
-                    		width="150"
-                    		height="23"
-                    		loading="lazy"
-                    	>
-                    	<span class="partner-card__cta">Перейти в магазин</span>
-                    </a>
-                    
-                    </div>
-                    
-
-                    <div class="col-6 col-md-4">
-                    
-                    <a class="partner-card" href="#" aria-label="Купить в Золотом Яблоке" target="_blank" rel="noopener noreferrer">
-                    	<img
-                    		class="partner-card__logo partner-card__logo--xxl"
-                    		src="img/shared/logos/marketplaces/golden-apple.webp"
-                    		alt="Золотое Яблоко"
-                    		width="195"
-                    		height="29"
-                    		loading="lazy"
-                    	>
-                    	<span class="partner-card__cta">Перейти в магазин</span>
-                    </a>
-                    
-                    </div>
-                    
-
-                    <div class="col-6 col-md-4">
-                    
-                    <a class="partner-card" href="#" aria-label="Купить на Яндекс Маркете" target="_blank" rel="noopener noreferrer">
-                    	<img
-                    		class="partner-card__logo partner-card__logo--xl"
-                    		src="img/shared/logos/marketplaces/yandex-market.svg"
-                    		alt="Яндекс Маркет"
-                    		width="174"
-                    		height="26"
-                    		loading="lazy"
-                    	>
-                    	<span class="partner-card__cta">Перейти в магазин</span>
-                    </a>
-                    
-                    </div>
-                    
-
-                    <div class="col-6 col-md-4">
-                    
-                    <a class="partner-card" href="#" aria-label="Купить на ВсеИнструменты" target="_blank" rel="noopener noreferrer">
-                    	<img
-                    		class="partner-card__logo partner-card__logo--xs"
-                    		src="img/shared/logos/marketplaces/vse-instrumenty.svg"
-                    		alt="ВсеИнструменты"
-                    		width="184"
-                    		height="17"
-                    		loading="lazy"
-                    	>
-                    	<span class="partner-card__cta">Перейти в магазин</span>
-                    </a>
-                    
-                    </div>
-                    
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="why section-space-md" aria-labelledby="why-title">
-          <div class="container">
-            <div class="why__head">
-              <h2 class="h2 title-lg why__title" id="why-title">Почему семьи <span class="text-accent">выбирают KIPNI</span></h2>
-              <p class="why__lead h3">Создаем безопасные и&nbsp;эффективные средства для чистоты в&nbsp;доме и&nbsp;заботы о&nbsp;близких</p>
-            </div>
-
-            <ul class="why__rows">
-              <li class="row why__row">
-              	<div class="col-12 col-lg-6">
-              		<div class="why__media">
-              			<img src="img/why/safety.webp" class="cover-image" alt="Продукция KIPNI на столе в светлой ванной" width="720" height="350" loading="lazy">
-              		</div>
-              	</div>
-              	<div class="col-12 col-lg-6">
-              		<div class="why__copy">
-              			<h3 class="title-md why__subtitle">Безопасность <br> Превыше всего</h3>
-              			<p class="why__text">Продукция KiPNi безопасна для человека и&nbsp;окружающей среды, благодаря наличию растительных компонентов в&nbsp;составах и&nbsp;биоразлагаемой структуре.</p>
-              		</div>
-              	</div>
-              </li><li class="row why__row why__row--reverse">
-              	<div class="col-12 col-lg-6">
-              		<div class="why__media">
-              			<img src="img/why/quality.webp" class="cover-image" alt="Семья с двумя детьми в светлой гостиной" width="720" height="350" loading="lazy">
-              		</div>
-              	</div>
-              	<div class="col-12 col-lg-6">
-              		<div class="why__copy why__copy--end">
-              			<h3 class="title-md why__subtitle">Забота <br> о качестве</h3>
-              			<p class="why__text">Наша миссия состоит в&nbsp;том, чтобы создавать продукты, которые сочетали бы в&nbsp;себе высокое качество, безопасность и&nbsp;доступность широкому кругу потребителей.</p>
-              		</div>
-              	</div>
-              </li><li class="row why__row">
-              	<div class="col-12 col-lg-6">
-              		<div class="why__media">
-              			<img src="img/why/access.webp" class="cover-image" alt="Производственный комплекс KIPNI и логистика" width="720" height="350" loading="lazy">
-              		</div>
-              	</div>
-              	<div class="col-12 col-lg-6">
-              		<div class="why__copy">
-              			<h3 class="title-md why__subtitle">Доступность <br> нашей продукции</h3>
-              			<p class="why__text">Собственные четырёхпоточные линии по&nbsp;производству тары и&nbsp;развитая логистическая система помогают KIPNI снижать производственные расходы. Благодаря этому мы сохраняем доступные цены, не&nbsp;экономя на&nbsp;качестве сырья, безопасности и&nbsp;эффективности продукции.</p>
-              		</div>
-              	</div>
-              </li>
-            </ul>
-          </div>
-        </section>
-        <section class="business section-space-md" aria-labelledby="business-title">
-          <div class="container">
-            <div class="business__banner" style="background-image: url('img/business-banner.webp');">
-              <div class="row g-0">
-                <div class="col-9 col-md-8 col-xl-7">
-                  <div class="business__content">
-                    <h2 class="h2 title-lg business__title" id="business-title">Товары для бизнеса</h2>
-                    <p class="business__lead h3">Чистота и&nbsp;забота о&nbsp;клиентах - ваша репутация</p>
-                    <ul class="business__features">
-                      <li class="business__feature icon-check">
-                        Стабильные поставки по&nbsp;всей России
-                      </li>
-                      <li class="business__feature icon-check">
-                        Выгодные условия оптовым клиентам
-                      </li>
-                      <li class="business__feature icon-check">
-                        Широкий ассортимент товаров
-                      </li>
-                    </ul>
-                    <a class="btn btn--info business__btn" href="#">Узнать условия</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="reviews" aria-labelledby="reviews-title">
-        	<div class="container">
-        		<div class="row reviews__head gy-4">
-        			<div class="col-12 col-xl-4 reviews__intro">
-        				<h2 class="h2 reviews__title" id="reviews-title">
-        					Нам доверяют
-        					<span class="reviews__title-accent">тысячи покупателей</span>
-        				</h2>
-        				<p class="reviews__lead">Более 100&nbsp;000 отзывов оставленных реальными покупателями</p>
-        			</div>
-        			<div class="col-12 col-xl-8">
-        				<div class="row reviews__ratings gy-3">
-        					<div class="col-6 col-xl-3">
-        						<div class="rating-card">
-        							<img
-        								class="rating-card__logo"
-        								src="img/shared/logos/marketplaces/wildberries.svg"
-        								alt="Wildberries"
-        								width="160"
-        								height="24"
-        								loading="lazy"
-        								>
-        							<div class="rating-card__score icon-star">
-        								<span>4.9</span>
-        							</div>
-        							<p class="rating-card__count">54 040 оценок</p>
-        						</div>
-        					</div><div class="col-6 col-xl-3">
-        						<div class="rating-card">
-        							<img
-        								class="rating-card__logo"
-        								src="img/shared/logos/marketplaces/ozon.svg"
-        								alt="Ozon"
-        								width="98"
-        								height="21"
-        								loading="lazy"
-        								>
-        							<div class="rating-card__score icon-star">
-        								<span>4.9</span>
-        							</div>
-        							<p class="rating-card__count">54 040 оценок</p>
-        						</div>
-        					</div><div class="col-6 col-xl-3">
-        						<div class="rating-card">
-        							<img
-        								class="rating-card__logo"
-        								src="img/shared/logos/marketplaces/letoile.svg"
-        								alt="Лэтуаль"
-        								width="150"
-        								height="23"
-        								loading="lazy"
-        								>
-        							<div class="rating-card__score icon-star">
-        								<span>4.9</span>
-        							</div>
-        							<p class="rating-card__count">54 040 оценок</p>
-        						</div>
-        					</div><div class="col-6 col-xl-3">
-        						<div class="rating-card">
-        							<img
-        								class="rating-card__logo"
-        								src="img/shared/logos/marketplaces/golden-apple.svg"
-        								alt="Золотое Яблоко"
-        								width="195"
-        								height="32"
-        								loading="lazy"
-        								>
-        							<div class="rating-card__score icon-star">
-        								<span>4.9</span>
-        							</div>
-        							<p class="rating-card__count">54 040 оценок</p>
-        						</div>
-        					</div>
-        				</div>
-        			</div>
-        		</div>
-
-        		<div class="reviews__slider-wrap">
-        			<div class="swiper reviews__slider">
-        				<div class="swiper-wrapper">
-        					<div class="swiper-slide">
-        						<div class="review-card">
-        							<div class="review-card__top">
-        								<div class="review-card__author">
-        									<span class="review-card__avatar">
-        										<img class="cover-image" src="img/avatar.svg" alt="Наталья" width="44" height="44" loading="lazy">
-        									</span>
-        									<div class="review-card__meta">
-        										<p class="review-card__name">Наталья</p>
-        										<div class="review-card__stars" aria-label="5 из 5">
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        										</div>
-        									</div>
-        								</div>
-        								<img
-        									class="review-card__source"
-        									src="img/shared/logos/marketplaces/wildberries.svg"
-        									alt="Отзыв с Wildberries"
-        									width="147"
-        									height="22"
-        									loading="lazy"
-        									>
-        							</div>
-        							<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
-        							<div class="review-card__footer">
-        								<button type="button" class="review-card__expand icon-chevron-right">
-        									<span class="review-card__expand-label">Раскрыть отзыв</span>
-        								</button>
-        								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-        							</div>
-        						</div>
-        					</div><div class="swiper-slide">
-        						<div class="review-card">
-        							<div class="review-card__top">
-        								<div class="review-card__author">
-        									<span class="review-card__avatar">
-        										<img class="cover-image" src="img/avatar.svg" alt="Татьяна" width="44" height="44" loading="lazy">
-        									</span>
-        									<div class="review-card__meta">
-        										<p class="review-card__name">Татьяна</p>
-        										<div class="review-card__stars" aria-label="5 из 5">
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        										</div>
-        									</div>
-        								</div>
-        								<img
-        									class="review-card__source review-card__source--ozon"
-        									src="img/shared/logos/marketplaces/ozon.svg"
-        									alt="Отзыв с Ozon"
-        									width="98"
-        									height="21"
-        									loading="lazy"
-        									>
-        							</div>
-        							<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
-        							<div class="review-card__footer">
-        								<button type="button" class="review-card__expand icon-chevron-right">
-        									<span class="review-card__expand-label">Раскрыть отзыв</span>
-        								</button>
-        								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-        							</div>
-        						</div>
-        					</div><div class="swiper-slide">
-        						<div class="review-card">
-        							<div class="review-card__top">
-        								<div class="review-card__author">
-        									<span class="review-card__avatar">
-        										<img class="cover-image" src="img/avatar.svg" alt="Елена С." width="44" height="44" loading="lazy">
-        									</span>
-        									<div class="review-card__meta">
-        										<p class="review-card__name">Елена С.</p>
-        										<div class="review-card__stars" aria-label="5 из 5">
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        										</div>
-        									</div>
-        								</div>
-        								<img
-        									class="review-card__source review-card__source--ozon"
-        									src="img/shared/logos/marketplaces/ozon.svg"
-        									alt="Отзыв с Ozon"
-        									width="98"
-        									height="21"
-        									loading="lazy"
-        									>
-        							</div>
-        							<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
-        							<div class="review-card__footer">
-        								<button type="button" class="review-card__expand icon-chevron-right">
-        									<span class="review-card__expand-label">Раскрыть отзыв</span>
-        								</button>
-        								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-        							</div>
-        						</div>
-        					</div><div class="swiper-slide">
-        						<div class="review-card">
-        							<div class="review-card__top">
-        								<div class="review-card__author">
-        									<span class="review-card__avatar">
-        										<img class="cover-image" src="img/avatar.svg" alt="Мария" width="44" height="44" loading="lazy">
-        									</span>
-        									<div class="review-card__meta">
-        										<p class="review-card__name">Мария</p>
-        										<div class="review-card__stars" aria-label="5 из 5">
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        										</div>
-        									</div>
-        								</div>
-        								<img
-        									class="review-card__source"
-        									src="img/shared/logos/marketplaces/wildberries.svg"
-        									alt="Отзыв с Wildberries"
-        									width="147"
-        									height="22"
-        									loading="lazy"
-        									>
-        							</div>
-        							<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
-        							<div class="review-card__footer">
-        								<button type="button" class="review-card__expand icon-chevron-right">
-        									<span class="review-card__expand-label">Раскрыть отзыв</span>
-        								</button>
-        								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-        							</div>
-        						</div>
-        					</div><div class="swiper-slide">
-        						<div class="review-card">
-        							<div class="review-card__top">
-        								<div class="review-card__author">
-        									<span class="review-card__avatar">
-        										<img class="cover-image" src="img/avatar.svg" alt="Ольга" width="44" height="44" loading="lazy">
-        									</span>
-        									<div class="review-card__meta">
-        										<p class="review-card__name">Ольга</p>
-        										<div class="review-card__stars" aria-label="5 из 5">
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        										</div>
-        									</div>
-        								</div>
-        								<img
-        									class="review-card__source review-card__source--ozon"
-        									src="img/shared/logos/marketplaces/ozon.svg"
-        									alt="Отзыв с Ozon"
-        									width="98"
-        									height="21"
-        									loading="lazy"
-        									>
-        							</div>
-        							<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
-        							<div class="review-card__footer">
-        								<button type="button" class="review-card__expand icon-chevron-right">
-        									<span class="review-card__expand-label">Раскрыть отзыв</span>
-        								</button>
-        								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-        							</div>
-        						</div>
-        					</div><div class="swiper-slide">
-        						<div class="review-card">
-        							<div class="review-card__top">
-        								<div class="review-card__author">
-        									<span class="review-card__avatar">
-        										<img class="cover-image" src="img/avatar.svg" alt="Анна" width="44" height="44" loading="lazy">
-        									</span>
-        									<div class="review-card__meta">
-        										<p class="review-card__name">Анна</p>
-        										<div class="review-card__stars" aria-label="5 из 5">
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        											<span class="icon-star" aria-hidden="true"></span>
-        										</div>
-        									</div>
-        								</div>
-        								<img
-        									class="review-card__source"
-        									src="img/shared/logos/marketplaces/letoile.svg"
-        									alt="Отзыв с Лэтуаль"
-        									width="150"
-        									height="23"
-        									loading="lazy"
-        									>
-        							</div>
-        							<blockquoute class="review-card__text">Обожаю этого производителя, беру уже вторую пару гелей, других ароматов, густой, приятный аромат и&nbsp;отлично пенится. Моей семье они очень нравятся. Буду заказывать ещё!</blockquoute>
-        							<div class="review-card__footer">
-        								<button type="button" class="review-card__expand icon-chevron-right">
-        									<span class="review-card__expand-label">Раскрыть отзыв</span>
-        								</button>
-        								<time class="review-card__date" datetime="2026-03-05">05.03.2026</time>
-        							</div>
-        						</div>
-        					</div>
-        				</div>
-        				<div class="reviews__pagination swiper-pagination"></div>
-        			</div>
-        			<div class="reviews__bar">
-        				<p class="reviews__note">
-        					<img class="reviews__note-icon" src="img/icons/shield.svg" alt="Проверено" width="30" height="36" loading="lazy">
-        					Все отзывы проверены и&nbsp;оставлены реальными покупателями
-        				</p>
-        				<div class="reviews__nav">
-        					<button type="button" class="reviews__prev swiper-button-prev icon-prev" aria-label="Предыдущий отзыв"></button>
-        					<button type="button" class="reviews__next swiper-button-next icon-next" aria-label="Следующий отзыв"></button>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-        </section>
-      </main>
-      <footer class="footer">
-      	<div class="container footer__container">
-      		<div class="row footer__main">
-      			<div class="col-12 col-xl-3 footer__brand">
-      				<a class="footer__logo" href="/" aria-label="KIPNI — на главную">
-      					<img src="img/logo.svg" alt="Логотип KIPNI" width="173" height="56" loading="lazy">
-      				</a>
-      				<p class="footer__tagline">Средства для дома и семьи, созданные с заботой о вас и природе</p>
-      				<div class="footer__legal footer__legal--desktop">
-      					<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
-      					<a class="footer__legal-link" href="#">Уведомление об использовании рекомендательных технологий</a>
-      				</div>
-      			</div>
-
-      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
-      				<h3 class="footer__title">Компания</h3>
-      				<ul class="footer__list">
-      					<li><a class="footer__link" href="about.html">О компании</a></li>
-      					<li><a class="footer__link" href="promotions.html">Акции</a></li>
-      					<li><a class="footer__link" href="vacancies.html">Вакансии</a></li>
-      					<li><a class="footer__link" href="certificates.html">Сертификаты</a></li>
-      					<li><a class="footer__link" href="contacts.html">Контакты</a></li>
-      					<li><a class="footer__link" href="#">Партнеры</a></li>
-      					<li><a class="footer__link" href="blog.html">Блог</a></li>
-      				</ul>
-      			</div>
-
-      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
-      				<h3 class="footer__title">Каталог</h3>
-      				<ul class="footer__list">
-      					<li><a class="footer__link" href="#">Уход за телом</a></li>
-      					<li><a class="footer__link" href="#">Уход за волосами</a></li>
-      					<li><a class="footer__link" href="#">Подарочные наборы</a></li>
-      					<li><a class="footer__link" href="#">Уборка</a></li>
-      					<li><a class="footer__link" href="#">Сад</a></li>
-      				</ul>
-      			</div>
-
-      			<div class="col-6 col-lg-3 col-xl-2 footer__col">
-      				<h3 class="footer__title">Помощь</h3>
-      				<ul class="footer__list">
-      					<li><a class="footer__link" href="#">Как купить</a></li>
-      					<li><a class="footer__link" href="delivery.html">Доставка</a></li>
-      					<li><a class="footer__link" href="delivery.html">Оплата</a></li>
-      					<li><a class="footer__link" href="#">Гарантия, возврат</a></li>
-      					<li><a class="footer__link" href="#">Юридическим лицам</a></li>
-      					<li><a class="footer__link" href="#">Для поставщиков</a></li>
-      				</ul>
-      			</div>
-
-      			<div class="col-6 col-lg-3 footer__col footer__contacts">
-      				<h3 class="footer__title">Контакты</h3>
-      				<a class="footer__phone" href="tel:88001013931">8 (800) 101-39-31</a>
-      				<p class="footer__hours">пн-пт с 9:00 до 18:00</p>
-      				<a class="footer__email" href="mailto:kipni@kipni.ru">kipni@kipni.ru</a>
-      				<ul class="footer__socials">
-      					<li>
-      						<a class="footer__social icon-vk" href="#" target="_blank" rel="noopener noreferrer" aria-label="ВКонтакте"></a>
-      					</li>
-      					<li>
-      						<a class="footer__social icon-max" href="#" target="_blank" rel="noopener noreferrer" aria-label="Мax"></a>
-      					</li>
-      					<li>
-      						<a class="footer__social icon-telegram" href="#" target="_blank" rel="noopener noreferrer" aria-label="Telegram"></a>
-      					</li>
-      				</ul>
-      				<a class="btn btn--primary footer__btn" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline">Задать вопрос</a>
-      			</div>
-      		</div>
-
-      		<div class="footer__bottom">
-      			<div class="footer__legal footer__legal--mobile">
-      				<a class="footer__legal-link" href="#">Политика конфиденциальности</a>
-      				<a class="footer__legal-link" href="#">Уведомление об использовании рекомендательных технологий</a>
-      			</div>
-      			<p class="footer__copy">2003-2026 © ООО «Фабрика Кипни». Все права&nbsp;защищены</p>
-      		</div>
-      	</div>
-      </footer>
-      <div id="modal-ask-question" class="popup">
-      	<div class="popup__head">
-      		<h2 class="popup__title">Задать вопрос</h2>
-      		<p class="text popup__lead">
-      			Возникли вопросы? Напишите их в форме ниже и мы обязательно ответим Вам в ближайшее время
-      		</p>
-      	</div>
-      	<form class="popup__form" action="#" method="post">
-      		<div class="row g-3 popup__fields">
-      			<div class="col-12 col-md-4">
-      				<label class="visually-hidden" for="ask-name">Имя</label>
-      				<input class="form-control" id="ask-name" type="text" name="name" placeholder="Введите имя" required autocomplete="name">
-      			</div>
-      			<div class="col-12 col-md-4">
-      				<label class="visually-hidden" for="ask-email">Электронная почта</label>
-      				<input class="form-control" id="ask-email" type="email" name="email" placeholder="Электронная почта" required autocomplete="email">
-      			</div>
-      			<div class="col-12 col-md-4">
-      				<label class="visually-hidden" for="ask-phone">Номер телефона</label>
-      				<input class="form-control" id="ask-phone" type="tel" name="phone" placeholder="Номер телефона" required autocomplete="tel">
-      			</div>
-      			<div class="col-12">
-      				<label class="visually-hidden" for="ask-message">Ваш вопрос</label>
-      				<textarea class="form-control popup__textarea" id="ask-message" name="message" placeholder="Ваш вопрос" required rows="6"></textarea>
-      			</div>
-      		</div>
-
-      		<label class="form-check">
-      			<input class="visually-hidden form-check__input" type="checkbox" name="consent" required checked>
-      			<span class="form-check__text">
-      				Нажимая на кнопку, вы даете согласие на обработку&nbsp;персональных данных
-      			</span>
-      		</label>
-
-      		<button class="btn btn--primary btn--large popup__submit" type="submit">Задать вопрос</button>
-      	</form>
-      </div>
-
-      <div class="ask-widget">
-      	<a class="ask-widget__link" href="#modal-ask-question" data-fancybox data-src="#modal-ask-question" data-type="inline" style="background-image: url('img/ask/bird.webp');">
-      		<span class="btn btn--soft ask-widget__btn">Задать вопрос</span>
-      	</a>
-      </div>
-    </div>
-    <!-- plugins -->
-    <script defer src="js/libs/swiper-bundle.min.js"></script>
-    <script defer src="js/libs/fancybox.umd.js"></script>
-    <!-- plugins -->
-
-    <script defer src="js/app.js"></script>
-  </body>
 </html>

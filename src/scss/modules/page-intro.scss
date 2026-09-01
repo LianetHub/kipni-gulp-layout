@@ -12,11 +12,10 @@
 
 	// page-intro__content
 	&__content {
-		padding-top: 2rem;
-
-		@media (min-width: $md4) {
-			padding-top: 3.75rem;
+		@media (max-width:$md3) {
+			padding-top: 2rem;
 		}
+
 	}
 
 	// page-intro__title
@@ -42,14 +41,24 @@
 	&__media {
 		margin-top: rem(24);
 
+		&.page-intro__media--large {
+			& img {
+				@media (min-width:$md1) {
+					margin-right: -2rem;
+					width: calc(100% + 4rem);
+					max-width: calc(100% + 4rem);
+				}
+			}
+		}
+
 		@media (min-width: $md3) {
 			margin-top: 0;
 		}
 
 		img {
 			display: block;
-			width: 100%;
 			height: auto;
+			width: auto;
 			margin-inline: auto;
 		}
 	}

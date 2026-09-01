@@ -1,10 +1,10 @@
 @use "sass:math";
 
 .certs-groups {
-	padding-bottom: rem(48);
+	padding-block: rem(48);
 
 	@media (min-width: $md4) {
-		padding-bottom: rem(64);
+		padding-block: rem(64);
 	}
 }
 
