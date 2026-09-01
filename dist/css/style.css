@@ -22,19 +22,19 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "tthoves";
-  font-display: swap;
-  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
   font-family: "Onest";
   src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
   font-display: swap;
+}
+@font-face {
+  font-family: "tthoves";
+  font-display: swap;
+  src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 :root {
   --color-primary: #8abd35;
@@ -3549,24 +3549,33 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   z-index: 1;
   top: 0;
   bottom: 0;
-  width: 5rem;
+  width: 3rem;
   pointer-events: none;
   display: none;
 }
 .buy-partners__slider-wrap::before {
   left: 0;
   z-index: 2;
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 85%);
 }
 .buy-partners__slider-wrap::after {
   right: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 85%);
+}
+.buy-partners__slider-wrap:not(.is-at-end)::after {
+  display: block;
 }
 @media (min-width: 991.98px) {
-  .buy-partners__slider-wrap:not(.is-at-start)::before {
-    display: block;
+  .buy-partners__slider-wrap::before, .buy-partners__slider-wrap::after {
+    width: 5rem;
   }
-  .buy-partners__slider-wrap:not(.is-at-end)::after {
+  .buy-partners__slider-wrap::before {
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  }
+  .buy-partners__slider-wrap::after {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  }
+  .buy-partners__slider-wrap:not(.is-at-start)::before {
     display: block;
   }
 }
@@ -7911,24 +7920,33 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   z-index: 1;
   top: 0;
   bottom: 0;
-  width: 5rem;
+  width: 3rem;
   pointer-events: none;
   display: none;
 }
 .catalog-cats__slider-wrap::before {
   left: 0;
   z-index: 2;
-  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 85%);
 }
 .catalog-cats__slider-wrap::after {
   right: 0;
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 85%);
+}
+.catalog-cats__slider-wrap:not(.is-at-end)::after {
+  display: block;
 }
 @media (min-width: 991.98px) {
-  .catalog-cats__slider-wrap:not(.is-at-start)::before {
-    display: block;
+  .catalog-cats__slider-wrap::before, .catalog-cats__slider-wrap::after {
+    width: 5rem;
   }
-  .catalog-cats__slider-wrap:not(.is-at-end)::after {
+  .catalog-cats__slider-wrap::before {
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  }
+  .catalog-cats__slider-wrap::after {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+  }
+  .catalog-cats__slider-wrap:not(.is-at-start)::before {
     display: block;
   }
 }

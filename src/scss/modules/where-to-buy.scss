@@ -52,7 +52,7 @@
 			z-index: $ui-index-1;
 			top: 0;
 			bottom: 0;
-			width: rem(80);
+			width: rem(48);
 			pointer-events: none;
 			display: none;
 		}
@@ -60,20 +60,33 @@
 		&::before {
 			left: 0;
 			z-index: 2;
-			background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+			background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 85%);
 		}
 
 		&::after {
 			right: 0;
-			background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+			background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 85%);
+		}
+
+		&:not(.is-at-end)::after {
+			display: block;
 		}
 
 		@media (min-width: $md3) {
-			&:not(.is-at-start)::before {
-				display: block;
+			&::before,
+			&::after {
+				width: rem(80);
 			}
 
-			&:not(.is-at-end)::after {
+			&::before {
+				background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+			}
+
+			&::after {
+				background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #fff 70%);
+			}
+
+			&:not(.is-at-start)::before {
 				display: block;
 			}
 		}
