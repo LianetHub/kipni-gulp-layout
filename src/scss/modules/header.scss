@@ -84,10 +84,16 @@
 		background: transparent;
 
 		.header__bar {
-			background: rgba(246, 246, 240, 0.7);
+			background: rgba(246, 246, 240, 0.8);
 			-webkit-backdrop-filter: blur(#{rem(4)});
 			backdrop-filter: blur(#{rem(4)});
 			box-shadow: 0 #{rem(4)} #{rem(248.2)} 0 rgba(69, 153, 61, 0.08);
+
+			@media (any-hover: hover) {
+				&:hover {
+					background: rgba(246, 246, 240, 0.9);
+				}
+			}
 		}
 	}
 

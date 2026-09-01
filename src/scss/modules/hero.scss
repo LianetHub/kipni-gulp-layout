@@ -59,7 +59,9 @@
 	height: 100%;
 	overflow: hidden;
 	border-radius: $radius-md;
-	background: $color-surface;
+	background-color: $color-surface;
+	--hero-slide-bg: var(--hero-slide-image-mobile, var(--hero-slide-image));
+	background-image: var(--hero-slide-bg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 100% center;
@@ -69,6 +71,7 @@
 	@media (min-width: $md5) {
 		width: 100%;
 		border-radius: 0;
+		--hero-slide-bg: var(--hero-slide-image);
 		background-position: center;
 		padding-top: rem(40);
 		padding-bottom: rem(56);

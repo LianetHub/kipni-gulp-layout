@@ -1,11 +1,4 @@
 @font-face {
-  font-family: "icons";
-  font-display: swap;
-  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
   font-family: "Manrope";
   src: url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Manrope-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Manrope-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
@@ -14,16 +7,15 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "GolosText";
-  src: url("../fonts/GolosText-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/GolosText-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/GolosText-VariableFont_wght.woff") format("woff");
-  font-weight: 100 900;
-  font-stretch: 75% 125%;
-  font-style: normal;
+  font-family: "icons";
   font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-  font-family: "Onest";
-  src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
+  font-family: "GolosText";
+  src: url("../fonts/GolosText-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/GolosText-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/GolosText-VariableFont_wght.woff") format("woff");
   font-weight: 100 900;
   font-stretch: 75% 125%;
   font-style: normal;
@@ -35,6 +27,14 @@
   src: url("../fonts/tthoves-medium.woff2") format("woff2"), url("../fonts/tthoves-medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
+}
+@font-face {
+  font-family: "Onest";
+  src: url("../fonts/Onest-VariableFont_wght.woff2") format("woff2 supports variations"), url("../fonts/Onest-VariableFont_wght.woff2") format("woff2-variations"), url("../fonts/Onest-VariableFont_wght.woff") format("woff");
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
 }
 :root {
   --color-primary: #8abd35;
@@ -1707,10 +1707,15 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   background: transparent;
 }
 .header.is-scrolled:not(.is-mobile-open) .header__bar {
-  background: rgba(246, 246, 240, 0.7);
+  background: rgba(246, 246, 240, 0.8);
   -webkit-backdrop-filter: blur(0.25rem);
   backdrop-filter: blur(0.25rem);
   box-shadow: 0 0.25rem 15.5125rem 0 rgba(69, 153, 61, 0.08);
+}
+@media (any-hover: hover) {
+  .header.is-scrolled:not(.is-mobile-open) .header__bar:hover {
+    background: rgba(246, 246, 240, 0.9);
+  }
 }
 .header__overlay {
   display: none;
@@ -3034,7 +3039,9 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   height: 100%;
   overflow: hidden;
   border-radius: var(--radius-md);
-  background: var(--color-surface);
+  background-color: var(--color-surface);
+  --hero-slide-bg: var(--hero-slide-image-mobile, var(--hero-slide-image));
+  background-image: var(--hero-slide-bg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 100% center;
@@ -3045,6 +3052,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   .hero-slide {
     width: 100%;
     border-radius: 0;
+    --hero-slide-bg: var(--hero-slide-image);
     background-position: center;
     padding-top: 2.5rem;
     padding-bottom: 3.5rem;
@@ -4608,7 +4616,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: var(--color-white);
+  background: rgba(255, 255, 255, 0.3);
   box-shadow: var(--shadow-soft);
   color: #0B3369;
 }
@@ -4616,7 +4624,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   .business__feature::before {
     width: 2.5rem;
     height: 2.5rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 .business__btn {

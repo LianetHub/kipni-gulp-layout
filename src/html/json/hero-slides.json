@@ -2,6 +2,7 @@
 	{
 		"heading": "h1",
 		"image": "@img/hero/slide-1.webp",
+		"image_mobile": "@img/hero/slide-1-mobile.webp",
 		"title": "Чистота, которой",
 		"accent": "доверяет семья",
 		"lead": "Экологичные средства для дома на&nbsp;каждый день",

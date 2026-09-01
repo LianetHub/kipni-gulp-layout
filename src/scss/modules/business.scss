@@ -133,14 +133,14 @@
 			align-items: center;
 			justify-content: center;
 			border-radius: 50%;
-			background: $color-white;
+			background: rgba(255, 255, 255, 0.30);
 			box-shadow: $shadow-soft;
 			color: #0B3369;
 
 			@media (min-width: $md4) {
 				width: rem(40);
 				height: rem(40);
-				font-size: rem(20);
+				font-size: rem(16);
 			}
 		}
 	}
