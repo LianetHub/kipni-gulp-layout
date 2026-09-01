@@ -1665,6 +1665,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 .header.is-mobile-open .header__bar {
   z-index: auto;
   background: transparent;
+  -webkit-backdrop-filter: none;
   backdrop-filter: none;
   box-shadow: none;
   transition: none;
@@ -1706,8 +1707,9 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   background: transparent;
 }
 .header.is-scrolled:not(.is-mobile-open) .header__bar {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(1.25rem);
+  background: rgba(246, 246, 240, 0.7);
+  -webkit-backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem);
   box-shadow: 0 0.25rem 15.5125rem 0 rgba(69, 153, 61, 0.08);
 }
 .header__overlay {
@@ -1835,8 +1837,9 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  background: rgba(246, 246, 240, 0.8);
-  backdrop-filter: blur(1.25rem);
+  background: rgba(246, 246, 240, 0.4);
+  -webkit-backdrop-filter: blur(0.25rem);
+  backdrop-filter: blur(0.25rem);
   border-radius: 0 1.25rem 1.25rem 0;
   box-shadow: 0 0.25rem 15.5125rem 0 rgba(69, 153, 61, 0.08);
   display: none;
@@ -1852,6 +1855,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
     height: auto;
     overflow: visible;
     background: transparent;
+    -webkit-backdrop-filter: none;
     backdrop-filter: none;
     border-radius: 0;
     box-shadow: none;
@@ -2241,10 +2245,10 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 }
 .header-banner__link span {
   text-decoration: underline;
-  text-underline-offset: 0.15em;
 }
 .header-banner__link::before {
   order: 1;
+  padding-top: 0.1em;
   font-size: 0.6111111111em;
   line-height: 0.8;
   margin-left: 0.25em;
@@ -2370,9 +2374,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
     min-height: 3.4375rem;
     padding: 1.1875rem 3rem 1.1875rem 1.25rem;
   }
-}
-.header-search__input::-moz-placeholder {
-  color: var(--color-muted);
 }
 .header-search__input::placeholder {
   color: var(--color-muted);
@@ -3593,16 +3594,14 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   grid-template-rows: auto;
   grid-auto-rows: 0;
   overflow: hidden;
-  -moz-column-gap: 0.75rem;
-       column-gap: 0.75rem;
+  column-gap: 0.75rem;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% - 0.75rem * 0.4) / 1.4);
   grid-template-columns: none;
 }
 @media (min-width: 576px) {
   .buy-partners__slider:not(.is-swiper-ready) .swiper-wrapper {
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% - 1rem * 1.2) / 2.2);
     grid-template-columns: none;
@@ -5129,7 +5128,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: -moz-fit-content;
   height: fit-content;
   min-height: 15rem;
   padding: 1.75rem 1.5rem;
@@ -5501,6 +5499,11 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 
 .delivery-intro {
   align-items: center;
+}
+@media (min-width: 1439.98px) {
+  .delivery-intro {
+    margin-top: -4.5rem;
+  }
 }
 .delivery-intro__title {
   margin: 0 0 1.25rem;
@@ -6087,10 +6090,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
     font-size: 1.125rem;
     line-height: 1.2222222222;
   }
-}
-.contacts-form .form-control::-moz-placeholder {
-  color: #8e8e8e;
-  font-weight: 500;
 }
 .contacts-form .form-control::placeholder {
   color: #8e8e8e;
@@ -7964,16 +7963,14 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   grid-template-rows: auto;
   grid-auto-rows: 0;
   overflow: hidden;
-  -moz-column-gap: 0.75rem;
-       column-gap: 0.75rem;
+  column-gap: 0.75rem;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% - 0.75rem * 0.4) / 1.4);
   grid-template-columns: none;
 }
 @media (min-width: 576px) {
   .catalog-cats__slider:not(.is-swiper-ready) .swiper-wrapper {
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+    column-gap: 1rem;
     grid-auto-flow: column;
     grid-auto-columns: calc((100% - 1rem * 1.2) / 2.2);
     grid-template-columns: none;
@@ -8780,7 +8777,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   right: 0;
   z-index: 3;
   min-width: 100%;
-  width: -moz-max-content;
   width: max-content;
   max-width: min(20rem, 100vw - 2rem);
   padding: 0.5rem;
@@ -9191,9 +9187,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   color: var(--color-muted);
   font-size: 1.625rem;
   line-height: 1;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   transition: color 0.3s ease;
 }
 .product-card__favorite:focus-visible {
@@ -9464,9 +9458,6 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
   color: var(--color-text);
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.form-control::-moz-placeholder, .form-select::-moz-placeholder {
-  color: var(--color-muted);
-}
 .form-control::placeholder,
 .form-select::placeholder {
   color: var(--color-muted);
@@ -9488,9 +9479,7 @@ html.is-banner-hidden .header .header-banner, .header.is-banner-hidden .header-b
 
 .form-select {
   padding-right: 2.75rem;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%234c4c4c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -10044,9 +10033,7 @@ img {
     width: 8.125rem;
     height: 8.125rem;
     pointer-events: none;
-    -webkit-user-select: none;
-       -moz-user-select: none;
-            user-select: none;
+    user-select: none;
     background-image: url("../img/footer/leaf-deco.webp");
     background-repeat: no-repeat;
     background-size: contain;

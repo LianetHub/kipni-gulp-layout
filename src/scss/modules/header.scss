@@ -84,9 +84,9 @@
 		background: transparent;
 
 		.header__bar {
-			background: rgba(255, 255, 255, 0.9);
-			-webkit-backdrop-filter: blur(#{rem(20)});
-			backdrop-filter: blur(#{rem(20)});
+			background: rgba(246, 246, 240, 0.7);
+			-webkit-backdrop-filter: blur(#{rem(4)});
+			backdrop-filter: blur(#{rem(4)});
 			box-shadow: 0 #{rem(4)} #{rem(248.2)} 0 rgba(69, 153, 61, 0.08);
 		}
 	}
@@ -230,9 +230,9 @@
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		background: rgba(246, 246, 240, 0.8);
-		-webkit-backdrop-filter: blur(#{rem(20)});
-		backdrop-filter: blur(#{rem(20)});
+		background: rgba(246, 246, 240, 0.4);
+		-webkit-backdrop-filter: blur(#{rem(4)});
+		backdrop-filter: blur(#{rem(4)});
 		border-radius: 0 rem(20) rem(20) 0;
 		box-shadow: 0 #{rem(4)} #{rem(248.2)} 0 rgba(69, 153, 61, 0.08);
 		display: none;
@@ -722,11 +722,12 @@
 
 		& span {
 			text-decoration: underline;
-			text-underline-offset: 0.15em;
+
 		}
 
 		&::before {
 			order: 1;
+			padding-top: 0.1em;
 			font-size: em(11, 18);
 			line-height: 0.8;
 			margin-left: 0.25em;

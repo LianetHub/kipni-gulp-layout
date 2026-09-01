@@ -133,6 +133,11 @@
 .delivery-intro {
 	align-items: center;
 
+	@media (min-width:$md1) {
+		margin-top: -4.5rem;
+
+	}
+
 	// delivery-intro__title
 	&__title {
 		margin: 0 0 rem(20);
